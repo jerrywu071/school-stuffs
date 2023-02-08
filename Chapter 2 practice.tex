@@ -62,4 +62,50 @@ One mole of an ideal \textbf{monoatomic} gas initially at $300k$ and pressure of
     \end{align*}
 \end{itemize}
 
+% QUESION 2 AND 3 ARE ADIABATIC AND WILL BE COVERED ON THE TEST, BUT NOT THE QUIZ
+
+\subsection*{Question 4}
+
+The constant pressure heat capacity of an ideal gas, $A\in \mathbb{C}$ was found to vary with temperature according to the expression
+
+\begin{align*}
+    \bar{C}_P=22.17+0.32T in units of JK^{-1}mol^{-1}
+\end{align*}
+
+\begin{itemize}
+    \item[a)] Calculate $q,w,\Delta U, \Delta H$ when the temperature of $2 mol$ of $A$ is raised from $0^{\circ}C\rightarrow 50^{\circ}C (273K\rightarrow 323K)$. Assume $P\equiv const$.
+    
+    \subsection*{Solution::}
+
+    First, we can find $\Delta H$.
+
+    \begin{align*}
+        \Delta H=\int_{273}^{323} C_P dT=n\int_{273}^{323}\bar{C}_P dT=(2)\int_{273}^{323} 21.17+0.32T=2\left[21.17T+\frac{0.32}{2}T^2\right]_{273}^{323}
+    \end{align*}
+
+    \begin{align*}
+        =2\left[\left(22.17(323)+\frac{0.32}{2}(323)^2\right)-\left(22.17(273)+\frac{0.32}{2}(273)^2\right)\right]=11753J=11.75kJ
+    \end{align*}
+
+    Because we assumed $P\equiv const$, $\Delta H=q=11.75kJ$. Now we find $\Delta U$.
+
+    \begin{align*}
+        \Delta U=\Delta H-\Delta (PV)=\Delta H-nR\Delta T=11753-(2)(8.314)(323-273)=10.92kJ
+    \end{align*}
+
+    And so, $w=\Delta U-q$.
+    \begin{align*}
+        w=10.92kJ-11.75kJ=-0.83kJ
+    \end{align*}
+
+    Because work is negative, work was done by the system, whereby we have an expansion.
+
+    \item[b)] Now assume $V\equiv const$.
+    
+    \subsection*{Solution}
+
+    Because $V\equiv const$, we can carry over our $\Delta H$ and $\Delta U$ values since they're only dependent on temperature.\\When volume is constant, $w=0$ since there is no expansion or compression. This implies that $q=\Delta U=10.92kJ$.
+
+\end{itemize}
+
 \end{document}
