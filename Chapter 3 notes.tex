@@ -8,7 +8,7 @@
 \usepackage{pgfplots}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
 
-\title{Chapter 3:: More on state functions}
+\title{Chapter 3:: Mathematical properties of state functions}
 
 \author{Jerry Wu (217545898)}
 
@@ -17,7 +17,264 @@
 \maketitle
 \rule{\textwidth}{0.4pt}
 
+\subsection*{Motivation}
+We want to be able to express state functions as variables and partial derivatives. From there we can model stuff like internal energy and enthalpy in terms of $P$, $V$, and $P$ interchangably. We can also do the following::
 
+\begin{itemize}
+    \item Quantify the difference between $C_P$ and $C_V$
+    \item Understand the Joule-Thomson experiment.
+\end{itemize}
 
+Consider $1mol$ of an ideal gas::
+\begin{align*}
+    P=f(V,T)=\frac{RT}{V}
+\end{align*}
+
+When we assume $T\equiv const$,
+\begin{align*}
+    \frac{\partial P}{\partial V}_T=\lim_{\Delta V\rightarrow 0}\frac{P(V+\Delta V,T)-P(V,T)}{\Delta V}=-\frac{RT}{V^2}
+\end{align*}
+
+When we assume $V\equiv const$,
+
+\begin{align*}
+    \frac{\partial P}{\partial T}_V=\lim_{\Delta V\rightarrow 0}\frac{P(V+\Delta V,T)-P(V,T)}{\Delta V}=\frac{R}{V}
+\end{align*}
+
+So the total change in pressure ($dP$) can be expressed as::
+
+\begin{align*}
+    dP=\frac{\partial P}{\partial T}_V dT+\frac{\partial P}{\partial V}_T dV
+\end{align*}
+
+In general, 
+
+\begin{align*}
+    dz=\frac{\partial z}{\partial x}_y dx + \frac{\partial z}{\partial y}_x dy
+\end{align*}
+
+by principle of vector addition.
+
+\subsection*{The cyclic rule}
+
+\begin{align*}
+    \frac{\partial P}{\partial V}_T\frac{\partial V}{\partial T}_P\frac{\partial T}{\partial P}_V=-1\implies \frac{\partial P}{\partial T}_v=-\frac{\partial P}{\partial V}_T\frac{\partial V}{\partial T}_P=-\frac{\frac{\partial V}{\partial T}_P}{\frac{\partial V}{\partial P}}_T=\frac{\alpha}{\kappa_T}
+\end{align*}
+
+The expansion coefficient for isobaric volumetric thermal is::
+\begin{align*}
+    \alpha=\frac{1}{V}\frac{\partial V}{\partial T}_P
+\end{align*}
+
+Isothermal compressibility::
+
+\begin{align*}
+    \kappa_T=-\frac{1}{V}\frac{\partial V}{\partial P}_T
+\end{align*}
+
+So we have that
+
+\begin{align*}
+    dP=\frac{\alpha}{\kappa_T}dT-\frac{1}{\kappa_T V}dV
+\end{align*}
+
+and the total change is expressed as::
+
+\begin{align*}
+    \Delta P=\int_{T_i}^{T_f}\frac{\alpha}{\kappa_T}dT-\int_{V_i}^{V_f}\frac{1}{\kappa_T V}dV\approx \frac{\alpha}{\kappa_T}\Delta T-\frac{1}{\kappa_T}\ln(\frac{V_f}{V_i})
+\end{align*}
+
+\subsection*{Example 1}
+
+You have accidentally arrived at the end of the range of an ethanol-in-glass
+thermometer so that the entire volume of the glass capillary is filled. By how much
+will the pressure in the capillary increase if the temperature is increased by another $10.0^{\circ}C$? $\alpha_{glass}=2E-5(^{\circ}C)^{-1}$,$\alpha_{ethanol}=11.2E-4(^{\circ}C)^{-1}$, $\kappa_{T,ethanol}=11.0E-5(bar)^{-1}$. Will the thermometer survive the experiment?
+
+\begin{align*}
+    \Delta P=\int_{T_i}^{T_f}\frac{\alpha_{ethanol}}{\kappa_{T,ethanol}}dT-\int_{V_i}^{V_f}\frac{1}{\kappa_{T,ethanol}V}dV\approx \frac{\alpha_{ethanol}}{\kappa_{T,ethanol}}(T_f-T_i)-\frac{1}{\kappa_{T,ethanol}}\ln(\frac{V_f}{V_i})
+\end{align*}
+
+So $\Delta P$ becomes::
+
+\begin{align*}
+    \Delta P=\frac{\alpha_{ethanol}}{\kappa_{T,ethanol}}\ln(\frac{V_i(1+\alpha_{glass}\Delta T)}{V_i})=100bar
+\end{align*}
+
+So no, the glass will not survive the experiment.
+
+\subsection*{Dependence of $U$ on $V$ and $T$}
+
+Internal energy on a fixed amount of substance is a function of $P$, $V$, and $T$.
+
+\begin{align*}
+    U=f(P_V)=f(V,T)=f(T,P)
+\end{align*}
+
+We are most interested in the one with volume and temperature.
+
+\begin{align*}
+    dU=\frac{\partial U}{\partial T}_V dT+\frac{\partial U}{\partial V}_T dV
+\end{align*}
+
+So how can numerical values for $\frac{\partial U}{\partial T}_V$ and $\frac{\partial U}{\partial V}_T$ be obtained?
+
+\begin{align*}
+    dq-P_{external}dV=\frac{\partial U}{\partial T}_V dT+\frac{\partial U}{\partial V}_T dV
+\end{align*}
+
+For an isochoric process, define the following::
+
+\begin{align*}
+    dq_V=\frac{\partial U}{\partial T}_V dT
+\end{align*}
+\begin{align*}
+    \frac{dq_V}{dT}=\frac{\partial U}{\partial T}_V=C_V
+\end{align*}
+
+So now we can integrate for total change in internal energy.
+
+\begin{align*}
+    \Delta U_V=\int_{T_1}^{T_2}C_V dT=n\int_{T_1}^{T_2}C_{V,m}dT
+\end{align*}
+
+If $C_{V,m}$ is regarded as constant (small temperature range), we have that::
+
+\begin{align*}
+    \Delta U_V=\int_{T_1}^{T_2}C_V dT=C_V\Delta T=nC_{V,m}\Delta T
+\end{align*}
+
+\begin{align*}
+    \int_{i}^{f}dq_V=\int_{i}^{f}\frac{\partial U}{\partial T}_V dT or q_V=\Delta U
+\end{align*}
+
+\subsection*{Internal pressure}
+
+$\frac{\partial U}{\partial V}_T$ has units of $\frac{J}{m^3}$, which is internal pressure.
+
+\begin{align*}
+    \frac{\partial U}{\partial V}_T=T\frac{\partial P}{\partial T}_V-P
+\end{align*}
+
+Our total infinitessimal change in $U$ can be expressed as the following::
+
+\begin{align*}
+    dU=dU_V+dU_T=C_V dT+\left(T\frac{\partial P}{\partial T}_V-P\right) dV
+\end{align*}
+
+For $T\equiv const$
+
+\begin{align*}
+    dU=dU_T=\left(T\frac{\partial P}{\partial T}_V-P\right)dV
+\end{align*}
+
+For $V\equiv const$
+
+\begin{align*}
+    dU=dU_V=C_V dT
+\end{align*}
+
+So this means that $\Sigma dU=dU_V+dU_T$ by virtue of common sense not so common.
+
+\subsection*{Example 2}
+
+Evaluate $\frac{\partial U}{\partial V}_T$ for an ideal gas.
+
+\begin{align*}
+    \frac{\partial U}{\partial V}_T=T\frac{\partial P}{\partial T}_V-P=T\left(\frac{\partial \left( \frac{nRT}{V}\right)}{\partial T}\right)_V-P=\frac{nRT}{V}-P=0
+\end{align*}
+
+This is unsurprising, since ideal gases' $\Delta U$ don't depend on $\Delta V$. So we can conclude that $U$ is only a function of $T$ for ideal gases.\\We can observe that
+
+\begin{align*}
+    \Delta U_T=\int_{V_i}^{V_f}\frac{\partial U}{\partial V}_T dV\approx 0
+\end{align*}
+
+to a good approximation for $g\in \mathbb{R}$ under most conditions.\\ So what is the magnitude of this for processes involving liquids and solids?
+
+\begin{align*}
+    \Delta U_T^{solid,liquid}=\int_{V_1}^{V_2}\frac{\partial U}{\partial V}_T dV\approx \frac{\partial U}{\partial V}_T\Delta V\approx 0
+\end{align*}
+
+Under most conditions encountered in lab, $U$ can be regarded as a function of $T$ alone $\forall$ substances.
+
+\begin{align*}
+    U(T_f,V_f)-U(T_i,V_i)=\Delta U=\int_{T_i}^{T_f}C_V dT=n\int_{T_i}^{T_f}C_{V,m}dT
+\end{align*}
+
+\subsection*{Enthalpy as a state function}
+
+$H$ is a function of $P$,$V$, and $T$.
+
+\begin{align*}
+    H=f(P,V)=f(V,T)=f(T,P)
+\end{align*}
+
+We can make $P\equiv const$.
+
+After some work, we have that
+
+\begin{align*}
+    \int_{i}^{f}dU=\int_{i}^{f}dq_P-\int_{i}^{f}PdV
+\end{align*}
+
+\begin{align*}
+    U_f-U_i=q_P-P(V_f-V_i)
+\end{align*}
+
+\subsection*{Phase chages}
+
+For both fusion and vaporization (solid $\rightarrow$ liquid and liquid $\rightarrow$ gas), $q>0\implies C_P\rightarrow \infty$
+
+\subsection*{Derivation}
+
+Following our derivation of $U$ and its differentials, we can do the same for $H$.
+
+\begin{align*}
+    dH=\frac{\partial H}{\partial T}_P dT+\frac{\partial H}{\partial P}_T dP
+\end{align*}
+
+Because $dP=0$ at $P\equiv const$ and $dH=dq_P$, we have that
+
+\begin{align*}
+    dq_P=\frac{\partial H}{\partial T}_P dT
+\end{align*}
+
+and the heat capacity at $P\equiv const$ is defined as::
+
+\begin{align*}
+    C_P=\frac{dq_P}{dT}=\frac{\partial H}{\partial T}_P
+\end{align*}
+
+$C_P$ is determined by measuring the heat flow $dq$ at constant $P$ with the resulting temperature
+change $dT$ in the limit in which $dT$ and $dq$ approach zero:
+
+\begin{align*}
+    C_P=\lim_{dT\rightarrow 0}\frac{dq}{dT}_P
+\end{align*}
+
+For a process where $P\equiv const$ assuming no phase changes or reactions, we have that
+
+\begin{align*}
+    \Delta H_P=\int_{T_i}^{T_f}C_P(T)dT=n\int_{T_i}^{T_f}C_{P,m}(T)dT
+\end{align*}
+
+\begin{align*}
+    \Delta H_P=C_P\Delta T=nC_{P,m}\Delta T
+\end{align*}
+
+\subsection*{Example 3 (full solution on slide 30)}
+
+A $143.0g$ sample of $C(s)$ in the form of graphite is heated from $300K \rightarrow 600K$ at a
+constant pressure. Over this temperature range, $C_{P,m}$ has been determined to be
+
+\begin{align*}
+    \frac{C_{P,m}}{JK^{-1}mol^{-1}}=-12.19+0.1126\frac{T}{K}-(1.947E-4)\frac{T^2}{K^2}+(1.19E-7)\frac{T^3}{K^3}-(7.800E-11)\frac{T^4}{K^4}
+\end{align*}
+
+\begin{align*}
+    \Delta H=\frac{m}{M}\int_{T_i}^{T_f}C_{P,m}(T)dT
+\end{align*}
+
+If $C_{P,m}$ at 300K is used instead, after some work, we have that $\Delta H=30.8kJ$
 
 \end{document}
