@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{CHEM2011 Chapter 1 problems}
+\date{\today}
+\author{Jerry Wu}
+
+\begin{document}
+\maketitle
+
+\subsection*{Question 1a,b}
+
+One mole of an ideal \textbf{monoatomic} gas initially at $300k$ and pressure of $15.0atm$ expands to a final pressure of $1.00 atm$. The expansion can occur via any of five different paths. For each case, calculate the value of $q$, $w$, $\Delta U$ and $\Delta H$.
+
+\begin{itemize}
+    \item[a)] Isothermal and reversible
+    \subsection*{Solution::}
+    Assume $T_2=T_1\implies \Delta T=0$ by isothermal. Because $\Delta T=0$, we have that $\Delta H=0$ and $\Delta U=0$ as a consequence. So, $\Delta U=q+w=0\implies w=-q$.\\
+    We can now find the value of $w$ by using the formula::
+
+    \begin{align*}
+        w=-nRT\ln(\frac{P_1}{P_2})=-(1)(8.314)(300)\ln(\frac{15}{1})=-6.75E-3 J\implies q=6.75E-3J
+    \end{align*}
+
+    \item[b)] Isothermal and irreversible
+    \subsection*{Solution::}
+    $\Delta U$ and $\Delta H$ are still 0 since $\Delta T=0$. Because this process is irreversible, $P_2=P_{external}$. So we have that
+    \begin{align*}
+        w=-P_2\Delta V=-P_2(V_2-V_1)
+    \end{align*}
+
+    Apply ideal gas law to find $V_1$ and $V_2$.
+
+    \begin{align*}
+        V_1=\frac{nRT}{P_1}=\frac{(1)(0.08206)(300)}{15}=1.641L, V_2=\frac{nRT}{P_2}=24.62L
+    \end{align*}
+
+    We can now find our work for the irreversible process.
+
+    \begin{align*}
+        w=-1(24.62-1.641)(\frac{101.325J}{1Latm})=-2.33E3J\implies q=2.33E3J
+    \end{align*}
+
+    \item[c)] Isothermal and irreversible in a 2 step process. \textbf{Step 1::} $P=7atm$, \textbf{Step 2::} P=$1atm$.
+    \subsection*{Solution::}
+    The process is still isothermal, so assume $\Delta T, \Delta U, \Delta H=0$ and $q=-w$.\\ Let $P'=7atm$ denote the intermediate pressure between the two steps. So we want to find the work berween $V_1$ and $V'$ along with $V'$ and $V_2$.
+
+    \begin{align*}
+        V_1=1.641L, V'=\frac{(1)(0.08206)(300)}{7}=3.52L, V_2=24.62L
+    \end{align*}
+
+    Now let us calculate the work done for both steps.
+
+    \begin{align*}
+        w=w_1+w_2=-P_2\Delta V=-((7)(3.52-1.641)+(1)(24.62-3.52))\approx -34.251Latm(\frac{101.325}{Latm})=-3470J=-3.47E3J\implies q=3.47E3J
+    \end{align*}
+\end{itemize}
+
+\end{document}
