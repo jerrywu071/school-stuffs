@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{EECS3101 notes}
+\author{Jerry Wu}
+\date{2023-02-02}
+
+\begin{document}
+\maketitle
+\subsection*{Sorting algorithms}
+As humans, we like order and when things are sorted/organized. Sorting algorithms have many practical applications in the working world like computer graphics, computational geometry, databases, etc. It is a good basis for learning the principles and techniques of algorithm design.\\We have a few examples of sorting algorithms from prior knowledge such as::
+
+\begin{itemize}
+    \item Bubble sort
+    \item Selection sort
+    \item Merge sort
+    \item Quick sort
+\end{itemize}
+
+and the list goes on.
+
+\subsection*{Heap sort}
+\begin{quote}
+    \textit{"This is a motivating example"-Larry YL Zhang 2023}
+\end{quote}
+
+Heaps are a very efficient data structure to perform operations on (everything is $\log(n)$ and better), so we should learn how they work. Every data structure has an invariant that must be maintained. For example, a sorted list must be sorted.
+
+\textbf{Binary max heap} is a nearly complete binary tree (each level is completely filled and if the last level isn't, all nodes are as far left as possible) that has the max heap property.\\
+Define the indices of an array storing a binary tree as the following:
+
+\textbf{IMPORTANT: (didn't learn this in EECS2011)}
+\begin{align*}
+    LeftChild(i)=2i\\
+    RightChild(i)=2i+1\\
+    Parent(i)=floor(\frac
+    {i}{2})
+\end{align*}
+
+The height of a complete binary tree with $n$ nodes is $\Theta(\log(n))$ as its worst case. So a $\log(n)$ runtime would entail that a tree would be used somewhere.
+
+\subsection*{Max heap property}
+Simply put, each parent has a greater or equal value than their immediate children (illustration on slide 16). This implies that every node is larger than equal to all its decendants, whereby every subtree of a heap is also a heap.
+
+\subsection*{Operations}
+\begin{quote}
+    \textit{"I used to spend a lot of time making animations on my old slides"-Larry YL Zhang 2023}
+\end{quote}
+\begin{itemize}
+    \item $Max(Q)$, return the root ($Q(0)$)
+    \item $Insert(Q,x)$, we insert at the leftmost unoccupied position of the bottom row and compare to its parent to swap (if necessary) to satisfy the max heap property.
+    \item $ExtractMax(Q)$, we want to delete the root's value without actually deleting the root itself. So we can bubble it down to the bottom leftmost node (swap with it), and then we can fix it so it satisfies the heap property. We do this by bubbling it down (swap with the \textbf{biggest} one) until it is smaller than its parent. Worst case runtime is also $\Theta(\log(n))$ (slide 30)
+    \begin{quote}
+        \textit{"If we delete the root, the tree becomes a forest"-Larry YL Zhang 2023}
+    \end{quote}
+    
+    \begin{quote}
+        \textit{"Which child is your favourite one?"-Larry YL Zhang 2023}
+    \end{quote}
+    \item $IncreasePriority(Q,x,k)$ Increases the key of node $x$ to $k$. \textbf{LEFT AS AN EXERCISE TO THE READER!}
+\end{itemize}
+
+\subsection*{How do we do heap sort (non descending)? (slide 39)}
+Simple. We want to extract max ($log(n)$), and do it $n$ times, so the overall runtime is $nlog(n)$. We want to do this all in place (no external data structures).\\
+
+Take the following array:
+\begin{align*}
+    \{65,40,25,33,18,24\}
+\end{align*}
+
+Start by swapping first (65) and last (24). Then decrement the heap size, and finally fix the heap by bubbling down 24. Repeat these steps until array is sorted.
+\textbf{MAKE SURE THAT THE ARRAY IS HEAP ORDERED FIRST BEFORE USING IT!}
+\begin{quote}
+    \textit{"It's almost like magic"-Larry YL Zhang 2023}
+\end{quote}
+
+\subsection*{BuildMaxHeap($A$)}
+\begin{itemize}
+    \item[Idea 1:] We can move everything to an empty array, but this is not in place.
+    \item[Idea 2:] Bubble down until the array is a valid heap. (slide 46 to 55)
+    \begin{quote}
+        \textit{"We have a heap built. Now it's time to celebrate!"-Larry YL Zhang 2023}\\
+        \textit{"The end result is 2 lines of code, It's B E A U T I F U L"-Larry YL Zhang 2023}\\
+        \textit{"Maybe I'm getting a bit emotional"-Larry YL Zhang 2023}
+    \end{quote}
+    \item[] 
+\end{itemize}
+
+\subsection*{Worst case analysis of BuildMaxHeap}
+A complete binary tree with $n$ nodes has $\frac{n}{2}$ leaf nodes. No work will be done on the leaves. Next level we bubble down at most once, next one at most twice, and so on. So we have that::
+
+\begin{align*}
+    T(n)=\sum_{i=1}^{\log(n)} i\frac{n}{2^{i+1}} \leq n\sum_{i=1}^{+\infty} i\frac{i}{2^{i+1}}=n
+\end{align*}
+
+So this is doable in $O(n)$ time!
+
+\end{document}
