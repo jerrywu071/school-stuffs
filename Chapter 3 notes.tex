@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{book}
 
 \usepackage[]{amsmath}
 \usepackage[]{amsthm}
@@ -10,11 +10,13 @@
 
 \title{Chapter 3:: Mathematical properties of state functions}
 
+
 \author{Jerry Wu (217545898)}
 
 \date{\today}
 \begin{document}
 \maketitle
+\chapter*{Mathematical properties of state functions}
 \rule{\textwidth}{0.4pt}
 
 \subsection*{Motivation}
@@ -276,5 +278,131 @@ constant pressure. Over this temperature range, $C_{P,m}$ has been determined to
 \end{align*}
 
 If $C_{P,m}$ at 300K is used instead, after some work, we have that $\Delta H=30.8kJ$
+
+\subsection*{Variations of enthalpy with pressure at $T\equiv const$}
+
+\begin{align*}
+    \Delta H=\int_{T_i}^{T_f}C_P(T)dT=n\int_{T_i}^{T_f}C_{P,m}(T)dT
+\end{align*}
+
+Because H is only a function of T, the equation above holds $\forall g\in \mathbb{C}$ even if $\lnot P\equiv const$. For an ideal gas, we know that
+
+\begin{align*}
+    \left(\frac{\partial H}{\partial P}\right)_T=0
+\end{align*}
+
+\begin{align*}
+    \left(\frac{\partial H}{\partial P}\right)_T=V-T\left(\frac{\partial V}{\partial T}\right)_P\approx V(1-T_\alpha)
+\end{align*}
+
+For systems that consist of liquids and solids, $T_\alpha<<1 \forall T<1000K$ and $\left(\frac{\partial H}{\partial P}\right)_T\approx V$ and $dH\approx C_P dt+Vdp$.
+
+
+\subsection*{Joule-Thomson experiment (slide 34)}
+
+\begin{align*}
+    dU=dU_V+dU_T=C_V dt+\left[T\left(\frac{\partial P}{\partial T}\right)_V-P\right]dV
+\end{align*}
+
+Assume $N_2$ is used in the expansion process ($P_1>P_2$), it is found that $T_2<T_1$; the gas is cooled as it expands. Why does this happen?
+
+\begin{align*}
+    w=w_{left}+w_{right}=-\int_{V_1}^{0}P_1dV-\int_{0}^{V_2}P_2dV=P_1V_1-P_2V_2
+\end{align*}
+
+Because the pipe is insulating, $q=0$ and
+
+\begin{align*}
+    \Delta U=w=P_1V_1-P_2V_2\implies U_2+P_2V_2=U_1+P_1V_1\implies U_2+P_2V_2=U_1+P_1V_1\implies H_2=H_1
+\end{align*}
+
+So this means that the system is \textbf{isenthalpic} (no enthalpy change)
+
+\subsection*{The Joule-Thomson coefficient}
+The constant can be expressed in the formula
+\begin{align*}
+    \mu_{J-T}=\lim_{\Delta P\rightarrow 0} \left(\frac{\Delta T}{\Delta P}\right)_H=\left(\frac{\partial T}{\partial P}\right)_H
+\end{align*}
+
+\begin{align*}
+    dH=C_P dT+\left(\frac{\partial H}{\partial P}\right)_T dP\implies C_P\left(\frac{\partial T}{\partial P}\right)_H+\left(\frac{\partial H}{\partial P}\right)_T=0
+\end{align*}
+
+So then,
+
+\begin{align*}
+    \left(\frac{\partial H}{\partial P}\right)_T=-C_P\mu_{J-T}
+\end{align*}
+
+\subsection*{Example}
+
+Using the equation::
+
+\begin{align*}
+    \left(\frac{\partial H}{\partial P}\right)_T=\left[\left(\frac{\partial U}{\partial V}\right)_T+P\right]\left(\frac{\partial V}{\partial P}\right)_T+V
+\end{align*}
+
+show that $\mu_{J-T}=0\forall g\in \mathbb{C}$
+
+\textbf{Pf.}
+
+\begin{align*}
+    \mu_{J-T}=1\frac{1}{C_P}\left(\frac{\partial H}{\partial P}\right)_T=-\frac{1}{C_P}\left[\left(\frac{\partial V}{\partial P}\right)_T+P\left(\frac{\partial V}{\partial P}\right)_T+V\right]
+\end{align*}
+
+\begin{align*}
+    =-\frac{1}{C_P}\left(0+{\left(\frac{\partial V}{\partial P}\right)_T}+V\right)
+\end{align*}
+
+\begin{align*}
+    =-\frac{1}{C_P}\left[P(\frac{\partial\left[\frac{nRT}{P}\right]}{\partial P})+V\right]=-\frac{1}{C_P}\left[-\frac{nRT}{P} +V\right]=0 \blacksquare
+\end{align*}
+\subsection*{Example 2 (slide 40)}
+
+If the Joule-Thomson coefficient for carbon dioxide, CO2, is $0.6375 \frac{K}{atm}$, estimate
+the final temperature of carbon dioxide at $20atm$ and $100^{\circ}C$ that is forced through
+a barrier to a final pressure of $1atm$.
+
+\subsection*{How are $C_P$ and $C_V$ related?}
+
+We can start with the differential form of the first law of thermodynamics.
+
+\begin{align*}
+    dq=C_VdT+\left(\frac{\partial U}{\partial V}\right)_T dV+P_{ext}dV
+\end{align*}
+
+Assume that $P\equiv const$, so
+
+\begin{align*}
+    dq_P=C_V dT+\left(\frac{\partial U}{\partial V}\right)_T dV+PdV
+\end{align*}
+
+\begin{align*}
+    C_P=C_V+\left(\frac{\partial U}{\partial V}\right)_T\left(\frac{\partial V}{\partial T}\right)_P+P\left(\frac{\partial V}{\partial T}\right)_P=C_V+\left[\left(\frac{\partial U}{\partial V}\right)_T+P\right]\left(\frac{\partial V}{\partial T}\right)_P
+\end{align*}
+
+\begin{align*}
+    =C_V+T\left(\frac{\partial P}{\partial V}\right)_V\left(\frac{\partial V}{\partial T}\right)_P
+\end{align*}
+
+Applying the cyclic rule along with the isobaric volumetric thermal expansion coefficient and isothermal compressibility, we have that
+
+\begin{align*}
+    C_P=C_V-T\frac{\left(\frac{\partial V}{\partial T}\right)_P^2}{\left(\frac{\partial V}{\partial P}\right)_T}
+\end{align*}
+
+Applying our $\alpha$ and $\kappa$ rules, we can conclude
+
+\begin{align*}
+    C_P=C_V+TV\frac{\alpha^2}{\kappa_T} or C_{P,m}=C_{V,m}+TV_m\frac{\alpha^2}{\kappa_T}
+\end{align*}
+
+What can we conclude from this? Well, $\forall g\in \mathbb{C} \land g\in \mathbb{R}$, we can say
+
+\begin{align*}
+    \alpha>0,\kappa_T>0\implies C_P-C_V=nR
+\end{align*}
+
+For solids and liquids, $C_P\approx C_V$.
 
 \end{document}
