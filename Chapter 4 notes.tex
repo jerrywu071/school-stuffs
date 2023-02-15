@@ -47,4 +47,189 @@ Recall that the standard change in enthalpy for a reaction can be calculated wit
 
 where $v$ is the stoichiometric coefficients of the products and reactants respectively.
 
+\subsection*{Standard enthalpies of formation}
+
+The following property applies to elements ($\zeta$) in their standard state
+
+\begin{align*}
+    \forall \zeta \in \mathbb{S}(\Delta H_f^{\circ}(\zeta)=0)
+\end{align*}
+
+Enthalpy of formation always produces exactly \textbf{1 mol} of the species of interest. For example::
+
+\begin{align*}
+    R: C(s)_{graphite}+2H_2(g)\rightarrow CH_4(g)|\Delta H_f^{\circ}=-74.8kJ/mol
+\end{align*}
+
+In the above reaction, we assume $C(s)$ is graphite.
+
+\begin{align*}
+    \frac{3}{2}H_2(g)+\frac{1}{2}N_2(g)\rightarrow NH_3(g)|\Delta H_f^{\circ}=-46 kJ/mol
+\end{align*}
+
+Note that we \textbf{must} resrtict the reactant coefficient to 1 in order for it to be a formation reaction.
+
+\subsection*{Standard state}
+
+\begin{itemize}
+    \item For a pure gas the pressure is exactlt $1bar$
+    \item For liquids and solids, the pressure is 1 bar and the temperature is $25^{\circ}C$
+    \item For a substance in solution, the concentration is exactly $1molL^{-1}$.
+\end{itemize}
+
+\subsection*{Example}
+
+Calculate $\Delta H$ and $\Delta U$ at 298.15K for the reaction::
+
+\begin{align*}
+    R: 4NH_3(g)+6NO(g)\rightarrow 5N_2(g)+6H_2O(g)
+\end{align*}
+
+We have one pure element ($N_2(g)$), so it requires 0 energy by default.
+
+So, we can plug them in
+
+\begin{align*}
+    \Delta_R H^{\circ}=\sum v\Delta H_f(prod)-\sum v\Delta H_f(rxt)
+\end{align*}
+
+\begin{align*}
+    =5(0kJmol^{-1})-5(241.8kJmol^{-1})+4(45.9kJmol^{-1})-6(91.3kJmol^{-1})=-1815.0kJmol^{-1}
+\end{align*}
+
+Because $\Delta H<0$, we have that the reaction is exothermic. So we can now calculate our internal energy of the reaction.
+
+\begin{align*}
+    \Delta U(reaction)=\Delta H(reaction)-\Delta nRT
+\end{align*}
+
+\begin{align*}
+    =(-1815.0)-1(8.314472jK^{-1}mol^{-1})(298.15K)=-1817.5kJmol^{-1}
+\end{align*}
+
+\subsection*{Obtaining $\Delta_f H^{\circ}$}
+
+\begin{itemize}
+    \item Direct method:: Only works for compounds that can be directly synthesized from their elements. This is not usually the case, so we have to use the indirect method.
+    \item Indirect method:: based on Hess' law
+    \begin{align*}
+        \Delta H_{overall}=\sum_{i=1}^{n}\Delta H_i
+    \end{align*}
+\end{itemize}
+
+\subsection*{Hess' law continued}
+
+For a multi step process, we can sum up reactions to calculate different values of $\Delta H^{\circ}$. Take the Haber process as an example::
+
+\begin{align*}
+    R: 2H_2(g)+N_2(g)\rightarrow 2NH_3|\Delta H_3=-92.2kJ\\
+    R_1: 2H_2(g)+N_2(g)\rightarrow N_2H_4(g)|\Delta H_1=?\\
+    R_2:N_2H_4(g)+H_2(g)\rightarrow 2NH_3(g)|\Delta H_2=-187.6kJ
+\end{align*}
+
+We can calculate $\Delta H_1$ from subtracting $\Delta H_3$ from $\Delta H_2$. So we get $\Delta H_1=95.4kJ$.\\
+
+When multiplying reactions by a factor, we also need to multiply their $\Delta H$ with the same factor.
+
+\subsection*{Bond enthalpies}
+For the dissocation of nitrogen and other gases, it has special meaning since there is only one bond.
+\begin{align*}
+    N_2(g)\rightarrow 2N(g)|\Delta_r H^{\circ}=941.4kJ
+\end{align*}
+
+This is really high because nitrogen gas is held together by a triple bond.\\
+
+For polyatomic moecules, there's more than one bond, so we can refer to it as \textbf{average bond enthalpy}.
+
+\begin{align*}
+    H_2O(g)\rightarrow \frac{1}{2}H_2(g)+OH(g)|\Delta _r H^{\circ}=502kJ\\
+    OH(g)\rightarrow O(g)+H(g)|\Delta_r H^{\circ}=427kJ
+\end{align*}
+
+$OH$ and $H_2O$ have the same elements, but the energy required to break them are different.
+
+\subsection*{Example 2 (slide 19)}
+
+Calculate the single bond enthalpy and energy for $Si-F$, given $\Delta H_f(SiF_4)=-1614.9 kJ/mol$
+
+\begin{align*}
+    R: Si(s)+2F_2(g)\rightarrow SiF_4(g)|\Delta H_f(SiF_4)=-1614.9 kJmol^{-1}\\
+    R_1: SiF_4\rightarrow Si(s)+2F_2(g)|\Delta H_r=1614.9kJmol^{-1}\\
+    R_2: 2F_2(g)\rightarrow 4F(g)|\Delta H_r=4(79.4)kJmol^{-1}\\
+    R_3: Si(s)\rightarrow Si(g)|\Delta H_r=450kJmol^{-1}
+\end{align*}
+
+So the final reaction is::
+
+\begin{align*}
+    R_f: SiF_4(g)\rightarrow Si(g)+4F(g)|\Delta H_r=2382.5kJmol^{-1}
+\end{align*}
+
+So average $Si-F$ bond enthalpy can be calculated::
+
+\begin{align*}
+    E[\Delta H]=\frac{2382.5}{4}=596kJmol^{-1}
+\end{align*}
+
+And we can calculate internal energy.
+
+\begin{align*}
+    E[\Delta U]=\Delta H-\Delta nRT=2382.5-4(8.314)(298.15)=2372.6kJmol^{-1}
+\end{align*}
+
+Dividing $\Delta U$ by 4, we have that average $Si-F$ bond energy is $593kJmol^{-1}$
+
+\subsection*{Dependence on temperature}
+
+What happens when $T\neq 298.15K$?
+
+\begin{align*}
+    H_T^{\circ}=H_{298.15K}^{\circ}+\int_{298.15K}^{T}C_P(T')dT'
+\end{align*}
+
+So we can say that for a reaction where elements are included::
+
+\begin{align*}
+    \Delta C_P(T')=\sum_{i}v_i C_{P,i}(T')
+\end{align*}
+
+\begin{align*}
+    \Delta_r H^{\circ}(T)=\Delta_r H^{\circ}(298.15K)+\int_{298.15K}^{T}\Delta C_P(T')dT' 
+\end{align*}
+
+\subsection*{Example 3 (slide 22)}
+Calculate $\Delta H_f^{\circ}$ for $NO(g)$ at $840K$ assuming that the heat
+capacities of reactants and products are constant over
+the temperature interval at their values at $298.15K$. $\Delta H_f$ for NO(g) at $298.16K=91.3kJmol^{-1}$\\ We can calculate $\Delta C_P$ first.
+
+\begin{align*}
+    \Delta C_P=C_P(NO(g))-\frac{1}{2}C_P(N_2(g))-\frac{1}{2}C_P(O_2(g))=29.86-\frac{1}{2}(29.13)-\frac{1}{2}(29.38)=0.605 JK^{-1}mol^{-1}
+\end{align*}
+
+Full solution is on the slide.
+
+\subsection*{Combustion}
+
+The general form of a combustion of carbohydrates 
+is::
+
+\begin{align*}
+    R_{comb}: C_x H_y+O_2(g)\rightarrow CO_2(g)+H_2O(l), x,y\in \mathbb{N}
+\end{align*}
+
+When number of moles is given, we can calculate the amount of heat released by multiplying $\Delta H_f^{\circ}$ by the number of moles since $\Delta H_f^{\circ}$ is for exactly 1 mole.
+
+\subsection*{Example 4}
+Calculate the amount of heat released when $3.76mol$ of
+$Ca(OH)_2$ are allowed to react.
+
+\begin{align*}
+    R: Ca(OH)_2+CO_2\rightarrow CaCO_3+H_2O|\Delta H=-69.1 kJ(nice!)
+\end{align*}
+
+\begin{align*}
+    \Delta H_r=-69.1(3.76)\approx -259.8kJ
+\end{align*}
+
+
 \end{document}
