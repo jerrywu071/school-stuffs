@@ -1,0 +1,96 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{EECS3101 notes::An introduction to dynamic programming}
+
+\author{Jerry Wu}
+\date{2023-02-16}
+
+\begin{document}
+\maketitle
+\chapter*{Dynamic programming}
+
+\rule{\textwidth}{0.4pt}
+You've probably heard of the term "dynamic programming" at least once or twice if you're a computer science student or a prospective software engineer, but what exactly does it mean? Let us start with a \textit{motivating} example.
+
+\subsection*{The fibonacci sequence}
+
+Take the recurrence relation for calculating the $n$th term of the fibonacci sequence::
+
+$F_n=\begin{cases}
+    0 & n=0\\
+    1 & n=1\\
+    F_{n-1}+F_{n-2} & n>1
+\end{cases}$
+
+What is the runtime of the code on slide 4? The naive implementation involves directly converting the recurrence relation to code. After drawing the recursion tree, we can see that the runtime of the code is $O(2^n)$, which is very inefficient. Why is this the case? This is because some sub problems overlap (i.e. $F_2$ being calculated twice, $F_5$ being calculate 3 times, etc). We want to eliminate these unnecessary calculations in order to optomize our solution.
+
+\subsection*{Memoization \& bottom up}
+We can use two techniques to implement dynamic programming. 
+
+\begin{quote}
+    \textit{"If you can solve it using a loop, you should avoid using recursion.-Larry YL Zhang 2023"}
+\end{quote}
+
+\begin{itemize}
+    \item Memoization entails using an external data structure to store the solution to subproblems in order to avoid redundant calculations. We're still using the original recursive solution for this technique. (\textit{slide 8})
+    \item Bottom up entails solving smaller subproblems first so their answers are ready when the larger subproblems will be calculated. This technique is iterative and uses an array/list to index subproblem solutions. (\textit{slide 9})
+\end{itemize}
+
+Dynamic programming is most frequently used to solve problems involving optomization, i.e. finding the $\max$ or $\min$ of something, and problems that involve overlapping subproblems (fibonacci). Of course, we can't use dynamic programming to solve every problem.
+
+\subsection*{Example 1:: Maximum sum with no adjacent items}
+
+
+Given an array of $n$ coins, with various positive values, pick a subset of the coins with the constraing that you're not allowed to pick two adjacent coins. What is the maximum ammount that you can collect?
+
+\begin{align*}
+   \xi_1=\{3,2,7,10\}|answer=13 (3+10)\\
+   \xi_2=\{3,2,5,10,7\}|answer=15(3+5+7)
+\end{align*}
+
+The greedy approach for $\xi_2$ isn't optimal (we didn't pick 10).
+
+\subsection*{The general idea}
+To devise a dynamic programming solution, we want to follow this formula::
+
+\begin{itemize}
+    \item Define your subproblems.
+    \item Find a recursive relationship between the solutions to subproblems, i.e. verify the optimal substructure (i.e. the optimal solution of a problem only depends on the optimal solution of a smaller subproblem) and base case.
+    \item Implement the solution either using memoization or bottom up (the latter is usually preferred for simplicity's sake).
+\end{itemize}
+
+So we can apply these steps to the question. What describes the size of the problem? Well that would be the total number of coins in the set.\\
+
+Define a subproblem as::
+
+\begin{align*}
+    \rho(i)=\max\{1<|coins|<i\}
+\end{align*}
+
+Create a recursive array definition for our answer such that::
+
+\begin{align*}
+    ans[i]=\max\{ans[i-1], A[i]+ans[i-2]\}
+\end{align*}
+
+The full code is on \textbf{slide 15}.\\
+\textbf{Dynamic programming will only work if the problem has an optimal substructure!}\\
+
+A good example of a problem with no optimal substructure is the longest simple path problem (slide 17)
+
+%\subsection*{Example 2:: Omtimization of itinerary}
+%\begin{itemize}
+%    \item We want to go from city 0 to n using buses. 
+%    \item The cost of going from city $i$ to $j$ is $C_{i,j}>0,\forall (i,j) (i<j)$
+%    \item All buses only go 
+%\end{itemize}
+
+
+\end{document}
