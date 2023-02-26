@@ -7,6 +7,8 @@
 \usepackage{blindtext}
 \usepackage{pgfplots}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\graphicspath{{/home/dimitri/Pictures}}
 
 \title{CHEM2011 office hours notes}
 \author{Jerry Wu}
@@ -19,10 +21,10 @@
 \subsection*{Terminology and cases}
 
 \begin{itemize}
-    \item \textbf{Isothermal} $\implies T\equiv const\implies w=-nRT\ln(\frac{V_2}{V_1})=-nRT\ln(\frac{P_1}{P_2})$
-    \item \textbf{Isobaric} $\implies P\equiv const\implies w=-P\Delta V$
-    \item \textbf{Isochoric} $\implies V\equiv const\implies w=0,\Delta U=q$
-    \item \textbf{Adiabatic} $\implies q=0\implies \Delta U=w\implies T_1P_1^{\frac{1-\gamma}{\gamma}}=T_2P_2^{\frac{1-\gamma}{\gamma}}$
+    \item \textbf{Isothermal} $\implies T\equiv const\implies q=-w=-nRT\ln(\frac{V_2}{V_1})=-nRT\ln(\frac{P_1}{P_2}), \Delta U=\Delta H=0$
+    \item \textbf{Isobaric} $\implies P\equiv const\implies w=P\Delta V, \Delta V>0\implies expansion, \Delta V<0\implies compression, \Delta H=q$
+    \item \textbf{Isochoric} $\implies V\equiv const\implies w=0,\Delta U=q, \Delta H=\Delta U+V\Delta P$
+    \item \textbf{Adiabatic} $\implies q=0\implies \Delta U=w\implies T_1P_1^{\frac{1-\gamma}{\gamma}}=T_2P_2^{\frac{1-\gamma}{\gamma}}, \Delta H=0$
 \end{itemize}
 
 \subsection*{Definition of a state function and constants}
@@ -34,8 +36,270 @@
     \end{align*}
     \item For monoatomic gases, $\bar{C_V}=\frac{3}{2}R$, $\bar{C_P}=\frac{5}{2}R$, $\gamma=\frac{\bar{C_P}}{C_V}=\frac{5}{3}$
     \item For diatomic gases (assume no vib.),$\bar{C_V}=\frac{5}{2}R$, $\bar{C_P}=\frac{7}{2}R$, $\gamma=\frac{\bar{C_P}}{C_V}=\frac{7}{5}$
+    \item The cyclic rule for enthalpy $H(T,P)$ is defined as the following::
+    \begin{align*}
+        \left(\frac{\partial H}{\partial P}\right)_T\left(\frac{\partial P}{\partial T}\right)_H\left(\frac{\partial T}{\partial H}\right)_P=-1
+    \end{align*}
 \end{itemize}
 
+\chapter*{Practice test questions}
 
+\subsection*{Question 1}
+
+\begin{itemize}
+    \item[a)] Briefly answer the following:
+        \begin{itemize}
+            \item[i)] Does Charles’ Law hold during a reversible adiabatic expansion or compression of an ideal gas?
+            Briefly explain your answer.\\
+
+            \textbf{Answer::} No, Charles' law will not hold for an adiabatic expansion because $P\equiv const$ must be true. In adiabatic expansion and compression, $\lnot P\equiv const$.
+
+            \item[ii)] (T/F) Dalton’s Law of partial pressure states that for unreactive gases, behaving ideally, the pressure exerted by one gas in a mixture is independent of the other gases in the mixture.\\
+            
+            \textbf{Answer::} This is true, because partial pressures in a gas mixture are independent of one another.
+
+            \item[iii)] (T/F) For real gases the ratio $\frac{PV}{RT}$ can be greater or smaller than one.
+            A positive deviation (meaning $\frac{PV}{RT} > 1$) is due to the molecules having
+            intermolecular forces and is quantified by the $a$ factor.\\
+
+            \textbf{Answer::} This is false. Looking at the Van der Waals equation, we can see that the $a$ value is in the numerator.
+
+            \item[iv)] (T/F) Non-ideal behavior in gases is more important at high temperature
+            and low pressure.
+
+            \textbf{Answer::} False
+
+            \item[v)] An ideal gas is taken around the cycle (a-b-c-a) shown in this $PV$–diagram. Process $b \rightarrow c$ is
+            isothermal. For the complete cycle, what are the signs of $q$, $w$ and $\Delta U$ positive, negative or zero?\\
+
+            \includegraphics*[scale=0.3]{pv}
+
+            \textbf{Answer::} The process is isothermal, so clearly $\Delta U=0$ must be immediately true. From here, we can look at the $PV$ diagram to determine the signs of $q$ and $w$. Here we can see that in process $b \rightarrow c$, pressure decreases as the volume increases. From this, we can say that $w<0$ due to the process being an expansion. So clearly $q>0$ must be true for the process as well.
+
+
+        \end{itemize}
+    \item[b)] The $PV$ diagram below can be used to represent the pressure dependence in a ventricle of
+    the human heart as a function of the volume of blood pumped. The systolic pressure, $P_s$, is $137
+    mmHg$, and the diastolic pressure $P_d$, is $81 mmHg$. If the volume of blood pumped in one heartbeat is $80 cm^3$, calculate the work done in one heartbeat.\\
+
+    \includegraphics*[scale=0.5]{heartrate}
+
+    \subsection*{Answer::}
+
+    \begin{align*}
+        w=-\int_{V_1}^{V_2}P_{ex}dV
+    \end{align*}
+
+    Since there is no curve, we can simply calculate work as the area of a rectangle and triangle for $P_s$ and $P_d$ respectively.
+
+    \begin{align*}
+        w_1=P_d(V_2-V_1)=(\frac{81 torr}{760torr})101325Pa(80E-6m^3-0)=0.8639J
+    \end{align*}
+
+    \begin{align*}
+        w_2=\frac{bh}{2}=\frac{(P_s-P_d)(V_2-V_1)}{2}=\frac{\frac{56torr}{760torr}101325Pa(80E-6m^3)}{2}=0.2986J
+    \end{align*}
+
+    Now we can add our values of work together for one heartbeat.
+
+    \begin{align*}
+        w=\sum_{\Omega}w_i=0.2986J+0.8639J=1.163J\approx 1.2J
+    \end{align*}
+
+    $\therefore$ each heartbeat does around 1.2J of work.
+\end{itemize}
+
+\subsection*{Question 2}
+
+\begin{itemize}
+    \item[a)] A $243.0g$ sample of Silicon ($Si$) in the \textbf{crystalline solid form} is heated from $300K$ to $425K$ at \textbf{constant pressure}. Over this temperature range, $C_{P,m}$ is given by the expression:
+    \begin{align*}
+        \frac{C_{P,m}}{JK^{-1}mol^{-1}}=-6.25+0.1681\frac{T}{K}-(3.437E-4)\frac{T^2}{K^2}
+    \end{align*}
+
+    Calculate $\Delta H$ and $q_P$.
+
+    \subsection*{Answer::}
+
+    Because we are given $C_{P,m}$ as a function of $T$, we can use the definition of $\Delta H$ for an ideal gas.
+
+    \begin{align*}
+        \forall g\in \mathbb{C}, \Delta H=n\int_{T_1}^{T_2}C_{P,m}dT
+    \end{align*}
+
+    \begin{align*}
+        \Delta H=\frac{243.0g}{28.0855gmol^{-1}}\int_{300K}^{425K}\left(-6.25+0.1681\frac{T}{K}-(3.437E-4)\frac{T^2}{K^2}\right)dT
+    \end{align*}
+
+    Integrating the polynomial with respect to T, we have that::
+
+    \begin{align*}
+        \Delta H=\frac{243.0g}{28.0855gmol^{-1}}\left(-6.25T+\frac{0.1681}{2}T^2-\frac{3.437E-4}{3}T^3\right)
+    \end{align*}
+    
+    So now, we can plug in our values of $T_2$ and $T_1$ to calculate our $\Delta H$.
+
+    \begin{align*}
+        \Delta H=\frac{243.0g}{28.0855gmol^{-1}}\times
+    \end{align*}
+
+    \begin{align*}
+        \left(-6.25(425-300)+\frac{0.1681}{2}(425^2-300^2)-\frac{3.437E-4}{3}(425^3-300^3)\right)
+    \end{align*}
+    
+    After a long and tedious calculation, we have found our value for $\Delta H$
+
+    \begin{align*}
+        \Delta H=8.652(-781.25+7617-5701.5)=9814J\approx 9.81kJ
+    \end{align*}
+
+    We do not have to calculate $q_P$, because $P\equiv const\implies \Delta H=q_P$
+
+    \item[b)] How large is the relative error in $\Delta H$ if we assume that $C_{P,m}$ is a constant at $300K$ and that
+    $C_{P,m}$ remains constant for temperature interval considered in part (a)?
+
+    \subsection*{Answer::}
+
+    We can simply evaluate $C_{P,m}(T=300K)$ to find our $\Delta H$ when temperature is constant.
+
+    \begin{align*}
+        C_{P,m}(300)=-6.25+0.1681(300)-(3.437E-4)(300)=13.247JK^{-1}mol^{-1}
+    \end{align*}
+
+    \begin{align*}
+        \Delta H=nC_{P,m}\Delta T=\frac{243.0g}{28.0855gmol^{-1}}13.247(425-300)=14.3kJ
+    \end{align*}
+
+    So now we can calculate relative error.
+
+    \begin{align*}
+        \%Err_{relative}=\frac{9.81-14.3}{9.81}\times 100\%\approx \pm 46\%
+    \end{align*}
+
+    \item[c)] For the process described in part (a) calculate $\Delta U$.
+    \subsection*{Answer::}
+    A calculation is not required for this section. This is because $\forall solids, \Delta U\approx \Delta H$
+\end{itemize}
+
+\subsection*{Question 3}
+
+A sample of \textbf{two moles} of an \textbf{ideal diatomic gas} is initially at \textbf{T = 290K} and at a pressure of \textbf{10.0 bar}.
+
+\begin{itemize}
+    \item[a)]The gas then undergoes a \textbf{reversible adiabatic expansion} to a final pressure of $1.50bar$. Calculate $T_f$, $q$, $w$, $\Delta U$, and $\Delta H$.
+    
+    \subsection*{Answer::}
+    First off, the process is an adiabatic expansion, so clearly $q=0$.\\
+
+    For diatomic gas molecules, we have the following heat capacities an constants::
+    \begin{align*}
+        C_{P,m}=\frac{7}{2}R,C_{V,m}=\frac{5}{2}R,\gamma=\frac{7}{5}
+    \end{align*}
+
+    We can use the following equation to find the value of $T_2$.
+
+    \begin{align*}
+        T_1P_1^{\frac{1-\gamma}{\gamma}}=T_2P_2^{\frac{1-\gamma}{\gamma}}\implies T_2=\frac{T_1P_1^{\frac{1-\gamma}{\gamma}}}{P_2^{\frac{1-\gamma}{\gamma}}}=T_1\left(\frac{P_1}{P_2}\right)^{\frac{1-\gamma}{\gamma}}=290\left(\frac{10}{1.5}\right)^{\frac{1-\frac{7}{5}}{\frac{7}{5}}}=169K
+    \end{align*}
+
+    From here, our job is to find the values of $\Delta U$ and $\Delta H$, since we know that $\Delta U=w$ in an adiabatic process.
+
+    \begin{align*}
+        \Delta U=w=C_V(T_2-T_1)=\frac{5}{2}\left(8.314\frac{J}{Kmol}\right)(2mol)(169-290)\approx -5.03kJ
+    \end{align*}
+
+    \begin{align*}
+        \Delta H=C_P(T_2-T_1)=\frac{7}{2}\left(8.314\frac{J}{Kmol}\right)(2mol)(169-290)\approx -7.04kJ
+    \end{align*}
+
+    \item[b)] In a second experiment, the gas sample is found at the same initial conditions, but it
+    expands to a \textbf{final pressure} of $1.50bar$ during an \textbf{irreversible adiabatic expansion} against a \textbf{constant pressure} of $1.50bar$, calculate the final temperature and the work done in that process.
+
+    \subsection*{Answer::}
+
+    To find $T_2$, we can apply the following formula and rearrange as needed::
+
+    \begin{align*}
+        nC_{V,m}(T_2-T_1)=-P_{ext}(V_2-V_1)\implies nC_{V,m}=-P_{ext}\left(\frac{nRT_2}{P_2}-\frac{nRT_1}{P_1}\right)
+    \end{align*}
+
+    Rearranging the equation, we have that
+
+    \begin{align*}
+        \left(C_{V,m}+\frac{RP_{ext}}{P_2}\right)T_2=\left(C_{V,m}+\frac{RP_{ext}}{P_1}\right)T_1\implies T_2=\frac{\left(C_{V,m}+\frac{RP_{ext}}{P_1}\right)T_1}{\left(C_{V,m}+\frac{RP_{ext}}{P_2}\right)}
+    \end{align*}
+
+    \begin{align*}
+        T_2=\frac{\left(\frac{5}{2}+\frac{1.5bar}{10.0bar}\right)}{\left(\frac{5}{2}+\frac{1.5bar}{1.5bar}\right)}(290K)\approx 220K
+    \end{align*}
+
+    Here, $P_2=P_{ext}$ because the process is an irreversible expansion.\\Finally, we calculate our $\Delta U$.
+
+    \begin{align*}
+        \Delta U=w=C_V(T_2-T_1)=\frac{5}{2}(8.314 JK^{-1}mol^{-1})(2mol)(220K-290K)\approx -2.91 kJ
+    \end{align*}
+
+    \item[c)] On the same PV diagram, sketch the work that was done in a) as well as in b). Clearly label the area that corresponds to each of the processes. Who did the work in a) and b) the system or the surroundings?\\
+    \includegraphics*[scale=0.5]{graph}
+
+    Since $w<0$ for both a) and b), we can conclude that work is done by the surroundings.
+    
+\end{itemize}
+
+\subsection*{Question 4}
+
+\begin{itemize}
+    \item[a)]Enthalpy ($H$) is a state function and $dH$ is an exact differential. Write an expression for the full differential expression of $dH$ illustrating the dependence of enthalpy on $P$ and $T$.
+    
+    \subsection*{Answer::}
+
+    The full differential can be expressed as the following sum of partial derivatives::
+
+    \begin{align*}
+        dH=\left(\frac{\partial H}{\partial T}\right)_P dT+\left(\frac{\partial H}{\partial P}\right)_T dP
+    \end{align*}
+
+    \item[b)] Write the cyclic rule expression for $H(T, P)$
+    \subsection*{Answer::}
+
+    \begin{align*}
+        \left(\frac{\partial H}{\partial P}\right)_T\left(\frac{\partial P}{\partial T}\right)_H\left(\frac{\partial T}{\partial H}\right)_P=-1
+    \end{align*}
+
+    \item[c)] Prove that $\forall g\in \mathbb{C}, \left(\frac{\partial H}{\partial P}\right)_T=0$
+    \subsection*{Answer::}
+    We can begin by using the following identity::
+    \begin{align*}
+        \left(\frac{\partial H}{\partial P}\right)_T=T\left(\frac{\partial P}{\partial T}\right)_V\left(\frac{\partial V}{\partial P}\right)_T+V
+    \end{align*}
+
+    We can substitute $P=\frac{nRT}{V}$ and $V=\frac{nRT}{P}$ to differentiate.
+
+    \begin{align*}
+        \left(\frac{\partial P}{\partial T}\right)_V=\left(\frac{\partial\left(\frac{nRT}{V}\right)}{\partial T}\right)_V=\frac{nR}{V}\\
+    \end{align*}
+
+    \begin{align*}
+        \left(\frac{\partial V}{\partial P}\right)_T=\left(\frac{\partial\left(\frac{nRT}{P}\right)}{\partial P}\right)_T=-\frac{1}{P^2}nRT=-\frac{nRT}{P^2}
+    \end{align*}
+
+    So now, we can substitute these values back into the original equation.
+
+    \begin{align*}
+        \left(\frac{\partial H}{\partial P}\right)_T=T\left(\frac{\partial P}{\partial T}\right)_V\left(\frac{\partial V}{\partial P}\right)_T+V=T\frac{nR}{V}\left(-\frac{nRT}{P^2}\right)+V=0\blacksquare
+    \end{align*}
+    
+
+    \item[d)]The potential energy of interaction of two molecules or atoms is shown in the figure below
+    (as a function of their separation, r). On the diagram, indicate where there is i) no interaction, ii)
+    attraction, iii) repulsion between gas molecules.
+
+    \subsection*{Answer::}
+
+    \includegraphics*[scale=0.75]{graph2}
+
+    iv) $\forall g\in \mathbb{R}, \left(\frac{\partial H}{\partial P}\right)_T=-C_P\mu_{J-T}$. In which region is $\left(\frac{\partial H}{\partial P}\right)_T>0$ for real gases?\\
+    \textbf{Answer::} The repulsive region.
+\end{itemize}
 
 \end{document}
