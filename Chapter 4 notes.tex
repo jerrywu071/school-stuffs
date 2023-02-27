@@ -318,4 +318,70 @@ So for molar enthalpy, we simply divide by number of moles.
 
 It's just bio stuff. Don't worry about it.
 
+\chapter*{Practice problems (tutorial)}
+
+\subsection*{Question 1}
+
+Benzoic acid ($C_6H_5COOH$), $1.35 g$, is reacted with oxygen in a constant volume calorimeter to form
+$H_2O(l)$ and $CO_2(g)$. The mass of the water in the inner bath is $1.240\times 10^3 g$. The temperature of the
+calorimeter and its content rise $3.45 K$ as a result of this reaction. Calculate the calorimeter constant.
+Note that the standard enthalpy of combustion of benzoic acid ($298 K$) is $-3228.0 kJ mol-1$
+
+First, we need to balance our equation.
+
+\begin{align*}
+    2C_6H_5COOH(aq)+\frac{15}{2}O_2(g)\rightarrow 7CO_2(g)+3H_2O(l)
+\end{align*}
+
+Because $V\equiv const$, we have that $\Delta U=q_{rxn}$. To find $\Delta U$, we need to use $\Delta H$.
+
+\begin{align*}
+    \Delta U=\Delta H-\Delta nRT=-3228.0-(7-7.5)\left(\frac{8.314}{1000}\right)(298K)=-3226.8 \frac{kJ}{mol}
+\end{align*}
+
+So to calculate the calorimeter constant, 
+
+\begin{align*}
+    q_{rxn}=n\Delta U_{rxn}=-35.72kJ=-q_{surr}
+\end{align*}
+
+\begin{align*}
+    q_{surr}=q_w+q_{cal}=m_w C_w \Delta T+C_{cal}\Delta T=35720J
+\end{align*}
+
+After plugging in our values and isolating for $C_{cal}$, we find that $C_{cal}=-322.8\frac{kJ}{mol}$
+\newpage
+\subsection*{Question 2}
+
+Under anaerobic conditions, glucose is broken down in muscle tissue to form lactic acid according to the reaction $C_6H_{12}O_6\rightarrow 2CH_3CHOHCOOH$.
+The standard enthalpy of formation ($T = 298 K$) for glucose and lactic acid are $-1273.1 kJ mol^{-1}$ and $-673.6 kJ mol^{-1}$;
+and the $C_P$ are $219.2 J/K mol$ and $127.6 J/k mol$, respectively. Calculate the enthalpy of reaction when $5 g$ of
+glucose react at $330 K$ assuming the change in heat capacity of the reaction is negligible.
+
+\begin{align*}
+    \Delta H_r=2(-673.6)-(-1273.1)=-74.1\frac{kJ}{mol}|T=298K
+\end{align*}
+
+We need $\Delta C_P$ to ind $\Delta H_r$ at $330K$.
+
+\begin{align*}
+    \Delta C_P(2(127.6)-219.2)=36\frac{J}{Kmol}
+\end{align*}
+
+So,
+
+\begin{align*}
+    \Delta H_{320K}=\Delta H_{298K}+\int_{298}^{330}C_P dt=74100+(36)(320-298)=-72948\frac{J}{mol}
+\end{align*}
+
+Scaling to 5 grams, we have that
+
+\begin{align*}
+    \frac{5}{180}(-72948)=2.03kJ
+\end{align*}
+
+\subsection*{Question 3}
+
+
+
 \end{document}
