@@ -10,7 +10,7 @@
 
 \title{Chapter 4:: Thermochemistry}
 
-\author{Jerry Wu (217545898)}
+\author{Jerry Wu}
 
 \date{\today}
 
@@ -231,5 +231,91 @@ $Ca(OH)_2$ are allowed to react.
     \Delta H_r=-69.1(3.76)\approx -259.8kJ
 \end{align*}
 
+\subsection*{Calorimetry with constant volume (applications)}
+
+We obtain the heat exchange of a reaction indirectly through means of a calorimeter.
+
+\begin{align*}
+    q_{rxn}=-q_{calorimeter}
+\end{align*}
+
+\begin{itemize}
+    \item In a constant volume scenario (bomb calorimetry), we have that $q_v=\Delta U$
+    \item In a constant pressure scenario, we have that $q_P=\Delta U+P\Delta V$
+\end{itemize}
+
+Consider a system $\Sigma$ where $\Sigma$ contains reactants in the calorimeter, an inner water bath, and a calorimeter vessel (by itself without the water in it). We can model this system's internal energy with the following equation::
+
+\begin{align*}
+    \Delta U_{\Sigma}=\frac{m_S}{M_S}\Delta_C U+\frac{m_{H_2O}}{M_{H_2O}}C_{P,m}(H_2O,l)\Delta T+C_{cal}\Delta T=0
+\end{align*}
+
+We have to know the following to use this model::
+
+\begin{itemize}
+    \item mass and molar mass of sample
+    \item mass and heat capacity of water
+    \item heat capacity of calorimeter (determined via separate experiment)
+\end{itemize}
+
+We also wish to measure $\Delta T$ whereby we can measure $\Delta U$.
+
+\subsection*{Example}
+The dipeptide glycylglycine ($C_4H_8O_3N_2$) has a standard enthalpy of combustion of $-1969 kJ mol^{-1}$. Calculate $q$, $w$, $\Delta U$, and $\Delta H$ when $10.0 g$ of glycine are burned at $T = 298 K$ and a constant pressure of $1.00 bar$. Assume the
+combustion products are \textbf{carbon dioxide gas, nitrogen gas, and liquid water}.
+
+Our reaction is the following::
+
+\begin{align*}
+    R: C_4H_8O_3N_2(s)+\frac{9}{2}O_2(g)\rightarrow N_2(g)+4CO_2(g)+4H_2O(l), n(C_4H_8O_3N_2)=0.0757
+\end{align*}
+
+
+\begin{align*}
+    \Delta H_{comb}=_{comb}=\frac{(-1969)(10)}{132.12}=-149.0kJ
+\end{align*}
+
+\begin{align*}
+    \Delta U_{comb}=\Delta H{comb}-\Delta nRT=-149.12kJ
+\end{align*}
+
+\begin{align*}
+    w_{comb}=-p_{ext}\Delta V=-RT\Delta n=-93.78J
+\end{align*}
+
+
+\subsection*{Constant presure calorimetry}
+
+For an isobaric system $\Sigma$, we are mainly concerned about the change in enthalpy of the system.
+
+\begin{align*}
+    \Delta H_\Sigma^{\circ}=\frac{m_S}{M_s}\Delta_s H^{\circ}+\frac{m_{H_2O}}{M_{H_2O}}C_{P,m}(H_2O,l)\Delta T+C_{cal}\Delta T=0
+\end{align*}
+
+\subsection*{Example}
+
+In a constant pressure calorimeter, $33.3 mL$ of $0.100 M$ $AgNO_3$ is mixed with $33.3 mL$ of $0.100 M HCl$. The
+reaction $Ag^+(aq) + Cl^-(aq)$ takes place. The temperature of the reactants was $25.60 ^{\circ}C$ and the final temperature is
+$26.47^{\circ}C$. Calculate the molar enthalpy change for this reaction.\\
+
+First, we can calculate the moles of $AgNO_3$
+
+\begin{align*}
+n(AgNO_3)=n(HCl)=(0.0333L)(0.100M)=0.0033 mol
+\end{align*}
+
+\begin{align*}
+    q=m_S C_S\Delta T=2(33.3)(4.18)(26.47-25.6)=242.2J\implies q_{rxn}=-242.2J
+\end{align*}
+
+So for molar enthalpy, we simply divide by number of moles.
+
+\begin{align*}
+    \Delta H_{rxn}=\frac{-242.2}{0.00333}=-72.7\frac{kJ}{mol}
+\end{align*}
+
+\subsection*{Differential scanning calorimetry}
+
+It's just bio stuff. Don't worry about it.
 
 \end{document}
