@@ -1,0 +1,90 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage{pgfplots}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{Chapter 5:: The 2nd law of thermodynamics}
+
+\author{Jerry Wu}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\chapter*{Entropy}
+
+\subsection*{Abstract}
+
+Entropy is a measure of the degree of disorder/randomness in an arbitrary system. We can use this concept to discuss matters such as spontaneous and non spontaneous processes.
+
+\subsection*{Spontaneous \& non spontaneous processes}
+
+A spontaneous change is one that occurs without a continuous input of energy from an outside system. A good example would be gravitational potential. We can increase the rate of a spontaneous process by introducing a catalyst to the system. \textbf{A spontaneous process is not always fast}.\\Non spontaneous processes aren't impossible, but they require input of external energy or a \textbf{more spontaneous} reaction to proceed.
+
+\subsection*{Example}
+
+A good example of an impossible spontaneous process is a ball starting to bounce on a surface spontaneously. This would require all particles under it (approx $6.02E23$ particles) to start vibrating in the same direction at the same time. The chance of this being possible is basically 0.
+
+\subsection*{Estimating spontaneity}
+
+The first law of thermodynamics accounts for energy in a system, but it does not predict the spontaneity of the energy transfer involved. We will use entropy to do this. A process is spontaneous if and only if $\Delta S>0$.
+
+\subsection*{Entropy as a state function}
+
+Entropy is a measure of how dispersed the energy of a system is (in units of $\frac{J}{K}$). We can start with this property::
+
+\begin{align*}
+    \Delta S_{\Omega}=\Delta S_{\sigma}+\Delta S_{\bar{\sigma}}
+\end{align*}
+
+Where $\Omega$ is the universe, $\sigma$ is an arbitrary system, and $\bar{\sigma}$ is the surroundings.
+
+To calculate the absolute entropy of a system, the following formula is used::
+
+\begin{align*}
+    S=k_b\ln(W)\implies \Delta S=k_b(\ln(W_0)-\ln(W_1))
+\end{align*}
+
+Where $k_b=1.38E-23 \frac{J}{K}$ is the boltzman constant, and $W=2^n$ is the number of possible arrangements of position and energy of all molecules in the system (microstates) for $n\in \mathbb{N}$ particles. The macrostate with the \textbf{highest entropy} also has the \textbf{greatest dispersal of energy}.
+
+\subsection*{Multiplicity of energy}
+
+Assume we have a hypothetical solid system with four atoms and a total energy of $E$. How many ways can we distribute that energy among the 4 atoms? Clearly there are 4 ways to distribute 1 unit of energy among 4 atoms because the system is small. However, if there are $N$ atoms, and total energy is $qE$, then the number of microstates is modelled by the following formula::
+
+\begin{align*}
+    W(N,q)=\frac{(q+N-1)!}{q!(N-1)!}
+\end{align*}
+
+\subsection*{Bringing it all together}
+
+A hot and a cold bar, each made up of 4
+atoms, are pushed together. What will
+happen? If the cold bar has 1 quantum of energy
+and the hot bar has 5 quanta of energy in
+the initial state, show that heat transfer is
+spontaneous by calculating $\Delta S_{\Omega}$ for
+the process.
+
+We can start by calculating the combinations of microstates for each process. %to finish later
+
+\subsection*{Entropy at the molecular level}
+
+In any system, when $T$ increases, $S$ will also increase proportionally with it. This makes sense because the faster the particles move, the more disorder there is in the system overall.
+
+\subsection*{Statistical definition of entropy}
+
+We can model the change in entropy of a system between two states with the following formula::
+
+\begin{align*}
+    \Delta S=S_2-S_1=k_b\ln(\frac{W_2}{W_1})
+\end{align*}
+
+This is possible since entropy is a state function.
+
+\end{document}
