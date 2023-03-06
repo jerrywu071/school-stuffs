@@ -87,4 +87,239 @@ We can model the change in entropy of a system between two states with the follo
 
 This is possible since entropy is a state function.
 
+\subsection*{Entropy change due to mixing of ideal gases}
+
+Assume that mixing two ideal gases will sum up their entropies::
+
+\begin{align*}
+    \Delta S_{mix}=\Delta S_A + \Delta S_B=n_A R\ln\left(\frac{V_A+V_B}{V_A}\right)+ n_B R\ln\left(\frac{V_A+V_B}{V_B}\right)
+\end{align*}
+
+By Avogadro's law, $T\equiv const \land P\equiv const\implies V \propto n$, so,
+
+\begin{align*}
+    \Delta S_{mix}=n_A R\ln\left(\frac{n_A+n_B}{n_A}\right)+n_B R\ln\left(\frac{n_A+n_B}{n_B}\right)
+\end{align*}
+
+Using the laws of logarithms, we have that::
+
+\begin{align*}
+    \Delta S_{mix}=-n_A R\ln\left(\frac{n_A}{n_A+n_B}\right)-n_B R\ln\left(\frac{n_B}{n_A+n_B}\right)
+\end{align*}
+
+Further simplifying the expression, we get::
+
+\begin{align*}
+    \Delta S_{mix}=-R(n_A\ln(\chi_A)+n_B\ln(\chi_B))
+\end{align*}
+
+Recall that $\chi_{\xi}<1\forall \xi\in U$
+
+\subsection*{Isothermal expansion of an ideal gas}
+
+To calculate change in entropy for a process like this, we use::
+
+\begin{align*}
+    \Delta S=nR\ln(\frac{V_2}{V_1})
+\end{align*}
+
+Heat absorbed by the expansion is given by::
+
+\begin{align*}
+    q_{rev}=nRT\ln\left(\frac{V_2}{V_1}\right)
+\end{align*}
+
+So we have that::
+
+\begin{align*}
+    \frac{q_{rev}}{T}=nR\ln\left(\frac{V_2}{V_1}\right)\implies \Delta S=\frac{q_{rev}}{T}
+\end{align*}
+
+\subsection*{Example}
+One mole of $N_2$ at $20.5^{\circ}C$ and $6.00 bar$ undergoes a transformation to the state described by $145^{\circ}C$ and $2.75 bar$. Calculate $\Delta S$ if
+
+\begin{align*}
+    C_{P,m}(T)=30.81-(11.87E-3)T+(2.3968E-5)T^2-(1.0176E-8)T^3
+\end{align*}
+
+We can invoke the formula::
+
+\begin{align*}
+    \Delta S=-nR\ln(\frac{P_2}{P_1})+n\int_{T_1}^{T_2}\frac{C_{P,m}(T)}{T}dT
+\end{align*}
+
+\begin{align*}
+    =\int_{293.65}^{418.15}\frac{30.81}{T}-(11.87E-3)+(2.3968E-5)T-(1.0176E-8)T^2
+\end{align*}
+
+After integrating each term and some calculations, we have that::
+
+\begin{align*}
+    6.48+\left[30.81\ln(T)-(11.87E-3)T+\frac{2.3969E-5}{2}T^2-\frac{1.0176E-8}{3}T^3\right]_{293.65}^{418.15}\approx 16.8JK^{-1}
+\end{align*}
+
+\subsection*{The 2nd law of thermodynamics}
+
+Any system $\sigma$ is significantly smaller than the surroundings. We can consider the surroundings $\sigma ^{-1}$ is an infinitely large reservoir. Thus, we can say::
+
+\begin{align*}
+    dq_{surr, rev}=dq_{surr, irrev}=dq_{surr}
+\end{align*}
+
+Since entropy is a state function, we can express change in entropy in the surroundings as the ratio::
+
+\begin{align*}
+    \Delta S_{surr}=\frac{q_{surr}}{T_{surr}}
+\end{align*}
+
+Consider the isothermal expansion of an ideal gas. Heat absorbed by the system is just $q_{sys}=nRT\ln\left(\frac{V_2}{V_1}\right)\implies q_{surr}=-nRT\ln\left(\frac{V_2}{V_1}\right)$. So for a \textbf{reversible} process, 
+
+\begin{align*}
+    \Delta S_{\Omega}=nR\ln\left(\frac{V_2}{V_1}\right)+\left[-nR\ln\left(\frac{V_2}{V_1}\right)\right]=0
+\end{align*}
+
+For an irreversible process (i.e. a gas expanding into a vacuum),
+
+\begin{align*}
+    \Delta S_{sys}=nR\ln\left(\frac{V_2}{V_1}\right)
+\end{align*}
+
+\subsection*{Cases (IMPORTANT)}
+
+\begin{itemize}
+    \item For a reversible process, $\Delta S_{\Omega}=0$
+    \item For an irreversible process, $\Delta S_{\Omega}>0$
+    \item Overall, $\Delta S_{\Omega}\geq 0$
+\end{itemize}
+
+\subsection*{Example}
+
+One mole of an ideal gas at $25^{\circ}C$ is allowed to expand adiabatically
+and irreversibly from $1L$ to $10 L$ with no work done. What is the final
+temperature of the gas? Calculate the values of $\Delta S_{sys}, \Delta S_{surr}$ and $\Delta S_{univ}$.
+
+We know that $q=0\land w=0\implies \Delta U=0$ in this system. So we can use the formula to calculate.
+
+\begin{align*}
+    \Delta S_{sys}=nR\ln\left(\frac{V_2}{V_1}\right)
+\end{align*}
+
+\begin{align*}
+    \Delta S_{sys}=(8.3145)\ln\left(\frac{10}{1}\right)=19.1JK^{-1}mol^{-1}
+\end{align*}
+
+\begin{align*}
+    q=0\implies\Delta S_{surr}=0\implies \Delta S_{\Omega}=19.1JK^{-1}mol^{-1}\implies R\equiv spont.
+\end{align*}
+
+\subsection*{Entropy change due to phase transitions}
+
+\begin{itemize}
+    \item In general, $\Delta_{vap} S^{\circ}>\Delta_{fus} S^{\circ}$ for the same substance.
+    \item Solid to liquid transitions result in relatively small increase in entropy.
+    \item Arrangements of molecules in gaseous state is completely random, implying larger increase in entropy from liquid to gas.
+\end{itemize}
+
+The molar entropy for oxygen gas ($O_2$) is shown on \textbf{slide 52}. We can see that phase changes have a large vertical jump on the entropy axis.\\
+
+We can model the entropy change of the system during a phase change as the following equation::
+
+\begin{align*}
+    \Delta S_{sys}=\frac{\Delta H_{trans}}{T_{trans}}\implies \Delta S_{surr}=-\frac{\Delta H_{trans}}{T_{trans}}
+\end{align*}
+
+So at a phase transition, $\Delta S_{\Omega}=0$
+
+For temperature dependence, we can model entropy change as::
+
+\begin{align*}
+    \Delta S=n\bar{C_P}\ln\left(\frac{T_2}{T_1}\right)
+\end{align*}
+
+To find total entropy change of water over an interval of temperature with 1 phase change (liquid to gas), we can say::
+
+\begin{align*}
+    \Delta S_{\Omega}=\sum_{S\in \Omega} \Delta S_i=C_P(H_2O(l))\ln\left(\frac{T_2}{T_1}\right)+\frac{\Delta H_{trans}}{T_2}+C_P(H_2O(g))\ln\left(\frac{T_3}{T_2}\right)
+\end{align*}
+
+\subsection*{The 3rd law of thermodynamics}
+
+In essence, the entropy of a perfect crystal at $0K$ is 0. This law gives us the basis in calculating absolute entropies.
+
+\subsection*{Proof}
+
+$\exists$ \textbf{exactly one} microstate at $T=0K$, so $W=1^{6.02E23}=1$. So $S=k_b\ln(W)=k_b\ln(1)=0\blacksquare$
+
+We can also express heat capacities and entropy of a perfect crystal as the following limits::
+
+\begin{align*}
+    \lim_{T\rightarrow 0}S=0, \lim_{T\rightarrow 0} C_P=0, \lim_{T\rightarrow 0} C_V=0
+\end{align*}
+
+We have never reached $0K$. The world record for lowest temperature is $100pK$.
+
+\subsection*{Absolute entropy}
+Assume that the following holds::
+\begin{align*}
+    q_{rev,P}=C_P dT
+\end{align*}
+
+Therefore at $298K$,
+
+\begin{align*}
+    S_{gas}(T)=S(0K)+\int_{0}^{T_{fus}}\frac{C_{P,sol}}{T} dT+\frac{\Delta H_{fus}}{T_{fus}}+\int_{T_{fus}}^{T_{boil}}\frac{C_{P,liq}}{T} dT+\frac{\Delta H_{vap}}{T_{boil}}+\int_{T_{boil}}^{T_{f}}\frac{C_{P,gas}}{T}dT
+\end{align*}
+
+If not at $298K$,
+
+\begin{align*}
+    \Delta S^T=\Delta S_{298.15K}+\int_{298.15}^{T}\frac{n\Delta C_p}{T}dT=\Delta S_{298.15K}+nC_P\ln\left(\frac{T}{298.15}\right)
+\end{align*}
+
+\subsection*{Entropy changes for chemical reactions}
+
+Simply invoke Hess' law for entropy.
+
+\begin{align*}
+    \Delta S_r=\sum v_p S_{p}-\sum v_r S_r
+\end{align*}
+
+\subsection*{Example}
+
+If a spark is applied to a mixture of $H_2(g)$ and $O_2(g)$, an explosion occurs and
+water is formed. The gaseous water is cooled to $100^{\circ}C$. Calculate the entropy
+change when $2 mol$ of gaseous $H_2O$ is formed at $100^{\circ}C$ and $1 atm$ from $H_2(g)$
+and $O_2(g)$ at the same temperature and each at a particular pressure of $1 atm$.
+
+\begin{align*}
+    R:2H_2(g)+O_2(g)\rightarrow2H_2O(g)
+\end{align*}
+
+\begin{align*}
+    \Delta S(25^{\circ}C)=2\bar{S}_{H_2O(g)}-\bar{S}_{O_2(g)}-2\bar{S}_{H_2(g)}
+\end{align*}
+
+\begin{align*}
+    =2(188.72)-205.04-2(130.57)=-88.74\frac{J}{K}
+\end{align*}
+In order to find $\Delta S$ at $100^{\circ}C, 1atm$, we need to know the heat capacities of the reactants and products from the table.
+
+\begin{align*}
+    \Delta C_P(25^{\circ}C)=2\bar{C_P}(H_2O(g))\bar{C_P}(O_2(g))-2\bar{C_P}(H_2(g))
+\end{align*}
+
+\begin{align*}
+    =2(33.6)-29.4-2(28.8)=-19.8\frac{J}{K}
+\end{align*}
+
+\begin{align*}
+    \Delta S(100^{\circ}C)=\Delta S(25^{\circ}C)+\int_{298}^{373}\frac{\Delta C_P}{T} dT
+\end{align*}
+
+\begin{align*}
+    -88.74\frac{J}{K}-19.8\ln\left(\frac{373}{298}\right)=-93.18\frac{J}{K}
+\end{align*}
+
+
+
 \end{document}
