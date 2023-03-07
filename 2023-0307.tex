@@ -1,0 +1,191 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS3101 notes::Dynamic programming examples part 2}
+
+\author{Jerry Wu}
+
+\date{2023-03-07}
+
+\begin{document}
+\maketitle
+
+\chapter*{More practice on dynamic programming}
+
+\subsection*{How to prove optimal substructure}
+
+Consider a subproblem $A$ that is composed of subproblems $B_1,B_2,\ldots,B_n$ where $n\in \mathbb{N}$. \textbf{Optimal substruction} means that an optimal solution to problem $A$ is expressed with \textbf{only optimal solutions} of $B_1,B_2,\ldots,B_n$.\\
+The \textbf{cut and paste argument} entails the following::
+
+\begin{itemize}
+    \item \textbf{Proof by contradiction::} Suppose that a solution to $A$ can be expressed with a \textbf{sub optimal} solution to subproblem $B$.
+    \item We can "cut out" said solution , then "paste in" the optimal solution to $B$ in order to construct a solution to $A$ that is \textbf{valid and more optimal} than the optimal sulution. Clearly this is a contradiction.
+\end{itemize}
+
+\subsection*{Matrix chain multiplication}
+
+Recall that if we multiply matrices $A_i\ldots A_k\ldots A_j$, we only need to know the optimal solutions from multiplying $A_i$ $A_k$ and $A_k$ to $A_j$, where $k\in(i,j)\subset\mathbb{N}$.
+
+\begin{align*}
+    OPT(i,j)=\lnot OPT(i,k)+OPT(k,j)
+\end{align*}
+The proof is trivial because we can simply remove the $\lnot OPT(i,k)$ and replace it with $OPT(i,k)$ by way of common sense, because there is \textbf{always a more optimal solution} than something that is not optimal.
+\newpage
+\subsection*{Two array maximum sum}
+
+\begin{quote}
+    \textit{"Good job catching my mistakes"-Larry YL Zhang 2023}
+\end{quote}
+
+Given two arrays of coins of varying positive values (i.e. $A[0\ldots n-1]$ and $B[0\ldots n-1]$), we select coins such that::
+\begin{itemize}
+    \item No two coins are adjacent in the same array
+    \item No two coins are from the same index
+    \item The sum of the selected coins is maximized.
+\end{itemize}
+
+Example::
+
+\begin{itemize}
+    \item $A=\left[9,3,2,7,3\right]$
+    \item $B=\left[5,8,1,4,5\right]$
+\end{itemize}
+
+What would be the optimal solution in this case?
+
+\subsection*{Solution}
+
+\begin{quote}
+    \textit{"This motivates us to find a more refined solution"-Larry YL Zhang 2023}
+\end{quote}
+
+Our first job is to identify the sub problems of our main problem. Let us take the first $i$ elements of both arrays. We can start by finding $ans[i]=\max\{A[0\ldots i]\}$ and $\max\{B[0\ldots i]\}$. So can we construct $ans[i+1]$? \\Define the array $DP_A[i]=\max\{A[i]\}$ to be the set of solutions for all elements from $0$ to $i$, and $DP_B[i]=\max\{B[i]\}$. We also need to consider the case where neither $A[i]$ or $B[i]$ are chosen as candidates (i.e. $DP_N[i]=\max\{x\notin A\land x\notin B\}$). So we can begin construction of our recurrence relations for our three cases::
+
+\begin{itemize}
+    \item For $A[i]$ (max sum up to index $i$ with $A[i]$ selected)::
+    \begin{align*}
+        DP_A[i]=\max\{DP_B[i-1]+A[i],DP_N[i-1]+A[i]\}
+    \end{align*}
+    
+    \item For $B[i]$ (max sum up to index $i$ with $B[i]$ selected)::
+    \begin{align*}
+        DP_B[i]=\max\{DP_A[i-1]+B[i],DP_N[i-1]+B[i]\}
+    \end{align*}
+    
+    \item For $N[i]$ (max sum up to index $i$ with neither $A[i]$ or $B[i]$ selected)::
+    \begin{align*}
+        DP_N[i]=\max\{(DP_A[i-1], DP_B[i-1])\}
+    \end{align*}
+\end{itemize}
+
+We have 3 recurrence relations, each with $O(n)$ time complexity, and we can spend $O(1)$ space to find the max of each number. So our algorithm is $O(n)$ overall, which is very efficient.\\
+
+\textbf{Exercise::} The array $DP_N$ is not necessary. Can we get rid of it? \textit{The proof is trivial and is left as an exercise to the reader}.
+\begin{quote}
+    \textit{"Believe it or not, I'm actually trying to confuse you less"-Larry YL Zhang 2023}
+\end{quote}
+
+\subsection*{Longest common subsequence (LCS)}
+
+Given two strings $X$ and $Y$, find the length of the longest common subsequence.
+
+\begin{itemize}
+    \item $Z$ is a subsequence of $X$ ($Z\subset X$), if it is possible to generate $Z$ by skipping 0 or more characters in $X$.
+    \item For example: What is $LCS(X,Y)$?
+    \begin{align*}
+        X="ACGGTTA00",
+        Y="CGTAT00"
+    \end{align*}
+\end{itemize}
+
+\subsection*{Solution}
+Let us start by identifying our subproblems. We can take substrings of both $X$ and $Y$::
+
+\begin{align*}
+    X_{\Sigma}=substring(X,i,j), Y_{\Sigma}=substring(Y,k,m)|i,j,k,m\in \mathbb{N}
+\end{align*}
+
+We have 4 parameters, so we'll need a 4D array (which is not ideal).
+
+\begin{quote}
+    \textit{"We are 3 dimensional creatures. We don't like 4 dimensional."-Larry YL Zhang 2023}
+\end{quote}
+
+So how can we make parameter(s) into non parameters? Yes. We can fix the starting points of both arrays at 0. So now we have that::
+
+\begin{align*}
+    X_{\Sigma}=substring(X,0,i), Y_{\Sigma}=substring(Y,0,j), i,j\in \mathbb{N}
+\end{align*}
+
+So our problem as a whole can be defined as::
+
+\begin{align*}
+    ans[i][j]=LCS(X_{\Sigma}, Y_{\Sigma})
+\end{align*}
+\newpage
+We now have a few cases to consider, namely the following::
+
+\begin{itemize}
+    \item $ans[i-1][j-1]$
+    \item $ans[i-1][j]$
+    \item $ans[i][j-1]$
+\end{itemize}
+
+We can represent this decision structure by some pseudocode
+
+\begin{lstlisting}
+def main():
+    ans[i][j]=length of LCS of X[0...i] and Y[0...j]
+    if X[i]==Y[j]:
+    //case 1
+        return ans[i-1][j-1] + 1
+    if X[i] != Y[j]:
+    //case 2
+        return max(ans[i-1][j],ans[i][j-1])
+\end{lstlisting}
+
+So our space taken is $O(|X|\cdot|Y|)$.
+
+\subsection*{The knapsack problem}
+
+Given $n$ items, each having an integer weight $w_i$ and value $v_i$ where $i\in [1,n]$ and given a knapsack with weight capacity $W$. Select items to fill the knapsack such that the total value is maximized.\\
+
+There are two versions of this problem::
+
+\begin{itemize}
+    \item Continuous:: can take any real valued fraction of any item. A greedy algorithm would work.
+    \item Discrete:: Each item is either taken or not taken. Would require dynamic programming.
+\end{itemize}
+
+We will revisit this problem in the next lecture.
+\end{document}
