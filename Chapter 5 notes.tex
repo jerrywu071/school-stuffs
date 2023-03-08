@@ -320,6 +320,56 @@ In order to find $\Delta S$ at $100^{\circ}C, 1atm$, we need to know the heat ca
     -88.74\frac{J}{K}-19.8\ln\left(\frac{373}{298}\right)=-93.18\frac{J}{K}
 \end{align*}
 
+\subsection*{The Carnot heat engine}
 
+An idealized model of a heat engine which converts heat to mechanical work (car engines, steam engines, etc.). Naturally, it is easier to turn work into heat, rather than heat into work. The reversible Carnot cycle dictates that::
 
+\begin{itemize}
+    \item Isothermal expansion
+    \item Adiabatic expansion
+    \item Isothermal compression
+    \item Adiabatic compression
+\end{itemize}
+
+What is the cause of this asymmetry? Well, we have to consider the following phenomena occuring in this system::
+
+\begin{itemize}
+    \item Entropy increases causing irreversible changes
+    \item Some energy is lost as waste heat
+    \item Amount of work the system can do is limited as a result
+\end{itemize}
+
+We can deduce that, from a PV diagram with 4 points::
+
+\begin{itemize}
+    \item $\Delta U=0$ since it is a cyclic path
+    \item $q(\psi)=\sum_{q\in \sigma}q_i=q_1+q_2$
+    \item $w(\psi)=-RT_2\ln\left(\frac{V_2}{V_1}\right)-RT_1\ln\left(\frac{V_4}{V_3}\right)=-R(T_2-T_1)\ln\left(\frac{V_2}{V_1}\right)$
+    \item $q_2=RT_2\ln\left(\frac{V_2}{V_1}\right), q_1=RT_1\ln\left(\frac{V_4}{V_3}\right)=-RT_1\ln\left(\frac{V_2}{V_1}\right)$
+\end{itemize}
+
+\subsection*{Efficiency of a heat engine}
+Efficiency can be expressed by the formula::
+\begin{align*}
+    \epsilon=\frac{\sum_{w\in \sigma}w_i}{q_2}=\frac{R(T_2-T_1)\ln\left(\frac{V_2}{V_1}\right)}{RT_2\ln\left(\frac{V_2}{V_1}\right)}=\frac{T_2-T_1}{T_2}=1-\frac{T_{cold}}{T_{hot}}
+\end{align*}
+
+So it would follow that $w_{\psi,irrev}<w_{\psi,rev}\implies \epsilon_{irrev}<\epsilon_{rev}<1$. This makes sense because actual efficiency is less than ideal carnot efficiency.
+
+\subsection*{Deriving $S$ from efficiency}
+
+\begin{align*}
+    \epsilon=\frac{q_1+q_2}{q_2}=\frac{T_2-T_1}{T_2}
+\end{align*}
+\begin{align*}
+    1+\frac{q_1}{q_2}-1+\frac{T_1}{T_2}=0
+\end{align*}
+\begin{align*}
+    \frac{q_2}{T_2}+\frac{q_1}{T_1}=0
+\end{align*}
+\begin{align*}
+    \oint \frac{dq_{rev}}{T}dT=0\implies \Delta S=\int \frac{dq_{rev}}{T}dT
+\end{align*}
+
+Note that $\Delta S$ must be calculated along a \textbf{reversible} path!
 \end{document}
