@@ -1,0 +1,71 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage{pgfplots}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{Chapter 6::Chemical equilibrium}
+
+\author{Jerry Wu}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\chapter*{Gibbs energy}
+\subsection*{Abstract}
+We would like to determine the spontaneity of a reaction mixture to approach equilibrium, along with deriving the thermodynamic equlibrium constant $K_p$ and equilibrium concentraations of reactants and products in a mixture of reactive ideal gases. We define Gibbs energy ($\Delta G$), which expresses spontaneity in terms of properties of the system alone.\\
+
+Suppose we have an arbitrary system $\sigma$ in thermal equilibrium with the surroundings. What determines the directions of a spontaneous change? Well, it would be the tendency of a system to minimize energy.
+
+\begin{align*}
+    -dq_{\sigma}=dq_{surr}\implies dS_{\Omega}+dS_{surr}\geq 0\implies dS_{\sigma}+\frac{dq_{surr}}{T}\geq 0
+\end{align*}
+
+\subsection*{Definition}
+\begin{align*}
+    \Delta G_{\sigma}=\Delta H_{\sigma}-T\Delta S_{\sigma}\implies dG_{\sigma}=dH_{\sigma}-TdS_{\sigma}
+\end{align*}
+
+If we graph this relation, we notice that $\Delta G$ is a function of $T$. $\Delta H$ would be $\Delta G_0$ and the slope would be $\Delta S$.
+
+Gibbs energy holds the following properties::
+
+\begin{itemize}
+    \item $\Delta G<0\implies \sigma\equiv spont\implies exergonic$
+    \item $\Delta G>0\implies \sigma\equiv \lnot spont\implies endergonic$
+    \item Gibbs energy is an extensive property, and is a state function.
+\end{itemize}
+
+When a problem concerns Gibbs energy, we only care about \textbf{what happens in the system, not the surroundings}.
+
+\subsection*{Differential forms of $U$, $H$, and $G$}
+For an infinitessimal process::
+\begin{align*}
+    G=H+TS\implies dG=dH-TdS-SdT
+\end{align*}
+
+According to the first law::
+\begin{align*}
+    dH=dU+PdV+VdP\implies dU=dq+dw\implies dU=dq-PdV
+\end{align*}
+
+For a reversible process::
+\begin{align*}
+    dq_{rev}=TdS, dU=TdS-PdV
+\end{align*}
+
+So,
+
+\begin{align*}
+    dH=TdS+VdP,dG=VdP-SdT, dU=TdS-PdV
+\end{align*}
+
+This only applies for \textbf{expansion} work.
+
+\end{document}
