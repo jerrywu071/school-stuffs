@@ -1,0 +1,199 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS3101 notes:: Greedy algorithms}
+
+\author{Jerry Wu}
+
+\date{2022-03-09}
+
+\begin{document}
+\maketitle
+
+\chapter*{The Knapsack problem (discrete) continued}
+
+\subsection*{Problem description}
+
+\begin{quote}
+    \textit{"I try to be vague about the class average so students don't obsess over their ranking in the class"-Larry YL Zhang 2023}
+\end{quote}
+
+Given $n$ items, each having an integer weight $w_i$ and value $v_i$ where $i\in [1,n]$ and given a knapsack with weight capacity $W$. Select items to fill the knapsack such that the total value is maximized.\\
+
+There are two versions of this problem::
+
+\begin{itemize}
+    \item Continuous:: can take any real valued fraction of any item. A greedy algorithm would work.
+    \item Discrete:: Each item is either taken or not taken. Would require dynamic programming.
+\end{itemize}
+
+\subsection*{Example}
+Given a list of boxes with a capacity ($w\in \mathbb{N}$) and a whole dollar value ($v\in \mathbb{N}$), find the highest value combination of boxes to fill the knapsack. Capacity of the bag is 50, i.e. $W=50$.
+\begin{itemize}
+    \item[\textbf{Box 1::}] $w=10,v=95$
+    \item[\textbf{Box 2::}] $w=10,v=95$
+    \item[\textbf{Box 3::}] $w=10,v=95$
+    \item[\textbf{Box 4::}] $w=10,v=95$
+    \item[\textbf{Box 5::}] $w=10,v=95$
+    \item[\textbf{Box 6::}] $w=20,v=180$
+    \item[\textbf{Box 7::}] $w=45,v=450$
+\end{itemize}
+
+\subsection*{Optimal substructure}
+
+Suppose we know that item at index $k\in \mathbb{N}$ is selected. Then the solution for $W-w_k$ must be optimal.
+
+\subsection*{Subproblems}
+We can express the answer to the subproblems $ans[w][i]$ as the maximum value of all the items contained within the bag of capacity $w$ using items 1 through $i$.
+
+\begin{align*}
+    Ans(i,w)=\begin{cases}
+        0&i=0\lor w=0\\
+        Ans(i-1,w)&w_i>w\\
+        \max\{Ans(i-1,w),v_i+Ans(i-1,w-w_i)\}&w\leq w_i\\
+    \end{cases}
+\end{align*}
+
+\begin{quote}
+    \textit{"Please talk to me if you didn't do as well as you wanted to on the midterm. My office hours are like a therapy session."-Larry YL Zhang 2023}
+\end{quote}
+
+So from here, we ask ourselves the following::
+
+\begin{itemize}
+    \item Which cell has the final answer?
+    \item What is the order to fill the array?
+    \item What is the space/time complexity of the solution? We have that the complexity is $\Theta (n\times w)$
+\end{itemize}
+
+\chapter*{Greedy algorithms}
+
+\subsection*{The general idea}
+\begin{quote}
+    \textit{"Every 2 year old knows the greedy algorithm"-S. Datta, LE EECS}
+\end{quote}
+\begin{itemize}
+    \item In order to get an optimal solution, we can just keep grabbing what looks best.
+    \item No backtracking, i.e. once a choice is made, never revert it.
+    \item The trickier part is to \textbf{prove} that the solution produced by the greedy algorithm is indeed \textbf{optimal}.
+\end{itemize}
+
+\subsection*{Difference between DP and greedy}
+
+\begin{itemize}
+    \item In DP, we do not know what an optimal solutions like \textit{a priori}, so we need to \textbf{search} a range of possibilities (the recursion tree).
+    \item In greedy, we believe we know a best choice already, and we focus on finding that best choice.
+\end{itemize}
+
+We can represent the general idea through pseudocode.
+
+\begin{lstlisting}
+while(!requirement is met):
+    choose next best object
+    if it conflicts with a previous chosen object:
+        reject the object
+    else:
+        commit to the object
+\end{lstlisting}
+\newpage
+\subsection*{Invariant}
+\begin{itemize}
+    \item After each iteration, $\exists$ at least one optimal solution that is consistent with the choices made so far.
+    \item This invariant is the key to proving the optimality of the greedy solution.
+    \item We often prove this by contradiction.
+    \item The invariant is known as the \textbf{greedy choice property}.
+\end{itemize}
+
+\subsection*{Example 1: A trivial proof}
+
+\begin{itemize}
+    \item Given a set of $n$ integers ($n>2$), find the maximum sum of any $\frac{n}{2}$ elements selected from the set.
+    \item By way of common sense, we can just sort the integers in decreasing order and pick the $\frac{n}{2}$ largest elements. However, we need to prove this!
+\end{itemize}
+
+\subsection*{Proof}
+
+Define array $SG$ as the choices made in the greedy solution, and $SO$ to be the choices made by an optimal solution. Assume $SO\neq SG\land Opt(SO)>Opt(SG)$. Sort both arrays in decreasing order and let $k$ be the first index where $SG[k]\neq SO[k]$. We construct an $SO'$ such that $Opt(SO')>Opt(SO)$.\\
+
+Going back to the definition of greedy, if we arrive at $SG[k]$, then $SG[k]>SO[k]$ is indeed true since greedy entails that the element at the current index is the \textbf{best/largest} possible value, thus we can place it at $SO'[k]$. Because $SO'$ will be sorted in descending order, it is completely fine to make this placement, whereby we arrive at our contradiction. $\blacksquare$
+
+\subsection*{Coin change}
+
+Given a set of denominations (quarters, dimes, nickels, and pennies), find the minimum number of coins that total to a desird amount of money. For example::
+
+\begin{quote}
+    \textit{"We can assume we have infinite money here."-Larry YL Zhang 2023}
+\end{quote}
+
+\begin{itemize}
+    \item Denominations: 1,3,4 cents
+    \item What would be the greedy solution?
+    \item What is the optimal solution for making 6 cents?
+    \item Does the greedy solution give the optimal solution?
+    \item What if we used real life denominations? (1,5,10,25) We can actually always use the greedy approach for the denominations we have. Let us prove it.
+\end{itemize}
+
+\subsection*{Proof that capitalism is built on greed}
+Assume denominations are 1,5,10,25 cents.\\
+
+Consider the greedy solution $SG$ and assume a different, more optimal solution $SO$ for the sake of contradiction. Sort both in \textbf{descending order}. Knowing that $SG[k]$ is always the largest possible value up to $k$, we know $SG[k]>SO[k]$ due to the afformentioned property. Take the following cases to construct $SO'$:
+
+\begin{itemize}
+    \item $SG[k]=1$, no $SO[k]$. Every coin following the first one would be 1 as well.
+    \item $SG[k]=5,SO[k]=1$. Everything following the 5 would be a 1, so we can merge exactly 5 of the 1s into a 5.
+    \item $SG[k]=10,SO[k]=5$. Everything following the 10 would be 5s followed by 1s, so we can merge the 1s into 5s and 5s into 10s.
+    \item $SG[k]=25,SO[k]=10$. Same principles, but merging 10s and 5s into 25s.
+\end{itemize}
+
+This solution is indeed more optimal than $SO$. So it follows that we have a contradiction, thus $SG$ is optimal. $\blacksquare$
+
+\subsection*{The continuous knapsack problem}
+
+We will now revisit the knapsack problem.\\
+
+Given $n$ items, each having an integer weight $w_i$ and value $v_i$ where $i\in [1,n]$ and given a knapsack with weight capacity $W$. Select items to fill the knapsack such that the total value is maximized. We can take any real valued fraction of the item this time.
+
+To do this, we can sort each item by a ratio of value to weight i.e. the density of value (descending order of $\frac{v_i}{w_i}$). Let us prove that we can solve it with a greedy approach.\\
+
+Construct $SG$ such that each element contains a ratio of value and density, and a hypothetical $SO$ that is more optimal for the sake of contradiction.
+\begin{align*}
+    SG[i]=\frac{v_{g,i}}{w_{g,i}}\forall i, SO[i]=\frac{v_{o,i}}{g_{o,i}}\forall i\implies Opt(SO)>Opt(SG)
+\end{align*}
+
+We can conclude that if the weight of a bigger item has a higher density of value than one of a smaller size, we cannot replace the smaller item. However, since we are in a continuous context, we can take a part of the item, i.e. cut it off and replace it with the smaller sized item. \textbf{A good example would be replace 1 gram of silver with 1 gram of gold.} So we now have a contradiction, since::
+
+\begin{align*}
+    v_o\rightarrow \frac{v_g}{w_g}\times w_o>v_o\blacksquare
+\end{align*}
+
+\end{document}
