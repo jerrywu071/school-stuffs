@@ -68,4 +68,207 @@ So,
 
 This only applies for \textbf{expansion} work.
 
+\subsection*{Example}
+
+Calculate the maximum nonexpansion work that can be gained from the combustion of
+benzene $(l)$ and of $H_2$ (g) on a per gram and a per mole basis under standard conditions. Is it
+apparent from this calculation why fuel cells based on hydrogen oxidation are under
+development for mobile applications? Thermodynamic values available in appendix.
+
+\begin{align*}
+    R:C_6H_6(l)+O_2(g)\rightarrow 6CO_2(g)+3H_2O(l)
+\end{align*}
+
+\textbf{To calculate maximum nonexpansion work, simply calculate} $\Delta G$
+
+\begin{align*}
+    \Delta G=3\Delta G(H_2O,l)+6\Delta G(CO_2,g)-\Delta G(G_6H_6,l)\approx 3202.2kJ
+\end{align*}
+
+The above value is per mole, so we need to multiply by molar mass ($\frac{1mol}{78.18g}$). In the end, we get $-40.99 \frac{kJ}{g}$
+
+For formation of water, we have that
+
+\begin{align*}
+    \Delta G=\Delta G(H_2O,l)=-237.1kJmol^{-1}\implies -237.1kJmol^{-1}\left(\frac{1mol}{2g}\right)=-117.6kJg^{-1}
+\end{align*}
+
+\subsection*{Helmholtz energy and spontaneity}
+
+This property is derived for processes occuring at $V\equiv const \land T\equiv const$. We use $A$ to represent the quantity.
+
+\begin{align*}
+    A=U-TS
+\end{align*}
+
+Gibbs free energy gives \textbf{maximum nonexpansion work}, whereas Helmholtz energy gives \textbf{maximum overall work.}
+
+\subsection*{Exact differentials and Maxwell relations}
+
+Take a function $z=f(x,y)$ where $dz=M(x,y)dx+N(x,y)dy$
+
+Recall that by Euler's theorem, a function is a state function if and only if::
+
+\begin{align*}
+    \left(\frac{\partial M}{\partial y}\right)_x=\left(\frac{\partial N}{\partial x}\right)_y
+\end{align*}
+
+The total differentials for $U(S,V), H(S,P), G(T,P)$ can be modelled as follows::
+
+\begin{align*}
+    dU=TdS-PdV=\frac{\partial U}{\partial S}dS+\frac{\partial U}{\partial V}dV|T=\frac{\partial U}{\partial S}, -P=\frac{\partial U}{\partial V}
+\end{align*}
+
+\begin{align*}
+    dH=TdS+VdP=\frac{\partial H}{\partial S}dS+\frac{\partial H}{\partial P}dP|T=\frac{\partial H}{\partial S},V=\frac{\partial H}{\partial P}
+\end{align*}
+
+\begin{align*}
+    dG=-SdT+VdP=\frac{\partial G}{\partial T}dT+\frac{\partial G}{\partial P}dP|-S=\frac{\partial G}{\partial T}, V=\frac{\partial G}{\partial P}
+\end{align*}
+
+Because $dU$ is an exact differential, 
+
+\begin{align*}
+    \frac{\partial}{\partial V}\left(\frac{\partial U(S,V)}{\partial S}\right)=\frac{\partial}{\partial S}\left(\frac{\partial U(S,V)}{\partial V}\right)
+\end{align*}
+
+It would follow that::
+
+\begin{align*}
+    \frac{\partial T}{\partial V}=-\frac{\partial V}{\partial S}
+\end{align*}
+
+\subsection*{Example}
+
+Derive the maxwell relation $\left(\frac{\partial T}{\partial V}\right)_S=-\left(\frac{\partial P}{\partial S}\right)_V$
+
+Because $S$ and $V$ are constant, we can use the exact differential::
+
+\begin{align*}
+    dU=TdS-PdV
+\end{align*}
+
+Now we can form the mixed derivative::
+
+\begin{align*}
+    \left(\frac{\partial}{\partial V}\left(\frac{\partial U(S,V)}{\partial S}\right)_V\right)_S=\left(\frac{\partial}{\partial S}\left(\frac{\partial U(S,V)}{\partial V}\right)_S\right)_V
+\end{align*}
+
+Substituting $dU=TdS-PdV$, we have that
+
+\begin{align*}
+    \left(\frac{\partial}{\partial V}\left(\frac{\partial\left[TdS-PdV\right]}{\partial S}\right)_V\right)_S=\left(\frac{\partial}{\partial S}\left(\frac{\partial\left[TdS-PdV\right]}{\partial V}\right)_S\right)_V
+\end{align*}
+
+After simplifying, we can conclude that
+
+\begin{align*}
+    \left(\frac{\partial T}{\partial V}\right)_S=-\left(\frac{\partial P}{\partial S}\right)_V\blacksquare
+\end{align*}
+
+\subsection*{Dependence of $\Delta G$ on $T$}
+
+Recall that $dG=VdP-SdT$. At $P\equiv const,dG=-SdT$. When $P\equiv const$, it also follows that
+
+\begin{align*}
+    \frac{\partial G}{\partial T}=-S, S\geq 0
+\end{align*}
+
+So it would follow that Gibbs energy \textbf{decreases as energy increases}.
+
+The Gibbs-Helmholtz equation states that for a finite process,
+
+\begin{align*}
+    \frac{\partial \left(\frac{\Delta G}{T}\right)}{T}=-\frac{\Delta H}{T^2}
+\end{align*}
+
+Assume that $\Delta H\land \Delta S$ are independent of T and that $P=1atm$. We can integrate both sides of the equation to give us that
+
+\begin{align*}
+    \int d\left(\frac{\Delta G}{T}\right)=\int\Delta Hd\frac{1}{T}
+\end{align*}
+
+\begin{align*}
+    \frac{\Delta G(T)}{T}-\frac{\Delta G(298)}{298}\approxeq \left(\frac{1}{T}-\frac{1}{298}\right)\Delta H(298)
+\end{align*}
+
+So in the end, we have that the Gibbs-Helmholtz equation can be approximated as::
+
+\begin{align*}
+    \frac{\Delta G(T_2)}{T_2}-\frac{\Delta G(T_1)}{T_1}\approxeq \left(\frac{1}{T_2}-\frac{1}{T_1}\right)\Delta H(T_1)
+\end{align*}
+
+\subsection*{Dependence of $\Delta G$ on $P$}
+
+Recall that $dG=VdP-SdT$, then at $T\equiv const$, we have that $dG=VdP\implies \frac{\partial G}{\partial P}=V$.\\
+
+We model dependence of $\Delta G$ on $P$ as follows::
+
+\begin{align*}
+    \Delta G=\int_{1}^{2}dG=G_2-G-1=\int_{P_1}^{P_2}VdP
+\end{align*}
+
+If $V\equiv const$ and the process concerns liquids and solids, we have that::
+
+\begin{align*}
+    \Delta G=G(P_2)-G(P_1)=V(P_2-P_2)
+\end{align*}
+
+For $g\in \mathbb{C}$, we have that::
+
+\begin{align*}
+    \Delta G=G_2-G_1=\int_{P_1}^{P_2}\frac{nRT}{P}dP=nRT\ln\left(\frac{P_2}{P_1}\right)
+\end{align*}
+
+Now set $P_1=1bar$ and set $P_2=P$, therefore,
+
+\begin{align*}
+    G=G^{\circ}+nRTln(P)\implies \bar{G}=\bar{G^{\circ}}+RT\ln(P)
+\end{align*}
+
+If $\forall products,reactants \in \sigma((products\equiv ((s)\lor (l)))\lor (reactants \equiv((s)\lor (l))))$, then
+
+\begin{align*}
+    \Delta G=G(P_2)-G(P_1)=V(P_2-P_1)=V\Delta P
+\end{align*}
+
+This is not very important, since we can just ignore the quantity altogether.\\
+
+However, if $\exists product\lor reactant\in \sigma(product\lor reactant\equiv (g))$, then the volume of solids and liquids is ignored, and::
+
+\begin{align*}
+    \Delta G=G(P_2)-G(P_1)=\Delta nRT\ln\left(\frac{P_2}{P_1}\right)
+\end{align*}
+
+\subsection*{Hess's law for Gibbs energy}
+It's the same thing as enthalpy.
+
+\subsection*{Example}
+
+For the synthesis of urea::
+
+\begin{align*}
+    R:CO_2(g)+2NH_3(g)\rightarrow (NH_2)_2CO(s)+H_2O(l)
+\end{align*}
+
+\begin{itemize}
+    \item[a)] Calculate $\Delta_r G$ for the reaction at $298K$ and $1 bar$ (Ans: $-6.8 kJ$)
+    \item[b)] Assume $g\in \mathbb{C}$, calculate $\Delta_r G$ at $P=10bar$.
+\end{itemize}
+
+To calculate $\Delta G(10 bar)$, we can plug in the values into the equation we derived.
+
+\begin{align*}
+    \Delta G(10 bar)=\Delta G(1 bar)+\Delta nRT\ln\left(\frac{P_2}{P_1}\right)
+\end{align*}
+
+\begin{align*}
+    =(6800Jmol^{-1})+(-3)(8.314JK^{-1}mol^{-1})(298K)(\ln\left(\frac{10}{1}\right)=-23.9kJmol^{-1})
+\end{align*}
+
+So it would suffice to say that a reaction at higher pressure is \textbf{more spontaneous} than at lower pressure.
+
+\subsection*{Haber process}
+
 \end{document}
