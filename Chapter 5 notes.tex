@@ -346,6 +346,8 @@ We can deduce that, from a PV diagram with 4 points::
     \item $q(\psi)=\sum_{q\in \sigma}q_i=q_1+q_2$
     \item $w(\psi)=-RT_2\ln\left(\frac{V_2}{V_1}\right)-RT_1\ln\left(\frac{V_4}{V_3}\right)=-R(T_2-T_1)\ln\left(\frac{V_2}{V_1}\right)$
     \item $q_2=RT_2\ln\left(\frac{V_2}{V_1}\right), q_1=RT_1\ln\left(\frac{V_4}{V_3}\right)=-RT_1\ln\left(\frac{V_2}{V_1}\right)$
+    \item $\Delta S_\Sigma=0 \forall$ cyclic processes
+    \item 
 \end{itemize}
 
 \subsection*{Efficiency of a heat engine}
@@ -372,4 +374,91 @@ So it would follow that $w_{\psi,irrev}<w_{\psi,rev}\implies \epsilon_{irrev}<\e
 \end{align*}
 
 Note that $\Delta S$ must be calculated along a \textbf{reversible} path!
+
+\subsection*{Example}
+10 moles of water at $60^{\circ}C$ are mixed with an equal amount of water at $20^{\circ}C$. Neglect any heat exchange with the surroundings and calculate the entropy change. The heat capacity of water may be
+taken to be $75.3 JK^{-1}mol^{-1}$ and independent of temperature.
+
+\subsection*{Solution}
+
+We know that $q_1+q_2=0$ by way of common sense, so,
+
+\begin{align*}
+    n\bar{C_P}(T_f-20)+n\bar{C_P}(T_f-60)=0\implies T_f=40^{\circ}C
+\end{align*}
+
+This is a trivial question since there is no phase change, and there are multiple equal quantities. If the quantities are different, we'd need to do more calculations. To calculate $\Delta S$, simply plug into the formula for heating and cooling::
+
+\begin{align*}
+    \Delta S_1=n\bar{C_P}\ln\left(\frac{T_f}{T_i}\right)=(10)(75.3)\ln\left(\frac{313}{293}\right)=-46.62JK^{-1}
+\end{align*}
+
+\begin{align*}
+    \Delta S_2=(10)(75.3)\ln\left(\frac{313}{333}\right)=49.7JK^{-1}
+\end{align*}
+
+
+\begin{align*}
+    \implies\Delta S_{\Sigma}=3.08JK^{-1}
+\end{align*}
+\textbf{MUST} USE KELVIN FOR THIS FORMULA!
+
+\subsection*{Example 2}
+
+1 mol of an ideal gas at $298K$ expands isothermally from $1L$ to $2L$ a) reversibly, b) against a constant external pressure of $12.2atm$ (irrev). Calculate the values of $\Delta S_{\sigma}, \Delta S_{surr}, \Delta S_{\Omega}$
+
+\subsection*{Solution}
+
+\begin{itemize}
+    \item[a)]
+    \begin{align*}
+        \Delta S_{\sigma}=\frac{q_{rev}}{T}=nR\ln\left(\frac{V_2}{V_1}\right)=5.8JK^{-1}
+    \end{align*}
+    
+    We know that since the process is reversible, $\Delta S_{\Omega}$ overall is 0. So,
+    
+    \begin{align*}
+        \Delta S_{\Omega}=0\implies \Delta S_{surr}=-\Delta S_{\sigma}=-5.8JK^{-1}
+    \end{align*}
+
+    \item[b)] From the previous section, we know that $\Delta S_{\sigma}=5.8JK^{-1}$. Since the process is irreversible and isothermal, we can calculate the heat exchange of the system.
+    \begin{align*}
+        q_{\sigma}=-w=P\Delta V=1236J
+    \end{align*}
+
+    Taking the negative of the heat exchange of the system, we get the value for the surroundings.
+
+    \begin{align*}
+        \Delta S_{surr}=\frac{q_{surr}}{T}=\frac{-1236}{298}=-4.15JK^{-1}\implies \Delta S_{\Sigma}=1.7JK^{-1}
+    \end{align*}
+\end{itemize}
+
+\subsection*{Question 6}
+
+A sample of an ideal monoatomic gas in a $0.8L$ container is found to be at $25^{\circ}C$ and $1atm$. The gas is heated to $100^{\circ}C$ and it simultaneously expands to $1.5L$. Calculate $\Delta S$.
+
+\subsection*{Solution}
+
+Based on the parameters above, we can reason that our overall change in entropy is positive.
+
+\begin{itemize}
+    \item For the isothermal step,
+    \begin{align*}
+        \Delta S=nR\ln\left(\frac{V_2}{V_1}\right),n=\frac{P_1V_1}{RT_1}=0.0327 mol
+    \end{align*}
+    \begin{align*}
+        \Delta S=(0.0327)(8.314)(\ln\left(\frac{1.5}{0.8}\right)=0.1709 JK^{-1}
+    \end{align*}
+    \item For the isochoric step,
+    \begin{align*}
+        \Delta S=n\bar{C_V}\ln\left(\frac{T_2}{T_1}\right)=(0.0327)(\frac{3}{2}R)\ln\left(\frac{373}{298}\right)=0.0915JK^{-1}
+    \end{align*}
+\end{itemize}
+
+So overall, we have that
+
+\begin{align*}
+    \Delta S_\Sigma=0.262JK^{-1}
+\end{align*}
+
 \end{document}
