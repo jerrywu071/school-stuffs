@@ -271,4 +271,146 @@ So it would suffice to say that a reaction at higher pressure is \textbf{more sp
 
 \subsection*{Haber process}
 
+\subsection*{Equilibrium}
+
+The following equation provides the relationship between $\Delta G_T$ and $\Delta G_T^{\circ}$ at partial pressures $P=1bar$. When $\Delta G=0$, the system is at equilibrium.
+
+\begin{align*}
+    \Delta G_T=\Delta G_T^{\circ}+RT\ln\left(\frac{\left(\frac{P_B}{P^{\circ}}\right)^b}{\left(\frac{P_A}{P^{\circ}}\right)^a}\right)
+\end{align*}
+
+All chemical reactions are reversible, i.e. $\forall R, R_1\rightarrow R_2\iff R_2\rightarrow R_1$ since they can go both ways. Reactions that proceed \textbf{nearly} to completion. Often times, the reverse of these reactions are too slow to detect experimentally.
+
+The \textbf{equilibrium point} is the point in time where a concentration of a reactant or product in the system stops changing.
+
+\subsection*{Reaction rates}
+
+When a system is at equilibrium, the forward and reverse reactions occur at the same rate, i.e. for gases, $\frac{\Delta P_1}{\Delta T}=\frac{\Delta P_2}{\Delta T}=0$. For solids and liquids, use concentration instead.
+
+\subsection*{The equilibrium constant}
+
+The equilibrium constant of a reaction is represented as a ratio of concentrations.
+
+\begin{align*}
+    K_c=\frac{\prod_{\left[E\right]\in rxt} \left[E\right]_i}{\prod_{\left[E\right]\in prod} \left[E\right]_j}|i,j\in \mathbb{N}
+\end{align*}
+
+For $i$ reactants and $j$ products. If we have multiple reactions taking place with distinct equilibrium constants, we can multiply them together to find the overall equilibrium constant. Say we have $R_1,R_2\in \sigma$ each with their own $K_1,K_2$, then $K_3=K_1K_2$.
+
+For gas exclusive systems, we have that::
+
+\begin{align*}
+    K_P=K_C (RT)^{\Delta n}
+\end{align*}
+
+\subsection*{Thermodynamic equilibrium constant (unitless)}
+
+In thermodynamics we want to relate equilibrium to reaction spontaneity. This would require us to have a unitless description of the equilibrium constant using a concept called activity. Activity is measured as the standard deviation from the sandard state.
+
+\begin{align*}
+    a_X=\frac{\left[E\right]}{1M}, a_X=\frac{P_X}{1bar}
+\end{align*}
+
+For solutes and gases respectively. For pure liquids and solids, $a_X=1$. For an arbitrary reaction,
+
+\begin{align*}
+    bB+cC\leftrightarrows dD+eE|K=\frac{a_D^d a_E^e}{a_B^b a_C^c}\implies K=\frac{\prod a_{prod}}{\prod a_{rxt}}
+\end{align*}
+
+Recall that if $K\rightarrow \infty$, the system would contain mostly products, and if $K\rightarrow 0$, the system would contain mostly products.
+
+\subsection*{$\Delta G$ of a reaction mixture}
+
+In a reaction, $G$ would depend on the number of moles $\forall \zeta\in \sigma$, i.e.
+
+\begin{align*}
+    G=G(T,P,n_1,n_2\ldots n_i)|i=|\sigma|\in \mathbb{N}
+\end{align*}
+
+The chemical potential of the $i$th element in the reaction can be expressed as $\mu_i=\frac{\partial G}{\partial n_j}, i\in \mathbb{N}$
+
+Once concentration equilibrium has been reached with respect to the reactants, we have that::
+
+\begin{align*}
+    \mu_{pure}(H_2)=\mu_{mixture}(H_2)
+\end{align*}
+
+So,
+
+\begin{align*}
+    dG=\frac{\partial G}{\partial T}dT+\frac{\partial G}{\partial P}dP+\sum_{i\in \mathbb{N}} \mu_i dn_i
+\end{align*}
+
+With respect to temperature and pressure,
+
+\begin{align*}
+    \mu_A^{mixture}(T,P)=\mu_A^{pure}(T,P)+RT\ln(\chi_A)
+\end{align*}
+
+For an arbitrary gaseous reaction, we have that
+
+\begin{align*}
+    R:aA(g)+ bB(g)\leftrightarrows cC(g)+dD(g)|\Delta G_R=\Delta G_R^{\circ}+RT\ln(Q)
+\end{align*}
+
+The $Q$ value is a ratio of pressures::
+
+\begin{align*}
+    Q=\frac{\left(\frac{P_C}{P^{\circ}}\right)^c\left(\frac{P_D}{P^{\circ}}\right)^d}{\left(\frac{P_A}{P^{\circ}}\right)^a\left(\frac{P_B}{P^{\circ}}\right)^b}
+\end{align*}
+
+\subsection*{What is the point?}
+
+$Q$ can tell us how reaction concentrations must change in order to reach equilibrium (where $Q=K$). In summary,
+
+\begin{itemize}
+    \item $Q_C<K_C\implies rxts\rightarrow prods$
+    \item $Q_C>K_C\implies prods\rightarrow rxts$
+    \item $Q_C=K_C\implies \varnothing$
+\end{itemize}
+
+\subsection*{Example}
+
+Take the reaction for the formation of ethylene from carbon and hydrogen at $25^{\circ}C$. $P_{H_2}=100atm, P_{C_2H_4}=0.1atm$
+
+\begin{align*}
+    2C(s)+2H_2(g)\leftrightarrows C_2H_4(g)
+\end{align*}
+
+So here,
+
+\begin{align*}
+    Q_P=\frac{P_{C_2H_4}}{P_{H_2}^2}, \Delta G=68.1+(8.314)(298)(\ln\left(\frac{0.1}{100^2}\right)=39.6 kJmol^{-1}
+\end{align*}
+
+\subsection*{Relating $\Delta G$ to equilibrium}
+
+Suppose we have a reaction
+
+\begin{align*}
+    R:aA\leftrightarrows bB
+\end{align*}
+
+Suppose $G$ changes by a small amount ($\delta G$) and the reaction progresses by a small amount ($\delta \xi$). We have that the change in $G$ is::
+
+\begin{align*}
+    dG=\mu_A dn_A+\mu_B dn_B=-\mu_A d\xi +\mu_B d\xi=(\mu_A-\mu_B)d\xi\implies \Delta G=\frac{\delta G}{\delta \xi}=\mu_B-\mu_A
+\end{align*}
+
+in $kJmol^{-1}$.
+
+So let us summarize,
+
+\begin{itemize}
+    \item $\mu_A>\mu_B\implies R\equiv spont(\rightarrow)$
+    \item $\mu_A=\mu_B\implies equilibrium$
+    \item $\mu_B>\mu_A\implies R\equiv spont(\leftarrow)$
+\end{itemize}
+
+We can rewrite the equation as::
+
+\begin{align*}
+    \Delta G_T=-RT\ln(K)+RT\ln(Q)=RT\ln\left(\frac{Q}{K}\right)
+\end{align*}
+
 \end{document}
