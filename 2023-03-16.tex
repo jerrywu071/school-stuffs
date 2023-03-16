@@ -1,0 +1,160 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS3101 notes:: Introduction to graph based algorithms}
+
+\author{Jerry Wu}
+
+\date{2022-03-16}
+
+\begin{document}
+\maketitle
+
+\chapter*{Graph algorithms}
+
+\subsection*{Abstract}
+
+A graph, in essence, is a pair of sets. One containing vertices, and another with edges defined the following way::
+
+\begin{align*}
+    G=(V,E)|V=\{a,b,c,d,\ldots\}, E=\{(v_1,v_2),(v_2,v_3),\ldots\}
+\end{align*}
+
+\subsection*{Types of graphs}
+
+We have different kinds of graphs, each with their own applications.
+
+\begin{itemize}
+    \item Undirected graphs:: Each $\epsilon \in E$ is unordered, i.e. $(a,b)=(b,a)$
+    \item Directed graphs:: Each $\epsilon \in E$ is ordered, i.e. $(a,b)\neq (b,a)$
+    \item Weighted:: Each edge will have a value/weight attached to it. This could represent distance between two points on a map.
+    \item Unweighted:: No value/weight attached to edges.
+    \item Simple graphs have exactly one edge joining any two $v\in V$
+    \item Non simple graphs can have self loops and multiple edges joining two vertices.
+    \item Cyclic graphs contain cycles, i.e. following a walk in the graph can end up back at the starting point.
+    \item Acyclic graphs do not contain cycles.
+    \item Connected graphs have a possible path between every pair of vertices in the graph, disconnected graphs have stray vertices.
+\end{itemize}
+
+\begin{quote}
+    \textit{"Simple graphs aren't completely useless"-Larry YL Zhang 2023}
+\end{quote}
+
+When we talk about the length of a path in a graph, we refer to the number of edges we need to traverse, disregarding the weights (if there are any).
+
+\subsection*{Data structures for the graph ADT}
+
+To represent a graph in code, we need two data structures::
+
+\begin{itemize}
+    \item Adjacency matrix\\
+    A $|V|\times |V|$ matrix $A$. If $V=\{v_1,v_2,v_3,\ldots,v_n\}\implies$
+    \begin{align*}
+        A_{i,j}=\begin{cases}
+            1&(v_i,v_j)\in V\\
+            0&else
+        \end{cases}
+    \end{align*}
+
+    Size of matrix is $|V|^2$. For an undirected graph, the adjacency matrix is \textbf{symmetric} with respect to the diagonal (slide 19). This means that we realistically only need the upper half of the matrix on th diagonal to retain all data we have about the graph.
+    \item Adjacency list\\
+    Each vertex $v_i$ stores a list $A_i$ of $v_j$ that satisfies $(v_i,v_j)\in E$. This is similar to a hash table. The property in essence is saying that each vertex is mapped to a list containing all vertices that it is pointing to with directed edges (slide 22). The space complexity is $|V|+|E|$ in a directed graph, since we need to count all vertices, along with each edge that is pointing to neighbouring vertices. In an undirected graph, we would count each edge twice, so we have that the space complexity is $|V|+2|E|$ now.
+\end{itemize}
+
+\begin{quote}
+    \textit{"Today I had 3 office hours and 2 lectures, so I've officially been talking too much"-Larry YL Zhang 2023}
+\end{quote}
+
+\begin{quote}
+    \textit{"If you don't mind, I have to take a phone call for a moment."-Larry YL Zhang 2023}
+\end{quote}
+
+\subsection*{In summary}
+Which one is more space efficient?
+\begin{itemize}
+    \item Adjacency matrix is $\Theta (|V|^2)$
+    \item Adjacency list is $\Theta (|V|+|E|)$
+\end{itemize}
+
+It would depend on the density of the graph. An adjacency list is good for graphs that are not very dense, i.e. $|E|\llless |V|^2$.
+
+\subsection*{When is matrix better?}
+Checking some edge $\epsilon =(v_1,v_2)\in G$
+
+\begin{itemize}
+    \item In a matrix, we can simply check if $A_{i,j}=1$, which is $O(1)$
+    \item In a list, we would have to look through the entire list to see if $j$ is in the list, which is $O(n)$.
+\end{itemize}
+
+\begin{quote}
+    \textit{"*COUGH COUGH*, oh sorry"-Larry YL Zhang 2023"}
+\end{quote}
+
+\subsection*{BFS and DFS}
+In essence, we want to visit every $v\in V$ exactly once starting from a given vertex. To do this, we invoke either BFS or DFS depending on the scenario. Consider a tree, which is a special type of graph. If we invoke BFS, we go from left to right, then top to bottom, whereas with DFS, we go top to bottom, then left to right. 
+
+\subsection*{Review}
+
+Recall that BFS in a tree is level by level traversal (not preorder). So we can use a queue to implement this algorithm. (slide 35)
+
+\begin{lstlisting}
+NOT_QUITE_BFS(root):
+    Q = Queue()
+    Enqueue(Q, root)
+    while Q not empty:
+        x = Dequeue(Q)
+        print(x)
+        for each child c of x:
+            Enqueue(Q,c)
+\end{lstlisting}
+
+This will not work for regular graphs, because we might visit a vertex twice (which would cause infinite loops). We can avoid this by adding a label at each vertex that has already been visited (colouring). For each vertex when traversing, we want to remember some values::
+
+\begin{itemize}
+    \item $\pi_v$ is the vertex from which v is encountered, i.e. its "parent"
+    \item $d_v$ which is the distance of the current vertex from the source vertex (number of edges in unweighted, sum of weights in weighted).
+\end{itemize}
+
+Full example is on slides 40 to 48. The values we get at each vertex after running BFS are the distance from the source node to each node. But not only that. It's also the \textbf{shortest} distance. We can find a single path by using $\pi_v$.\\
+
+If the graph is not connected, i.e. $\exists v\in V$ such that $v$ is not connected to the rest of the graph by any edge, we can say that this node is \textbf{unreachable} by way of common sense. A good example of this is garbage collection in Java, where the JRE will check which functions are not used/called from the main function, whereby we can get rid of them.
+
+\begin{quote}
+    \textit{"It is effectively a pile of garbage"-Larry YL Zhang 2023}
+\end{quote}
+
+\begin{quote}
+    \textit{"Next class we will talk about BFS's evil twin DFS, so stay tuned"-Larry YL Zhang 2023}
+\end{quote}
+
+\end{document}
