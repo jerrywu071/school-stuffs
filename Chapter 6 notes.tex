@@ -19,7 +19,7 @@
 
 \chapter*{Gibbs energy}
 \subsection*{Abstract}
-We would like to determine the spontaneity of a reaction mixture to approach equilibrium, along with deriving the thermodynamic equlibrium constant $K_p$ and equilibrium concentraations of reactants and products in a mixture of reactive ideal gases. We define Gibbs energy ($\Delta G$), which expresses spontaneity in terms of properties of the system alone.\\
+We would like to determine the spontaneity of a reaction mixture to approach equilibrium, along with deriving the thermodynamic equlibrium constant $K_P$ and equilibrium concentraations of reactants and products in a mixture of reactive ideal gases. We define Gibbs energy ($\Delta G$), which expresses spontaneity in terms of properties of the system alone.\\
 
 Suppose we have an arbitrary system $\sigma$ in thermal equilibrium with the surroundings. What determines the directions of a spontaneous change? Well, it would be the tendency of a system to minimize energy.
 
@@ -269,8 +269,6 @@ To calculate $\Delta G(10 bar)$, we can plug in the values into the equation we 
 
 So it would suffice to say that a reaction at higher pressure is \textbf{more spontaneous} than at lower pressure.
 
-\subsection*{Haber process}
-
 \subsection*{Equilibrium}
 
 The following equation provides the relationship between $\Delta G_T$ and $\Delta G_T^{\circ}$ at partial pressures $P=1bar$. When $\Delta G=0$, the system is at equilibrium.
@@ -412,5 +410,154 @@ We can rewrite the equation as::
 \begin{align*}
     \Delta G_T=-RT\ln(K)+RT\ln(Q)=RT\ln\left(\frac{Q}{K}\right)
 \end{align*}
+
+\subsection*{Chemical equilibria of ideal gases (ice tables)}
+
+Suppose $1.00 mol$ of $H_2$ and $2.00 mol$ of $I_2$ are placed in a $1.00L$ vessel. How many
+moles of substances are in the gaseous mixture when it comes to equilibrium at
+$458^{\circ}C$? The equilibrium constant $K_c$ at this temperature is $49.7^{\circ} C$.
+
+\subsection*{Solution}
+
+We have that $[H_2]=1M$ and $[I_2]=2M$ since volume is $1L$.
+
+\begin{align*}
+    R:H_2(g)+I_2(g)\leftrightarrows 2HI(g)
+\end{align*}
+
+\begin{align*}
+    K_c=\frac{2x^2}{(1-x)(2-x)}=49.7\implies 0.92x^2-3x+2=0
+\end{align*}
+
+\begin{align*}
+    x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}=\frac{3\pm\sqrt{9-4(0.92)(2)}}{2(0.92)}\approx 1.63\pm 0.7
+\end{align*}
+
+Since $x_1=2.33$ would give us a negative concentration, we reject it. So we can plug in $x_2=0.93$ to check if our values work::
+
+\begin{align*}
+    K_c=\frac{1.86^2}{(0.07)(1.07)}=49.7
+\end{align*}
+
+It is indeed the same number, so our solution is correct.
+
+\subsection*{The Van't Hoff equation}
+
+We want to find a relationship between $K$ and $T_2$ if $K$ is known for $T_1$
+
+\begin{align*}
+    \Delta_r G^{\circ}=\Delta_r H^{\circ}-T\Delta_r S\\
+    \Delta_r G^{\circ}=-RT\ln(K)\\
+    -RT\ln(K)=\Delta_r H^{\circ}-T\Delta_r S\\
+    \ln(K)=\frac{-\Delta H}{RT}+\frac{\Delta S}{R}
+\end{align*}
+
+So we have found a relationship for $K_1, T_1$ and $K_2, T_2$
+
+\begin{align}
+    \ln(K)=-\frac{\Delta H}{RT}+\frac{\Delta S}{R}
+\end{align}
+
+\begin{align}
+    \ln\left(\frac{K_2}{K_1}\right)=-\frac{\Delta H}{R}\left(\frac{1}{T_2}-\frac{1}{T_1}\right)
+\end{align}
+
+\subsection*{Example}
+
+A polypeptide can exist in either the helical or random coil forms. The
+equilibrium constant for equilibrium reaction of the helix to random coil
+transition is $0.86$ at $40 ^{\circ}C$ and $0.35$ at $60^{\circ}C$. Calculate values of $\Delta H$ and $\Delta S$ for
+the reaction.
+
+\subsection*{Solution}
+
+Assuming $\Delta H$ and $\Delta S$ are independent of $T$, then we can use the equation
+
+\begin{align*}
+    \ln\left(\frac{0.35}{0.86}\right)=-\frac{\Delta H}{333K}\left(\frac{1}{333K}-\frac{1}{313K}\right)\implies \Delta H=-3.9E4 kJmol^{-1}
+\end{align*}
+
+Use the values at $40^{\circ} C$ to calculate $\Delta G$ and $\Delta S$
+
+\begin{align*}
+    \Delta G=-RT\ln(K)=-(8.314)(313)\ln(0.86)=391Jmol^{-1}\\
+    \Delta S=\frac{\Delta H-\Delta G}{T}=\frac{-3.9E4-392}{313K}=-1.3E2JK^{-1}mol^{-1}
+\end{align*}
+
+\subsection*{Example 2}
+
+If the reaction $R:FeN_2(s)+\frac{3}{2}H_2(g)\rightarrow 2FE(s)+NH_3(g)$ comes to equilibrium at a total pressure of $1 bar$, analysis of the gas shows that at
+$700K$ and $800K$, $\frac{P(NH_3)}{P(H_2)} = 2.165$ and $1.083$, respectively, if only $H_2(g)$ was initially
+present in the gas phase and $Fe_2N(s)$ was in excess.
+
+\begin{itemize}
+    \item[a)] Calculate $K_P$ at $700K$ and $800K$.
+    We know that if $P_{\Sigma}=1bar$, then $P_{NH_3}+P_{H_2}=1bar$. So at 700K,
+
+    \begin{align*}
+        1atm=2.165P_{H_2}+P_{H_2}=3.165P_{H_2}\\
+        P_{H_2}=0.316atm, P_{NH_3}=0.684atm\\
+        K_P(700K)=\frac{0.684}{(0.316)^{\frac{3}{2}}}=3.85
+    \end{align*}
+
+    At 800K,
+
+    \begin{align*}
+        1atm=1.083P_{H_2}+P_{H_2}=2.083P_{H_2}\\
+        P_{H_2}=0.480atm, P_{NH_3}=0.520atm\\
+        K_P(800K)=\frac{0.520}{(0.480)^{\frac{3}{2}}}=1.56
+    \end{align*}
+    \item[b)] Calculate $\Delta_r S^{\circ}$ at $700K$ and $800K$ and $\Delta_R H^{\circ}$ assuming it is independent of temperature.
+    
+    \begin{align*}
+        \ln\left(\frac{K_P(800)}{K_P(700)}\right)=-\frac{\Delta H}{R}\left(\frac{1}{800}-\frac{1}{700}\right)
+    \end{align*}
+
+    After some plugging in and calculations, we have that::
+
+    \begin{align*}
+        \Delta H=-42.1kJmol^{-1}
+    \end{align*}
+
+    To find $\Delta S$, we need $\Delta G$ first.
+
+    \begin{align*}
+        \Delta G(700K)=-RT\ln(K_P(700K))=-7.81kJmol^{-1}
+    \end{align*}
+    \begin{align*}
+        \Delta G(800K)=-RT\ln(K_P(800K))=-2.91kJmol^{-1}
+    \end{align*}
+
+    Now we can calculate $\Delta S$.
+
+    \begin{align*}
+        \Delta S(700K)=\frac{\Delta H(700)-\Delta G(700)}{700K}=48.9jmol^{-1}K^{-1}=\Delta S(800K)
+    \end{align*}
+
+    Note that the values of $\Delta S$ at $700K$ and $800K$ are nearly equal because $|\Delta G_r|\llless|\Delta H_r|$
+
+    \item[c)] Calculate $\Delta G_r$ at $298K$
+
+    \begin{align*}
+        ln(K_P(298.15K))=ln(K_P(700K))-\frac{\Delta H}{R}\left(\frac{1}{298}-\frac{1}{700}\right)=11.1
+    \end{align*}
+
+    So now we can calculate our $\Delta G$.
+    
+    \begin{align*}
+        \Delta G=-RT\ln(K_P(298K))=-(8.314)(298.15)(11.1)=-27500Jmol^{-1}=-27.5kJmol^{-1}
+    \end{align*}
+\end{itemize}
+
+\subsection*{Le Chatelier's principle}
+
+We want to know what happens when we perturb a system that is at equilibrium. Changing the amount of reactants and products in addition to changing volume, pressure, and temperature are all different ways to perturb the system. In general, 
+
+\begin{itemize}
+    \item The concentration stress of an \textbf{added reactant} or product is relieved by \textbf{consuming} the added substance.
+    \item The concentration stress of a \textbf{removed} reactant or product is relieved by \textbf{replenishing} the removed substance
+\end{itemize}
+
+A special case is if we add \textbf{inert} gases to the system. Then no changes will occur because no reactions will be taking place to increase/decrease pressure/volume.
 
 \end{document}
