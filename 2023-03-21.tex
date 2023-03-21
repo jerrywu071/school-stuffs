@@ -1,0 +1,135 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS3101 notes:: DFS examples}
+\author{Jerry Wu}
+\date{2023-03-21}
+
+\begin{document}
+\maketitle
+\chapter*{BFS's evil twin}
+
+\subsection*{Pushing children (child abuse)}
+
+For BFS in a tree, we try to traverse all the nodes in a layer before moving to the next layer. However for DFS, we're interested in moving down all the layers first, then moving to the next set of nodes beside it. The pseudocode for DFS in a tree is exactly the same as BFS, however, we're using a \textbf{stack} this time rather than a queue (push/pop instead of enqueue/dequeue).
+
+\begin{lstlisting}
+NOT_QUITE_DFS(root):
+    S = Stack()
+    Push(Q, root)
+    while Q not empty:
+        x = Pop(Q)
+        print(x)
+        for each child c of x:
+            Push(Q,c)
+\end{lstlisting}
+
+Just like in BFS, we want to void visiting vertices in the graph that have already been visited. We can remember which vertex introduces us to a new vertex $\pi_v$. However, we have to remember these values as well::
+
+\begin{itemize}
+    \item Clock variable:: Incremented whenever the colour of a vertex is changed
+    \item $\forall v\in V$, remember two timestamps::
+    \begin{itemize}
+        \item $d_v$ is the discovery time when the vertex is first encountered (changes to grey)
+        \item $f_v$ is the finishing time when all vertices neighbours have been visited (changes to black)
+    \end{itemize}
+\end{itemize}
+
+Full pseudocode is available on slide 23.
+
+\subsection*{Runtime of DFS}
+
+The runtime of DFS is exactly identical to BFS ($O(|V|+|E|)$)
+
+\subsection*{Applications}
+
+DFS allows us to detect cycles within a graph. We want to determine the descendant/ancestor relationship in the DFS forest.
+
+\begin{quote}
+    \textit{"Overlapping parethensis are ILLEGAL"-Larry YL Zhang 2023}
+\end{quote}
+
+\begin{itemize}
+    \item First, we can trace back the $\pi_v$ pointers (red edges) starting from $y$ to see if we can arrive at $u$. The worst case for this is if the tree is a linked list ($O(|V|)$). We can forget about this!
+\end{itemize}
+
+A better way is that we can say for sure that $d_v<f_v\forall v\in V$, and we can visualize starting and ending time as an interval $[d_v,f_v]$. For parenthesis, the starting and ending times are either all contained within each other's intervals, or are completely disjoint. This is how we know that bracket matching is valid. So from this propisition, we can say that a node is a descendant of an ancestor if and only if \textbf{the descendant's waiting time interval is contained within its ancestor's waiting time interval}.
+
+\subsection*{Classifying edges}
+
+We have 4 types of edges in DFS::
+
+\begin{itemize}
+    \item Tree edge:: An edge in the DFS forest
+    \item Back edge:: A non tree edge pointing from a vertex to its ancestor in the DFS forest
+    \item Forward edge:: A non tree edge pointing from a vertex to its descendant in the DFS forest
+    \item Cross edge:: Every other edge
+\end{itemize}
+We can efficientyy check edge types because we can look at the waiting time intervals. For example, if $u=[1,8]\supset v=[2,7]$, then $u\rightarrow v$ is a tree edge i.e. $\pi_v=u$. If not a tree edge, then we need to determine whether it is a forward or back edge. We do this by comparing the waiting time intervals once again. If $[u_1,v_1]\supset [u_2,v_2]$, then $u_1\rightarrow v_1$ is a forward edge, else back edge. So from here, we can say that \textbf{a graph is cyclic if and only if $DFS$ yields a back edge!}
+
+\subsection*{Proof}
+
+\begin{itemize}
+    \item The if case:: let an edge be $(u,v)$. By definition of back edge, $v$ is an ancestor of $u$ in the DFS tree. Then $\exists$ a path from $v$ to $u$ along with the back edge. BOOM! Cycle.
+    \item The only if case:: Invoke the white path theorem (full proof on slide 45).
+\end{itemize}
+
+\subsection*{DFS properties in undirected graphs}
+
+\begin{itemize}
+    \item In an undirected graph, $\forall \epsilon \in E$, $\epsilon$ is always either a tree edge or back edge. It is impossible to have forward edges or a cross edge.
+\end{itemize}
+
+\subsection*{Why do we care about cycles?}
+
+\begin{quote}
+    \textit{"Don't tell people about prerequisite waivers"-Larry YL Zhang 2023}
+\end{quote}
+
+Say that the chair of the EECS department wants to introduce a cycle in the prerequesite tree for courses in the department. Then all the courses in the cycle can't be taken by anyone because there's no place to start! This is known as "circular dependency" or a deadlock in operating systems. Another realistic example is requiring experience to get a job, but needing a job to get experience (too relatable!).
+
+\subsection*{More applications}
+
+\begin{itemize}
+    \item Topological sort
+    \begin{itemize}
+        \item Do DFS
+        \item Order vertices accordinv to their finishing times $f_v$
+    \end{itemize}
+    \item Strongly connected components
+    \begin{itemize}
+        \item Subgraphs where any pair of vertices can reach each other in a graph (eg. mutual friends)
+    \end{itemize}
+\end{itemize}
+
+\end{document}
