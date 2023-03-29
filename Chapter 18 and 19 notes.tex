@@ -1,0 +1,266 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage{pgfplots}
+\usepackage{etoolbox}
+\AtBeginEnvironment{align}{\setcounter{equation}{0}}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\setlength\parindent{24pt}
+
+\title{Chapter 18-19:: Kinetics}
+
+\author{Jerry Wu}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+\chapter*{Chapter 18:: Chemical kinetics}
+
+\section*{Abstract}
+Kinetics lets us determine the speed/how fast a process will occur in some arbitrary system $\sigma$. Some examples include carbon dating, digestion times, atmospheric chemistry, etc. When making decisions about processes, we have to consider both thermodynamics and kinetics.
+
+\section*{Rates of reactions}
+
+Reaction rates concern how the concentration of a reactant/product in a system changes as a function of time, i.e. $[A]=f(t)$. Simply put, the rate of reaction is expressed as::
+
+\begin{align*}
+    Rate=\frac{[A]}{\Delta t}
+\end{align*}
+So we can conclude that when $R_{reaction}=0\implies$ reaction has been completed. We will use this to prove completeness later. 
+
+\subsection*{Formal definition of reaction rate}
+We need an expression to find a rate expression which works $\forall prod\forall rxt\in \sigma$.
+Take the following arbitrary dissociation reaction::
+
+\begin{align*}
+    R: aA\rightarrow dD+eE
+\end{align*}
+
+Then the reaction rate can be expressed as the following::
+
+\begin{align*}
+    Rate=-\left(\frac{1}{a}\right)\left(\frac{\Delta [A]}{\Delta t}\right)=\left(\frac{1}{d}\right)\left(\frac{\Delta D}{\Delta t}\right)=\left(\frac{1}{e}\right)\left(\frac{\Delta [E]}{\Delta t}\right)
+\end{align*}
+
+Since we're decreasing the amount of reactant and increasing the amount of product, we put a negative for the rate for the reactants, and positive for the rate for the products. So overall, $Rate\geq 0\forall t\in \mathbb{R}$. Rate is measured in $M/s$.
+
+\subsection*{Average rate of reaction}
+
+Average rate of reaction concerns the rate of reaction in a macroscopic time interval, i.e. $t\in[t_1,t_2]\subset \mathbb{R}$. To do this, we can just use the slope formula for linear functions. Assume $A$ is a reactant in an arbitrary reaction, with $a$ as its stoichiometric coefficient.
+
+\begin{align*}
+    E[Rate]=-\left(\frac{1}{a}\right)\left(\frac{[A]_2-[A]_1}{t_2-t_1}\right)
+\end{align*}
+
+\subsection*{Instantaneous rate of reaction}
+
+This topic is also trivial, as we use the definition of a derivative. Assume that $A$ is a reactant in an arbitrary reaction, with $a$ as its stoichiometric coefficient.
+
+
+\begin{align*}
+    Rate_i=-\left(\frac{1}{a}\right)\lim_{\Delta t\rightarrow 0} \frac{f(t+\Delta t)-f(t)}{\Delta t}
+\end{align*}
+
+\subsection*{Rate laws of reactions}
+
+We want a way to express the rate of a reaction in an elegant manner while keeping the expression independent of time. This is where rate laws come into play. For some arbitrary reaction with $m$ reactants and $n$ products, the rate of reaction can be modelled as the following::
+
+\begin{align*}
+    R: a_0A_0+a_1A_1+\ldots+a_mA_m\rightarrow b_0B_0+b_1B_1+\ldots+b_nB_n
+\end{align*}
+
+\begin{align*}
+    \equiv R: \sum_{i=0}^{m}a_iA_i\rightarrow\sum_{i=0}^{n}b_iB_i
+\end{align*}
+
+\begin{align*}
+    \implies Rate(R)=k[A_0]^{\omega_0}[A_1]^{\omega_1}\ldots[A_m]^{\omega_m}=k\prod_{i=0}^{m} [A_i]^{\omega_i}
+\end{align*}
+
+\begin{itemize}
+    \item $[A_i]$ is the concentration of some reactant in the reaction in $M$ or $P$
+    \item $k$ is the rate constant, units vary from reaction to reaction
+    \item $\omega_i$ is the reaction order for the respective $i$-th reactant in the set of reactants.
+\end{itemize}
+
+\subsection*{Some things to keep in mind}
+
+\begin{itemize}
+    \item Reaction orders, and consequently rate laws are determined \textbf{experimentally}
+    \item Stoichiometric coefficients cannot equal to reaction orders, i.e. $\forall R\forall i(a_i\neq \omega_i)$.
+    \item Overall order of a reaction is the sum of all individual orders, i.e. \\$O(R)=\sum_{i=0}^{n} \omega_i$
+\end{itemize}
+
+\subsection*{Method of initial rates}
+
+Since the rate constant $k$ is independent of concentrations of products and reactants, we can set the initial rate equal to the final rate to determine the values of $m$ and $n$. For example if we have a reaction,
+
+\begin{align*}
+    R: aA\rightarrow products
+\end{align*}
+
+and we have that the initial rate of the reaction at $t=0$ is::
+
+\begin{align*}
+    v_0=k[A]^n\implies v_0=\lim_{t\rightarrow 0}\left(-\frac{1}{a}\frac{d[A]}{dt}\right)=k[A]_0^n
+\end{align*}
+
+We can get a linear function in slope intercept form by taking $\ln$ of both sides.
+
+\begin{align*}
+    \ln(v_0)=n\ln([A]_0)+\ln(k)
+\end{align*}
+
+\textbf{The slope of this function ($n$) will be the order of the reaction.} To generalize, we can state that for the following reaction,
+
+\begin{align*}
+    R: a_0A_0+a_1A_1+\ldots+a_mA_m\rightarrow b_0B_0+b_1B_1+\ldots+b_nB_n
+\end{align*}
+
+\begin{align*}
+    \equiv R: \sum_{i=0}^{m}a_iA_i\rightarrow\sum_{i=0}^{n}b_iB_i
+\end{align*}
+
+The initial rate can be expressed as the following product::
+
+\begin{align*}
+    v_0=k[A_0]^{\omega_0}[A_1]^{\omega_1}\ldots[A_m]^{\omega_m}=\lim_{t\rightarrow 0}\left(-\frac{1}{a_0}\frac{d[A_0]}{dt}\right)=k\prod_{i=0}^{m} [A_i]_0^{\omega_i}
+\end{align*}
+
+To find each $\omega_i$, we can keep every other one constant and find each $\ln$ relationship individually. 
+
+\begin{align*}
+    \forall R\forall i(\ln(v_0)=\omega_i\ln([A_i]_0+\ln(k')))
+\end{align*}
+
+\subsection*{Isolation method}
+
+Take a generic reaction
+
+\begin{align*}
+    R:aA+bB\rightarrow products
+\end{align*}
+
+We assume the following to use this method::
+
+\begin{itemize}
+    \item Assume $R$ will run until $B$ is used up
+    \item $[A]$ will be $0.99M$ once it is used up
+    \item $[A]$ can be assumed to be constant over that time interval, since the reaction has been completed during said interval.
+    \begin{align*}
+        Rate=k'[B]^{\beta}, k'=k[A]^{\alpha}
+    \end{align*}
+
+    \item We can determine the order with respect to $A$ in the same manner.
+\end{itemize}
+
+\section*{Reaction mechanisms}
+Reactions will typically take place in multiple elementary steps before proceeding to a final product. These sequences of steps are known as reaction mechanisms. In general, a reaction is a sum of its elementary steps, i.e.
+
+\begin{align*}
+    R=\sum_{i=0}^{n} R_i
+\end{align*}
+
+for a reaction with $n$ elementary steps.
+
+\subsection*{Reaction intermediates}
+Simply put, a reaction intermediate is a compound that is formed during a reaction that is consumed during a subsequent elementary step, i.e. it does not appear in the final product. For example,
+
+\begin{align}
+    R_1:NO_2(g)+NO_2(g)\rightarrow NO(g)+NO_3(g)\\
+    R_2:NO_3(g)+CO(g)\rightarrow NO_2(g)+CO_2(g)\\
+    R: NO_2(g)+CO(g)\rightarrow NO(g)+CO_2(g)
+\end{align}
+
+We can see that $NO_3$ is a reaction intermediate, as it doesn't appear in the overall reaction $R$.
+
+\subsection*{Proving reaction correctness and completeness}
+
+When finding a reaction mechanism, it is not possible to prove that a mechanism is completely accurate. We can only approximate and prove that a mechanism is \textbf{plausible}. For example, take the following reaction::
+
+\begin{align*}
+    R: 2NO_2+F_2\rightarrow 2NO_2F|Rate=k[NO_2][F_2]
+\end{align*}
+
+Because this is an overall reaction, the stoichiometric coefficients are not necessarily equal to the orders of each reactant (\textbf{they are however always equal for elementary steps}). Here, both $NO_2$ and $F_2$ are first order, i.e. $NO_2,F_2\in O(n)$. Our job is to find and prove a reaction mechanism that is acceptable. Let's take an arbitrary mechanism with 1 elementary step for the previous overall reaction::
+
+\begin{align}
+    R_1:NO_2+NO_2+F_2\rightarrow 2NO_2F|Rate=k[NO_2]^2[F_2]
+\end{align}
+
+Here, we use the stoichiometric coefficients as the rate orders since it is an elementary step. We can see that $NO_2$ is 2nd order, i.e. $NO_2\in O(n^2)$. Because the rate law for this elementary step is not equal to the one for the overall reaction, we reject this example as an acceptable reaction mechanism, i.e. it doesnt agree with the experiment.\\So we can say that \textbf{a mechanism is plausible if and only if the elementary steps added together will produce the same rate law as the overall reaction}.\\
+
+Now let us properly divide the overall reaction into elementary steps::
+\begin{align}
+    R_1:NO_2+F_2\rightarrow^{k_1} NO_2F+F\\
+    R_2:F+NO_2\rightarrow^{k_2} NO_2F\\
+    R:2NO_2+F_2\rightarrow^k 2NO_2F
+\end{align}
+After summing up the elementary steps, we arrive at our overall reaction, so this mechanism is indeed correct.
+
+\subsection*{Proof}
+Here, depending on the magnitude of each step's rate constants ($k_1,k_2$), it will determine how fast each individual step is. We can also conclude the following properties of this process::
+
+\begin{itemize}
+    \item $F$ is the reaction intermediate
+    \item The molecularity of both elementary steps is 2, i.e. we have 2 molecules of reactants.
+    \item The rate law for both steps are as follows::
+    \begin{align}
+        Rate_{R_1}=k_1[NO_2][F_2]\\
+        Rate_{R_2}=k_2[NO_2][F]
+    \end{align}
+    Rate orders are all $O(n)$ in this case.
+\end{itemize}
+
+Assume $R_1$ is the slow step (rate determining step), and $R_2$ is the fast step. If this is the case, then the overall rate law should be identical to that of $R_1$.\\From this proposition it would follow, because the relative rates postulated for $R_1$ and $R_2$ are consistent with the overall rate law, it would follow that the mechanism is plausible. $\blacksquare$
+
+\subsection*{Reaction mechanism with equilibriums}
+
+Take the following reaction mechanism::
+
+\begin{center}
+    $R_1:Cl_2\rightleftarrows_{k_-1}^{k_1} 2Cl$ Fast equilibrium\\
+    $R_2:Cl+CO\rightleftarrows_{k_-2}^{k_2} COCl$ \indent Fast equilibrium\\
+    $R_3:COCl+Cl_2\rightarrow^k COCl_2+Cl$ \indent Slow step
+\end{center}
+
+Our job is to determine the reaction order. When doing this, we want to always use the \textbf{slowest} step in the mechanism to determine the rate law and reaction orders. When $\exists$ equilbirum in our mechanism, we know that those steps are reversible and that their \textbf{forward and reverse rates are equal!}\\ From here, we can express our rate law in terms of the slowest step::
+
+\begin{align}
+    Rate=Rate_{R_3}=k[COCl][Cl_2]\\
+    Rate_{R_1}=k_1[Cl_2]=k_{-1}[Cl]^2\\
+    Rate_{R_2}=k_2[Cl][CO]=k_{-2}[COCl]\\
+    \implies Rate=k[COCl][Cl_2]
+\end{align}
+
+Because $COCl$ and $Cl$ are intermediates, we want to get rid of it in our final rate expression. How do we do this? We can use the fact that $R_1$ and $R_2$ are equilibrium reactions to rearrange (2) and (3) to express $[COCl]$ independently and substitute the rewritten value into the overall rate law. Here, we'll rearrange the rate laws for $R_1$ and $R_2$.
+
+\begin{align}
+    k_2[Cl][CO]=k_{-2}[COCl]\implies [COCl]=\frac{k_2[Cl][CO]}{k_{-2}}\\
+    k_1[Cl_2]=k_{-1}[Cl]^2\implies [Cl]=\left(\frac{k_1[Cl_2]}{k_{-1}}\right)^{\frac{1}{2}}
+\end{align}
+
+Substituting these values in for the intermediates, we have that::
+
+\begin{align}
+    Rate=k[COCl][Cl]=k\left(\frac{k_2[Cl][CO]}{k_{-2}}\right)[Cl_2]\\=\frac{k_2k\left(\frac{k_1[Cl_2]}{k_{-1}}\right)^{\frac{1}{2}}[CO][Cl_2]}{k_{-2}}\\=\frac{k_1^{\frac{1}{2}}k_2k[Cl_2]^{\frac{3}{2}}[CO]}{k_{-1}^{\frac{1}{2}}k_{-2}}
+\end{align}
+
+Cleaning this up by grouping rate constants together as ratios, we have that::
+
+\begin{align*}
+    Rate=k\left(\frac{k_1}{k_{-1}}\right)^{\frac{1}{2}}\left(\frac{k_2}{k_{-2}}\right)[CO][Cl]^{\frac{3}{2}}
+\end{align*}
+
+Therefore, the reaction orders are $Cl_2\in O(n^{1.5})$ and $CO\in O(n)$.
+
+\subsection*{Molecularity}
+
+%to finish
+
+\end{document}
