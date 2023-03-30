@@ -187,4 +187,16 @@ Runtime is $\Theta(|V|\times|E|)$
     \item At the end of the $k$-th iteration, $d[v]$ is the shortest path distance over all paths that contain at most $k$ edges (24.1).
 \end{itemize}
 
+\section*{Shortest paths in directed acyclic graphs (DAGs)}
+
+We can perform the following operations in sequence::
+
+\begin{itemize}
+    \item Topological sort the graph
+    \item Relax all nodes in the topologically sorted order
+    \item We only do one round of relax, whereas BF does $|V|-1$ rounds.
+\end{itemize}
+
+Running time is $O(|E|)$.
+
 \end{document}
