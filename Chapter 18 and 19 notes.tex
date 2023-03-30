@@ -261,6 +261,191 @@ Therefore, the reaction orders are $Cl_2\in O(n^{1.5})$ and $CO\in O(n)$.
 
 \subsection*{Molecularity}
 
-%to finish
+In simple terms, molecularity is the number of molecules in the reactants side, i.e. $|Rxts|$. Unimolecular and bimolecular reactions are commonplace, but any $|Rxts|>2$ is extremely rare. $\nexists$ any elementary reaction with $|Rxts|>3$ that are known currently. 
+
+\subsection*{Theorem}
+For any given overall reaction, it's elementary steps can have a molecularity of at most the overall reaction's molecularity.
+
+\begin{align*}
+    \forall R_i\subset R(|Rxts(R_i)|\leq|Rxts(R)|)
+\end{align*}
+
+\subsection*{Integrated rate law ($O(1)$)}
+Let us start by taking the rate law of an arbitrary $O(1)$ reaction. 
+\begin{align}
+    A\rightarrow^k products
+\end{align}
+What does it mean to be $O(1)$? It just means that the reaction will run in constant time for one reactant i.e. the rate will be constant regardless of the concentration.
+
+\begin{align}
+    Rate=\frac{-d[A]}{dt}=k[A]^0=k
+\end{align}
+
+From here, we can derive the integrated rate law for this reaction via integration, hence "integrated" rate law. This can be done with FTC1.
+
+\begin{align}
+    \frac{-d[A]}{dt}=k\implies \int_{[A]_0}^{[A]_t}dA=-\int_{0}^{t}kdt\\
+    [A]_{[A_0]}^{[A]_t}=-kt\implies [A]_t=[A]_0-kt
+\end{align}
+
+With this, we get $[A]$ at some point in time $t$ as a function of $t$. It is in slope intercept form; the rate constant is the slope, and the y intercept is the initial concentration.
+
+\subsection*{Half life of $O(1)$ processes}
+
+The definition of this property is trivial, as we can take half of the initial concentration as the half life ($[A]_{\frac{\lambda}{2}}=\frac{1}{2}[A]_0$). We can derive a better expression for this via the integrated rate law::
+
+\begin{align}
+    [A]_t-[A]_0=-kt\\
+    \frac{[A]_0}{2}-[A]_0=-kt_{\frac{1}{2}}\\
+    \frac{[A]_0}{2}=kt_{\frac{1}{2}}\implies t_{\frac{1}{2}}=\frac{[A]_0}{2k}
+\end{align}
+
+Remember that half life is exponential decay.
+
+\subsection*{Integrated rate law ($O(n)$)}
+
+For first order reactions, deriving the integrated rate law is exactly the same as for $O(1)$ reactions. We will use the same monomolecular reaction from the $O(1)$ example for the derivation.
+
+\begin{align}
+    Rate=\frac{-d[A]}{dt}=k[A]\implies \frac{d[A]}{[A]}=-kdt\\
+    \int_{[A]_0}^{[A]_t}\frac{d[A]}{[A]}=-\int_{0}^{t}kdt\implies \left[\ln([A])\right]_{[A]_0}^{[A]_t}=\left[-kt\right]_{0}^{t}\\
+    \ln([A]_t)-\ln([A]_0)=-kt\implies \ln\left(\frac{[A]_t}{[A_0]}\right)=-kt\\
+    \implies [A]_t=[A]_0 e^{kt}
+\end{align}
+\newpage
+\subsection*{Half life of $O(n)$ processes}
+
+We can derive this in the same method as the $O(1)$ derivation.
+
+\begin{align}
+    \ln\left(\frac{[A]_t}{[A]_0}\right)=-kt\\
+    \ln\left(\frac{\frac{1}{2}[A]_0}{[A]_0}\right)=-kt\\
+    \ln\left(\frac{1}{2}\right)=-kt\\
+    t_{\frac{1}{2}}=\frac{\ln(2)}{k}
+\end{align}
+
+From this, we can conclude that the half life of a $O(n)$ process is a value which is independent of any concentrations $\implies O(n)$ has a constant half life. Thus, $t_{\frac{1}{2}}\equiv const\implies R\in O(n)$.
+
+\subsection*{Example}
+
+A child weighing $20 kg$ has an infection and requires the intake of antibiotics. It is found that
+the antibiotic, $A$, during its metabolization obeys the relation $\frac{-d[A]}{dt}=k[A]$. The rate
+constant, $k$, depends on temperature and body weight, but for a $20 kg$ child with no fever it
+is equal to $2.00E-8$ per milliseconds.
+
+\begin{itemize}
+    \item[a)] If the child has taken the first pill, when should it take its second pill (which all contain $100 mg$ of antibiotics) to keep the concentration at a minimum of $1.50 mg$ per $kg$ of body weight assuming instantaneous and uniform distribution of the antibiotic throughout the
+    body mass as soon as the pill has been ingested?
+
+    \subsection*{Solution}
+    Looking at the rate law, it is evident that this process is $O(n)$, thus the half life will be constant.\\
+    First, we determine our rate law equation::
+    \begin{align}
+        \ln\left(\frac{[A]}{[A]_0}\right)=-kt
+    \end{align}
+
+    Next, find initial concentration::
+    \begin{align}
+        [A]_0=\frac{100mg}{20kg}=5 mg/kg
+    \end{align}
+
+    So we can now calculate the time for the next pill.
+
+    \begin{align}
+        \ln\left(\frac{1.5}{5}\right)=-2E8t\implies t=6.02E7 ms\approx 16.7 hours
+    \end{align}
+
+    $\therefore$ the kid should wait somewhere in the neighbourhood of 16.7 hours before taking the next pill.
+
+    \item[b)]Do you think that the child should be given its third pill after a shorter time interval, after the same time interval, or after a longer time interval than it did for the second
+    pill? Give a brief explanation for your answer.
+
+    \subsection*{Answer}
+    The child should wait a longer time interval before taking the next pill, since the concentration only drops to $1.5 mg/kg$ after 16.7 hours.
+
+    \item[c)] At what time (value of $t$) would M reach its maximum concentration? Determine the
+    expression for the maximum concentration of $[M]$.
+    
+    \subsection*{Answer}
+    Knowing that the process is $O(n)$, we can conclude that we should plot $\ln([A])$ vs $t$ to obtain a straight line plot.
+
+    \item[d)] What is the relationship between the slope of the plot in part (c) and the rate
+    constant of the reaction?
+
+    \subsection*{Answer}
+
+    The slope of the plot is exactly $-k$.
+
+\end{itemize}
+
+\subsection*{Example involving differential equations}
+
+A compound $M$ is being synthesized by a $O(1)$ mechanism with a rate constant $k_0$. It is also being degraded by a $O(n)$ mechanism with rate constant $k_1$.
+
+\begin{itemize}
+    \item[a)] Write a differential equation consistent with the mechanism.
+    
+    \subsection*{Solution}
+    By inspection of the mechanism, we have that::
+
+    \begin{align*}
+        \frac{d[M]}{dt}=k_0-k_1[M]
+    \end{align*}
+
+    This equation will model production of products in $O(1)$ and consumption of reactants in $O(n)$.
+
+    \item[b)] If $[M]=0$ for $t=0$, find the solution to the differential equation. 
+    
+    \subsection*{Solution}
+
+    We do this in the same manner as deriving rate laws, i.e. \textbf{isolate everything with $t$ on one side, and everything with $[M]$ on the other side}.
+
+    \begin{align}
+        \frac{d[M]}{dt}=k_0-k_1[M]\\
+        \frac{d[M]}{k_0-k_1[M]}=dt\\
+        \left[-\frac{1}{k_1}\ln(k_0-k_1[M])\right]_{[M]_0}^{[M]}=t\\
+        \ln\left(\frac{k_0-k_1[M]}{k_0}\right)=-k_1t\\
+        1-\frac{k_1[M]}{k_0}=e^{-k_1t}\\
+        [M]=\frac{k_0}{k_1}(1-e^{-k_1t})
+    \end{align}
+
+    \item[c)] At what time (value of $t$) would $M$ reach its maximum concentration? Determine the
+    expression for the maximum concentration of $[M]$.
+
+    \subsection*{Solution}
+
+    We can find the derivative of the function and find the solutions when $\frac{d[M]}{dt}=0$.
+
+    \begin{align*}
+        \frac{d[M]}{dt}=0=k_0e^{-k_1t}\implies [M]=\frac{k_0}{k_1}
+    \end{align*}
+
+    So $[M]$ will reach its maximum when $t\rightarrow \infty$.
+
+\end{itemize}
+
+\subsection*{Integrated rate law for $O(n^2)$}
+
+Again, we will use the same method of derivation for the $O(n^2)$ integrated rate law as the previous two. Use the same monomolecular process as a basis.
+
+\begin{align}
+    Rate=\frac{-d[A]}{dt}=k[A]^2\implies \frac{d[A]}{[A]^2}=-kdt\\
+    \int_{[A]_0}^{[A]_t}\frac{d[A]}{[A]^2}=-\int_{0}^{t}kdt\implies \left[-\frac{1}{[A]}\right]_{[A]_0}^{[A]_t}=-kt\\
+    -\left(\frac{1}{[A]_t}-\frac{1}{[A]_0}\right)=-kt\implies \frac{1}{[A]_t}=kt+\frac{1}{[A]_0}
+\end{align}
+
+With this equation, we can plot $\frac{1}{[A]}$ vs $t$ in order to get a straight line plot.
+
+\subsection*{Half life for $O(n^2)$ processes}
+
+Let us derive the half life formula for $O(n^2)$ in the same manner as the $O(n)$ and $O(1)$ derivations.
+
+\begin{align}
+    \frac{1}{[A]_t}=kt+\frac{1}{[A]_0}\\
+    \frac{1}{[A]_0}=kt_{\frac{1}{2}}+\frac{1}{[A]_0}\\
+    kt_{\frac{1}{2}}=\frac{1}{[A]_0}\implies t_{\frac{1}{2}}=\frac{1}{k[A]_0}
+\end{align}
+
+When plotting this, we can observe that the half life doubles after each iteration. So we can conclude that if $t_{\frac{1}{2}}=2^n\implies R\in O(n^2)$.
 
 \end{document}
