@@ -1,0 +1,190 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS3101 notes:: More on graph algorithms}
+\author{Jerry Wu}
+\date{2023-03-30}
+
+\begin{document}
+\maketitle
+\chapter*{Shortest path algorithms}
+
+\section*{Abstract}
+A shortest path is simply the path of minimum weight on a weighted graph. Applications of this idea include, but are not limited to::
+\begin{itemize}
+    \item Network routing
+    \item Map/route generation in traffic
+    \item Robotic motion
+\end{itemize}
+\section*{Types of shortest path problems}
+There are 3 main types of shortest path problems in graph theory.
+\subsection*{Single source, all destinations shortest paths}
+\begin{itemize}
+    \item BFS on an unweighted graph.
+    \item Dijkstras(LAN)/Bellman-Ford(WAN) for weighted graphs
+\end{itemize}
+\subsection*{Single source, single destination}
+\begin{itemize}
+    \item All known algorithms for this kind of problem have the same worst case running time as single source, all destinations algorithms. In other words, just find all of them!
+\end{itemize}
+\subsection*{All pair shortest paths}
+\begin{itemize}
+    \item A naive approach would be to run single source shortest path algorithm $\forall v\in V$
+    \item FLoyd-Warshall algorithm
+    \item Johnson's algorithm
+\end{itemize}
+
+\section*{Properties of shortest path problems}
+
+\begin{quote}
+    \textit{"How many times did we use proof by contradiction? I don't know, 3 times a week?"-Larry YL Zhang 2023}
+\end{quote}
+\subsection*{Optimal substructure}
+\begin{itemize}
+    \item Sub paths of shortest paths are also shortest paths.
+    \item Proof by cut and paste:: Assume $(x,y)$ is not a shortest path, then $\exists$ another $(\psi, \phi)$ that is even shorter $\implies$ contradiction.
+\end{itemize}
+
+\subsection*{Relaxation}
+\begin{itemize}
+    \item $\forall v\in V$, we maintain $d[v]$, the estimate of the shortest path from the source node $s$ initialized to $\infty$ at the start.
+    \item Relaxing an edge $(u,v)$ means testing whether we can improve the shortest path to $v$ found so far by going through $u$.
+    
+    \begin{lstlisting}
+Relax(u,v,w):
+if d[v]>d[u]+w(u,v) then:
+    d[v]=d[u]+w(u,v)
+    pi[v]=u
+    \end{lstlisting}
+\end{itemize}
+
+\begin{quote}
+    \textit{"Today's lecture is going to be very relaxing. Today is gonna be a medication session"-Larry YL Zhang}
+\end{quote}
+
+\section*{Dijkstra's algorithm}
+
+\begin{itemize}
+    \item Non negative edge weights, i.e. $\forall \epsilon \in E, w(\epsilon)>0$
+    \item It's like BFS but uses a priority queue (similar to Prim's algorithm). Key for the min priority queue is $d[v]$.
+\end{itemize}
+
+\subsection*{The main idea}
+\begin{itemize}
+    \item Maintain a set $S$ containing the solved vertices
+    \item At each step,
+    \begin{itemize}
+        \item Select the closest vertex $u$.
+        \item add it to $S$.
+        \item relax all edges from $u$.
+    \end{itemize}
+    \item Repeat until the queue is empty.
+\end{itemize}
+
+\begin{lstlisting}
+Dijkstra(G,w,s):
+    for v in V:
+        d[v]=infinity
+    d[s]=0
+    S=null
+    Q=V
+    while Q != null:
+        u=ExtractMin(Q)
+        S=union(S, [u])
+        for(v in Adj[u]):
+            if(d[v]>d[u]+w(u,v)):
+                d[v]=d[u]+w(u,v)
+\end{lstlisting}
+
+\subsection*{Proof of correctness}
+
+\begin{itemize}
+    \item Loop invariant
+    \begin{itemize}
+        \item A the end of each iteration, $\forall v\in S, d[v]$ is the real shortest path distance from the source vertex to $v$.
+    \end{itemize}
+
+    \item The proof is trivial and is left as an exercise to the reader (24.3). In summary, it is impossible to find a path shorter than the shortest path.
+    
+    \begin{align*}
+        d[y]=\delta(s,y)\leq \delta(s,u)\leq d[u]\implies d[u]\leq d[y]\\
+        \implies d[u]=d[y]=\delta(s,y)=\delta(s,u)\blacksquare
+    \end{align*}
+
+    Why is $d[u]\leq d[y]$? This is because $u$ is selected by $ExtractMin(Q)$, so it will always be the lesser value for $d[v]$. So it is the thing we will be adding to $S$.
+\end{itemize}
+
+\subsection*{Runtime of Dijkstra's}
+
+\begin{itemize}
+    \item We execute $ExtractMin$ exactly $|V|$ times.
+    \item We execute $DecreaseKey$ exactly $|E|$ times.
+    \item Time complexity depends on the priority queue implementation. With a min heap priority queue, we have that the time complexity is::
+    \begin{align*}
+        |V|\log(|V|)+|E|\log(|V|)\Theta(|E|\log(|V|)
+    \end{align*}
+\end{itemize}
+
+\section*{Bellman-Ford algorithm}
+Dijkstra's algorithm doesn't allow for \textbf{negative} weighted edges, so we utilize BF instead.
+
+\begin{itemize}
+    \item BF uses dynamic programming (they're actually the people who invented dyanmic programming!)
+    \item It can detect negative cycles (returns false because the "shortest" path distance will be $-\infty$)
+    \item returns shortest path tree otherwise
+\end{itemize}
+
+\begin{lstlisting}
+BellmanFord(G,w,s):
+    for v in V:
+        d[v]=infinity
+    d[s]=0
+    pi[s]=null
+    for i in range |V|-1:
+        for (u,v) in E:
+            Relax(u,v,w)
+    for (u,v) in E:
+        if d[v]>d[u]+w(u,v):
+            return false
+    return true
+\end{lstlisting}
+
+Runtime is $\Theta(|V|\times|E|)$
+
+\subsection*{Loop invariant of BF}
+
+\begin{itemize}
+    \item At the end of the $k$-th iteration, $d[v]$ is the shortest path distance over all paths that contain at most $k$ edges (24.1).
+\end{itemize}
+
+\end{document}
