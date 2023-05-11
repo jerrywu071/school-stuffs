@@ -1,0 +1,220 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS3221 notes}
+\author{Jerry Wu}
+\date{Week I}
+
+\begin{document}
+\maketitle
+
+\chapter*{Chapter 1:: Intro}
+
+\section*{Abstract}
+
+In general, the computer system stack is divided into 4 components from bottom up:
+
+\begin{itemize}
+    \item Hardware (CPU, memory, storage, IO, etc.)
+    \item OS - Controls and coordinates use of hardware among various applications and users
+    \item Applications (word processors, compilers, web browsers, database system, games, etc.)
+    \item Users (the people using the system, other computers, etc.)
+\end{itemize}
+
+\section*{What is an OS, what do they do?}
+There is no universally accepted definition of what an OS is, however, operating systems are generally a \textbf{medium} between the user and a set of hardware such that the user can accomplish an arbitrary objective. This would depend on the user in question since multiple people would have different goals in mind that they want to accomplish. 
+
+Operating systems allocate resources and acts as a control program in order to make optimal use of hardware while managing execution of programs and applications. For example, the operating system on a desktop PC would optimize performance, while most mobile operating systems are resource poor, but optimize usability and battery life.
+
+We can divide an operating system into its own parts as well::
+
+\begin{itemize}
+    \item Kernel - the part of the OS that is running at all times
+    \item System program - something that is included with the OS, but not part of the kernel
+    \item Application program - everything else that isn't associated with the core OS.
+\end{itemize}
+
+Modern operating systems for general purpose/mobile computing also come with \textbf{middleware}, a set of software frameworks (APIs) that provide additional services to application developers such as databases, multimedia, graphics, etc. A good example is the .net framework in Windows, or gcc being included with most linux distributions.
+
+\section*{Computer system organization}
+
+\begin{itemize}
+    \item One or more CPUs, device controllers connect through a common \textbf{bus} providing access to shared memory
+    \item Concurrent executions of CPUs and devices competing for memory cycles
+    \item IO devices can execute concurrently
+    \item Each device controller is in charge of a particular device type
+    \item Each device controller has a local buffer
+    \item Each device controller type has an operating sstem \textbf{device driver} to manage it
+    \item CPU moves data from/to main memory to/from local buffers
+    \item IO is from the device to local buffer of controller
+    \item Device controller informs CPU that it has finished its operation by causing an interrupt
+\end{itemize}
+
+\section*{Interrupts}
+
+\begin{itemize}
+    \item Interrupt transfers control the \textbf{interrupt service routine} generally through the \textbf{interrupt vector}, which contains the addresses of all service routines
+    \item Interrupt architecture must save the address of the interrupted instruction
+    \item A \textbf{trap} or an \textbf{exception} is a software generated interrupt caused either by an error or a user request
+    \item All operating systems are \textbf{interrupt driven}
+\end{itemize}
+
+\subsection*{Handling interrupts}
+
+\begin{itemize}
+    \item OS preserves the state of the CPU by storing registers and the program counter
+    \item Determines which type of interrupt has occurred
+    \item Separate segments of code to determine what action should be taken for each type of interrupt
+\end{itemize}
+
+\section*{IO structure}
+
+\begin{itemize}
+    \item After IO starts, controller returns to user program only upon IO completion
+    \item 
+\end{itemize}
+
+\section*{Storage structure}
+
+Storage systems can be organized in a hierarchy of factors::
+
+\begin{itemize}
+    \item Speed
+    \item Cost
+    \item Volatility
+\end{itemize}
+
+\subsection*{Caching}
+The act of copying information into a faster storage system such that the main memory can be viewed as a cache for secondary storage.
+
+\subsection*{Device driver}
+
+For each device controller to manage IO
+
+\begin{itemize}
+    \item Provides uniform interface between controller and kernel
+\end{itemize}
+
+As of today, \textbf{SSDs are strictly slower than RAM chips}.\\
+
+Magnetic drives like floppy disks, hard drives, tape, etc. are \textbf{sequential}, in that if one wishes to access something in the middle of the storage system, they would have to iterate through everything before that index.
+
+\section*{Proessors}
+
+\begin{itemize}
+    \item Most systems use a single general purpose processor along with a few special purpose processors
+    \item \textbf{Multiprocessor} systems are growing in use and importance, advantages include, but are not limited to::
+    \begin{itemize}
+        \item Increased throughput
+        \item Economy of scale
+        \item Increased reliability (graceful degradation or fault tolerance)
+        \begin{itemize}
+            \item \textbf{Graceful degradation} - don't show a cryptic message when something bad happens. Doesn't enable hackers to extract sensitive information
+            \item \textbf{Fault tolerance} - quickly recover from crashes and exceptions
+        \end{itemize}
+    \end{itemize}
+    \item There are two types of multiprocessors
+    \begin{itemize}
+        \item \textbf{Asymmetric multiprocessing} - each processor is assigned a specific task
+        \item \textbf{Symmetric multiprocessing} - each processor performs all tasks (the most common one)
+    \end{itemize}
+\end{itemize}
+
+\section*{Clustered systems}
+
+\begin{itemize}
+    \item Similar to multiprocessor systems, but multiple systems working together independently from one another
+    \begin{itemize}
+        \item usually sharing storage via a \textbf{storage area network} (SAN)
+        \item Proides a \textbf{high availability} service which survives failures
+        \begin{itemize}
+            \item \textbf{Asymmetric clustering} has one machine in hot standby mode
+            \item \textbf{Symmetric clustering} has multiple nodes running applications monitoring each other
+        \end{itemize}
+
+        \item Some clusters are for \textbf{high performance computing} (HPC)
+        \begin{itemize}
+            \item Applicaations must be written to use parallelization
+        \end{itemize}
+
+        \item Some have \textbf{distributed lock manager} (DLM) to avoid conflicting operations
+    \end{itemize}
+\end{itemize}
+
+\section*{OS operations}
+
+\begin{itemize}
+    \item Bootstrap program - simple code to initialize the system and load the kernel
+    \item Kernel loads
+    \item Starts system daemons (services provided outside of the kernel)
+    \item Kernel interrupt driven (hardware and software)
+    
+    \begin{itemize}
+        \item Hardware interrupt by one of the devices
+        \item Software interrupt (exception or trap):
+        \begin{itemize}
+            \item Software error (e.g. zero division error)
+            \item Request for operating system service - \textbf{system call}
+            \item Other process problems including infinit eloops, processes modifying each other or the OS
+        \end{itemize} 
+    \end{itemize}
+\end{itemize}
+
+\section*{Multiprogramming and multitasking}
+Before OS was a thing, computers could only run one program at a time. Multiple programs would be executed sequentially.
+
+\subsection*{Multiprogramming (batch system)}
+
+\begin{itemize}
+    \item Needed for efficiency
+    \item Single user cannot keep CPU and IO devices busy at all times
+    \item Multiprogramming organizes jobs (code and data) such that CPU can always have one to execute
+    \item A subset of total jobs in the system is kept in memory
+    \item One job selected and run via \textbf{job scheduling}
+    \item When it has to wait (for IO for example), OS will switch to another job
+\end{itemize}
+
+\subsection*{Tunesharing (multitasking)}
+A logical extension in which the CPU switches jobs so frequently that the user can interact with each job while it is running, creating \textbf{interactive computing}.
+
+\begin{itemize}
+    \item Response time should be $<1s$
+    \item Each user has at least one program executing in memory (process)
+    \item If several jobs are ready to run at the same time, use CPU scheduling
+    \item If processes don't fit in memory, swapping moves them in and out to run
+    \item Virtual memory allows execution of processes not completely in memory
+\end{itemize}
+
+Nowadays, we see less and less memory errors since computers have so much more memory real estate to use for running programs.
+
+\end{document}
