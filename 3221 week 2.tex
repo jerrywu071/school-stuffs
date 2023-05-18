@@ -1,0 +1,162 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS3221 notes}
+\author{Jerry Wu}
+\date{Week II 2023/05/18}
+
+\begin{document}
+\maketitle
+\chapter*{Operating system structures}
+
+\section*{Services}
+
+\begin{itemize}
+    \item Operating systems provide an environment for execution of programs and services to programs and users.
+    \item Some other OS services include but are not limited to::
+    \begin{itemize}
+        \item \textbf{UI} - Almost all operating systems have a user interface (cmd, GUI, touch screen, etc)
+        \item \textbf{Program execution} - The system must be able to load a program into memory and run the program, end execution either normally or abnormally (indicating an error)
+        \item \textbf{IO operations} - A running program may require IO which may involve a file or an IO device
+        \item \textbf{File system manipulation} - Programs need to read and write files and directories, create and delete them, search, list file info, and permission management
+        \item \textbf{Communications} - Processes may exchange information on the same computer or between computers over a network
+        \begin{itemize}
+            \item Communications may be via shared memory or through message passing (packets moved by the OS)
+        \end{itemize} 
+        \item \textbf{Error detection} - OS needs to be constantly aware of possible errors
+        \begin{itemize}
+            \item May occur in the CPU and memory, IO devices, or in software
+            \item For each type of error, OS should take the appropriate action to ensure correct and consistent computing
+            \item Debugging facilities can greatly enhance the user's and programmer's abilities to efficiently use the system
+        \end{itemize}
+        \item \textbf{Resource allocation}
+        \item \textbf{Security}
+    \end{itemize}
+    \item Our goal is to develop an understanding of OS in order to build scalable software
+\end{itemize}
+
+\subsection*{CLI (command line interpreter)}
+
+CLI allows direct command entry closer to the hardware which is much faster than a GUI
+
+\begin{itemize}
+    \item Sometimes implemented in the kernel, sometimes by system programs
+    \item Sometimes multiple flavours implemented (shells)
+    \item Primarily fetches a command from the user and executes
+    \item There are multiple build in commands, and some are just names of system programs
+    \begin{itemize}
+        \item If the latter, adding new features doesn't require shell modification
+    \end{itemize}
+\end{itemize}
+
+\subsection*{GUI}
+
+First invented by Xerox. Made for ease of use for the user so they won't have to use commands.
+
+\begin{itemize}
+    \item Controlled by keyboard and mouse with a monitor for viewing, or touch screens
+    \item Icons represent files, programs, actions, etc
+    \item Various mouse buttons over objects in the interface cause actions (providing information, options, function execution, opening directories (folders))
+\end{itemize}
+
+\section*{System calls}
+
+\begin{itemize}
+    \item Programming interface to the services provided by the OS
+    \item Typically written in a high level language (C or C++)
+    \item Mostly accessed by programs via a high level API rather than direct system call use
+    \item Three most common APIs are Win32 for windows, POSIX for UNIX, mac, Linux, etc. and the Java API for the JVM.
+\end{itemize}
+
+\subsection*{Implementation}
+
+\begin{itemize}
+    \item Each system call is associated with a number
+    \begin{itemize}
+        \item \textbf{System call interface} maintains a table indexed according to said numbers
+    \end{itemize}
+    \item The system all interface invokes the intended system call in the OS kernel and returns the status of the system call and any return values
+    \item To make system calls, we need to pass parameters into the OS
+    \begin{itemize}
+        \item Simplest: pass parameters in registers (sometimes there are more parameters than there are registers)
+        \item Pass in blocks, or table in memory and address of the block passed as a parameter in a register (Linux/solaris)
+        \item Parameters are pushed and popped from the program stack
+    \end{itemize} 
+\end{itemize}
+
+\subsection*{Types of system calls}
+System call API cheat sheet on \textbf{slide 2.24}
+\begin{itemize}
+    \item Create/terminate processes
+    \item end, abort, load, execute
+    \item get process attributes, set process attributes
+    \item wait for time/event/signal event
+    \item allocate and free memory
+    \item dump memory if error
+    \item \textbf{debuggers} for determining bugs: \textbf{single step} execution
+    \item \textbf{locks} for managing access to shared date between processes
+\end{itemize}
+
+\section*{Example:: Arduino}
+
+\begin{itemize}
+    \item Single task (one program at a time)
+    \item No on board OS
+    \item Programs (sketch) loaded via USB stick
+
+\end{itemize}
+
+\section*{System services}
+System programs provide a convenient environment for program development and execution. They can be divided into::
+
+\begin{itemize}
+    \item File manipulation/management (text editors, file manager, etc)
+    \item Status information sometimes stored in a file(s) (task manager)
+    \item Programming language support (GCC, JDK, etc)
+    \item Program loading and execution
+    \item Communications
+    \item Background services (daemons)
+    \item Application programs (everything else)
+\end{itemize}
+
+Most users' view of the OS is deined by system programs and not the actual system calls.
+
+\section*{Linkers and loaders}
+
+\begin{itemize}
+    \item Source code compiled into object files designed to be loaded into any physical memory location - \textbf{relocatable object file}
+    \item \textbf{Linker} combines these into a single binary executable file.
+    \item 
+\end{itemize}
+
+\end{document}
