@@ -1,0 +1,196 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS3221 notes}
+\author{Jerry Wu}
+\date{Week III 2023/05/23}
+
+\begin{document}
+\maketitle
+
+\chapter*{Process management}
+
+\section*{Complete tuesday stuff later!}
+to complete
+\section*{Memory layout of a C program}
+
+\begin{lstlisting}
+#include<stdio.h>
+
+\end{lstlisting}
+
+\section*{Multitasking}
+We want to be able to do multiple things at the same time on a computer system. This is where multitasking comes into play. In case one process crashes, we can use \textbf{multithreading} so that the whole system doesn't crash.
+\subsection*{Process creation}
+
+\begin{itemize}
+    \item \textbf{Parent} processes create \textbf{child} processes which create other processes, forming a \textbf{process tree}.
+    \item A process is identified and managed via a \textbf{process identifier (pid)}.
+    \item Resource sharing options::
+    \begin{itemize}
+        \item Parent and children share all resources
+        \item children share a subset of parents' resources
+        \item parent and child share no resources
+    \end{itemize} 
+    \item Execution options::
+    \begin{itemize}
+        \item Parent and child processes execute concurrently
+        \item Parent process waits until child process terminates before terminating
+        \item Usually, killing a parent will also kill their children (wow, that's dark)
+    \end{itemize} 
+    \item Addresses space
+    \begin{itemize}
+        \item Child can be a duplicate of parent
+        \item Child has a program loaded into it
+    \end{itemize} 
+
+    \item UNIX examples::
+    \begin{itemize}
+        \item \texttt{fork()} is a system call that creates a new process
+        \item \texttt{exec()} is a system call used after fork to replace the process' memory space with a new program (there are multiple variations of \texttt{exec()}, read sytstem call API for more info)
+        \item Parent process calls \texttt{wait()} for the child to terminate
+        \item Always call \texttt{exit()} at the end of the program. This is done automatically by the OS, but it is good practice to put it at the end of your code.
+    \end{itemize}
+\end{itemize}
+
+\newpage
+\subsection*{Creating a process by forking}
+\begin{lstlisting}
+#include <sys/types.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main()
+{
+    pid_t pid;
+    //fork a child process
+    pid = fork();
+    if(pid < 0) //error occurred because fork returned n<0
+    {
+        fprintf(stderr, "Fork failed");
+        return 1;
+    }
+
+    else if(pid == 0) //child process
+    {
+        execlp("/bin/ls","ls",NULL);
+    }
+    else  //parent process
+    {
+    //parent will wait for the child to complete
+        wait(NULL);
+        printf("Child complete");
+    }
+
+    return 0;
+}
+\end{lstlisting}
+
+\subsection*{Some things to note}
+
+\begin{itemize}
+    \item We use \texttt{fprintf()} in the error handling because we can \textbf{treat memory blocks as files in C}. Network output streams also behave in a similar manner and can be treated as files among other things as well.
+    \item When the return value of \texttt{fork()} $<0$, we have an error.
+    \item When $return(\texttt{fork()})=0$, we have the pid of the child process.
+    \item \texttt{sys/types.h} is the system call library.
+\end{itemize}
+
+\subsection*{Process termination (good for dark humour)}
+
+\begin{itemize}
+    \item When calling \texttt{exit()}, the following things happen::
+    \begin{itemize}
+        \item Returns status data from child to parent via \texttt{wait()}
+        \item Process' resources are deallocated by the OS
+    \end{itemize}
+
+    \item Parent may terminate the execution of child processes using the \texttt{abort()} system call. Some reasons for doing so::
+    \begin{itemize}
+        \item Child has exceeded allocated resources
+        \item Task assigned to child is no longer required
+        \item The parent is exiting and the operating systems does not allow a child to continue to run
+        \item Don't try the above as a person!
+    \end{itemize}
+    \item Some OS do not allow child to exist if its parent has been terminated. If a process terminates, then all its children must also be terminated.
+    \begin{itemize}
+        \item \textbf{Cascading termination} is what this is known as.
+        \item This is initiated by the OS
+    \end{itemize} 
+    \item The parent process may wait for termination of a child process by using \texttt{wait()} system call. The call returns status information and the pid of the terminated process. (\texttt{pid = wait(\&status);})
+    \item If no parent is waiting (did not invoke \texttt{wait()}), the child is a \textbf{zombie}
+    \item If the parent is terminated without invoking \texttt{wait()}, the child process is an \textbf{orphan}
+    \item Moral of the story:: Always \texttt{wait} for your child(ren)!
+\end{itemize}
+\newpage
+\section*{Android process importance hierarchy}
+
+\begin{itemize}
+    \item Mobile OSs often have to terminate processes to reclaim system resources such as memory. They are terminated from least to most important:
+    \begin{itemize}
+        \item Foreground (UI, MainActivity)
+        \item Visible processes (static text, images, etc.)
+        \item Services
+        \item Background processes
+        \item Empty processes
+    \end{itemize} 
+    \item Start down here
+\end{itemize}
+
+\section*{Interprocess communication}
+
+\begin{itemize}
+    \item Processes within a system may be \textbf{independent} or \textbf{cooperative}
+    \item Cooperating processes can affect or be affected by other processes
+    \item Reasons for cooperation::
+    \begin{itemize}
+        \item Information sharing
+        \item Computation speedup
+        \item Modularity
+        \item Convenience
+    \end{itemize} 
+
+    \item Cooperating processes need \textbf{interprocess communication (IPC)}
+    \item Two models of IPC
+    \begin{itemize}
+        \item \textbf{Shared memory}
+        \item \textbf{Message passing}
+    \end{itemize} 
+\end{itemize}
+
+\subsection*{Producer consumer problem}
+
+\begin{itemize}
+    \item Paradigm for cooperating processes, producer process produces information that is consumed by a consumer process
+\end{itemize}
+
+\end{document}
