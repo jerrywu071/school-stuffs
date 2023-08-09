@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{EECS3101 notes (Divide and Conquer, recurrence, master theorem, etc.)}
+\author{Jerry Wu}
+\date{Thursday, Jan 26, 2023}
+
+\begin{document}
+
+\maketitle
+
+\subsection*{Structure of D and C}
+\begin{itemize}
+    \item Divide - Divide the problem into smaller sub problems
+    \item Conquer - If the sub problem is small enough, return the solution directly. Else, use recursion.
+    \item Combine - Put it all together into the overall solution.
+\end{itemize}
+
+\subsection*{Example :: Segment sum (code on slide 13)}
+We can split the array into 2 smaller sub arrays for a start. The problem will be considered small enough once each sub array has one element, i.e. $low==high$, then we return each one individually. If the value is negative, default to 0 since the empty set is also a subset of every set (segment sum of an empty array is always 0).
+
+\subsection*{Recursive analysis of example}
+
+Let $T(n)$ be the worst case runtime of the algorithm. The left and right segments are both $T(\frac{n}{2})$. So it is $T(n)$ overall. When analyzing recursive functions, we always assume the base case is true.
+
+\subsection*{The master theorem (formal definition on slide 19)}
+The function of the following form has a runtime determinable by the master theorem.
+\begin{align*}
+    T(n)=aT(\frac{n}{b})+f(n)
+\end{align*}
+
+\begin{itemize}
+    \item $a$ is the number of recursive calls.
+    \item $b$ is the rate at which subproblem size decreases.
+    \item $f(n)$ is the runtime of the non recursive portion of the algorithm.
+
+\end{itemize}
+
+The master theorem has the following cases::
+
+\begin{itemize}
+    \item[\textbf{Case 1::}] $f(n)=O(n^{\log_b(a)-\epsilon}), \epsilon > 0: T(n)=\Theta(n^{\log_b(a)})$
+    \item[\textbf{Case 2::}] $f(n)=\Theta(n^{\log_b(a)}): T(n)=\Theta(n^{\log_b(a)}\log(n))$
+    \item[\textbf{Case 3::}] $f(n)=\Omega(n^{\log_b(a)+\epsilon}), \epsilon > 0: T(n)=\Theta(f(n))$
+\end{itemize}
+
+\textbf{According to MT, the segment sum discussed earlier is $\Theta(nlog(n))$!}
+
+\begin{quote}
+    \textit{"I don't care about log. I'm not a math prof."-Larry YL Zhang 2023}
+\end{quote}
+\begin{quote}
+    \textit{"Master theorem is P O W E R"-Larry YL Zhang 2023}
+\end{quote}
+\begin{quote}
+    \textit{"log is very important"-Larry YL hang 2023}
+\end{quote}
+
+\subsection*{Recursion trees (slide 32)}
+When MT isn't appplicable, we can use the general form::
+\begin{align*}
+    T(n)=\sum_{j=0}^{\log_b(n)-1}a^j f(\frac{n}{b^j})+\Theta(n^{\log_b(a)})
+\end{align*}
+
+\begin{quote}
+    \textit{"Try doing this proof yourself. It's good practice."-Larry YL Zhang 2023}
+\end{quote}
+
+\end{document}

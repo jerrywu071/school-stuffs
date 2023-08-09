@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{EECS3101 notes :: A continuation on best/worst/average case complexity}
+\author{Jerry Wu}
+\date{Tues. January 24 2023}
+
+\begin{document}
+
+\maketitle
+\subsection*{Example 1 :: Average case runtime}
+\begin{quote}
+    \textit{"motivation"-Larry YL Zhang 2023}
+\end{quote}
+
+A and B are the values of two dice rolled independently. We want to measure how many times the print line is executed. What is the average case runtime?\\
+
+We want to find $E(X)$, where $X$ is the number of times print is executed 10 times or once. What are the possible values of $X$?
+
+\begin{align*}
+    X=10,1
+\end{align*}
+
+Because the dice are uniform, and the events are independent, we can conclude that there are 36 possibilities. Out of those 36, there are exactly 6 that both dice rolls are equal. Therefore,
+
+\begin{align*}
+    P(A=B)=\frac{1}{6}, P(A\neq B)=\frac{5}{6}
+\end{align*}
+
+So, \begin{align*}E(X)=10(\frac{1}{6})+1(\frac{5}{6})=2.5\end{align*}
+
+
+\subsection*{Example 2 :: Worst case runtime (slide 9)}
+
+We have an outer loop of $O(n^2)$, and two inner loops of $O(n)$ and $O(\log(n))$. The worse of the inner loops is $O(n)$, so the worst case for this program would be $O(n^3)$.
+\begin{quote}
+    We can actually get rid of the exponent and base in log, so we can write any expression in terms of $alog_k(n^m)$ as $log(n)$ when working with big O. In other words, it's not based!
+\end{quote}
+
+\subsection*{Example 3 :: Worst case runtime (slide 11)}
+
+\begin{quote}
+    \textit{"Never say never" - Larry YL Zhang 2023}
+\end{quote}
+In this question, we have an outer loop with $O(n)$, and an inner loop with $O(n)$, so we get $O(n^2)$, right? Well, this is the naive way of doing it. It's actually a tighter bound of $O(n)$ because for every key in the stack, there are 2 possible operations; push and pull. To add to this, the inner loop is dependent on the size of the stack.
+
+\subsection*{Example 4 :: Average case runtime (slide 13)}
+
+\begin{itemize}
+    \item $A_0$ is picked from \{0,1\}
+    \item $A_1$ is picked from \{0,1,2\}
+    \item $A_2$ is picked from \{0,1,2,3\}
+    \item $A_n$ is picked from \{0,1,2,\ldots,n+1\}
+\end{itemize}
+
+
+
+\end{document}

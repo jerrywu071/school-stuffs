@@ -1,0 +1,527 @@
+\documentclass[12pt]{article}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage{pgfplots}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\title{Chapter 2:: The first law of thermodynamics}
+
+\author{Jerry Wu (217545898)}
+
+\date{\today}
+\begin{document}
+
+\maketitle
+\rule{\textwidth}{0.4pt}
+Essentially, the first law states that energy is always conserved.\\
+
+\subsection*{Internal energy}
+
+In this chapter, we'll define energy as the capacity to supply heat or do work. A system doesn't inherently have heat or work; only if it's transferred. We measure it in the following units::
+
+\begin{align*}
+    1J=\frac{1kgm^2}{s^2}
+\end{align*}
+
+\begin{align*}
+    1calorie=4.184J
+\end{align*}
+\begin{align*}
+    1calorie_{dietary}=1000calories
+\end{align*}
+
+Energy cannot be created or destroyed. Only transferred or converted from one form/object to another.\\
+
+\begin{itemize}
+    \item \textbf{Energy} is the capacity to do work
+    \item In thermodynamics, we are interested in flow of energy in \textbf{heat} and \textbf{work}. This is because they describe the process of energy transfer.
+\end{itemize}
+
+In essence, for any system $\Omega$,\\
+\begin{align*}
+    \sum_{\Omega}{E}=E_{kinetic} + E_{potential}
+\end{align*}
+
+\subsection*{Forms of energy}
+\begin{itemize}
+    \item Thermal energy (kinetic and heat)
+    \item Bond energy (potential)
+\end{itemize}
+
+\subsection*{The first law}
+
+Because energy can't be created or destroyed, we can express change in energy in the following ways::
+
+\begin{align*}
+    \Delta E_{\Omega}=\Delta E_{\sigma}+\Delta E_{\sigma^c}=0
+\end{align*}
+
+\begin{align*}
+    \implies\Delta E_{\sigma}=-\Delta E_{\sigma^c}
+\end{align*}
+
+$\forall\Omega$ at rest with no external fields, it can be said that
+
+\begin{align*}
+    E_{\sigma}=
+    \Delta U_{\Omega}=\Delta U_{\sigma}+\Delta U_{\sigma^c}
+\end{align*}
+
+$U$ (internal energy) is a state function, so \begin{align*}\Delta U=U_2-U_2=q+w\end{align*}
+
+In the simplest processes, only one of $P$, $V$, or $T$ will change at any given time. Some important things to note are the following::
+
+\begin{itemize}
+    \item Isothermal: const temperature, $(\Delta T_\sigma=0)$
+    \item Isobaric: const pressure, $(\Delta P_\sigma=0)$
+    \item Isochoric: const volume, $(\Delta V_\sigma=0)$
+    \item Adiabatic no heat transfer $(q=0)$
+    \item Cyclic $\implies \Sigma_1=\Sigma_0$, where $\Sigma_n$ is some arbitrary state or property of a system.
+\end{itemize}
+
+\subsection*{Internal energy vs heat/work}
+In a reaction, change in internal energy is expressed as::
+\begin{align*}
+    \Delta U_{\Omega}=\Delta U_{products}-\Delta U_{reactants}
+\end{align*}
+
+Recall that work is \textbf{NOT} a state function!
+\begin{itemize}
+    \item When work is positive, $\Delta U_\sigma>0$ and $\Delta V_\sigma<0$
+    \item When work is negative, $\Delta U_\sigma<0$ and $\Delta V_\sigma>0$
+\end{itemize}
+
+\subsection*{Expansion work}
+Let us start by looking at the two pressure inequalities below::
+\begin{align*}
+    P_\sigma > P_{\sigma^c} \implies expansion\\
+    P_\sigma < P_{\sigma^c} \implies compression
+\end{align*}
+
+So we have that
+
+\begin{align*}
+    P_{\sigma^c} = \frac{F_{\sigma}}{A}\\
+    dV = Adh
+\end{align*}
+
+Then
+
+\begin{align*}
+    dw = -F_{\sigma^c} dh = -\frac{F_{\sigma^c}}{A}Adh = -P_{\sigma^c}dV
+\end{align*}
+    
+Thus, our final formula for expansion work can be expressed as the following integral::
+
+\begin{align*}
+    w=-\int_{v_1}^{v_2}P_{\sigma^c}dV
+\end{align*}
+
+where $P_{\sigma^c}$ is a function of the volume of gas in an arbitrary container $\sigma$.
+
+\subsection*{Why do we care about work?}
+We care because energy is transferred from the system to the surroundings in the form of work (only applicable to adiabatic systems).
+
+\subsection*{Work with gases}
+We can express this idea with the equation:
+
+\begin{align*}
+    w=-\Delta nRT, \Delta n=v_{prod,(g)}-v_{rxt,(g)}
+\end{align*}
+
+Take the following reaction for example::
+\begin{align*}
+    C_3H_8(g)+5O_2(g)\implies3CO_2(g)+4H_2O(g)
+\end{align*}
+Here, we have 6 moles of gas on the reactant side, and 7 on the product side. So we have that $\Delta n=1$. This means that work was done by the system, thus the sign for work is negative.\\In general::
+\begin{align*}
+    \Delta n>0\implies w<0\\
+    \Delta n<0\implies w>0
+\end{align*}
+
+\subsection*{Example (slide 18)}
+A greatly simplified model of an internal combustion engine is as follows. At the
+start of the power stroke the ignited gases exert a pressure of 20 atm, and drive the
+piston back against a constant force equivalent to 5.0 atm. In so doing, the piston
+sweeps out 250 cm3. What is the power output of a six-cylinder engine working at
+2000 RPM (with one power stroke from each cylinder every second revolution)?
+
+\begin{itemize}
+    \item[\textbf{Solution::}] We can start by calculating work.
+    \begin{align*}
+        w=-P\Delta V=-(5atm)(0.25L)=1.25Latm=1.25Latm\frac{101.325J}{Latm}=1.3E2J
+    \end{align*}
+
+    In six cylinders over a 1 minute duration, we have that,
+    \begin{align*}
+        (2000)(6)(w)(0.5)=7.8E5J
+    \end{align*}
+
+    Rate of production::
+
+    \begin{align*}
+        P=\frac{w}{t}=\frac{7.8E5}{60s}=13LW
+    \end{align*}
+\end{itemize}
+
+\subsection*{Example 2 (slide 19)}
+\begin{align*}
+    R:Zn(s)+2H^+(aq)+2Cl^-(aq)\implies H_2(g)+Zn^{2+}(aq)+2Cl^-(aq)
+\end{align*}
+\begin{itemize}
+    \item[a)]  How much work has been done if 5 g of Zn have completely reacted according
+    to the following reaction if the external pressure is 1 atm and T=298K.
+
+    \begin{align*}
+        n(H_2)=n(Zn)=\frac{5g}{65.38\frac{g}{mol}}=0.0765mol
+    \end{align*}
+    \begin{align*}
+        \Delta V=\frac{n(H_2)RT}{P}=\frac{0.0765mol(0.08206\frac{Latm}{Kmol})298K}{1atm}=1.87L
+    \end{align*}
+
+    \item[b)] What’s the work per 1 mole of Zn consumed?
+    
+    \begin{align*}
+        w=-P\Delta V=\frac{-189J}{0.0765mol}=-2470\frac{J}{mol}
+    \end{align*}
+\end{itemize}
+
+\subsection*{Heat}
+Recall that heat is not a state function. If $\Delta Q=0$, the system is at thermal equilibrium. Conservation of energy requires that $q_{\sigma}+q_{\sigma^c}=0\implies q_{\sigma}=-q_{\sigma^c}$.
+
+\subsection*{Example 3 (slide 26)}
+
+How much heat is transferred in raising the temperature of a beaker of water (50 g) from 25°C to 35°C (at constant P = 1 atm)?
+
+\begin{align*}
+    q=mc\Delta T=(50g)(4.1840\frac{J}{G^{\circ}})(10^{\circ})=2092J
+\end{align*}
+
+\subsection*{Heat capacity}
+
+Assume $\sigma$ is closed with no phase changes or reactions.
+
+\begin{align*}
+    q_\sigma=\int_{T_1}^{T_2}CdT=\int_{T_1}^{T_2}mC^c dt
+\end{align*}
+
+Temperature rising depends on the following::
+\begin{itemize}
+    \item[1.] Amount of heat delivered
+    \item[2.] Amount of substance present
+    \item[3.] Chemical nature and physical state of substance
+    \item[4.] Conditions under which heat is added to substance
+\end{itemize}
+Specific heat capacities can be found on \textbf{slide 30}. Recall that the higher the heat capacity, the harder it is to add temperature to the substance.\\
+
+At constant volume::
+\begin{align*}
+    C_V=\frac{\Delta U}{\Delta T}=\frac{q_v}{\Delta T}
+\end{align*}
+
+At constant pressure::
+\begin{align*}
+    C_P=\frac{\Delta H}{\Delta T}=\frac{q_v}{\Delta T}
+\end{align*}
+
+Heat capacity can also be expressed as the limit::
+\begin{align*}
+    \lim_{\Delta T \rightarrow 0}\frac{q}{\Delta T}
+\end{align*}
+
+$\Delta U=f(T)$. Internal energy is not a function of volume or pressure. The change in enternal energy can be expressed as the partial differential::
+
+\begin{align*}
+    \frac{\partial U}{\partial V}_T=0 \forall g\in\mathbb{C} 
+\end{align*}
+
+For sake of simplicity, we'll assume all processes covered in this course are quasi-static.\\
+
+Internal equilibrium $\equiv$ systems are homogenous.
+
+\subsection*{Reversible \& irreversible processes}
+
+\begin{itemize}
+    \item [\textbf{Reversible::}] An infinitessimal change \textbf{will} change the direction of the process
+    \item [\textbf{Irreversible::}] An infinitessimal change \textbf{will not} change the direction of the process
+\end{itemize}
+
+In reality, there's no process that's fully reversible. They just progress much slower than irreversible processes.
+
+\subsection*{PV diagrams (slide 43, 44)}
+Take a function $V=f(P)$. We want to study the region bound between $P_1$ and $P_2$ as well as $V_1$ and $V_2$. Isothermal curves are hyperbola, because the function is the rational function::
+\begin{align*}
+    PV=nRT\implies P=f(V)=\frac{nRT}{V}
+\end{align*}
+
+Where n and T are constant.
+
+\subsection*{Example 1}
+
+We have 3 moles of an arbitrary ideal gas expanding isothermally ($T=const$). $V_i=20.0L$, $V_1=60.0L$, $T=27.0^{\circ}C$. Calculate the work in this process.
+
+\subsection*{Solution}
+\begin{align*}
+    w=-P\Delta V=-(1.0 atm)(60-20)L=-40L atm=-40Latm(\frac{101.35J}{Latm}) =-4053J=-4.1kJ
+\end{align*}
+
+\subsection*{Infinitessimal pressure changes for expansion}
+When this occurs, we need to use integration. Recall that
+
+\begin{align*}
+    w=-\int_{V_1}^{V_2}P_{ex}dV=-\int_{V_1}^{V_2}(P-dP)dV=-\int_{V_1}^{V_2}PdV
+\end{align*}
+
+Because $P=\frac{nRT}{V}=const$, we have that
+
+\begin{align*}
+    -nRT\int_{V_1}^{V_2}\frac{1}{V}dV=-nRT(\ln(V_2)-\ln(V_2))=-nRT(\ln(\frac{V_2}{V_1}))
+\end{align*}
+
+By laws of logarithms.\\Thus, we have our derived formula::
+\begin{align*}
+    w=-nRT(\ln(\frac{V_2}{V_1})) \blacksquare
+\end{align*}
+
+\textbf{NOTE::} For any real process $\rho\in\mathbb{R}$, $\rho$ is irreversible.\\
+
+\subsection*{Summary}
+
+\begin{itemize}
+    \item For expansion, $|w_{irreversible}|\geq |w_{reversible}|$
+    \item For compression, $|w_{irreversible}|\leq |w_{reversible}|$
+    \item For irreversible, $w=-P_{ex}\Delta V$
+    \item For reversible, $w=-nRT(\ln(\frac{V_2}{V_1})$
+\end{itemize}
+
+\subsection*{Example 1 revisited}
+We have 3 moles of an arbitrary ideal gas expanding isothermally ($T=const$). $V_i=20.0L$, $V_1=60.0L$, $T=27.0^{\circ}C$. Calculate the work in this process.
+
+\begin{align*}
+    w=-nRT(\ln(\frac{V_2}{V_1}))=-(3mol)(8.314\frac{J}{Kmol})(300K)(\ln(\frac{60L}{20L}))=-8.22kJ
+\end{align*}
+
+We get a greater resultant work by assuming the process is reversible.
+
+\subsection*{First law of thermodynamics summary}
+Recall that in a temperature dependent system, heat is calculated as::
+\begin{align*}
+    q=\int_{T_1}^{T_2}CdT=\int_{T_1}^{T_2}m\bar{c}dT
+\end{align*}
+
+More formulas on slide 58 and 59.
+
+\subsection*{Enthalpy revisited}
+
+\begin{align*}
+    H=U+PV
+\end{align*}
+
+$U$, $P$, and $V$ are all state functions $\implies$ $H$ is also a state function. However, we don't care about absolute enthalpy. We care about change in enthalpy. So,
+
+\begin{align*}
+    \Delta H=\Delta U+\Delta (PV)=\Delta U+P\Delta V+V\Delta P+\Delta P\Delta V
+\end{align*}
+
+Assume $P\equiv const$, we have that,
+
+\begin{align*}
+    \Delta H=\Delta U+P\Delta V=\Delta U-w=q_p
+\end{align*}
+
+For $g\in \mathbb{C}$,
+\begin{align*}
+    \Delta H=C_P\Delta T
+\end{align*}
+
+For infinitessimal change in $T$,
+\begin{align*}
+    dH=dU+d(nRT)=dU+nRdT
+\end{align*}
+
+Knowing that $dH=C_P dT$ and $dU=C_V dT$, we can substitute into the above equation:
+\begin{align*}
+    C_P dT=C_V dT+nRdT\\
+    C_P=C_V+nR\\
+    C_P-C_V=nR\\
+    \bar{C_P}-\bar{C_V}=R
+\end{align*}
+
+\subsection*{Difference between $\Delta H$ and $\Delta U$}
+
+Consider the following reaction::
+
+\begin{align*}
+    R:2Na_{(s)}+2H_2O_{(l)}\implies 2NaOH_{(aq)}+H_{2(g)}\\
+    \Delta H=-367.5kJ
+\end{align*}
+
+Volume of $H_2$ generated at 1 atm is $24.5L$, so $-P\Delta V=-24.5Latm=-2.5kJ$, $\Delta U=-370kJ$. We can see that $\Delta H\approx\Delta U$
+
+
+\subsection*{Example with heat capacity (slide 64)}
+Calculate $\Delta H$ and $\Delta U$ for the transformation of 1.00 mol of an ideal gas from $27.0^{\circ}C$
+and 1.00 atm to 327°C and 17.0 atm if
+
+\begin{align*}
+    C_{p,m}=20.9+0.42\frac{T}{K} JK^{-1}mol^{-1}
+\end{align*}
+
+For an ideal gas, $\Delta H$ is given by:
+
+\begin{align*}
+    \Delta H=\int_{T_1}^{T_2}C_P dT=\int_{T_1}^{T_2}C_{p,m}ndT=\int_{300}^{600}(20.9+0.042\frac{T}{K})dT\\=(20.9T+\frac{0.042T^2}{2})\vert_{300}^{600}=(20.9(600-300)+0.021(600^2-300^2))\\
+    \approx 11.9\times 10^3J=11.9kJ
+\end{align*}
+
+\subsection*{Adiabatic expansion}
+For adiabatic processes, we always assume that $\Omega\equiv adiabatic\implies q=0\forall\Omega$, so,
+
+\begin{align*}
+    dU=dw=-PdV=-\frac{nRT}{V}dV\\
+    \frac{dU}{nT}=-R\frac{dV}{V}
+\end{align*}
+since
+\begin{align*}
+    dU=C_V dt
+\end{align*}
+
+So,
+
+\begin{align*}
+    \frac{dU}{nt}=\frac{C_V dt}{nT}=\bar{C_V}\frac{dT}{T}=-R\frac{dV}{V}
+\end{align*}
+
+Integrating both sides, we have that
+\begin{align*}
+    \int_{T_1}^{T_2}\bar{C_V}\frac{dT}{T}=-R\int_{T_1}^{T_2}\frac{dV}{V}=\bar{C_V}\ln(\frac{T_2}{T_2})=R\ln(\frac{V_1}{V_2})
+\end{align*}
+
+Since $\bar{C_P}-\bar{C_V}=R$ for an ideal gas, then.
+\begin{align*}
+    \bar{C_V}\ln(\frac{T_2}{T_1}=)\bar{C_P}-\bar{C_V}\ln(\frac{V_1}{V_2})
+\end{align*}
+
+Divide both sides by $\bar{C_V}$ to obtain::
+
+\begin{align*}
+    \ln(\frac{T_2}{T_1})=(\frac{\bar{C_P}}{\bar{C_V}}-1)\ln(\frac{V_1}{V_2})=(\gamma-1)\ln(\frac{V_1}{V_2})=\ln(\frac{V_1}{V_2})^{\gamma-1}, \gamma=\frac{\bar{C_P}}{\bar{C_V}}
+\end{align*}
+
+\textbf{$\bar{C_P}$ and $\bar{C_V}$ constants wont be provided on the constant sheet! Review chapter 2 slide 71 for them!}
+
+\subsection*{Reversible adiabatic expansion ($g\in \mathbb{C}$)}
+
+\begin{align*}
+    T_1V_1^{\gamma-1}= T_2V_2^{\gamma-1}=
+\end{align*}
+
+We can also do this for $T$ and $P$
+
+\begin{align*}
+    P_1^{1-\gamma}T_1^{\gamma}=P_2^{1-\gamma}T_2^{\gamma}
+\end{align*}
+
+\begin{align*}
+    T_1P_1^{\frac{1-\gamma}{\gamma}}=T_2P_2^{\frac{1-\gamma}{\gamma}}
+\end{align*}
+
+\subsection*{Work done in an adiabatic expansion (slide 74-79)}
+
+3.50 moles of an ideal gas are expanded from 450. K and an initial pressure of 5.00 bar to a
+final pressure of 1.00 bar, and CP,m = 5/2R. Calculate w for the following two cases:
+
+\begin{itemize}
+    \item[a)] The expansion is isothermal and reversible.
+    \item[b)] The expansion is adiabatic and reversible.
+
+
+\end{itemize}
+
+$w$ for an isothermal process is given by::
+
+\begin{align*}
+    w=-nRT(\ln(\frac{V_2}{V_1}))
+\end{align*}
+
+Calculate $V_0$ and $V_f$. Recall that $PV=nRT$ always holds!
+
+\begin{align*}
+    V_1=\frac{nRT_1}{V_1}=\frac{(13.5)(0.08314)(450K)}{(5.00)}=26.2L
+\end{align*}
+
+\begin{align*}
+    V_2=\frac{nRT_2}{V_2}=\frac{(3.5)(8.314)(450)}{10^5}=0.1310m^3
+\end{align*}
+
+\begin{align*}
+    w=-nRT(\ln(\frac{V_2}{V_1}))=(-3.5)(8.314472)(450K)(\ln(\frac{0.1310}{0.0262}))=-21076J=-21.1kJ
+\end{align*}
+
+For adiabatic:
+
+\begin{align*}
+    C_V=C_P-R=\frac{5}{2}R-R=\frac{3}{2}R
+\end{align*}
+
+\begin{align*}
+    T_1P_1^{\frac{1-\gamma}{\gamma}}=T_2P_2^{\frac{1-\gamma}{\gamma}}
+\end{align*}
+
+Now we find $T_2$
+
+\begin{align*}
+    T_2=\frac{T_1P_1^{\frac
+    1-\gamma}{\gamma}}{P_2^{\frac{1-\gamma}{\gamma}}}
+\end{align*}
+
+After some plugging in, we get $T_2=236K$. Now we can calculate work!
+
+\begin{align*}
+    w=C_V(T_2-T_1)=\frac{3}{2}(8.314)(3.5)(236-450)=-9.23kJ
+\end{align*}
+
+In general, gases with the same parameters will have the following property::
+
+\begin{align*}
+    |w|_{isothermal(exp)}>|w|_{adiabatic(exp)}
+\end{align*}
+
+\subsection*{Irreversible adiabatic expansions}
+Assume $P_2=P_{ext}$ and $q=0$ by definition of adiabatic.
+
+\begin{align*}
+    \Delta U=w
+\end{align*}
+\begin{align*}
+    n\bar{C}_V(T_2-T_1)=-P_2(V_2-V_1)
+\end{align*}
+But,
+\begin{align*}
+    V_1=\frac{nRT_1}{P_1}, V_2=\frac{nRT_2}{P_2}
+\end{align*}
+So,
+\begin{align*}
+    n\bar{C}_V(T_2-T_1)=-P_2(\frac{nRT_2}{P_2}-\frac{nRT_1}{P_1})
+\end{align*}
+
+\subsection*{Example}
+
+An automobile tire contains air at $320\times10^3Pa$ at $20.0^{\circ}C$. The stem valve is
+removed and the air is allowed to expand adiabatically against the constant
+external pressure of $100\times10^3 Pa$ until $P=P_{external}$. For air, $C_{V,m}=\frac{5}{2}R$. Calculate
+the final temperature. Assume ideal gas behavior.
+
+Since $q=0$, we have that $\Delta U=w$.
+
+\begin{align*}
+    C_{V,m}n(T_2-T_1)=-P_{ext}(V_2-V_1)=-P_2(\frac{nRT_2}{P_2}-\frac{nRT_1}{P_1})
+\end{align*}
+
+We can cancel the $n$ values, (full solution on \textbf{slide 80}). It's all plugging in. Our final solution would be $0.804$.
+
+\end{document}
