@@ -1,0 +1,201 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS3221 exam review}
+\author{Jerry Wu}
+\date{2023/08/15}
+
+\begin{document}
+    \maketitle
+
+    \chapter*{Multiple choice}
+    \begin{itemize}
+        \item[\textbf{1.}] 1. If the time quantum get too large, Round Robin scheduling degenerates to\ldots?
+        \begin{itemize}
+            \item[A)] SJF
+            \item[B)] \textbf{FCFS}
+            \item[C)] Shortest-remaining-time-first
+            \item[D)] Multilevel queue
+        \end{itemize}
+
+        \subsection*{Reasoning}
+
+        When the time quantum is large, round-robin scheduling can start to exhibit behavior similar to first-come-first-served (FCFS) scheduling. This happens because as the time quantum increases, the overhead of process switching becomes less significant compared to the actual execution time of processes. As a result, processes that get scheduled first will be able to complete their execution before their time quantum expires, and new processes won't get a chance to run until the currently running process completes. This makes the behavior resemble FCFS scheduling, where the process that arrives first gets to complete its execution before the next process gets a chance to run.
+
+        \item[\textbf{2.}] Computing systems need cache because
+        
+        \begin{itemize}
+            \item[A)] \textbf{accessing main memory is slow and cache speeds it up.}
+            \item[B)] register access is slow and cache speeds it up.
+            \item[C)] main memory is expensive and cache offsets the cost.
+            \item[D)] All of the above.
+        \end{itemize}
+
+        \subsection*{Reasoning}
+        A computer's CPU cache is a small, high-speed memory component located on the processor chip that stores frequently accessed instructions and data from main memory. It acts as a buffer between the much slower main memory and the faster CPU, reducing the time it takes for the processor to access frequently needed information. By storing copies of frequently used data and instructions in the cache, the CPU can access them quickly, improving overall system performance and reducing latency in data retrieval operations.
+
+        \item[\textbf{3.}] If the base register is loaded with value 12000 and limit register is loaded with value
+        1000, which of the following memory address access will not result in a trap to the
+        operating system?
+
+        \begin{itemize}
+            \item[A)] \textbf{12500}
+            \item[B)] 13200
+            \item[C)] 13346
+            \item[D)] 15200
+        \end{itemize}
+        \subsection*{Reasoning}
+        In order for a memory access to not result in a trap, the register value must reside between the base value and the base value + the limit value, i.e. 
+        \begin{align*}
+            base\leq n \leq base+limit
+        \end{align*}
+
+        \item[\textbf{4.}] Suppose a program is operating with execution-time binding and the physical address
+        generated is 400. The relocation register is set to 200. What is the corresponding logical
+        address?
+        \begin{itemize}
+            \item[A)] 199
+            \item[B)] 201
+            \item[C)] \textbf{200}
+            \item[D)] 300
+        \end{itemize}
+
+        \subsection*{Reasoning}
+        \begin{align*}
+            logical=physical-relocation
+        \end{align*}
+
+        \item[\textbf{5.}] Which of the following is a function that can be provided by Pthreads API for constructing a multithreaded program?
+
+        \begin{itemize}
+            \item[A)] \texttt{pthread\_start}
+            \item[B)] \texttt{pthread\_stop} 
+            \item[C)] \textbf{pthread\_join}
+            \item[D)] all of the above
+        \end{itemize}
+
+        \subsection*{Reasoning}
+        Just memorize the API
+
+        \item[\textbf{6.}] In\ldots, the process accesses the resources shared with others.
+        \begin{itemize}
+            \item[A)] entry section
+            \item[B)] \textbf{critical section}
+            \item[C)] exit section
+            \item[D]) remainder section
+        \end{itemize}
+        \subsection*{Reasoning}
+        The critical section refers to a specific portion of a program or code where multiple concurrent processes or threads can potentially access shared resources or variables.
+
+        \chapter*{Short answers}
+
+        \begin{itemize}
+            \item[\textbf{7.}] Describe the difference between binary and counting semaphores.
+            
+            \subsection*{Answer}
+            Binary and counting semaphores are synchronization primitives used in concurrent programming. A binary semaphore can have only two values, 0 or 1, and is typically used for mutual exclusion, allowing one process/thread at a time to access a shared resource or critical section. It ensures that only a single process enters the critical section, preventing concurrent access. In contrast, a counting semaphore can have a range of non-negative integer values and is employed for scenarios where multiple processes need controlled access to a finite number of resources. It tracks the availability of resources and allows a specified number of processes to enter a critical section simultaneously while respecting the available resource count.
+
+            \item[\textbf{8.}] Describe the difference between named and unnamed semaphores.
+            \subsection*{Answer}
+            Named and unnamed semaphores are synchronization mechanisms used in concurrent programming. An unnamed semaphore, often referred to as an anonymous semaphore, is typically limited to a single process or thread and is used for local synchronization within a program. It is not easily shareable across different processes. On the other hand, a named semaphore is associated with a unique name within the system and can be accessed and shared among multiple processes, enabling inter-process synchronization. Named semaphores provide a means for coordination and communication between unrelated processes by allowing them to synchronize their activities based on the same named semaphore object, facilitating a higher level of concurrency and collaboration in distributed systems.
+            \item[\textbf{9.}] What is the advantage of dynamic linking?
+            \subsection*{Answer}
+            Multiple answers:
+
+            \begin{itemize}
+                \item \textbf{Reduced Memory Usage}: Dynamic linking allows multiple programs to share a single copy of a library, reducing memory consumption as compared to static linking where each program has its own copy of the library.
+
+                \item \textbf{Easier Updates}: When a shared library is updated, all programs using that library automatically benefit from the update without needing to recompile them, simplifying maintenance and reducing deployment time.
+                
+                \item \textbf{Faster Program Startup}: Dynamic linking defers the actual loading of library code until runtime, which can result in faster program startup times as only the necessary parts of the library are loaded when they are needed.
+                
+                \item \textbf{Smaller Executable Size}: Dynamic linking can result in smaller executable files because the code of shared libraries is not duplicated in every program using them.
+                
+                \item \textbf{Flexibility}: Users can update or replace shared libraries independently without affecting the entire application, offering more flexibility in managing software components.
+                
+                \item \textbf{Version Control}: Dynamic linking enables versioning of shared libraries, allowing different programs to use different versions of the library based on compatibility requirements.
+                
+                \item \textbf{Hot Patching}: Some systems allow dynamic updates to shared libraries without restarting the programs using them, facilitating "hot patching" to fix bugs or apply security patches without interruption.
+                
+                \item \textbf{Language Interoperability}: Dynamic linking supports mixed-language programming by enabling different languages to share and interact with the same library code.
+                
+                \item \textbf{Efficient Disk Usage}: When multiple programs use the same shared libraries, disk space is conserved since the library code is stored in a single location rather than being duplicated for each program.
+                
+                \item \textbf{Smoother Software Distribution}: Dynamic linking simplifies software distribution by allowing libraries to be distributed separately, reducing the size of installer packages and enabling more efficient updates.
+            \end{itemize}
+            These advantages collectively contribute to more efficient memory usage, easier maintenance, faster execution, and improved software distribution in dynamic linking scenarios.
+
+            \item[\textbf{10.}] Describe the different types of thread cancelation modes (ex. deferred, asynchronous, and
+            off).
+
+            \subsection*{Answer}
+            \begin{itemize}
+                \item 
+                \textbf{Deferred (or Default) Cancellation Mode}:
+                
+                \begin{itemize}
+                    \item Thread remains cancellable until it explicitly checks for cancellation points, like system calls or library functions that could block the thread.
+                    \item Cancellation request is deferred until the thread reaches a cancellation point.
+                    \item Provides controlled cancellation, allowing the thread to perform cleanup operations before termination.
+                \end{itemize}
+
+                \item \textbf{Asynchronous Cancellation Mode}:
+                
+                \begin{itemize}
+                    \item The thread can be canceled at any time, regardless of whether it's at a cancellation point.
+                    \item Cancellation takes place immediately after the cancel request is issued, without waiting for the thread to reach a cancellation point.
+                    \item Cleanup functions registered with the thread may not have an opportunity to execute fully, potentially leading to resource leaks.
+                \end{itemize}
+
+
+                \item \textbf{Disabled (or Off) Cancellation Mode}:
+                
+                \begin{itemize}
+                    \item Cancellation is disabled for the thread.
+                    \item A thread in this mode ignores any cancellation requests, and cancellation points are effectively ignored.
+                    \item Useful when critical sections need to be protected from cancellation.
+                \end{itemize}
+
+            \end{itemize}
+            Each of these thread cancellation modes has its own use cases and implications in terms of control, responsiveness, and resource management within a multi-threaded environment.
+            \newpage
+            \item[\textbf{11.}] Describe the benefits of hierarchal paging tables and hash tables, compared to traditional
+            paging. 
+
+            \subsection*{Answer}
+            Hierarchical paging tables and hash tables offer benefits compared to traditional paging by providing more efficient and flexible memory management. Hierarchical paging tables organize the virtual address space into a multi-level structure, reducing memory overhead by allocating memory for page tables only as needed. This helps manage large address spaces more efficiently. Hash tables, on the other hand, enable faster page table lookups by directly mapping virtual pages to physical frames, avoiding the need for traversing multiple levels of page tables. Hash tables can provide constant-time access for page table entries, improving memory access times and reducing overhead. These approaches enhance memory utilization, reduce memory overhead, and potentially lead to faster memory lookups, all contributing to improved system performance in modern memory management.
+
+        \end{itemize}
+
+    \end{itemize}
+\end{document}
