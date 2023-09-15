@@ -1,0 +1,4 @@
+#Wed Jan 05 14:59:17 EST 2022
+base.0=C\:\\Users\\mack\\Desktop\\Scott-new\\Java\\AndroidStudioStuff\\Demo_Android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
