@@ -41,8 +41,26 @@
 
 \chapter*{Android app anatomy}
 
-\section{Review of basic software design concepts}
+\section*{Review of basic software design concepts}
 
-\subsection{What is a framework?}
+\subsection*{What is a framework?}
+
+\subsection*{Fitt's law}
+
+\begin{align*}
+    ID=\log_2\left(\frac{D}{W} + 1\right)
+\end{align*}
+
+\subsection*{UI layout (MKB vs touch screen)}
+
+\begin{itemize}
+  \item For a mouse and desktop system, we want to have submit and cancel buttons beside each other, but when we are designing a mobile UI, we want to keep them far away so the end user doesn't touch the wrong button.
+  \item Keep destructive actions like deletion and undo to avoid mistakes from the end user
+  \item People are distracted, so when turning attention away from the mobile device, we want to retain a state where data is restored once the user refocuses on their device (suspend).
+  \item Do not place any important functions on the edges of the screen, as the edges are usually used for system functions like back, menus, etc.
+  \item Popups are bad; especially for mobile UI because they dissociate from the context of the application. Usually associated with something malicious.
+  \item Always provide information and context to the user so that they can make informed decisions about actions they will perform within an application.
+\end{itemize}
+
 
 \end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS4443 Notes}
+\author{Jerry Wu}
+\date{2023-09-18}
+
+\begin{document}
+
+\maketitle
+
+\section*{More about activities}
+
+An activity is programatically a class that is created, which is a controller. In terms of UI, it is what appears on the \textbf{screen}.
+
+\subsection*{Activity states}
+
+\begin{itemize}
+  \item \textbf{Resume}: Activity is visible and active, usable by the user. This is the default state when the app is running.
+  \item \textbf{Paused}: Still partially visible, but there is something else on the screen that requires the user's attention at the present moment; not in the user's focus. Activity object is retained in memory with all states and can be killed by the system in low memory situations.
+  \item \textbf{Stopped}: Activity is completely obscured by another activity; it is now in the background but the activity is still alive. Everything is retained butis no longer attached to the window manager. Lower priority than pause so it will be killed first before paused activities.
+  \item To stop an activity, we can smply call \texttt{finish()} for an activity to signal its own destruction.
+\end{itemize}
+
+\subsection*{Recreating an activity}
+
+When we destroy an activity, we want some way to restore the state of that activity when we need it once more. To do this, we can call \texttt{onSaveInstanceState()} before we call \texttt{onDestroy()}. To resume the activity from destroyed, invoke\\ \texttt{onRestoreInstanceState(savedInstanceState)}.
+
+
+\subsection*{DemoLayout}
+
+
+
+\end{document}
