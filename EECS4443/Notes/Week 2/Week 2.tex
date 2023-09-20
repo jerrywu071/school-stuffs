@@ -10,6 +10,8 @@
 \usepackage{listings}
 \usepackage{color}
 
+\usepackage{graphicx}
+
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
@@ -30,6 +32,8 @@
   breakatwhitespace=true,
   tabsize=4
 }
+
+\graphicspath{{img}}
 
 \title{EECS4443 Notes}
 \author{Jerry Wu}
@@ -54,11 +58,160 @@ An activity is programatically a class that is created, which is a controller. I
 
 \subsection*{Recreating an activity}
 
-When we destroy an activity, we want some way to restore the state of that activity when we need it once more. To do this, we can call \texttt{onSaveInstanceState()} before we call \texttt{onDestroy()}. To resume the activity from destroyed, invoke\\ \texttt{onRestoreInstanceState(savedInstanceState)}.
+When we destroy an activity, we want some way to restore the state of that activity when we need it once more. To do this:
+  \begin{itemize}
+  \item Call \texttt{onSaveInstanceState()} before we call \texttt{onDestroy()}. 
+  \item To resume the activity from destroyed, invoke\\ \texttt{onRestoreInstanceState(savedInstanceState)}.
+  \end{itemize}
+
+  This is the general layout of an activity's lifecycle in android.\\
+  \includegraphics*[width=\textwidth]{lifecycle}
+
+\newpage
+\section*{Designing a user study}
+
+\subsection*{What is a user study?}
+In a nutshell, a user study is an experiment with human participants. It is usually based on human factors, experimental psychology, and statistics. They are used often in software engineering via developers and end users alike.
+
+\subsection*{Goals of a user study}
+
+\begin{itemize}
+  \item It is not to evaluate a UI
+  \item We want to compare alternatives to determine what works better
+  \item "Better" is a subjective term based on many factors
+  \item Quantitative factors: accuracy, fewer steps, quicker to learn, efficient, etc
+  \item Qualitative factors: Not the primary focus, but they include appearance, enjoyment, comfort, discomfort, etc.
+\end{itemize}
+
+\subsection*{The method}
+
+\begin{itemize}
+  \item Method is the way a user study is designed and carried out
+  \item \textit{"Science is method, everything else is commentary."}
+  \item Do not make things up just because it seems reasonable, but follow standards for experiments with human participants (\textbf{not human experiments}).
+
+\end{itemize}
+
+\subsection*{Independent variables}
+
+\begin{itemize}
+  \item A circumstance or characteristic that is manipulated in an experiment to elicit a change in a human response (while interacting with a computer system)
+  \item Does not depend on the participant (participant cannot influence the variable)
+  \item Example: interface, device, feedback mode, button layout, visual layout, age, gender, background noise, expertise, etc.
+\end{itemize}
+
+\subsection*{Test conditions}
+
+\begin{itemize}
+  \item An independent variable must have at least two levels.
+  \item The levels (settings, values, points of comparisons) are test conditions.
+  \item Name both the factor (independent variable) and its levels (test conditions)
+\end{itemize}
+
+\subsection*{Dependent variables}
+
+\begin{itemize}
+  \item Dependent variables are things that we can measure via human behavior (interaction involving an independent variable)
+  \item Depends on what the end user does
+  \item Examples: task completion time, speed, accuracy, error rate, retries, number of presses, etc.
+  \item Make sure that research is reproducible and state how things are measured by units (i.e. words per minute, number of clicks, etc.)
+\end{itemize}
+
+\subsection*{Research questions}
+\begin{itemize}
+  \item i.e. Can a task be performed more quickly with my new interface than with an existing interface?
+  \item A properly formed question identifies an IV and DV. Here we want to \textbf{establish} a new relationship between the new and existing interfaces(IV) given the dependent variables.
+\end{itemize}
+
+\subsection*{Statistical hypothesis testing (VERY IMPORTANT)}
+
+\begin{itemize}
+  \item Ask research question first
+  \item The test will tell us the following:
+  \begin{itemize}
+    \item If data gathered is sufficient and supports hypothesis
+    \item What is the statistical confidence that $\exists$ a causal relationship between IV and DV
+  \end{itemize}
+\end{itemize}
+
+\subsection*{Hypothesis statement}
+
+\begin{itemize}
+  \item Hypotheses usually come in pairs:
+  \begin{itemize}
+    \item Null (initial) hypothesis $H_0$: the average between $IV_a$ and $IV_b$
+    \item The alternative hypothesis $H_a$ or $H_1$: the average DV is not the same between $IV_a$ and $IV_b$.
+  \end{itemize} 
+
+  \item If we can't reject the null hypothesis, that means that there is relatively no difference between it and the alternate hypothesis, and vice versa.
+  
+\end{itemize}
 
 
-\subsection*{DemoLayout}
+\subsection*{P-value and errors}
 
+\begin{itemize}
+  \item P-value is the probability of obtaining test results at least as extreme as the results at least as extreme as the results actually observed under the assumption that the null hypothesis is correct.
+  \item $\alpha$ is the level of significance (i.e. 0.05 or 5\%.). If $p<\alpha$, reject $H_0$
+  \item $1-\beta$ is the power of test. We can use the significance level and the power of test to calculate the necessary sample size.\\
+  
+\end{itemize}
+In summary we can look at this chart:\\
+\includegraphics*[width=\textwidth]{chart}
+
+\subsection*{Statistical tests}
+
+\begin{itemize}
+  \item Common assumptions:
+  \begin{itemize}
+    \item Independence of observations; no autocorrelation
+    \item Homogenity of variance between groups (Levene's test)
+    \item Normality of data:
+    \begin{itemize}
+      \item Skewedness of data within $\pm 2$, Kurtosis $\pm 7$
+      \item Shapiro-Wilk's test
+      \item Kolmogorov-Smirnov test (for large samples)
+    \end{itemize} 
+  \end{itemize} 
+  \item If assumptions are met, run parametric tests. Otherwise run non-parametric tests.
+  \item Other factors:
+  \begin{itemize}
+    \item Continuous vs discrete variables
+    \item Groups or no groups
+    \item Number of independent variables
+  \end{itemize}
+\end{itemize}
+
+\subsection*{Experiment task}
+\begin{itemize}
+  \item Experiment task must elicut a change
+  \item Qualities of a good experiment task include represent, discriminate, practicality, etc.
+  \begin{itemize}
+    \item Should represent activities people typically do (testing a keyboard involves typing real inputs)
+    \item Discriminate among the test conditions (we can find differences that are real and tangible)
+  \end{itemize}
+\end{itemize}
+
+\subsection*{Examples}
+\begin{itemize}
+  \item Usually the task is self evident
+  \item Idea: new widgets for creating entries in a calendar app
+  \item Task: create an entry in the app using both the conventional method (first IV) and the new method (the widget in development)
+  \item Idea: Auditory feedback for programming GPS destination
+  \item Task: Use the following 3 IVs; musical sounds, natural sounds, and conventional method (talking voice)
+\end{itemize}
+
+\subsection*{Procedure}
+\begin{itemize}
+  \item Arriving (welcoming)
+  \item Sign consent form (if publishing data)
+  \item Instructions given to participants about the experiment task
+  \item Demonstration of tasks, practice trials, etc.
+  \item Rest breaks
+  \item Administer a questionnaire or an interview at the end (if necessary)
+\end{itemize}
+
+\subsection*{Power analysis}
 
 
 \end{document}
