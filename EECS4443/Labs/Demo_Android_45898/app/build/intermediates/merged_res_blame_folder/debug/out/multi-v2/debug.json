@@ -1,0 +1,43 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Android_45898\\app\\build\\intermediates\\merged_res\\debug\\values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Android_45898\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "6,3,5,7,4,2",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "277,124,221,333,168,55",
+                        "endColumns": "55,43,47,37,47,68",
+                        "endOffsets": "328,163,264,366,211,119"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "112,168,212,260,298,346",
+                        "endColumns": "55,43,47,37,47,68",
+                        "endOffsets": "163,207,255,293,341,410"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Android_45898\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                }
+            ]
+        }
+    ]
+}
