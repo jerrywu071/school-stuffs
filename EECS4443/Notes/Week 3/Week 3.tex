@@ -1,0 +1,61 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\usepackage{graphicx}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Python,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\graphicspath{{img}}
+
+\title{EECS4443 Notes}
+\author{Jerry Wu}
+\date{2023-09-18}
+
+\begin{document}
+
+\maketitle
+
+\section*{XML advantages}
+
+\begin{itemize}
+    \item XML is used exclusively for the view. We can separate concerns between function and form by using MVC.
+    \item The ID attribute: \texttt{android:id="@+id/decbutton"} signifies that we are pulling a value, in this case, a button from the \texttt{R} (resources) class. 
+    \item \texttt{R.java} is automatically generated based on what is in the XML view. This allows us to change a single value in the XML to change \textbf{all} occurences of that value in code.
+\end{itemize}
+
+\subsection*{Layout parameters}
+An app activity can have multiple layouts.
+\begin{itemize}
+  \item Layouts take on the form of \texttt{layout\_foo}
+  \item \texttt{LinearLayout}: every element is stacked sequentially on the screen depending on the orientation of the screen.
+\end{itemize}
+
+\end{document}

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Android_45898\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Android_45898/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Android_45898\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Android_45898/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "6,3,5,7,4,2",
                         "startColumns": "4,4,4,4,4,4",
@@ -21,15 +21,8 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Android_45898\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Android_45898/app/src/main/res/values/ic_launcher_background.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "57",
-                        "endColumns": "56",
-                        "endOffsets": "109"
-                    },
-                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",
