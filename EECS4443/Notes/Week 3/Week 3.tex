@@ -45,6 +45,7 @@
 
 \section*{XML advantages}
 
+
 \begin{itemize}
     \item XML is used exclusively for the view. We can separate concerns between function and form by using MVC.
     \item The ID attribute: \texttt{android:id="@+id/decbutton"} signifies that we are pulling a value, in this case, a button from the \texttt{R} (resources) class. 
@@ -57,5 +58,11 @@ An app activity can have multiple layouts.
   \item Layouts take on the form of \texttt{layout\_foo}
   \item \texttt{LinearLayout}: every element is stacked sequentially on the screen depending on the orientation of the screen.
 \end{itemize}
+
+\subsection*{What is a layout?}
+Simply put, a layout is what defines the UI elements in a given activity (screen). It is the \textbf{parent view} to all other elements within it. A \texttt{Layout} is a \texttt{ViewGroup}, and a \texttt{ViewGroup} is a \texttt{View}
+
+\subsection*{Dynamic layout}
+In a dynamic layout, the elements on the screen are not pre determined. In other words, \texttt{AdapterView} is used to populate the layout with views \textbf{at runtime} like \texttt{ListView}, \texttt{GridView}, etc. These are very common views for organizing data in many applications, since they display items in either a list or a grid respectively.
 
 \end{document}
