@@ -14,10 +14,12 @@
         android:text="@string/instruction"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    <!--IMPLEMENT ONCLICK FUNCTIONALITY-->
     <Button
         android:id="@+id/incbutton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:padding="20dp"
         android:text="@string/increment"
         android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -30,18 +32,34 @@
         android:text="@string/count"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
+    <!--IMPLEMENT ONCLICK FUNCTIONALITY-->
     <Button
         android:id="@+id/decbutton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:padding="20dp"
         android:text="@string/decrement"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
+
+    <!--DEFINE RESET BUTTON IN VIEW-->
+    <!--IMPLEMENT ONCLICK FUNCTIONALITY-->
+    <Button
+        android:id="@+id/resetbutton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:padding="20dp"
+        android:text="@string/reset"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <!--IMPLEMENT ONCLICK FUNCTIONALITY-->
     <Button
         android:id="@+id/exitbutton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:onClick="onClick"
         android:padding="20dp"
         android:text="@string/exit"
         android:textAppearance="?android:attr/textAppearanceMedium" />

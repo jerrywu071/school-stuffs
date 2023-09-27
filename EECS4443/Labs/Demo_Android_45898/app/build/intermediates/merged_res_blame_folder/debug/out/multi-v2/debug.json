@@ -6,23 +6,28 @@
                 {
                     "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Android_45898/app/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "6,3,5,7,4,2",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "277,124,221,333,168,55",
-                        "endColumns": "55,43,47,37,47,68",
-                        "endOffsets": "328,163,264,366,211,119"
+                        "startLines": "-1,-1,-1,-1,-1,-1,8",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,4",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,316",
+                        "endColumns": "-1,-1,-1,-1,-1,-1,39",
+                        "endOffsets": "-1,-1,-1,-1,-1,-1,351"
                     },
                     "to": {
-                        "startLines": "3,4,5,6,7,8",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "112,168,212,260,298,346",
-                        "endColumns": "55,43,47,37,47,68",
-                        "endOffsets": "163,207,255,293,341,410"
+                        "startLines": "3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "112,168,212,260,298,346,415",
+                        "endColumns": "55,43,47,37,47,68,39",
+                        "endOffsets": "163,207,255,293,341,410,450"
                     }
                 },
                 {
                     "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Android_45898/app/src/main/res/values/ic_launcher_background.xml",
                     "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
                         "startLines": "2",
                         "startColumns": "4",
                         "startOffsets": "55",

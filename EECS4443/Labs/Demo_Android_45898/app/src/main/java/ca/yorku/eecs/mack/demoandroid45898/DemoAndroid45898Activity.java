@@ -22,7 +22,8 @@ import ca.yorku.eecs.mack.demoandroid.R;
 public class DemoAndroid45898Activity extends Activity implements OnClickListener {
     private final static String MYDEBUG = "MYDEBUG"; // for Log.i messages
 
-    private Button incrementButton, decrementButton, exitButton;
+     //DECLARE A resetButton
+    private Button incrementButton, decrementButton, resetButton, exitButton;
     private TextView textview;
     private int clickCount;
 
@@ -39,6 +40,9 @@ public class DemoAndroid45898Activity extends Activity implements OnClickListene
         // get references to buttons and text view from the layout manager (rather than instantiate them)
         incrementButton = (Button) findViewById(R.id.incbutton);
         decrementButton = (Button) findViewById(R.id.decbutton);
+
+        //DEFINE RESET BUTTON
+        resetButton = (Button) findViewById(R.id.resetbutton);
         exitButton = (Button) findViewById(R.id.exitbutton);
         textview = (TextView) findViewById(R.id.textview);
 
@@ -61,6 +65,11 @@ public class DemoAndroid45898Activity extends Activity implements OnClickListene
         } else if (v == decrementButton) {
             Log.i(MYDEBUG, "Decrement button clicked!");
             --clickCount;
+
+        } else if(v == resetButton) {
+            //ADD CONDITION FOR RESET BUTTON
+            Log.i(MYDEBUG, "Reset button clicked!");
+            clickCount = 0;
 
         } else if (v == exitButton) {
             Log.i(MYDEBUG, "Good bye!");

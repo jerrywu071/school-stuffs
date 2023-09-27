@@ -43,7 +43,9 @@
 
 \maketitle
 
-\section*{XML advantages}
+\section*{Layouts}
+
+\subsection*{XML advantages}
 
 
 \begin{itemize}
@@ -64,5 +66,8 @@ Simply put, a layout is what defines the UI elements in a given activity (screen
 
 \subsection*{Dynamic layout}
 In a dynamic layout, the elements on the screen are not pre determined. In other words, \texttt{AdapterView} is used to populate the layout with views \textbf{at runtime} like \texttt{ListView}, \texttt{GridView}, etc. These are very common views for organizing data in many applications, since they display items in either a list or a grid respectively.
+\begin{itemize}
+  \item When scrolling through a list of elements, we don't want to have them all rendered at once, as that will cause performance issues (low memory). We can deal with these issues by using dynamic rendering. To achieve this, we only render what is on the screen at the moment (text, images, etc.) when they are scrolled to.
+\end{itemize}
 
 \end{document}

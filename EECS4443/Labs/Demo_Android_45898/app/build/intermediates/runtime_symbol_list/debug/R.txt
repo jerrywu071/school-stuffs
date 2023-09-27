@@ -3,6 +3,7 @@ int drawable icon 0x7f020000
 int id decbutton 0x7f030000
 int id exitbutton 0x7f030001
 int id incbutton 0x7f030002
+int id resetbutton 0x7f030004
 int id textview 0x7f030003
 int layout main 0x7f040000
 int mipmap ic_launcher 0x7f050000
@@ -14,3 +15,4 @@ int string decrement 0x7f060002
 int string exit 0x7f060003
 int string increment 0x7f060004
 int string instruction 0x7f060005
+int string reset 0x7f060006
