@@ -70,4 +70,60 @@ In a dynamic layout, the elements on the screen are not pre determined. In other
   \item When scrolling through a list of elements, we don't want to have them all rendered at once, as that will cause performance issues (low memory). We can deal with these issues by using dynamic rendering. To achieve this, we only render what is on the screen at the moment (text, images, etc.) when they are scrolled to.
 \end{itemize}
 
+\subsection*{Tabs}
+
+\begin{itemize}
+  \item Tabs allow us to create muti paged activities
+  \item All items are displayed concurrently
+  \item Tabs should all be equal width with a text label
+  \item Tabs are scrollable horizontally to find more pages within a single activity. In other words, we can switch between views without switching activities.
+  \item They are NOT like tabs in a browser, because a tab in a browser can be considered as another activity, if nothing else.
+\end{itemize}
+
+\subsection*{Spinners}
+\begin{itemize}
+  \item It's like a \texttt{ListView}, but it is in the form of a dropdown menu.
+\end{itemize}
+
+\subsection*{Buttons}
+
+\begin{itemize}
+  \item We shouldn't use buttons too often since they have a heavy appearance. They are most suitable for important actions like sign up/log in.
+  \item Rule of thumb is to not have more than 2 buttons on the screen at any given time.
+\end{itemize}
+
+\subsection*{Image buttons $>$ text buttons}
+
+\begin{itemize}
+  \item Image buttons are good for representing actions with easy to understand indicators such as a magnifying glass for search, etc.
+  \item Image buttons save a lot of space.
+  \item We can combine images and text in a button in order to add more context as to what the button does.
+  \item Coloured image buttons are not necessary since users are used to interacting with objects. In fact, it is discouraged since it makes applications look archaic. 
+  \item Same case applies to text buttons, however, the text colour should be different from the body text of the application so as to avoid roach motel (disguised links).
+\end{itemize}
+
+\subsection*{SeekBar, slider, and progress indicator}
+
+\begin{itemize}
+  \item Seekbar is good for increasing and decreasing continuous/discrete values like volume, brightness, timestamps in audio/video, etc. Though the former two are sliders.
+  \item Progress indicators indicate how far a task has progressed such as download/install progress. Can only increase; fill from 0\% to 100\%.
+  \item If we don't know exactly when the task will complete, we can use an \textbf{activity indicator} (spinning loading circle) to avoid giving the user false despair.
+\end{itemize}
+
+\subsection*{Switches}
+
+\begin{itemize}
+  \item \textbf{Checkbox} - used for selecting multiple options in a list, i.e. "select all that apply"
+  \item \textbf{Radio button} - used for selecting exactly one option in a list, i.e. "select one"
+  \item \textbf{On/off switch} - used for enabling/disabling certain features/settings within an application, i.e. "dark mode, wifi, mobile data, etc"
+\end{itemize}
+
+\textit{"If it's hell for spinners, it's even hell-ier with radio buttons" - M. Fokaefs 2023}
+
+\subsection*{Dialogues}
+\begin{itemize}
+  \item Dialogues are used for information, alert, popups, feedback, etc. These should be used only for important prompts like info, settings, etc. since they put the current activity of the application on pause.
+  \item \textbf{Toast}: A temporary lightweight popup that subtly alerts the user that something has happened. It automatically fades away.
+\end{itemize}
+
 \end{document}
