@@ -1,0 +1,4 @@
+#Wed Oct 18 15:32:01 EDT 2023
+base.0=/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

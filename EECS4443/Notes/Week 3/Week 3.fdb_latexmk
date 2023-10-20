@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1696265484 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/Week 3/Week 3.tex" "Week 3.pdf" "Week 3" 1696265485
+["pdflatex"] 1696434239 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/Week 3/Week 3.tex" "Week 3.pdf" "Week 3" 1696434239
   "/etc/texmf/web2c/texmf.cnf" 1675046609 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/Week 3/Week 3.tex" 1696265484 5810 cac09d04070dc9b236345b81a9d0c39e ""
+  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/Week 3/Week 3.tex" 1696434238 6202 99bce18ed12bf9a7d8f26157231cb2f7 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -63,8 +63,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1675046631 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1685476551 2799767 f3a98faf324e8a30dddc07cf76604a22 ""
-  "Week 3.aux" 1696265485 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
-  "Week 3.tex" 1696265484 5810 cac09d04070dc9b236345b81a9d0c39e ""
+  "Week 3.aux" 1696434239 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
+  "Week 3.tex" 1696434238 6202 99bce18ed12bf9a7d8f26157231cb2f7 ""
   (generated)
   "Week 3.aux"
   "Week 3.log"

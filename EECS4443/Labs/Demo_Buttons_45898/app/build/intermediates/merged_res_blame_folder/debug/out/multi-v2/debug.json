@@ -1,0 +1,56 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/values/ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                },
+                {
+                    "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/values/icon_background.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "112",
+                        "endColumns": "49",
+                        "endOffsets": "157"
+                    }
+                },
+                {
+                    "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,-1,-1,-1,12,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,559,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "endColumns": "-1,-1,-1,-1,-1,-1,-1,49,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
+                        "endOffsets": "-1,-1,-1,-1,-1,-1,-1,607,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "162,218,274,312,361,415,466,510,563,612,652,703,768,804,838,874,921,980",
+                        "endColumns": "55,55,37,48,53,50,43,52,48,39,50,64,35,33,35,46,58,47",
+                        "endOffsets": "213,269,307,356,410,461,505,558,607,647,698,763,799,833,869,916,975,1023"
+                    }
+                }
+            ]
+        }
+    ]
+}

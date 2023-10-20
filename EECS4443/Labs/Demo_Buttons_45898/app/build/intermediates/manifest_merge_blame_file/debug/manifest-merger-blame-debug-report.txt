@@ -1,0 +1,47 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="ca.yorku.eecs.mack.demobuttons45898"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="13"
+8-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="27" />
+9-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:7:5-22:19
+12        android:allowBackup="false"
+12-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:9:9-36
+13        android:debuggable="true"
+14        android:icon="@mipmap/ic_launcher"
+14-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:10:9-43
+15        android:label="@string/app_name"
+15-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:11:9-41
+16        android:testOnly="true"
+17        android:theme="@android:style/Theme.Holo" >
+17-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:8:9-50
+18        <activity
+18-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:13:9-21:20
+19            android:name="ca.yorku.eecs.mack.demobuttons45898.DemoButtons45898Activity"
+19-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:14:13-88
+20            android:label="@string/app_name" >
+20-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:15:13-45
+21            <intent-filter>
+21-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:16:13-20:29
+22                <action android:name="android.intent.action.MAIN" />
+22-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:17:17-69
+22-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:17:25-66
+23                <action android:name="android.intent.action.VIEW" />
+23-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:18:17-69
+23-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:18:25-66
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:19:17-77
+25-->/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:19:27-74
+26            </intent-filter>
+27        </activity>
+28    </application>
+29
+30</manifest>

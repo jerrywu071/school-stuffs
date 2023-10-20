@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--enable save instance state-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#ff113322"
+    android:gravity="center_horizontal"
+    android:saveEnabled="true"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="@string/instructions"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="buttonClick"
+                android:text="@string/buttonLabel"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <!--enable save instance state-->
+            <TextView
+                android:id="@+id/buttonclickstatus"
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:padding="5dp"
+                android:saveEnabled="true" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center" >
+
+            <!--enable save instance state-->
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="buttonClick"
+                android:saveEnabled="true"
+                android:text="@string/checkboxLabel"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <!--enable save instance state-->
+            <TextView
+                android:id="@+id/checkboxclickstatus"
+                android:layout_width="100dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:padding="5dp"
+                android:saveEnabled="true" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center" >
+
+            <!--enable save instance state-->
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:saveEnabled="true">
+
+                <RadioButton
+                    android:id="@+id/radiobutton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonClick"
+                    android:text="@string/redButtonLabel"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonClick"
+                    android:text="@string/greenButtonLabel"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                <RadioButton
+                    android:id="@+id/radiobutton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="buttonClick"
+                    android:text="@string/blueButtonLabel"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </RadioGroup>
+
+            <!--enable save instance state-->
+            <TextView
+                android:id="@+id/radiobuttonclickstatus"
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:padding="5dp"
+                android:saveEnabled="true" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center" >
+
+            <!--enable save instance state-->
+            <ToggleButton
+                android:id="@+id/togglebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="buttonClick"
+                android:saveEnabled="true"
+                android:text="@string/toggleButtonLabel"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <!--enable save instance state-->
+            <TextView
+                android:id="@+id/togglebuttonclickstatus"
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:padding="5dp"
+                android:saveEnabled="true" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center" >
+
+            <ImageButton
+                android:id="@+id/backspacebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:contentDescription="@string/backspaceButtonText"
+                android:onClick="buttonClick"
+                android:padding="10dp"
+                android:src="@drawable/bs_normal" />
+
+            <!--enable save instance state-->
+            <TextView
+                android:id="@+id/backspacebuttonclickstatus"
+                android:layout_width="50dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:padding="5dp"
+                android:saveEnabled="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </TableRow>
+
+        <!-- REMOVED EXIT BUTTON
+        <Button
+            android:id="@+id/exitbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:onClick="buttonClick"
+            android:text="@string/exitButtonLabel" /> -->
+    </TableLayout>
+
+    <Switch
+        android:id="@+id/darkModeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="68dp"
+        android:text="@string/darkModeLabel" />
+
+</LinearLayout>

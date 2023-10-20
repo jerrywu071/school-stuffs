@@ -126,4 +126,13 @@ In a dynamic layout, the elements on the screen are not pre determined. In other
   \item \textbf{Toast}: A temporary lightweight popup that subtly alerts the user that something has happened. It automatically fades away.
 \end{itemize}
 
+\section*{Touch \& multitouch}
+
+In android, every touch screen is referred to as a "gesture". However, we also want to discuss gestural inputs in a different contest (unistroke recognition).
+
+\subsection*{Touch mode}
+\begin{itemize}
+  \item Android buttons are not focusable in touch mode, so we want to attach a \texttt{OnClickListener} instead of a \texttt{OnTouchListener}.
+\end{itemize}
+
 \end{document}
