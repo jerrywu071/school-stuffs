@@ -1,0 +1,41 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/dimitri/Desktop/School stuffs/EECS4443/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/values_values.arsc.flat",
+            "map": [
+                {
+                    "source": "/home/dimitri/Desktop/School stuffs/EECS4443/Demo_TiltBall_45898/app/src/main/res/values/ic_launcher_background.xml",
+                    "from": {
+                        "startLines": "-1",
+                        "startColumns": "-1",
+                        "startOffsets": "-1"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                },
+                {
+                    "source": "/home/dimitri/Desktop/School stuffs/EECS4443/Demo_TiltBall_45898/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "-1,-1,-1,-1,9,-1,-1,-1,-1",
+                        "startColumns": "-1,-1,-1,-1,4,-1,-1,-1,-1",
+                        "startOffsets": "-1,-1,-1,-1,423,-1,-1,-1,-1",
+                        "endColumns": "-1,-1,-1,-1,62,-1,-1,-1,-1",
+                        "endOffsets": "-1,-1,-1,-1,481,-1,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "3,4,5,6,7,8,9,10,11",
+                        "startColumns": "4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "112,163,207,253,305,368,442,503,566",
+                        "endColumns": "50,43,45,51,62,73,60,62,65",
+                        "endOffsets": "158,202,248,300,363,437,498,561,627"
+                    }
+                }
+            ]
+        }
+    ]
+}
