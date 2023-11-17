@@ -1,14 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/values_values.arsc.flat",
+            "outputFile": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\values_values.arsc.flat",
             "map": [
                 {
-                    "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/values/ic_launcher_background.xml",
+                    "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
                     "from": {
-                        "startLines": "-1",
-                        "startColumns": "-1",
-                        "startOffsets": "-1"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "56",
+                        "endOffsets": "109"
                     },
                     "to": {
                         "startLines": "2",
@@ -19,11 +21,13 @@
                     }
                 },
                 {
-                    "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/values/icon_background.xml",
+                    "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\values\\icon_background.xml",
                     "from": {
-                        "startLines": "-1",
-                        "startColumns": "-1",
-                        "startOffsets": "-1"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endColumns": "49",
+                        "endOffsets": "102"
                     },
                     "to": {
                         "startLines": "3",
@@ -34,13 +38,13 @@
                     }
                 },
                 {
-                    "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/values/strings.xml",
+                    "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\values\\strings.xml",
                     "from": {
-                        "startLines": "-1,-1,-1,-1,-1,-1,-1,12,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "startColumns": "-1,-1,-1,-1,-1,-1,-1,1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "startOffsets": "-1,-1,-1,-1,-1,-1,-1,559,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "endColumns": "-1,-1,-1,-1,-1,-1,-1,49,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1",
-                        "endOffsets": "-1,-1,-1,-1,-1,-1,-1,607,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"
+                        "startLines": "3,11,18,9,4,5,15,12,10,17,8,2,20,19,16,7,6,14",
+                        "startColumns": "1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1",
+                        "startOffsets": "117,517,784,423,171,223,670,571,470,746,374,54,852,820,712,329,272,624",
+                        "endColumns": "52,52,34,45,50,47,40,49,45,36,47,61,32,30,32,43,55,44",
+                        "endOffsets": "168,568,817,467,220,269,709,619,514,781,420,114,883,849,743,371,326,667"
                     },
                     "to": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",

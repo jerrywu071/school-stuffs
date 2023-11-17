@@ -1,67 +1,67 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:2:1-24:12
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:2:1-24:12
+ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:2:1-24:12
 	package
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:3:5-50
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:3:5-50
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:5:5-30
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:5:5-30
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:4:5-28
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:4:5-28
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
 application
-ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:7:5-22:19
+ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:7:5-22:19
 	android:label
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:11:9-41
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:11:9-41
 	android:icon
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:10:9-43
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:10:9-43
 	android:allowBackup
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:9:9-36
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:9:9-36
 	android:theme
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:8:9-50
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:8:9-50
 activity#ca.yorku.eecs.mack.demobuttons45898.DemoButtons45898Activity
-ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:13:9-21:20
+ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:13:9-21:20
 	android:label
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:15:13-45
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:15:13-45
 	android:name
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:14:13-88
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:14:13-88
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:16:13-20:29
+ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:16:13-20:29
 action#android.intent.action.MAIN
-ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:17:17-69
+ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:17:25-66
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:17:25-66
 action#android.intent.action.VIEW
-ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:19:17-77
+ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml:19:27-74
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml:19:27-74
 uses-sdk
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-		ADDED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
-		INJECTED from /home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/AndroidManifest.xml
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Markw\OneDrive\Documents\GitHub\latex-stuffs\EECS4443\Labs\Demo_Buttons_45898\app\src\main\AndroidManifest.xml

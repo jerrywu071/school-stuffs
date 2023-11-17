@@ -44,6 +44,7 @@ public class RollingBallPanel extends View
     int labelTextSize, statsTextSize, gap, offset;
 
     RectF innerRectangle, outerRectangle, innerShadowRectangle, outerShadowRectangle, ballNow;
+
     boolean touchFlag;
     Vibrator vib;
     int wallHits;
@@ -229,10 +230,6 @@ public class RollingBallPanel extends View
 
         //Check if ball completes a lap
 
-        if(ballCompletesLap()){
-            lapNumber++;
-        }
-
         // This is the only code that distinguishes velocity-control from position-control
         if (orderOfControl.equals("Velocity")) // velocity control
         {
@@ -302,6 +299,9 @@ public class RollingBallPanel extends View
             canvas.drawRect(outerRectangle, fillPaint);
             canvas.drawRect(innerRectangle, backgroundPaint);
 
+            //startline
+            canvas.drawLine(innerRectangle.left, (innerRectangle.bottom + innerRectangle.top)/2, outerRectangle.left,(outerRectangle.bottom+outerRectangle.top)/2,linePaint);
+
             // draw lines
             canvas.drawRect(outerRectangle, linePaint);
             canvas.drawRect(innerRectangle, linePaint);
@@ -311,9 +311,12 @@ public class RollingBallPanel extends View
             canvas.drawOval(outerRectangle, fillPaint);
             canvas.drawOval(innerRectangle, backgroundPaint);
 
+            //startline
+            canvas.drawLine(innerRectangle.left, (innerRectangle.bottom + innerRectangle.top)/2, outerRectangle.left,(outerRectangle.bottom+outerRectangle.top)/2,linePaint);
             // draw lines
             canvas.drawOval(outerRectangle, linePaint);
             canvas.drawOval(innerRectangle, linePaint);
+
         }
 
         // draw label
@@ -334,6 +337,10 @@ public class RollingBallPanel extends View
 
         // draw the ball in its new location
         canvas.drawBitmap(ball, xBall, yBall, null);
+
+        if(ballCompletesLap()){
+            lapNumber++;
+        }
 
     } // end onDraw
 
@@ -397,7 +404,7 @@ public class RollingBallPanel extends View
             final float ballDistance = (float) Math.sqrt((xBallCenter - xCenter) * (xBallCenter - xCenter)
                     + (yBallCenter - yCenter) * (yBallCenter - yCenter));
 
-            // Check if the ball crosses the inner circular border to the outer circular border
+            // Check if the ball has crossed the inner circular border to the outer circular border
             if (ballDistance > radiusOuter && ballDistance - dBall < radiusInner) {
                 return true;
             }
@@ -405,5 +412,16 @@ public class RollingBallPanel extends View
         // Add similar checks for other path types if needed
 
         return false;
+    }
+
+    private boolean crossedStartLine() {
+        float startLineX = innerRectangle.left;
+        float startLineY = (innerRectangle.bottom + innerRectangle.top) / 2;
+
+        float ballCenterX = xBallCenter;
+        float ballCenterY = yBallCenter;
+
+        // Check if the ball has crossed the start line
+        return ballCenterX <= startLineX && ballCenterY > startLineY;
     }
 }

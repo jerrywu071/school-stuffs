@@ -1,282 +1,282 @@
 [
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-xhdpi_icon_background.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/generated/res/pngs/debug/drawable-xhdpi/icon_background.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_icon_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xhdpi\\icon_round.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-hdpi_icon_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-hdpi/icon_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_icon_background.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\icon_background.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_smileyface_pressed.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-mdpi/smileyface_pressed.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_icon_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_backspace_normal.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-hdpi/backspace_normal.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_backspacebuttonselector.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-hdpi\\backspacebuttonselector.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\layout_main.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\layout\\main.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xhdpi_icon_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xhdpi/icon_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_backspace_pressed.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-mdpi\\backspace_pressed.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_backspace_focused.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-hdpi\\backspace_focused.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_smileyfacebuttonselector.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-mdpi/smileyfacebuttonselector.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xhdpi_icon_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xhdpi/icon_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_backspacebuttonselector.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-mdpi/backspacebuttonselector.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_smileyface_normal.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-mdpi/smileyface_normal.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_smileyface_focused.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-hdpi\\smileyface_focused.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/layout_main.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/layout/main.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v21_icon_background.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\icon_background.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_backspacebuttonselector.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-hdpi/backspacebuttonselector.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_backspacebuttonselector.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-mdpi\\backspacebuttonselector.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_icon.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-anydpi-v26/icon.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_icon.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xhdpi\\icon.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\layout-land_main.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\layout-land\\main.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_smileyface_normal.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-mdpi\\smileyface_normal.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_smileyface_normal.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-hdpi/smileyface_normal.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_backspace_normal.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-hdpi\\backspace_normal.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_backspace_normal.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-ldpi/backspace_normal.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_icon_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xhdpi\\icon_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_smileyface_focused.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-hdpi/smileyface_focused.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_icon.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxhdpi\\icon.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_backspace_focused.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-mdpi\\backspace_focused.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_bs_normal.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-ldpi/bs_normal.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_smileyfacebuttonselector.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-mdpi\\smileyfacebuttonselector.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_icon.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxhdpi/icon.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_icon_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxhdpi/icon_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_backspace_normal.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-mdpi\\backspace_normal.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_icon_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxhdpi/icon_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_smileyface_pressed.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-hdpi\\smileyface_pressed.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-mdpi_icon.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-mdpi/icon.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_icon.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_backspace_focused.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-mdpi/backspace_focused.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_bs_normal.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-hdpi/bs_normal.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_backspace_focused.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-ldpi\\backspace_focused.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_backspace_pressed.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-hdpi\\backspace_pressed.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-xhdpi_icon_background.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\icon_background.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-hdpi_icon.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-hdpi/icon.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_smileyface_focused.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-mdpi\\smileyface_focused.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_bs_normal.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-mdpi\\bs_normal.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_backspace_focused.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-ldpi/backspace_focused.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_icon_background.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\icon_background.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_backspace_pressed.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-hdpi/backspace_pressed.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_icon_background.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\icon_background.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_icon_background.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/generated/res/pngs/debug/drawable-ldpi/icon_background.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_icon_background.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\icon_background.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-xxhdpi_icon_background.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/generated/res/pngs/debug/drawable-xxhdpi/icon_background.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_smileyface_focused.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-ldpi/smileyface_focused.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_icon.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-hdpi\\icon.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_bs_normal.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-mdpi/bs_normal.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_backspace_normal.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-ldpi\\backspace_normal.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/layout-land_main.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/layout-land/main.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_smileyface_pressed.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-ldpi\\smileyface_pressed.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-mdpi_icon_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-mdpi/icon_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-hdpi_icon_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-hdpi/icon_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_bs_normal.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-ldpi\\bs_normal.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_icon_background.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/generated/res/pngs/debug/drawable-hdpi/icon_background.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_smileyface_normal.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-hdpi\\smileyface_normal.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_icon_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxxhdpi/icon_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-xxhdpi_icon_background.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\icon_background.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_smileyfacebuttonselector.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-ldpi/smileyfacebuttonselector.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_backspacebuttonselector.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-ldpi/backspacebuttonselector.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_icon.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_smileyfacebuttonselector.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-hdpi/smileyfacebuttonselector.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-mdpi_icon_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-mdpi/icon_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_bs_normal.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-hdpi\\bs_normal.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_smileyface_normal.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-ldpi/smileyface_normal.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_backspace_pressed.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-mdpi/backspace_pressed.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_backspacebuttonselector.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-ldpi\\backspacebuttonselector.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-anydpi-v21_icon_background.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/generated/res/pngs/debug/drawable-anydpi-v21/icon_background.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_smileyfacebuttonselector.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-ldpi\\smileyfacebuttonselector.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_smileyface_pressed.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-ldpi/smileyface_pressed.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_smileyfacebuttonselector.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-hdpi\\smileyfacebuttonselector.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-xxxhdpi_icon_background.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/generated/res/pngs/debug/drawable-xxxhdpi/icon_background.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_icon_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxhdpi\\icon_round.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xhdpi_icon.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xhdpi/icon.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_smileyface_pressed.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-mdpi\\smileyface_pressed.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_icon_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxxhdpi/icon_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_icon_round.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-anydpi-v26\\icon_round.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_icon_background.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/generated/res/pngs/debug/drawable-mdpi/icon_background.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_smileyface_focused.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-mdpi/smileyface_focused.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_smileyface_normal.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-ldpi\\smileyface_normal.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_icon.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxxhdpi/icon.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_smileyface_focused.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-ldpi\\smileyface_focused.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_icon_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon_round.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_icon.xml.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-anydpi-v26\\icon.xml"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_smileyface_pressed.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-hdpi/smileyface_pressed.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_icon_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxhdpi\\icon_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_backspace_focused.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-hdpi/backspace_focused.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_backspace_pressed.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-ldpi/backspace_pressed.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_icon_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-hdpi\\icon_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_backspace_normal.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/drawable-mdpi/backspace_normal.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_icon_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-mdpi\\icon_round.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_backspace_pressed.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\drawable-ldpi\\backspace_pressed.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_icon_foreground.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-mdpi\\icon_foreground.png"
     },
     {
-        "merged": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_icon_round.xml.flat",
-        "source": "/home/dimitri/Desktop/Misc projects/4443/Demo_Buttons_45898/app/src/main/res/mipmap-anydpi-v26/icon_round.xml"
+        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_icon_round.png.flat",
+        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_Buttons_45898\\app\\src\\main\\res\\mipmap-hdpi\\icon_round.png"
     }
 ]
