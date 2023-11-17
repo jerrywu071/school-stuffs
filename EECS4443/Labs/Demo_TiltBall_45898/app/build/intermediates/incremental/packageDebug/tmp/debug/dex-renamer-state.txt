@@ -1,4 +1,4 @@
-#Fri Nov 17 00:50:22 EST 2023
-base.0=C\:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Fri Nov 17 15:33:29 EST 2023
+base.0=/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

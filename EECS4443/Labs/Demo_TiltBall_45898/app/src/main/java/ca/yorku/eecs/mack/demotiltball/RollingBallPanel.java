@@ -6,6 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.graphics.RectF;
 import android.os.Vibrator;
 import android.util.AttributeSet;
@@ -299,8 +300,6 @@ public class RollingBallPanel extends View
             canvas.drawRect(outerRectangle, fillPaint);
             canvas.drawRect(innerRectangle, backgroundPaint);
 
-            //startline
-            canvas.drawLine(innerRectangle.left, (innerRectangle.bottom + innerRectangle.top)/2, outerRectangle.left,(outerRectangle.bottom+outerRectangle.top)/2,linePaint);
 
             // draw lines
             canvas.drawRect(outerRectangle, linePaint);
@@ -312,15 +311,26 @@ public class RollingBallPanel extends View
             canvas.drawOval(innerRectangle, backgroundPaint);
 
             //startline
-            canvas.drawLine(innerRectangle.left, (innerRectangle.bottom + innerRectangle.top)/2, outerRectangle.left,(outerRectangle.bottom+outerRectangle.top)/2,linePaint);
+
             // draw lines
             canvas.drawOval(outerRectangle, linePaint);
             canvas.drawOval(innerRectangle, linePaint);
-
         }
 
-        // draw label
-        canvas.drawText("Demo_TiltBall jerrywu0", 6f, labelTextSize, labelPaint);
+        //draw arrow
+        canvas.drawLine(outerRectangle.left - 50, outerRectangle.top + (outerRectangle.height() / 2),
+                outerRectangle.left - 50, outerRectangle.top + (outerRectangle.height() / 2) + 100, linePaint);
+
+        // draw right side of arrow
+        canvas.drawLine(outerRectangle.left - 50, outerRectangle.top + (outerRectangle.height() / 2) + 100,
+                outerRectangle.left - 40, outerRectangle.top + (outerRectangle.height() / 2) + 80, linePaint);
+
+        // draw left side of arrow
+        canvas.drawLine(outerRectangle.left - 50, outerRectangle.top + (outerRectangle.height() / 2) + 100,
+                outerRectangle.left - 60, outerRectangle.top + (outerRectangle.height() / 2) + 80, linePaint);
+
+        //start line
+        canvas.drawLine(innerRectangle.left, (innerRectangle.bottom + innerRectangle.top)/2, outerRectangle.left,(outerRectangle.bottom+outerRectangle.top)/2,linePaint);
 
         // draw stats (pitch, roll, tilt angle, tilt magnitude)
         if (pathType == PATH_TYPE_SQUARE || pathType == PATH_TYPE_CIRCLE)
@@ -338,8 +348,11 @@ public class RollingBallPanel extends View
         // draw the ball in its new location
         canvas.drawBitmap(ball, xBall, yBall, null);
 
-        if(ballCompletesLap()){
+        if(ballCompletesLap() && crossedStartLine()){
             lapNumber++;
+
+            //update the lap number once ballCompletesLap
+            canvas.drawText("Laps = " + lapNumber, 6f, updateY[5], statsPaint);
         }
 
     } // end onDraw

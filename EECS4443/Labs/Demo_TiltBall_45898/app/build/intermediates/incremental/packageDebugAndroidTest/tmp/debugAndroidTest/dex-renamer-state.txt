@@ -1,0 +1,4 @@
+#Fri Nov 17 15:19:47 EST 2023
+base.0=/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/dex/debugAndroidTest/mergeDexDebugAndroidTest/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

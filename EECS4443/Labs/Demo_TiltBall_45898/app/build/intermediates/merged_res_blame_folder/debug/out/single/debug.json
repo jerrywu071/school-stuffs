@@ -1,106 +1,106 @@
 [
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/layout_spinnerstyle.xml.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/layout/spinnerstyle.xml"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_icon.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/drawable-hdpi/icon.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_icon.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\drawable-mdpi\\icon.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_ball.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/drawable-hdpi/ball.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/layout_setup.xml.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/layout/setup.xml"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_icon.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-mdpi_ball.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\drawable-mdpi\\ball.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_ball.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/drawable-ldpi/ball.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\layout_spinnerstyle.xml.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\layout\\spinnerstyle.xml"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\layout_setup.xml.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\layout\\setup.xml"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_icon.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\drawable-hdpi\\icon.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_icon.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/drawable-ldpi/icon.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/layout_main.xml.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/layout/main.xml"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-ldpi_ball.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\drawable-ldpi\\ball.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\drawable-hdpi_ball.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\drawable-hdpi\\ball.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_ball.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/drawable-mdpi/ball.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_icon.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/drawable-mdpi/icon.png"
     },
     {
-        "merged": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\layout_main.xml.flat",
-        "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\layout\\main.xml"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
     }
 ]

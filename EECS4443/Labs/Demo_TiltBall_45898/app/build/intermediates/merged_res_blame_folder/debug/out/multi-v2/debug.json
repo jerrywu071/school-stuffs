@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\build\\intermediates\\merged_res\\debug\\values_values.arsc.flat",
+            "outputFile": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/values_values.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\values\\ic_launcher_background.xml",
+                    "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/values/ic_launcher_background.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,13 +21,13 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Markw\\OneDrive\\Documents\\GitHub\\latex-stuffs\\EECS4443\\Labs\\Demo_TiltBall_45898\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/values/strings.xml",
                     "from": {
                         "startLines": "3,10,11,6,9,5,8,7,4",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "59,496,541,253,432,178,370,306,111",
+                        "startOffsets": "56,486,530,247,423,173,362,299,107",
                         "endColumns": "50,43,45,51,62,73,60,62,65",
-                        "endOffsets": "105,535,582,300,490,247,426,364,172"
+                        "endOffsets": "102,525,571,294,481,242,418,357,168"
                     },
                     "to": {
                         "startLines": "3,4,5,6,7,8,9,10,11",
