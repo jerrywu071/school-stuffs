@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "ca.yorku.eecs.mack.demotiltball"
-        minSdkVersion 13
+        minSdkVersion 21
         targetSdkVersion 27
     }
 

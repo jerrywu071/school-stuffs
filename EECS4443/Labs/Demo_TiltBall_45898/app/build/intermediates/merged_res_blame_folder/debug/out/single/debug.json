@@ -12,6 +12,10 @@
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/drawable-hdpi/icon.png"
     },
     {
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/layout_results.xml.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/layout/results.xml"
+    },
+    {
         "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_ball.png.flat",
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/res/drawable-hdpi/ball.png"
     },

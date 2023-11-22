@@ -5,7 +5,7 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="13"
+8        android:minSdkVersion="21"
 8-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml
 9        android:targetSdkVersion="27" />
 9-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml
@@ -16,7 +16,7 @@
 12    </uses-permission>
 13
 14    <application
-14-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:10:5-29:19
+14-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:10:5-34:19
 15        android:allowBackup="false"
 15-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:11:9-36
 16        android:debuggable="true"
@@ -49,13 +49,22 @@
 30        </activity>
 31        <activity
 31-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:24:9-28:20
-32            android:name="ca.yorku.eecs.mack.demotiltball.DemoTiltBallActivity"
-32-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:25:13-80
+32            android:name="ca.yorku.eecs.mack.demotiltball.ResultsActivity"
+32-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:25:13-75
 33            android:label="@string/app_name"
 33-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:26:13-45
 34            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
 34-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:27:13-71
 35        </activity>
-36    </application>
-37
-38</manifest>
+36        <activity
+36-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:29:9-33:20
+37            android:name="ca.yorku.eecs.mack.demotiltball.DemoTiltBallActivity"
+37-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:30:13-80
+38            android:label="@string/app_name"
+38-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:31:13-45
+39            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+39-->/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:32:13-71
+40        </activity>
+41    </application>
+42
+43</manifest>

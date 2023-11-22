@@ -80,6 +80,7 @@ public class DemoTiltBallActivity extends Activity implements SensorEventListene
         pathType = b.getString("pathType");
         pathWidth = b.getString("pathWidth");
 
+
         // set alpha for low-pass filter (based on sampling rate and order of control)
         if (orderOfControl.equals("Velocity")) // velocity control
             alpha = ALPHA_VELOCITY[2]; // for GAME sampling rate
@@ -89,6 +90,7 @@ public class DemoTiltBallActivity extends Activity implements SensorEventListene
 
         // get this device's default orientation
         defaultOrientation = getDefaultDeviceOrientation();
+
 
         // force the UI to appear in the device's default orientation (and stay that way)
         if (defaultOrientation == Configuration.ORIENTATION_LANDSCAPE)

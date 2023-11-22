@@ -3,6 +3,8 @@ int drawable ball 0x7f020000
 int drawable icon 0x7f020001
 int id Button01 0x7f030000
 int id Button03 0x7f030001
+int id background 0x7f030010
+int id darkModeCheckBox 0x7f03000f
 int id paramGain 0x7f030002
 int id paramLabelGain 0x7f030003
 int id paramLabelLapNumber 0x7f030004
@@ -17,6 +19,7 @@ int id rollingballpanel 0x7f03000c
 int id setupTitle 0x7f03000d
 int id spinnerstyle 0x7f03000e
 int layout main 0x7f040000
+int layout results 0x7f040003
 int layout setup 0x7f040001
 int layout spinnerstyle 0x7f040002
 int mipmap ic_launcher 0x7f050000

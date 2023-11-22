@@ -1,12 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:3:5-46
 		INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBa
 	android:name
 		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:7:22-63
 application
-ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:10:5-29:19
+ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:10:5-34:19
 	android:label
 		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:13:9-41
 	android:icon
@@ -55,14 +55,22 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
 		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:21:27-74
-activity#ca.yorku.eecs.mack.demotiltball.DemoTiltBallActivity
+activity#ca.yorku.eecs.mack.demotiltball.ResultsActivity
 ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:24:9-28:20
 	android:label
 		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:26:13-45
 	android:theme
 		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:27:13-71
 	android:name
-		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:25:13-80
+		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:25:13-75
+activity#ca.yorku.eecs.mack.demotiltball.DemoTiltBallActivity
+ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:29:9-33:20
+	android:label
+		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:31:13-45
+	android:theme
+		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:32:13-71
+	android:name
+		ADDED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml:30:13-80
 uses-sdk
 INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/src/main/AndroidManifest.xml

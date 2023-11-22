@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.util.Log;
 
@@ -24,6 +27,10 @@ public class DemoTiltBallSetup extends Activity
 	final static int[] GAIN_ARG_VELOCITY_CONTROL = { 25, 50, 100, 200, 400 };
 
 	Spinner spinOrderOfControl, spinGain, spinPathMode, spinPathWidth, spinNumberLaps;
+
+	CheckBox darkModeCheckBox;
+
+	LinearLayout background;
 
 	// called when the activity is first created
 	@Override
@@ -58,6 +65,25 @@ public class DemoTiltBallSetup extends Activity
 		ArrayAdapter<CharSequence> adapter5 = new ArrayAdapter<CharSequence>(this, R.layout.spinnerstyle, NUMBER_OF_LAPS);
 		spinNumberLaps.setAdapter(adapter5);
 		spinNumberLaps.setSelection(0);
+
+		darkModeCheckBox = (CheckBox) findViewById(R.id.darkModeCheckBox);
+
+		background = (LinearLayout) findViewById(R.id.background);
+
+		darkModeCheckBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			@Override
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if(isChecked)
+				{
+					background.setBackgroundColor(0x00000000);
+				}
+
+				else
+				{
+					background.setBackgroundColor(0x3a3a3aff);
+				}
+			}
+		});
 	}
 
 	// called when the "OK" button is tapped
@@ -82,6 +108,7 @@ public class DemoTiltBallSetup extends Activity
 		b.putInt("gain", gain);
 		b.putString("pathType", pathType);
 		b.putString("pathWidth", pathWidth);
+		b.putBoolean("darkMode", darkModeCheckBox.isChecked());
 
 		// start experiment activity
 		Intent i = new Intent(getApplicationContext(), DemoTiltBallActivity.class);

@@ -348,7 +348,7 @@ public class RollingBallPanel extends View
         // draw the ball in its new location
         canvas.drawBitmap(ball, xBall, yBall, null);
 
-        if(ballCompletesLap() && crossedStartLine()){
+        if(crossedStartLine()){
             lapNumber++;
 
             //update the lap number once ballCompletesLap
@@ -409,21 +409,6 @@ public class RollingBallPanel extends View
             if (Math.abs(ballDistance - radiusInner) < (ballDiameter / 2f))
                 return true; // touching inner circular border
         }
-        return false;
-    }
-
-    public boolean ballCompletesLap() {
-        if (pathType == PATH_TYPE_CIRCLE) {
-            final float ballDistance = (float) Math.sqrt((xBallCenter - xCenter) * (xBallCenter - xCenter)
-                    + (yBallCenter - yCenter) * (yBallCenter - yCenter));
-
-            // Check if the ball has crossed the inner circular border to the outer circular border
-            if (ballDistance > radiusOuter && ballDistance - dBall < radiusInner) {
-                return true;
-            }
-        }
-        // Add similar checks for other path types if needed
-
         return false;
     }
 

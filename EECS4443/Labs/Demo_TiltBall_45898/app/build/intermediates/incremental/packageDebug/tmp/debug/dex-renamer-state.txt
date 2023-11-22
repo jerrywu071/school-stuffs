@@ -1,4 +1,7 @@
-#Fri Nov 17 15:33:29 EST 2023
-base.0=/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
-path.0=classes.dex
+#Fri Nov 17 16:37:39 EST 2023
+base.0=/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.1=/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_TiltBall_45898/app/build/intermediates/dex/debug/mergeProjectDexDebug/2/classes.dex
+path.0=0/classes.dex
+path.1=2/classes.dex
 renamed.0=classes.dex
+renamed.1=classes2.dex
