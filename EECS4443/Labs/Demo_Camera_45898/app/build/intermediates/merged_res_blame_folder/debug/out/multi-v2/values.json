@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\Markw\\OneDrive\\Desktop\\school stuffs\\4443\\Demo_Camera_45898\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Markw\\OneDrive\\Desktop\\school stuffs\\4443\\Demo_Camera_45898\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "4,8,9,7,10,13,3,11,5,12,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "106,332,383,278,430,604,59,484,156,544,217",
+                        "endColumns": "48,49,45,52,52,56,45,58,59,58,59",
+                        "endOffsets": "150,377,424,326,478,656,100,538,211,598,272"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,104,154,200,253,306,357,403,462,522,581",
+                        "endColumns": "48,49,45,52,52,50,45,58,59,58,59",
+                        "endOffsets": "99,149,195,248,301,352,398,457,517,576,636"
+                    }
+                }
+            ]
+        }
+    ]
+}
