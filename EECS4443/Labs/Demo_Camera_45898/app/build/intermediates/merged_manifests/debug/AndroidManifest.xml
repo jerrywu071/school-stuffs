@@ -34,6 +34,8 @@
         </activity>
         <activity android:name="ca.yorku.eecs.mack.democamera.VideoViewerActivity" >
         </activity>
+        <activity android:name="ca.yorku.eecs.mack.democamera.ImageViewerActivity" >
+        </activity>
     </application>
 
 </manifest>

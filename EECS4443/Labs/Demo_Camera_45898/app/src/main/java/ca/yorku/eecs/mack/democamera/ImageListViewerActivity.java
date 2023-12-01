@@ -2,12 +2,15 @@ package ca.yorku.eecs.mack.democamera;
 
 import android.app.Activity;
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
 @SuppressWarnings("unused")
-public class ImageListViewerActivity extends ListActivity
+public class ImageListViewerActivity extends Activity implements AdapterView.OnItemClickListener
 {
 	final static String MYDEBUG = "MYDEBUG"; // for Log.i messages
 
@@ -43,8 +46,25 @@ public class ImageListViewerActivity extends ListActivity
 
 		ImageAdapter adapter = new ImageAdapter(imageFilenames, directory, displayWidth);
 
-    	setListAdapter(adapter);
+		gridView = (GridView) findViewById(R.id.gridView);
+    	gridView.setAdapter(adapter);
+		gridView.setOnItemClickListener(this);
     }
+
+	//method taken from DemoGridView
+	@Override
+	public void onItemClick(AdapterView<?> parent, View v, int position, long id)
+	{
+		final Bundle b = new Bundle();
+		b.putStringArray("imageFilenames", imageFilenames);
+		b.putString("directory", directory.toString());
+		b.putInt("position", position);
+
+		// start image viewer activity
+		Intent i = new Intent(getApplicationContext(), ImageViewerActivity.class);
+		i.putExtras(b);
+		startActivity(i);
+	}
 
 	@Override
 	public void onBackPressed()

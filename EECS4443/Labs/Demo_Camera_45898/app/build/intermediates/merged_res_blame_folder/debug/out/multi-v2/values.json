@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Markw\\OneDrive\\Desktop\\school stuffs\\4443\\Demo_Camera_45898\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+            "outputFile": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Markw\\OneDrive\\Desktop\\school stuffs\\4443\\Demo_Camera_45898\\app\\src\\main\\res\\values\\strings.xml",
+                    "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "4,8,9,7,10,13,3,11,5,12,6",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "106,332,383,278,430,604,59,484,156,544,217",
-                        "endColumns": "48,49,45,52,52,56,45,58,59,58,59",
-                        "endOffsets": "150,377,424,326,478,656,100,538,211,598,272"
+                        "startLines": "4,8,9,7,10,13,3,11,17,5,20,19,18,16,12,6",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "102,324,374,271,420,591,56,473,704,151,866,815,764,650,532,211",
+                        "endColumns": "48,49,45,52,52,56,45,58,59,59,42,50,50,53,58,59",
+                        "endOffsets": "146,369,415,319,468,643,97,527,759,206,904,861,810,699,586,266"
                     },
                     "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,104,154,200,253,306,357,403,462,522,581",
-                        "endColumns": "48,49,45,52,52,50,45,58,59,58,59",
-                        "endOffsets": "99,149,195,248,301,352,398,457,517,576,636"
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,104,154,200,253,306,357,403,462,522,582,625,676,727,781,840",
+                        "endColumns": "48,49,45,52,52,50,45,58,59,59,42,50,50,53,58,59",
+                        "endOffsets": "99,149,195,248,301,352,398,457,517,577,620,671,722,776,835,895"
                     }
                 }
             ]
