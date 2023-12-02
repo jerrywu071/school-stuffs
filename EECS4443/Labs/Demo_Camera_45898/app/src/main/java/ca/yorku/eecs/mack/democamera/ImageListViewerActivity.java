@@ -1,13 +1,17 @@
 package ca.yorku.eecs.mack.democamera;
 
 import android.app.Activity;
-import android.app.ListActivity;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Switch;
+
 
 @SuppressWarnings("unused")
 public class ImageListViewerActivity extends Activity implements AdapterView.OnItemClickListener
@@ -22,6 +26,9 @@ public class ImageListViewerActivity extends Activity implements AdapterView.OnI
 
 	String[] imageFilenames;
 	String directory;
+
+	Switch darkswitch;
+	LinearLayout p;
 
     // Called when the activity is first created.
     @Override
@@ -49,6 +56,19 @@ public class ImageListViewerActivity extends Activity implements AdapterView.OnI
 		gridView = (GridView) findViewById(R.id.gridView);
     	gridView.setAdapter(adapter);
 		gridView.setOnItemClickListener(this);
+		darkswitch = (Switch) findViewById(R.id.darkswitch);
+		p = (LinearLayout) findViewById(R.id.background);
+
+		//check if switch has been clicked
+		darkswitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+				if (isChecked) {
+					p.setBackgroundColor(0x00000000);
+				} else {
+					p.setBackgroundColor(0xff123456);
+				}
+			}
+		});
     }
 
 	//method taken from DemoGridView

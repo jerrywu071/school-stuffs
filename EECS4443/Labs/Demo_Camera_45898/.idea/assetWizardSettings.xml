@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/arrow_forward/baseline_arrow_forward_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/menu/baseline_menu_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="rightarrow" />
-                            <entry key="sourceFile" value="C:\Users\Markw\OneDrive\Desktop\school stuffs\4443\Demo_Camera_45898" />
+                            <entry key="outputName" value="baseline_menu_24" />
+                            <entry key="sourceFile" value="$USER_HOME$/C:\Users\Markw\OneDrive\Desktop\school stuffs\4443\Demo_Camera_45898" />
                           </map>
                         </option>
                       </PersistentState>

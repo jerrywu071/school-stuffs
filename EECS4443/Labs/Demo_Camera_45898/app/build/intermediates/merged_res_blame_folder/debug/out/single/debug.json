@@ -4,8 +4,20 @@
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-xhdpi/video.png"
     },
     {
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-xhdpi_menu.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-xhdpi/menu.png"
+    },
+    {
         "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-xhdpi_leftarrow.png.flat",
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-xhdpi/leftarrow.png"
+    },
+    {
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-anydpi-v21_menu.xml.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-anydpi-v21/menu.xml"
+    },
+    {
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_menu.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-hdpi/menu.png"
     },
     {
         "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_camera.png.flat",
@@ -76,6 +88,14 @@
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-hdpi/video.png"
     },
     {
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/menu_menu_settings.xml.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/src/main/res/menu/menu_settings.xml"
+    },
+    {
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_menu.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-mdpi/menu.png"
+    },
+    {
         "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_rightarrow.png.flat",
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-ldpi/rightarrow.png"
     },
@@ -96,20 +116,24 @@
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-xxhdpi/rightarrow.png"
     },
     {
-        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-anydpi-v21_leftarrow.xml.flat",
-        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-anydpi-v21/leftarrow.xml"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_leftarrow.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-mdpi/leftarrow.png"
     },
     {
         "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-hdpi_icon.png.flat",
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/src/main/res/drawable-hdpi/icon.png"
     },
     {
-        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_leftarrow.png.flat",
-        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-mdpi/leftarrow.png"
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-anydpi-v21_leftarrow.xml.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-anydpi-v21/leftarrow.xml"
     },
     {
         "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-xxhdpi_leftarrow.png.flat",
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-xxhdpi/leftarrow.png"
+    },
+    {
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-xxhdpi_menu.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-xxhdpi/menu.png"
     },
     {
         "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-mdpi_icon.png.flat",
@@ -124,8 +148,16 @@
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-mdpi/rightarrow.png"
     },
     {
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_menu.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-ldpi/menu.png"
+    },
+    {
         "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-xxhdpi_camera.png.flat",
         "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-xxhdpi/camera.png"
+    },
+    {
+        "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-xxxhdpi_menu.png.flat",
+        "source": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/generated/res/pngs/debug/drawable-xxxhdpi/menu.png"
     },
     {
         "merged": "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Labs/Demo_Camera_45898/app/build/intermediates/merged_res/debug/drawable-ldpi_icon.png.flat",

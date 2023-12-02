@@ -1,12 +1,16 @@
 package ca.yorku.eecs.mack.democamera;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Rect;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.GestureDetector;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
@@ -37,6 +41,8 @@ public class ImageViewerActivity extends Activity implements OnTouchListener
     float xRatio, yRatio;
     float scaleFactor, lastScaleFactor;
 
+    private String imagePath;
+
     // The �active pointer� is the one currently moving the image.
     private static final int INVALID_POINTER_ID = -1;
     private int activePointerId = INVALID_POINTER_ID;
@@ -66,6 +72,7 @@ public class ImageViewerActivity extends Activity implements OnTouchListener
         directory = b.getString("directory");
         index = b.getInt("position");
 
+        imagePath = b.getString("image_filename");
         // set and apply the default for the scaling, transformation, etc.
         setDefaults();
 
@@ -145,6 +152,37 @@ public class ImageViewerActivity extends Activity implements OnTouchListener
         setDefaults();
         imageView.animate().alpha(1f); // fade in
         imageView.invalidate();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_settings, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            //if send button is pressed
+            case R.id.action_settings:
+                sendImageByEmail();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    private void sendImageByEmail() {
+        if (imagePath != null) {
+            // create intent to open email activity
+            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            emailIntent.setType("image/*");
+            emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(imagePath)));
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Check out this picture!");
+            emailIntent.putExtra(Intent.EXTRA_TEXT, "Sent from my Android app.");
+            // start activity
+            startActivity(Intent.createChooser(emailIntent, "Send Email"));
+        }
     }
 
     // set and apply a variety of defaults to get things started off on the right foot

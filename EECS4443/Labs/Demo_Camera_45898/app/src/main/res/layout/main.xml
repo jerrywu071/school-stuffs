@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/background"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#ff123456"
     android:gravity="center_horizontal"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <TextView
         android:layout_width="fill_parent"
@@ -12,10 +13,10 @@
         android:layout_gravity="center_horizontal"
         android:background="#ff234567"
         android:gravity="center_horizontal"
-        android:paddingBottom="15dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:paddingTop="15dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="15dp"
         android:text="@string/app_name"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -23,13 +24,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:baselineAligned="false"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/button1"
@@ -37,8 +38,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="2dp"
-                android:text="@string/button1text"
                 android:src="@drawable/camera"
+                android:text="@string/button1text"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <ImageView
@@ -46,10 +47,10 @@
                 android:layout_width="fill_parent"
                 android:layout_height="140dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
                 android:layout_marginTop="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
 
                 android:contentDescription="@string/imageviewtext" />
 
@@ -58,10 +59,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="0dp"
                 android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
                 android:layout_marginTop="0dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="0dp"
 
                 android:gravity="center_horizontal"
                 android:hint="@string/imageCountString"
@@ -70,15 +71,15 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <ImageButton
                     android:id="@+id/button1a"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/button1atext"
                     android:src="@drawable/leftarrow"
+                    android:text="@string/button1atext"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <ImageButton
@@ -86,8 +87,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/button1btext"
                     android:src="@drawable/rightarrow"
+                    android:text="@string/button1btext"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </LinearLayout>
         </LinearLayout>
@@ -96,7 +97,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ImageButton
                 android:id="@+id/button2"
@@ -113,20 +114,20 @@
                 android:layout_width="fill_parent"
                 android:layout_height="140dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginRight="2dp"
-                android:layout_marginTop="2dp" />
+                android:layout_marginBottom="2dp" />
 
             <TextView
                 android:id="@+id/videoCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="0dp"
                 android:layout_marginLeft="2dp"
-                android:layout_marginRight="2dp"
                 android:layout_marginTop="0dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="0dp"
 
                 android:gravity="center_horizontal"
                 android:hint="@string/videoCountString"
@@ -135,15 +136,15 @@
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <ImageButton
                     android:id="@+id/button2a"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/button1atext"
                     android:src="@drawable/leftarrow"
+                    android:text="@string/button1atext"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
 
                 <ImageButton
@@ -151,11 +152,17 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/button1btext"
                     android:src="@drawable/rightarrow"
+                    android:text="@string/button1btext"
                     android:textAppearance="?android:attr/textAppearanceSmall" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+    <Switch
+        android:id="@+id/darkswitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch" />
 
 </LinearLayout>
