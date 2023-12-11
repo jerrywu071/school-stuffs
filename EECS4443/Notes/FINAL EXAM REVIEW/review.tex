@@ -6,7 +6,7 @@
 \usepackage[]{amssymb}
 \usepackage{blindtext}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
-
+\usepackage{graphicx}
 \usepackage{listings}
 \usepackage{color}
 
@@ -342,6 +342,112 @@
         \item[a)] \textbf{Because during development we cannot test the performance in the same conditions, same environment and under the exact same scenarios as the users.}
         \item[b)] Because users cannot provide technical feedback about the performance of the software.
         \item[c)] Because users are not involved in the development of the software when performance requirements are implemented.
+    \end{itemize}
+
+\end{itemize}
+\newpage
+\section*{Sample final exam solutions}
+\subsection*{Multiple choice questions}
+
+\begin{itemize}
+    \item[1.] In the manifest of an Android application, among other things, we specify
+    \begin{itemize}
+        \item[a)] \textbf{the activities of the application.}
+        \item[b)] the UI elements of the application.
+        \item[c)] the string constants used in our code.
+    \end{itemize}
+
+    \item[2.] When an Activity is Paused
+    \begin{itemize}
+        \item[a)] it is hidden from the user and can be destroyed by the system.
+        \item[b)] \textbf{it is not in the user's main focus and may be destroyed by the system.}
+        \item[c)] it is completely visible to the user, but inactive.
+    \end{itemize} 
+
+    \item[3.] When an interface puts an interactive element in a place where another element is most commonly found in other applications, what is this UX antipattern called?
+    \begin{itemize}
+        \item[a)] Misdirection
+        \item[b)] \textbf{Bait and Switch}
+        \item[c)] Roach Motel
+    \end{itemize} 
+
+    \item[4.] In the XML file of a layout, we typically include
+    \begin{itemize}
+        \item[a)] The dependencies of our app
+        \item[b)] The activities of our app
+        \item[c)] \textbf{The elements of an activity and their attributes}
+    \end{itemize} 
+
+    \item[5.] Which of the following UI elements allow me to make a single choice in the presence of multiple options.
+    \begin{itemize}
+        \item[a)] Spinners and Action Buttons
+        \item[b)] Radio buttons and Checkboxes
+        \item[c)] \textbf{Spinners and Radio buttons}
+    \end{itemize} 
+\newpage
+    \item[6.] In the Espresso Testing Framework, a ViewMatcher allows me to
+    \begin{itemize}
+        \item[a)] \textbf{Find a view and focus on it.}
+        \item[b)] Perform an action on a view.
+        \item[c)] Test the value of a property or data of a view.
+    \end{itemize} 
+
+    \item[7.] In this layout, the elements are organized "one after the other".
+    \begin{itemize}
+        \item[a)] \textbf{Linear layout}
+        \item[b)] Relative Layout
+        \item[c)] Grid Layout
+    \end{itemize} 
+
+    \item[8.] In this type of software testing, the system is tested in parts usually following the order of development
+    \begin{itemize}
+        \item[a)] Big Bang
+        \item[b)] \textbf{Incremental}
+        \item[c)] Alpha testing
+    \end{itemize} 
+
+    \item[9.] What is considered a "gesture" in the context of Android development?
+    \begin{itemize}
+        \item[a)] A "digital" handshake used for electronic verifications.
+        \item[b)] A hand motion, like a wave, capture by the camera of a mobile device.
+        \item[c)] \textbf{Any tactile, i.e., using touch, interaction with the screen of the mobile device.}
+    \end{itemize} 
+
+    \item[10.] This type of performance test allows us to test the behavior of the system for a given and expected workload.
+    \begin{itemize}
+        \item[a)] Capacity testing
+        \item[b)] \textbf{Load testing}
+        \item[c)] Endurance testing
+    \end{itemize} 
+
+\end{itemize}
+\newpage
+\subsection*{Design problems}
+
+\begin{itemize}
+    \item[1.] You are given the UI of an activity. In the picture of the UI, there are 5 design or UX problems. Point them out, explain why they are a problem and propose a solution to fix each problem. (10 points) 
+    \textit{Note: Some problems can be found multiple times. You need to identify 5 different problems.}
+
+    \includegraphics[scale=0.6]{images/activity.png}
+    \item[2.] You are designing an assembly service for IKEA. The service allows users to input the pieces of furniture they want assembled and get a quote. The basic cost for any assembly is \$15 per item. Other factors include:
+    \begin{itemize}
+        \item[a.] Type of furniture: Beds, cabinets, drawers (+\$10 per item); Desks, dining sets (+\$5 per item); Bookcases, chairs (basic price) 
+        \item[b.] Time of assembly: Morning (basic cost), Afternoon (+\$20 for entire assembly) 
+        \item[c.] Additional hourly rate: 0-3 hours (basic cost), any additional hour up to 6 hours (+\$10 per additional hour beyond 3 and until 6)
+    \end{itemize}
+    Provide the equivalence classes and the test cases for this use case. (10 points)
+    NOTE: \textit{You do not have to accurately calculate the result of the price for every test case.}
+
+    \item[4.] You are designing “PetGPS”, a mobile app to complement a wearable digital collar for pets. The collar emits a geolocation signal captured by the app.
+    In the app, the user can register up to 5 collars to track different pets. The user can track the pets on a map. The user can interact with the map (zoom in and out, tap on the pet’s location to see more information about the specific pet). If a pet is further than 10 meters away from where the phone with the app is, a proximity alarm goes off in the app. The app can also be connected with an autofeeder and let you know when it’s time to order more food. This can be done from the pet’s profile that contains information about the pet, including a picture of the pet, and gets data from the autofeeder. The user can place an order directly from the app, specifying the quantity and the type of the pet food and paying by credit card (which is already saved in the phone). Finally, the user should create a profile associated with the app and get a personalized page where they can see all their registered pets.  (30 points total)\\
+
+    Read the description carefully and answer the following questions as best and as complete as you can:
+
+    \begin{itemize}
+        \item[a.] What would you include in the manifest of this app? Mention activities, permissions, intent-filters and anything else you deem relevant. (10 points)
+        \item[b.] What kind of listeners or other helper classes do your activities need to implement to allow for the intended interactions between the user and the app? (5 points)
+        \item[c.] Provide two UI mockups, one for the user’s profile and another for the pet’s profile. What kind of UI elements would you choose? What kind of Layouts would you use for the two activities? (10 points)
+        \item[d.] Write test case to test the use case where the user places an order for pet food after they have received a signal from the autofeeder. (5 points)
     \end{itemize}
 
 \end{itemize}
