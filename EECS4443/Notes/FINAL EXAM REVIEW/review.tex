@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[12pt]{book}
 
 \usepackage[]{amsmath}
 \usepackage[]{amsthm}
@@ -13,6 +13,9 @@
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\pagenumbering{arabic}
+\renewcommand{\chaptername}{Section}
 
 \lstset{frame=tb,
   language=Python,
@@ -37,10 +40,11 @@
 
 \begin{document}
 \maketitle
+\tableofcontents
 
-\section*{Quiz answers}
+\chapter{Quiz answers}
 
-\subsection*{Quiz 1: UI design, intro to activities, etc}
+\section*{Quiz 1: UI design, intro to activities, etc}
 
 \begin{itemize}
     \item[1.] A design is efficient, if:
@@ -115,7 +119,7 @@
 
 \end{itemize}
 
-\subsection*{Quiz 2: Views, layouts, etc}
+\section*{Quiz 2: Views, layouts, etc}
 
 \begin{itemize}
     \item[1.] If I flip the orientation of my device, when I have a \texttt{GridView},
@@ -192,7 +196,7 @@
 
 \end{itemize}
 
-\subsection*{Quiz 3: Software testing methods}
+\section*{Quiz 3: Software testing methods}
 
 \begin{itemize}
     \item[1.] In software testing, these modules accept test data from high-level modules and pass computed data.
@@ -268,7 +272,7 @@
 
 \end{itemize}
 
-\subsection*{Quiz 4: Fragments, SPE, etc.}
+\section*{Quiz 4: Fragments, SPE, etc.}
 
 \begin{itemize}
     \item[1.] What is the difference between profiling and monitoring?
@@ -346,8 +350,8 @@
 
 \end{itemize}
 \newpage
-\section*{Sample final exam solutions}
-\subsection*{Multiple choice questions}
+\chapter{Sample final exam solutions}
+\section*{Multiple choice questions}
 
 \begin{itemize}
     \item[1.] In the manifest of an Android application, among other things, we specify
@@ -422,34 +426,77 @@
 
 \end{itemize}
 \newpage
-\subsection*{Design problems}
+\chapter{UI Design problems}
+
+\section*{Problem 1}
+
+You are given the UI of an activity. In the picture of the UI, there are 5 design or UX problems. Point them out, explain why they are a problem and propose a solution to fix each problem. (10 points) 
+\textit{Note: Some problems can be found multiple times. You need to identify 5 different problems.}
+
+\includegraphics[scale=0.6]{images/activity.png}
+
+\section*{Solution}
+We will make a list of possible UI design issues for this activity:
 
 \begin{itemize}
-    \item[1.] You are given the UI of an activity. In the picture of the UI, there are 5 design or UX problems. Point them out, explain why they are a problem and propose a solution to fix each problem. (10 points) 
-    \textit{Note: Some problems can be found multiple times. You need to identify 5 different problems.}
+    \item The font for the title text at the top of the screen "My Calendar" is too small, so it is hard for the user to see which activity we are in. Therefore we should increase the size of the title font.
+    \item The "add event" option in the spinner context menu is an important action for this activity, so it should not be in the context menu in the menu bar. We should put the action as a button under the calendar to fix this.
+    \item There is no indication as to what the colours of the circle on the calendar mean. We can combat this issue by adding a legend telling us what each colour means.
+    \item The action bar's colour is way too dark and it is hard to tell that it is the action bar; it isn't distinguishable. We can change this by making it a brighter colour.
+    \item The "sign out" button is in a prominent position on the screen (under the calendar) when it isn't at all relevant to what the activity is supposed to do (likely adding events to a calendar). Not only that, but it is a different colour from the rest of the buttons and UI elements on the screen currently. Therefore we should get rid of it from the bottom of the screen and put it in the action bar's context menu.
+    \item There is a volume icon beside "add meeting" which makes no sense. Therefore we should change the icon to something better like a "+" symbol.
+\end{itemize}
 
-    \includegraphics[scale=0.6]{images/activity.png}
-    \item[2.] You are designing an assembly service for IKEA. The service allows users to input the pieces of furniture they want assembled and get a quote. The basic cost for any assembly is \$15 per item. Other factors include:
-    \begin{itemize}
-        \item[a.] Type of furniture: Beds, cabinets, drawers (+\$10 per item); Desks, dining sets (+\$5 per item); Bookcases, chairs (basic price) 
-        \item[b.] Time of assembly: Morning (basic cost), Afternoon (+\$20 for entire assembly) 
-        \item[c.] Additional hourly rate: 0-3 hours (basic cost), any additional hour up to 6 hours (+\$10 per additional hour beyond 3 and until 6)
-    \end{itemize}
-    Provide the equivalence classes and the test cases for this use case. (10 points)
-    NOTE: \textit{You do not have to accurately calculate the result of the price for every test case.}
 
-    \item[4.] You are designing “PetGPS”, a mobile app to complement a wearable digital collar for pets. The collar emits a geolocation signal captured by the app.
-    In the app, the user can register up to 5 collars to track different pets. The user can track the pets on a map. The user can interact with the map (zoom in and out, tap on the pet’s location to see more information about the specific pet). If a pet is further than 10 meters away from where the phone with the app is, a proximity alarm goes off in the app. The app can also be connected with an autofeeder and let you know when it’s time to order more food. This can be done from the pet’s profile that contains information about the pet, including a picture of the pet, and gets data from the autofeeder. The user can place an order directly from the app, specifying the quantity and the type of the pet food and paying by credit card (which is already saved in the phone). Finally, the user should create a profile associated with the app and get a personalized page where they can see all their registered pets.  (30 points total)\\
+\section*{Problem 2}
+You are designing an assembly service for IKEA. The service allows users to input the pieces of furniture they want assembled and get a quote. The basic cost for any assembly is \$15 per item. Other factors include:
+\begin{itemize}
+    \item[a.] Type of furniture: Beds, cabinets, drawers (+\$10 per item); Desks, dining sets (+\$5 per item); Bookcases, chairs (basic price) 
+    \item[b.] Time of assembly: Morning (basic cost), Afternoon (+\$20 for entire assembly) 
+    \item[c.] Additional hourly rate: 0-3 hours (basic cost), any additional hour up to 6 hours (+\$10 per additional hour beyond 3 and until 6)
+\end{itemize}
+Provide the equivalence classes and the test cases for this use case. (10 points)
+NOTE: \textit{You do not have to accurately calculate the result of the price for every test case.}
 
-    Read the description carefully and answer the following questions as best and as complete as you can:
+\section*{Solution}
 
-    \begin{itemize}
-        \item[a.] What would you include in the manifest of this app? Mention activities, permissions, intent-filters and anything else you deem relevant. (10 points)
-        \item[b.] What kind of listeners or other helper classes do your activities need to implement to allow for the intended interactions between the user and the app? (5 points)
-        \item[c.] Provide two UI mockups, one for the user’s profile and another for the pet’s profile. What kind of UI elements would you choose? What kind of Layouts would you use for the two activities? (10 points)
-        \item[d.] Write test case to test the use case where the user places an order for pet food after they have received a signal from the autofeeder. (5 points)
-    \end{itemize}
+We have 3 variables. 
 
+
+There are \begin{itemize}
+    \item 3 valid classes for type of furniture
+    \item 2 valid classes for time of assembly
+    \item 2 valid classes for hourly rate
+\end{itemize}
+
+There is at least one invalid class per variable (any other type of furniture, any other time of assembly and additional hours out of bounds). \\There are also four marginal values for hourly rate
+
+\begin{itemize}
+    \item 0
+    \item 3
+    \item 3.1
+    \item 6
+\end{itemize}
+
+There must be at least 3 test cases for valid values, 4 test cases for marginal values and 3 test cases for invalid values. \textit{Deduct -1 for every test case missing (max -3 points). Do not deduct two points if it is missing both the value and the test case.}
+
+\chapter{Prototyping problem}
+You are designing “PetGPS”, a mobile app to complement a wearable digital collar for pets. The collar emits a geolocation signal captured by the app.
+In the app, the user can register up to 5 collars to track different pets. The user can track the pets on a map. The user can interact with the map (zoom in and out, tap on the pet's location to see more information about the specific pet). If a pet is further than 10 meters away from where the phone with the app is, a proximity alarm goes off in the app. The app can also be connected with an autofeeder and let you know when it's time to order more food. This can be done from the pet's profile that contains information about the pet, including a picture of the pet, and gets data from the autofeeder. The user can place an order directly from the app, specifying the quantity and the type of the pet food and paying by credit card (which is already saved in the phone). Finally, the user should create a profile associated with the app and get a personalized page where they can see all their registered pets.  (30 points total)\\
+
+Read the description carefully and answer the following questions as best and as complete as you can:
+
+\begin{itemize}
+    \item[a.] What would you include in the manifest of this app? Mention activities, permissions, intent-filters and anything else you deem relevant. (10 points)
+    
+
+    \item[b.] What kind of listeners or other helper classes do your activities need to implement to allow for the intended interactions between the user and the app? (5 points)
+    
+
+    \item[c.] Provide two UI mockups, one for the user's profile and another for the pet's profile. What kind of UI elements would you choose? What kind of Layouts would you use for the two activities? (10 points)
+    
+
+    \item[d.] Write test case to test the use case where the user places an order for pet food after they have received a signal from the autofeeder. (5 points)
 \end{itemize}
 
 \end{document}
