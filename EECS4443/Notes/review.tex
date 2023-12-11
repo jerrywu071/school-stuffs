@@ -40,11 +40,310 @@
 
 \section*{Quiz answers}
 
-\subsection*{Quiz}
+\subsection*{Quiz 1: UI design, intro to activities, etc}
 
 \begin{itemize}
-    \item 
+    \item[1.] A design is efficient, if:
+    \begin{itemize}
+        \item[a)] it accomplishes the user's task in a satisfying way.
+        \item[b)] it accomplishes the user's task.
+        \item[c)] \textbf{it accomplishes the user's task without creating additional problems.}
+
+    \end{itemize}
+    \item[2.] Using auto-complete may help you satisfy which UX (user experience) design principle?
+    \begin{itemize}
+        \item[a)] \textbf{Minimize User Input}
+        \item[b)] KISS (keep it simple stupid!)
+        \item[c)] Make Navigation Intuitive
+    \end{itemize}
+    
+    \item[3.] Android Applications usually follow this architectural style:
+    \begin{itemize}
+        \item[a)] \textbf{MVVM (a variant of MVC}
+        \item[b)] Layered
+        \item[c)] Plugin
+    \end{itemize}
+    
+    \item[4.] A design is effective, if:
+    \begin{itemize}
+        \item[a)] it accomplishes the user's task without creating additional problems.
+        \item[b)] it accomplishes the user's task in a satisfying way.
+        \item[c)] \textbf{it accomplishes the user's task.}
+    \end{itemize}
+    
+    \item[5.] A design is exciting, if:
+    \begin{itemize}
+        \item[a)] it accomplishes the user's task without creating additional problems.
+        \item[b)] \textbf{.it accomplishes the user's task in a satisfying way.}
+        \item[c)] it accomplishes the user's task.
+    \end{itemize}
+    
+    \item[6.] When an interface puts an interactive element in a place where another element is most commonly found in other applications, what is this UX antipattern called?
+    \begin{itemize}
+        \item[a)] Misdirection
+        \item[b)] \textbf{Bait and Switch}
+        \item[c)] Roach Motel
+    \end{itemize}
+    
+    \item[7.] In Android, an \texttt{Activity} corresponds to:
+    \begin{itemize}
+        \item[a)] a transition between screens.
+        \item[b)] \textbf{a screen}
+        \item[c)] a use case
+    \end{itemize}
+    
+    \item[8.] If an \texttt{Activity} has been "Destroyed",
+    \begin{itemize}
+        \item[a)] the \texttt{onSaveInstanceState()} method is invoked automatically, so that we can always recover the Activity.
+        \item[b)] it is impossible to be recovered and has to be created again from scratch.
+        \item[c)] \textbf{our code needs to explicitly call the \texttt{onSaveInstanceState()} in order to recreate the Activity for certain circumstances.}
+    \end{itemize}
+    
+    \item[9.] When an \texttt{Activity} is Paused,
+    \begin{itemize}
+        \item[a)] it is completely visible to the user, but inactive.
+        \item[b)] it is hidden from the user and can be destroyed by the system.
+        \item[c)] \textbf{it is not in the user's main focus and may be destroyed by the system.}
+    \end{itemize}
+    
+    \item[10.] If an \texttt{Activity} is Started,
+    \begin{itemize}
+        \item[a)] it is not fully created, but not yet visible to the user.
+        \item[b)] \textbf{it is visible, but not yet running.}
+        \item[c)] it has been created, but it is hidden from the user.
+    \end{itemize}
+
 \end{itemize}
 
+\subsection*{Quiz 2: Views, layouts, etc}
+
+\begin{itemize}
+    \item[1.] If I flip the orientation of my device, when I have a \texttt{GridView},
+    \begin{itemize}
+        \item[a)] It will maintain the same number of rows and columns.
+        \item[b)] It will maintain the same number of rows and columns, but it will stretch or screen the dimensions of the items to better fit the screen.
+        \item[c)] \textbf{It will adapt the number of rows and columns to better fit the screen.}
+    \end{itemize}
+    
+    \item[2.] A \texttt{Toast} is a popup dialog that 
+    \begin{itemize}
+        \item[a)] Requires a user's action to disappear
+        \item[b)] Provides important feedback, like a warning or an error to a user.
+        \item[c)] \textbf{Automatically disappears after some time.}
+    \end{itemize}
+   
+    \item[3.] A layout is used \textbf{only} to
+    \begin{itemize}
+        \item[a)] Define all the UI elements used in an application
+        \item[b)] \textbf{Define all the UI elements of an activity and how they are organized.}
+        \item[c)] Define the position of UI elements when the orientation of the screen changes.
+        \item[d)] All of the above
+    \end{itemize}
+    
+    
+    \item[4.] A \texttt{ListView} is used to create and present lists in an \texttt{Activity}. When the \texttt{ListView} is created and presented,
+    \begin{itemize}
+        \item[a)] It loads all data and create the visualizations for all list items.
+        \item[b)] \textbf{It loads all data in the Adapter but creates visualizations only for the visible items.}
+        \item[c)] It loads only the data that will be visible, but creates placeholder items (UI elements) for all possible data items.
+    \end{itemize}
+   
+    \item[5.] In this layout, the elements are organized "in rows and columns".
+    \begin{itemize}
+        \item[a)] Linear layout
+        \item[b)] Relative Layout
+        \item[c)] \textbf{Grid Layout}
+    \end{itemize}
+    
+    \item[6.] In this layout, I can assign elements a certain "weights" which defines the space they will take in the layout relative to other elements in the layout.
+    \begin{itemize}
+        \item[a)] \textbf{Linear layout}
+        \item[b)] Relative Layout
+        \item[c)] Grid Layout
+    \end{itemize}
+    
+    \item[7.] In this layout, the elements are organized using anchors, like other elements, the parent elements, or specific positions.
+    \begin{itemize}
+        \item[a)] Linear layout
+        \item[b)] \textbf{Relative Layout}
+        \item[c)] Grid Layout
+    \end{itemize}
+    
+    \item[8.] In the Manifest, we can declare that our application requires permission to access
+    \begin{itemize}
+        \item[a)] \textbf{any kind of resource external to the application, which includes Internet sources or the storage of the device.}
+        \item[b)] only the external storage of our device.
+        \item[c)] only data sources on the Internet.
+    \end{itemize}
+    
+    \item[9.] What is the class that is used to as a link between the layout and the data source?
+    \begin{itemize}
+        \item[a)] Adapter
+        \item[b)] \textbf{AdapterView}
+        \item[c)] Intent
+    \end{itemize}
+
+    \item[10.] When I am using a ListView, which of the following statements is true? (only one is true)
+    \begin{itemize}
+        \item[a)] I can have only single line textual items.
+        \item[b)] I can have both single and multiple line items, but only textual items.
+        \item[c)] \textbf{I can have items that combine multiple data types, text, images, icons, action buttons, and span many lines.}
+    \end{itemize}
+
+\end{itemize}
+
+\subsection*{Quiz 3: Software testing methods}
+
+\begin{itemize}
+    \item[1.] In software testing, these modules accept test data from high-level modules and pass computed data.
+    \begin{itemize}
+        \item[a)] \textbf{Stubs}
+        \item[b)] Test cases
+        \item[c)] Drivers
+    \end{itemize}
+
+    \item[2.] In this type of software testing, the system is tested in parts usually following the order of development.
+    \begin{itemize}
+        \item[a)] Big Bang
+        \item[b)] \textbf{Incremental}
+        \item[c)] Alpha testing
+    \end{itemize}
+
+    \item[3.] Which MotionEvent action is called when a second finger touches the screen?
+    \begin{itemize}
+        \item[a)] \texttt{ACTION\_DOWN}
+        \item[b)] \textbf{ACTION\_POINTER\_DOWN}
+        \item[c)] \texttt{ACTION\_MOVE}
+        \item[d)] \texttt{ACTION\_POINTER\_UP}
+    \end{itemize}
+
+    \item[4.] In this type of testing, users provide feedback on an incomplete version of the system.
+    \begin{itemize}
+        \item[a)] \textbf{Alpha testing}
+        \item[b)] Beta testing
+        \item[c)] Exploratory testing
+    \end{itemize}
+
+    \item[5.] Which of the following interactions is NOT a gesture?
+    \begin{itemize}
+        \item[a)] Swipe
+        \item[b)] Flick
+        \item[c)] \textbf{Click}
+    \end{itemize}
+\newpage
+    \item[6.] How many test cases do we typically need to test a software functionality?
+    \begin{itemize}
+        \item[a)] A lot!
+        \item[b)] Exactly three (happy path, boundary path, exceptional path)
+        \item[c)] \textbf{We need one test case for each invalid and boundary value and enough test cases to cover all valid equivalence classes.}
+    \end{itemize}
+
+    \item[7.] What is considered a "gesture" in the context of Android development?
+    \begin{itemize}
+        \item[a)] A "digital" handshake used for electronic verifications
+        \item[b)] A hand motion, like a wave, capture by the camera of a mobile device.
+        \item[c)] \textbf{Any tactile, i.e., using touch, interaction with the screen of the mobile device.}
+    \end{itemize}
+
+    \item[8.] A Unistroke is
+    \begin{itemize}
+        \item[a)] A single straight line
+        \item[b)] \textbf{A continuous single line that represents a character or another symbol.}
+        \item[c)] A line to represent the number 1.
+    \end{itemize}
+
+    \item[9.] In the Espresso Testing Framework, what is an Idling Resource?
+    \begin{itemize}
+        \item[a)] A device resource, like CPU, memory, and disk, that does not perform any task at the moment.
+        \item[b)] An activity that is not visible at the moment.
+        \item[c)] \textbf{An object that represents an asynchronous task running in the background.}
+    \end{itemize}
+
+    \item[10.] A "pinching" movement on the screen requires this class to be captured.
+    \begin{itemize}
+        \item[a)] \texttt{GestureDetector}
+        \item[b)] Either \texttt{GestureDetector} or \texttt{ScaleGestureDetector}
+        \item[c)] \textbf{ScaleGestureDetector}
+    \end{itemize}
+
+\end{itemize}
+
+\subsection*{Quiz 4: Fragments, SPE, etc.}
+
+\begin{itemize}
+    \item[1.] What is the difference between profiling and monitoring?
+    \begin{itemize}
+        \item[a)] Profiling is static, while monitoring is dynamic.
+        \item[b)] Profiling is for software, while monitoring is for hardware.
+        \item[c)] \textbf{Profiling is measuring at development time, monitoring is measuring after deployment.}
+        \item[d)] They are the same concept.
+    \end{itemize}
+
+    \item[2.] What class do I use to pass data between two Activities?
+    \begin{itemize}
+        \item[a)] \texttt{Bundle}
+        \item[b)] \texttt{TouchListener}
+        \item[c)] \textbf{Intent}
+    \end{itemize}
+
+    \item[3.] What can be detected by the gyroscope?
+    \begin{itemize}
+        \item[a)] The acceleration force
+        \item[b)] \textbf{The rate of rotation.}
+        \item[c)] The geomagnetic field strength
+    \end{itemize}
+
+    \item[4.] One of the goals of Software Performance Engineering is to
+    \begin{itemize}
+        \item[a)] Allocate more resources to the software to improve its performance.
+        \item[b)] Improve the efficiency of the developers.
+        \item[c)] \textbf{Reduce the maintenance costs necessary to resolve performance issues.}
+    \end{itemize}
+
+    \item[5.] How can I invoke a transition between two activities?
+    \begin{itemize}
+        \item[a)] \textbf{By creating an Intent object to start the new activity and pass data between the activities.}
+        \item[b)] by calling \texttt{Bundle.startActivity()}
+        \item[c)] by calling \texttt{Intent.startActivity()}
+    \end{itemize}
+\newpage
+    \item[6.] How can I create transitions between fragments?
+    \begin{itemize}
+        \item[a)] With Intents like in the Activities.
+        \item[b)] By declaring the fragments as "containers" in the layout XML.
+        \item[c)] \textbf{By beginning a transaction through the Fragment manage and replacing the current Fragment with another one.}
+    \end{itemize}
+
+    \item[7.] When an operation is too short, which profiling method do we prefer?
+    \begin{itemize}
+        \item[a)] Sampling
+        \item[b)] \textbf{Instrumentation}
+        \item[c)] Both are equally acceptable.
+        \item[d)] None of the above
+    \end{itemize}
+
+    \item[8.] Which of the following are acceptable profiling methods? (multiple answers, wrong answers will receive -25%)
+    \begin{itemize}
+        \item[a)] Basic profiling
+        \item[b)] \textbf{Sampling}
+        \item[c)] \textbf{Instrumentation}
+        \item[d)] Hybrid
+    \end{itemize}
+
+    \item[9.] What is a fragment?
+    \begin{itemize}
+        \item[a)] \textbf{a "sub-activity"}
+        \item[b)] a popup dialog
+        \item[c)] a simple UI element like a menu
+    \end{itemize}
+
+    \item[10.] Why do we say that the performance being perceived by the users is a limitation of Software Performance Engineering?
+    \begin{itemize}
+        \item[a)] \textbf{Because during development we cannot test the performance in the same conditions, same environment and under the exact same scenarios as the users.}
+        \item[b)] Because users cannot provide technical feedback about the performance of the software.
+        \item[c)] Because users are not involved in the development of the software when performance requirements are implemented.
+    \end{itemize}
+
+\end{itemize}
 
 \end{document}
