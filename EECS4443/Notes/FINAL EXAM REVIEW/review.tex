@@ -16,6 +16,7 @@
 
 \pagenumbering{arabic}
 \renewcommand{\chaptername}{Section}
+\let\cleardoublepage\clearpage
 
 \lstset{frame=tb,
   language=Python,
@@ -234,7 +235,7 @@
         \item[b)] Flick
         \item[c)] \textbf{Click}
     \end{itemize}
-\newpage
+
     \item[6.] How many test cases do we typically need to test a software functionality?
     \begin{itemize}
         \item[a)] A lot!
@@ -310,7 +311,7 @@
         \item[b)] by calling \texttt{Bundle.startActivity()}
         \item[c)] by calling \texttt{Intent.startActivity()}
     \end{itemize}
-\newpage
+
     \item[6.] How can I create transitions between fragments?
     \begin{itemize}
         \item[a)] With Intents like in the Activities.
@@ -349,7 +350,7 @@
     \end{itemize}
 
 \end{itemize}
-\newpage
+
 \chapter{Sample final exam solutions}
 \section*{Multiple choice questions}
 
@@ -388,7 +389,6 @@
         \item[b)] Radio buttons and Checkboxes
         \item[c)] \textbf{Spinners and Radio buttons}
     \end{itemize} 
-\newpage
     \item[6.] In the Espresso Testing Framework, a ViewMatcher allows me to
     \begin{itemize}
         \item[a)] \textbf{Find a view and focus on it.}
@@ -425,9 +425,8 @@
     \end{itemize} 
 
 \end{itemize}
-\newpage
 \chapter{UI Design problems}
-
+\newpage
 \section*{Problem 1}
 
 You are given the UI of an activity. In the picture of the UI, there are 5 design or UX problems. Point them out, explain why they are a problem and propose a solution to fix each problem. (10 points) 
@@ -489,11 +488,68 @@ Read the description carefully and answer the following questions as best and as
 \begin{itemize}
     \item[a.] What would you include in the manifest of this app? Mention activities, permissions, intent-filters and anything else you deem relevant. (10 points)
     
+    \subsection*{Solution}
+
+    The following is a list of things included in the manifest for the app:
+    \begin{itemize}
+        \item[A.] \textbf{Activities}
+        \begin{itemize}
+            \item[1.] \texttt{UserProfileActivity}
+            \item[2.] \texttt{PetProfileActivity}
+            \item[3.] \texttt{MapActivity}
+            \item[4.] \texttt{OrderFoodActivity}
+            \item[5.] \texttt{CreateProfileActivity}
+        \end{itemize}
+        \item[B.] \textbf{Intent filters for activities}
+        \begin{itemize}
+            \item[1.] \texttt{UserProfileActivity} $\rightarrow$ \texttt{PetProfileActivity}
+            \item[2.] \texttt{PetProfileActivity} $\rightarrow$ \texttt{OrderFoodActivity}
+            \item[3.] \texttt{CreateProfileActivity} $\rightarrow$ \texttt{UserProfileActivity}
+            \item[4.] \texttt{PetProfileActivity} $\rightarrow$ \texttt{MapActivity}
+        \end{itemize}
+
+        \item[C.] \textbf{Permissions}
+        \begin{itemize}
+            \item[1.] Internet for ordering food online
+            \item[2.] Google services for Google maps
+            \item[3.] Local storage access for pet photos
+            \item[4.] GPS for location services
+        \end{itemize}
+    \end{itemize}
+
 
     \item[b.] What kind of listeners or other helper classes do your activities need to implement to allow for the intended interactions between the user and the app? (5 points)
     
+    \subsection*{Solution}
+    We can make a list of classes that we would use to implement the application's features:
+
+    \begin{itemize}
+        \item[1.] \texttt{OnTouchListener} for touch interaction with on screen lists
+        \item[2.] \texttt{ScaleGestureDetector} for zooming in and out of the map
+        \item[3.] \texttt{OnClickListener} for checking regular button clicks
+        \item[4.] \texttt{Adapter} for handling list items
+    \end{itemize}
+    
 
     \item[c.] Provide two UI mockups, one for the user's profile and another for the pet's profile. What kind of UI elements would you choose? What kind of Layouts would you use for the two activities? (10 points)
+    
+    \subsection*{Solution}
+
+    Let us list out all the UI elements we will use for both activities
+
+    \begin{itemize}
+        \item[A.] \textbf{User profile}
+        \begin{itemize}
+            \item List of pets
+            \item Button for adding a new pet
+            \item Menu for editing profile
+            \item Sign out button, settings button, etc.
+        \end{itemize}
+        \item[B.] \textbf{Pet profile}
+        \begin{itemize}
+            \item Activity with 2 fragments: one with photo(s) of pet and another with the pet's information under the photo. We also need buttons to open the map to locate the pet (it opens \texttt{MapActivity}) and to order food (it opens \texttt{OrderFoodActivity}).
+        \end{itemize}
+    \end{itemize}
     
 
     \item[d.] Write test case to test the use case where the user places an order for pet food after they have received a signal from the autofeeder. (5 points)

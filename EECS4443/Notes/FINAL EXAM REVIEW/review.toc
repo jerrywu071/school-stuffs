@@ -1,4 +1,4 @@
-\contentsline {chapter}{\numberline {1}Quiz answers}{5}{}%
-\contentsline {chapter}{\numberline {2}Sample final exam solutions}{13}{}%
-\contentsline {chapter}{\numberline {3}UI Design problems}{17}{}%
-\contentsline {chapter}{\numberline {4}Prototyping problem}{21}{}%
+\contentsline {chapter}{\numberline {1}Quiz answers}{3}{}%
+\contentsline {chapter}{\numberline {2}Sample final exam solutions}{11}{}%
+\contentsline {chapter}{\numberline {3}UI Design problems}{13}{}%
+\contentsline {chapter}{\numberline {4}Prototyping problem}{17}{}%
