@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1702337454 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/FINAL EXAM REVIEW/review.tex" "review.pdf" "review" 1702337454
+["pdflatex"] 1702501784 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/FINAL EXAM REVIEW/review.tex" "review.pdf" "review" 1702501784
   "/etc/texmf/web2c/texmf.cnf" 1675046609 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/FINAL EXAM REVIEW/review.tex" 1702337454 25190 578dfeaa2b86de9d106058a7ffd9973f ""
+  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/FINAL EXAM REVIEW/review.tex" 1702501784 26955 c2867d86a724900b4db34b1934d55eb6 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -26,6 +26,8 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm" 1136768653 772 9a936b7f5e2ff0557fce0f62822f0bbf ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1248133631 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb" 1248133631 34586 5a65dc15601f9c74fe3fb3f37b3b8b6f ""
@@ -64,6 +66,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty" 1585170648 80964 64e57373f36316e4a09b517cbf1aba2e ""
   "/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty" 1585170648 204271 bae5b2d457283e99567249c1990510be ""
   "/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty" 1585170648 77022 ee25ce086f4a79d8cf73bac6f94c02a5 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty" 1636758526 12694 6c23725d50ab9d1e2d3ce482c58ffcf3 ""
   "/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty" 1622581934 4545 d84d0b20a11b9c36c6ecf45697be591c ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1636152094 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -72,9 +75,11 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1675046631 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1685476551 2799767 f3a98faf324e8a30dddc07cf76604a22 ""
   "images/activity.png" 1702332811 65618 f65061f7ab65d61672e23f349ca7c730 ""
-  "review.aux" 1702337454 768 8ed40484392381fa561daccf64750cd2 "pdflatex"
-  "review.tex" 1702337454 25190 578dfeaa2b86de9d106058a7ffd9973f ""
-  "review.toc" 1702337454 267 079d52b9c4c105f1335f6a8bf5f6cf70 "pdflatex"
+  "images/equivtable.jpg" 1702501271 95842 7de2d55a0019828a89b453e8a51be218 ""
+  "images/testtable.jpg" 1702501290 110073 cac4a549b5ee7dc610262886f70f3172 ""
+  "review.aux" 1702501784 970 44100fd735287b2c824e3f9ab0ec5494 "pdflatex"
+  "review.tex" 1702501784 26955 c2867d86a724900b4db34b1934d55eb6 ""
+  "review.toc" 1702501784 352 79b6a7103be4fb278ecb95dcf392198b "pdflatex"
   (generated)
   "review.aux"
   "review.log"

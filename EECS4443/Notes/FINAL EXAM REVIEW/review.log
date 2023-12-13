@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  11 DEC 2023 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  13 DEC 2023 16:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -185,29 +185,38 @@ Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box54
+\extrarowheight=\dimen163
+\NC@list=\toks30
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box55
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count301
-\l__pdf_internal_box=\box54
+\l__pdf_internal_box=\box56
 ) (./review.aux)
 \openout1 = `review.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -246,16 +255,16 @@ LaTeX Font Info:    ... okay on input line 42.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count302
-\scratchdimen=\dimen162
-\scratchbox=\box55
+\scratchdimen=\dimen164
+\scratchbox=\box57
 \nofMPsegments=\count303
 \nofMParguments=\count304
-\everyMPshowfont=\toks30
+\everyMPshowfont=\toks31
 \MPscratchCnt=\count305
-\MPscratchDim=\dimen163
+\MPscratchDim=\dimen165
 \MPnumerator=\count306
 \makeMPintoPDFobject=\count307
-\everyMPtoPDFconversion=\toks31
+\everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -263,11 +272,11 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 \c@lstlisting=\count308
-LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
@@ -285,7 +294,7 @@ Section 1.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 104.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 105.
  [4] [5] [6] [7] [8] [9] [10]
 Section 2.
 [11
@@ -298,31 +307,59 @@ Section 3.
 <images/activity.png, id=49, 301.125pt x 615.80063pt>
 File: images/activity.png Graphic file (type png)
 <use images/activity.png>
-Package pdftex.def Info: images/activity.png  used on input line 435.
+Package pdftex.def Info: images/activity.png  used on input line 436.
 (pdftex.def)             Requested size: 180.67638pt x 369.48322pt.
  [14 <./images/activity.png>] [15] [16]
 Section 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 483--485
+Underfull \hbox (badness 10000) in paragraph at lines 484--486
 
  []
 
 [17
 
-] [18] [19] (./review.aux) ) 
+] [18] [19]
+Section 5.
+<images/equivtable.jpg, id=74, 1210.5225pt x 591.20876pt>
+File: images/equivtable.jpg Graphic file (type jpg)
+<use images/equivtable.jpg>
+Package pdftex.def Info: images/equivtable.jpg  used on input line 608.
+(pdftex.def)             Requested size: 484.20042pt x 236.47931pt.
+
+Overfull \hbox (68.20525pt too wide) in paragraph at lines 608--609
+[][] 
+ []
+
+
+Underfull \vbox (badness 2189) has occurred while \output is active []
+
+ [20
+
+]
+<images/testtable.jpg, id=81, 1220.56pt x 694.595pt>
+File: images/testtable.jpg Graphic file (type jpg)
+<use images/testtable.jpg>
+Package pdftex.def Info: images/testtable.jpg  used on input line 610.
+(pdftex.def)             Requested size: 488.21535pt x 277.83307pt.
+
+Overfull \hbox (72.22017pt too wide) in paragraph at lines 610--611
+[][] 
+ []
+
+[21 <./images/equivtable.jpg> <./images/testtable.jpg>] (./review.aux) ) 
 Here is how much of TeX's memory you used:
- 4866 strings out of 478287
- 72570 string characters out of 5849289
- 556845 words of memory out of 5000000
- 23012 multiletter control sequences out of 15000+600000
+ 4947 strings out of 478287
+ 73929 string characters out of 5849289
+ 557518 words of memory out of 5000000
+ 23088 multiletter control sequences out of 15000+600000
  479833 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,62p,1028b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on review.pdf (19 pages, 174180 bytes).
+ 55i,8n,62p,1028b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on review.pdf (21 pages, 404346 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

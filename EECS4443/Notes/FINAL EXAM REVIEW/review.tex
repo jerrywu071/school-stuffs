@@ -9,6 +9,7 @@
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{array}
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -64,7 +65,7 @@
     
     \item[3.] Android Applications usually follow this architectural style:
     \begin{itemize}
-        \item[a)] \textbf{MVVM (a variant of MVC}
+        \item[a)] \textbf{MVVM (a variant of MVC)}
         \item[b)] Layered
         \item[c)] Plugin
     \end{itemize}
@@ -553,6 +554,59 @@ Read the description carefully and answer the following questions as best and as
     
 
     \item[d.] Write test case to test the use case where the user places an order for pet food after they have received a signal from the autofeeder. (5 points)
+    
+    \subsection*{Solution}
+    We do this by listing setup, data, procedure, and expected result.
+
+    \begin{itemize}
+        \item[A.] \textbf{Setup:} \begin{itemize}
+            \item[1.] Food alarm has gone off
+            \item[2.] User opens \texttt{OrderFoodActivity} for one of their pets
+        \end{itemize}
+
+        \item[B.] \textbf{Data:} \begin{itemize}
+            \item Pet's name is Lucy
+            \item Past order is "\date{2023-02-15}, 7kg dry food"
+            \item Order was fulfilled by PetSmart (URL)
+        \end{itemize}
+
+        \item[C.] \textbf{Procedure:} \begin{itemize}
+            \item[1.] User clicks on renew order
+            \item[2.] User clicks on confirm new order
+            \item[3.] User clicks pay button to pay for order
+            \item[4.] User confirms payment for stored payment method (credit card)
+        \end{itemize}
+
+        \item[D.] \textbf{Expected result:} \begin{itemize}
+            \item[1.] Confirmation toast shows up to alert the user that payment was confirmed
+            \item[2.] Data about last order is updated in pet's profile
+            \item[3.] Order status is set to "pending"
+        \end{itemize} 
+    \end{itemize}
+
+
 \end{itemize}
+
+\chapter{Constructing equivalence class tables}
+To construct this table, we need the following columns:
+
+\begin{itemize}
+    \item Variable
+    \item Valid class
+    \item Valid value
+    \item Boundary value
+    \item Invalid class
+    \item Invalid value
+\end{itemize}
+
+The minimum number of test cases is calculated with the following formula:
+
+\begin{align*}
+    N_{cases}=max\{N_{class,valid}\}+N_{vals,boundary}
+\end{align*}
+
+\includegraphics*[scale=0.4]{images/equivtable.jpg}
+
+\includegraphics*[scale=0.4]{images/testtable.jpg}
 
 \end{document}
