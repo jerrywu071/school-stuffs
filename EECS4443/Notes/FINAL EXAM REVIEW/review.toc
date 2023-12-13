@@ -3,3 +3,4 @@
 \contentsline {chapter}{\numberline {3}UI Design problems}{13}{}%
 \contentsline {chapter}{\numberline {4}Prototyping problem}{17}{}%
 \contentsline {chapter}{\numberline {5}Constructing equivalence class tables}{20}{}%
+\contentsline {chapter}{\numberline {6}Extra quiz questions}{23}{}%

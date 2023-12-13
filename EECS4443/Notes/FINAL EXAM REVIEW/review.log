@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  13 DEC 2023 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  13 DEC 2023 17:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -326,8 +326,8 @@ File: images/equivtable.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/equivtable.jpg  used on input line 608.
 (pdftex.def)             Requested size: 484.20042pt x 236.47931pt.
 
-Overfull \hbox (68.20525pt too wide) in paragraph at lines 608--609
-[][] 
+Overfull \hbox (68.20525pt too wide) in paragraph at lines 608--610
+[][]
  []
 
 
@@ -339,14 +339,21 @@ Underfull \vbox (badness 2189) has occurred while \output is active []
 <images/testtable.jpg, id=81, 1220.56pt x 694.595pt>
 File: images/testtable.jpg Graphic file (type jpg)
 <use images/testtable.jpg>
-Package pdftex.def Info: images/testtable.jpg  used on input line 610.
-(pdftex.def)             Requested size: 488.21535pt x 277.83307pt.
+Package pdftex.def Info: images/testtable.jpg  used on input line 619.
+(pdftex.def)             Requested size: 427.2024pt x 243.1119pt.
 
-Overfull \hbox (72.22017pt too wide) in paragraph at lines 610--611
-[][] 
+Overfull \hbox (11.20721pt too wide) in paragraph at lines 619--621
+[][]
  []
 
-[21 <./images/equivtable.jpg> <./images/testtable.jpg>] (./review.aux) ) 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./images/equivtable.jpg>] [22 <./images/testtable.jpg>]
+Section 6.
+[23
+
+] (./review.aux) ) 
 Here is how much of TeX's memory you used:
  4947 strings out of 478287
  73929 string characters out of 5849289
@@ -356,10 +363,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  55i,8n,62p,1028b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on review.pdf (21 pages, 404346 bytes).
+Output written on review.pdf (23 pages, 406535 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 82 compressed objects within 1 object stream
+ 138 PDF objects out of 1000 (max. 8388607)
+ 86 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 

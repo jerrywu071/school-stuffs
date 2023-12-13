@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1702501784 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/FINAL EXAM REVIEW/review.tex" "review.pdf" "review" 1702501784
+["pdflatex"] 1702505164 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/FINAL EXAM REVIEW/review.tex" "review.pdf" "review" 1702505165
   "/etc/texmf/web2c/texmf.cnf" 1675046609 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/FINAL EXAM REVIEW/review.tex" 1702501784 26955 c2867d86a724900b4db34b1934d55eb6 ""
+  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4443/Notes/FINAL EXAM REVIEW/review.tex" 1702505164 27524 f590263056d965b77b12498464055b6e ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -77,9 +77,9 @@
   "images/activity.png" 1702332811 65618 f65061f7ab65d61672e23f349ca7c730 ""
   "images/equivtable.jpg" 1702501271 95842 7de2d55a0019828a89b453e8a51be218 ""
   "images/testtable.jpg" 1702501290 110073 cac4a549b5ee7dc610262886f70f3172 ""
-  "review.aux" 1702501784 970 44100fd735287b2c824e3f9ab0ec5494 "pdflatex"
-  "review.tex" 1702501784 26955 c2867d86a724900b4db34b1934d55eb6 ""
-  "review.toc" 1702501784 352 79b6a7103be4fb278ecb95dcf392198b "pdflatex"
+  "review.aux" 1702505165 1155 0b4ef3cc1c978587d4328be42e54eb23 "pdflatex"
+  "review.tex" 1702505164 27524 f590263056d965b77b12498464055b6e ""
+  "review.toc" 1702505165 420 5089602b4c5b4aaa926694e75ec11008 "pdflatex"
   (generated)
   "review.aux"
   "review.log"

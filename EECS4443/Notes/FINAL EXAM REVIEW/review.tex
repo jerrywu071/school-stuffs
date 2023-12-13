@@ -602,11 +602,23 @@ To construct this table, we need the following columns:
 The minimum number of test cases is calculated with the following formula:
 
 \begin{align*}
-    N_{cases}=max\{N_{class,valid}\}+N_{vals,boundary}
+    N_{cases}=max\{N_{vals,valid}\}+max\{N_{vals,boundary}\} + N_{vals,invalid}
 \end{align*}
 
 \includegraphics*[scale=0.4]{images/equivtable.jpg}
+In this chart:
 
-\includegraphics*[scale=0.4]{images/testtable.jpg}
+\begin{itemize}
+    \item The valid class with most valid values would be age. So $Max\{N_{vals,valid}\}=3$ since we take 8.4, 42.7, and 65
+    \item We can use age's boundary values as well since we want the one with the most values. Therefore $Max\{N_{vals,boundary}\}=6$
+    \item Finally, $N_{vals,invalid}=6$
+\end{itemize}
+
+All in all, 3+6+9=15, so we have that the minimum number of test cases for this set of specifications would be 15.
+
+\includegraphics*[scale=0.35]{images/testtable.jpg}
+Here is the chart detailing each of the test case.
+
+\chapter{Extra quiz questions}
 
 \end{document}
