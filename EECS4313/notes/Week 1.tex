@@ -1,0 +1,103 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{array}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\pagenumbering{arabic}
+\renewcommand{\chaptername}{Lecture}
+\let\cleardoublepage\clearpage
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS4313 week 1}
+\author{Jerry Wu}
+\date{2024-01-08}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Introduction}
+
+\section*{Testing knowing and unknowing}
+For knowing, we already have an idea of the features we need to implement.
+\begin{itemize}
+  \item[1.] Requirements
+  \item[2.] Deliverable
+\end{itemize}
+
+The opposite being testing stuff that we don't know we want to implement or the requirements don't cover(extrapolating new features). Oftentimes, the base requirements aren't enough to solve the problem that the software wants to solve.\\
+
+Our goal is to find unknowing functional/unfunctional bugs and problems within code effectively.
+
+\section*{Difference between testing goals}
+\begin{itemize}
+  \item An oracle is used for known testing, because we can get a definitive and objective answer as to whether something fulfills the requirements.
+  \item Testing the \textbf{unknown} requires subjectivity and whether something is good or bad, which we will focus on in this course
+\end{itemize}
+\newpage
+\section*{Common causes of software failure}
+To put simply, a software failure is any kind of unpredictable/undesirable behavior. Some examples include:
+
+\begin{itemize}
+  \item Crashing (the worst case scenario)
+  \item Hanging
+  \item Data corruption
+  \item Incorrect functionality
+  \item Performance degradation
+\end{itemize}
+
+Our goal is to completely prevent these issues and in the worst case scenario where they can't be prevented to recover or arrive at a termination point so as to create a functional system.
+
+\subsection*{A few more possible causes}
+\begin{itemize}
+  \item Segfault (index out of bounds)
+  \item Deadlock (in multithreaded applications with thread interaction over shared memory)
+  \item Memory leaks
+  \item Regression bugs (fixing one bug creating multiple new bugs)
+  \item Incorrect implementation\\for example:
+\begin{lstlisting}
+public int add(int x, int y)
+{
+    return x-y
+}
+\end{lstlisting}
+\end{itemize}
+
+\subsection*{Historical examples of bugs}
+
+\begin{itemize}
+  \item Ariane 5 rocket crash (64 bit float for horizontal velocity converted to 16 bit signed int. Number was $>32767$, which is the largest 16 bit int, conversion failed)
+  \item This ended up costing \$8B
+\end{itemize}
+
+
+
+\end{document}
