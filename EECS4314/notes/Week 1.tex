@@ -1,0 +1,293 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{array}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\pagenumbering{arabic}
+\renewcommand{\chaptername}{Lecture}
+\let\cleardoublepage\clearpage
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS4314 week 1}
+\author{Jerry Wu}
+\date{2024-01-10}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+
+
+\chapter{Introduction, requirements}
+
+\begin{quote}
+    \textit{"It's software engineering, but advanced" - H.V. Pham 2024}
+\end{quote}
+
+\newpage
+\section*{SCRUM roles}
+
+\begin{itemize}
+  \item Product owner: Person who's responsible for the success of the product
+  \item Stakeholders: Investors 
+  \item Users: general userbase population
+  \item Team members: developers, testers, etc.
+  \item Scrum master: overseer and manager of the product development as a whole
+\end{itemize}
+
+\section*{Software development life cycle}
+In general, we follow these criteria in order when developing a new software product using any process model (waterfall, AGILE, etc.):
+
+\begin{itemize}
+  \item[1.] \textbf{Requirements} - what do we need the software to do?
+  \item[2.] \textbf{Architecture} - blueprint for the design based on the hardware of the system
+  \item[3.] \textbf{Design} - how should we structure the code?
+  \item[4.] \textbf{Implementation} - actual coding
+  \item[5.] \textbf{Testing} - identify problems in the current cycle
+  \item[6.] \textbf{Maintenance} - continuously evolve and improve the product
+\end{itemize}
+
+\subsection*{Question}
+Which phase of this process lasts the longest and is most costly to make fixes and changes to?
+
+\subsection*{The answer}
+Maintenance is the most costly and takes the longest, since it is an ongoing process. Requirements is the area that is most costly to fix and make changes to, since the requirements are the very foundations of the product idea.
+
+\begin{itemize}
+  \item Statistically speaking, as the years have gone by, the percentage of project costs devoted to maintenance have also increased.
+\end{itemize}
+
+\newpage
+\section*{Types of software maintenance activities}
+
+\begin{itemize}
+  \item \textbf{Perfective}: add new functionality/features
+  \item \textbf{Corrective}: fix faults, errors, and failures (MOST IMPORTANT ONE)
+  \item \textbf{Adaptive}: new support for file formats, refactoring of code, etc
+\end{itemize}
+
+\section*{Common software development problems}
+
+\begin{itemize}
+  \item The largest problems appearing in $\approx$50\% of responses
+  \begin{itemize}
+    \item Requirements and specifications
+    \item Managing customer requirements
+  \end{itemize}
+
+  \item Coding is usually a non issue relatively speaking (especially when there is a group of developers working together).
+  
+\end{itemize}
+
+\subsection*{Costs of incorrect or incomplete requirements}
+
+\begin{itemize}
+
+  \item In 1981, 75-85\% of all issues found in software can be traced back to:
+  \begin{itemize}
+    \item Requirements
+    \item Design
+  \end{itemize}
+
+  \item In 2000, out of 500 major projects, 70-85\% of costs are due to:
+  \begin{itemize}
+    \item Requirement errors
+    \item New requirements
+  \end{itemize}
+
+\end{itemize}
+
+\subsection*{High cost of requirement errors}
+
+\begin{itemize}
+  \item Errors during the design phase could fall into one of the following categories:
+  \begin{itemize}
+    \item Errors that occured when a technical design was created from a correct set of requirements
+    \item Requirement errors that should have been detected earlier in the proess but "leaked" into the design phase of the project
+  \end{itemize}
+
+  \item The latter category turns out to be particularly expensive, since:
+  \begin{itemize}
+    \item The errors are misleading:
+    \begin{itemize}
+      \item Developers are looking for design errors, but they are in fact in the requirements.
+    \end{itemize} 
+    \item By the time the errors are discovered:
+    \begin{itemize}
+      \item These issues lay low within the software and go undetected for an extended period of time, all the while causing errors. So as a result, we lose time.
+    \item There is also an administrative side to this, since we would have to go all the way back to the requirements in order to see where we went wrong.
+    \end{itemize}
+    
+  \end{itemize} 
+
+
+  %%finish later
+  \item To repair an error, costs are incurred in:
+  \begin{itemize}
+    \item Rework
+    \item Change orders
+    \item Corrective action
+    \item Scrap
+    \item Recall
+    \item %%not done yet
+  \end{itemize} 
+\end{itemize}
+
+\newpage
+\section*{Requirements}
+\subsection*{Where do requirements come from?}
+Requirements for software can come from one of the following places:
+\begin{itemize}
+  \item Users and stakeholders who have demands/needs (\textbf{raw requirements})
+  \item Analysts/requirement engineers
+  \begin{itemize}
+    \item Elicit these demands and needs
+    \item Analyze them for consistency, completeness, and feasability
+    \item Formulate the requirements and write a specification list in formal language (REQUIRED BY LAW BY CRITICAL SYSTEMS; medical, vehicle etc)
+    \item Validate the gathered requirements and reflect the needs/demands of the stakeholders. Look for these responses:
+    \begin{itemize}
+      \item Yes, this is what I'm looking for
+      \item This system will solve the problem
+    \end{itemize} 
+  \end{itemize}
+\end{itemize}
+
+\subsection*{Types of requirements}
+\begin{itemize}
+  \item Functional requirements
+  \begin{itemize}
+    \item Specify the function of the system.
+    \item Usually follows a form of a mathematical function: \begin{align*}
+      f(i, state)\rightarrow (output, state_{new})
+    \end{align*}
+  \end{itemize} 
+
+  \item Non-functional requirements
+  \begin{itemize}
+    \item Quality requirements
+    \begin{itemize}
+      \item Specify how well the system performs its intended functions
+      \item Performance, usability, maintenance, reliability, and portability
+    \end{itemize} 
+
+    \item Managerial requirements
+    \begin{itemize}
+      \item When will the product be delivered?
+      \item Verification - is everything that's needed present at the time of release?
+      \item What happens if things go wrong? Legal requirements.
+    \end{itemize} 
+
+    \item Context/Environment requirements
+    \begin{itemize}
+      \item Legal stuff, range of consitions in which the system should operate (VERY IMPORTANT FOR CRITIAL SYSTEMS)
+    \end{itemize} 
+  \end{itemize} 
+\end{itemize}
+
+\subsection*{Design and architecture}
+
+\begin{itemize}
+  \item Design
+  \begin{itemize}
+    \item Inner structure of components
+    \item Low level, information hiding and interfaces make it easier to change
+    \item Mostly technical stuff like code
+    \item Makes sense for systems with KLOCs
+    \item Late in SWE life cycle
+  \end{itemize} 
+
+  \item Architecture
+  \begin{itemize}
+    \item Structure of system (components/connectors)
+    \item High level and hard to change (better get it right!)
+    \item Concerned with technical and non technical requirements (security, legal, outsourcing, etc.)
+    \item Makes sense for systems with MLOCs
+    \item Early in SWE life cycle
+  \end{itemize} 
+\end{itemize}
+
+\section*{Software Architecture}
+\subsection*{Official definition by IEEE}
+\textit{Architecture is the fundamental organization of a system embodied in its components, relationships to each other, and to the environment as well as the principles guiding its design and evolution}.
+
+\begin{itemize}
+  \item \textit{System}: A collection of components organized to accomplish a specific function or set of functions
+  \item For example:
+  \begin{itemize}
+    \item An individual application
+    \item Systems in traditional sense
+    \item Subsystems, systems of systems, etc.
+  \end{itemize} 
+
+  \item Systems exist to fulfill one or more \textbf{missions} in its environment
+\end{itemize}
+
+\subsection*{Environment, Missions and Stakeholders}
+
+\begin{itemize}
+  \item Environment: Determines the setting and circumstances of developmenta, operational, political, and other influences upon that system
+  \item Mission: a use or operation for which a system is intended by one or more stakeholders to meet some set of objectives
+  \item Stakeholders %%finish
+\end{itemize}
+
+\subsection*{Kruchten's definition}
+An architecture is the set of \textbf{significant decisions} about the organization of a software system.
+
+\begin{itemize}
+  \item structural elements of which the system is composed of together with their behavior
+  %%finish
+\end{itemize}
+
+\section*{Architectural styles}
+
+\subsection*{Types of styles}
+\begin{itemize}
+  \item Live architecture
+  \begin{itemize}
+    \item Just an \textbf{idea}, can be mostly concrete or completely abstract.
+    \item A "mental model" or wetware of sorts; may be fuzzy, inaccurate, incorrect, or incomplete.
+  \end{itemize} 
+  \item Complexity
+  \begin{itemize}
+    \item Number talk. Simplifies the system by concentrating on structure, not content or semantics.
+    \item Cognitive complexity: How hard is it to understand or visualize?
+  \end{itemize} 
+  \item Reverse Engineering
+  \begin{itemize}
+    \item Extraction of design or architecture from existing implementations and from developers
+    \item Design recovery, code reuse.
+  \end{itemize} 
+\end{itemize}
+
+%some stuff to finish here
+\subsection*{Determining style}
+
+\end{document}

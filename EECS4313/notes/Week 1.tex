@@ -74,7 +74,7 @@ To put simply, a software failure is any kind of unpredictable/undesirable behav
   \item Performance degradation
 \end{itemize}
 
-Our goal is to completely prevent these issues and in the worst case scenario where they can't be prevented to recover or arrive at a termination point so as to create a functional system.
+Our goal is to completely prevent these issues and in the worst case scenario where they can't be prevented to recover or arrive at a termination point so as to create a functional system. Our goal is to be efficient as possible when testing as it is costly.
 
 \subsection*{A few more possible causes}
 \begin{itemize}
@@ -98,6 +98,134 @@ public int add(int x, int y)
   \item This ended up costing \$8B
 \end{itemize}
 
+\subsection*{Testing challenges}
 
+In times past, we were able to conduct tests by creating a test suite with test cases. Nowadays when software is constantly evolving, we have to take into account these challenges in btoh a technical and moral context:
+
+\begin{itemize}
+  \item Maintenance - evolving our testing as the application evolves
+  \item Selection
+  \item Minimization - how can we be efficient? How can we minimize the amount of harm done by bugs?
+  \item Prioritization - which component of the application needs more rigorous testing?
+  \item Augmentation - what happens when we make changes to our code?
+  \item Evaluation
+  \item Fault characterization - where is the problem located?
+  \item Testing ML/DL applications - especially applicable in the year of 2024. A bug is something that \textbf{can cause significant harm}. So an image generator generating something innacurate wouldn't be considered a bug, but a self driving car misclassifying a pedestrian as something else leading to a crash would be a significant bug.
+\end{itemize}
+We can't be 100\% accurate when conducting testing, so we should be as specific as possible when defining our testing criteria.
+
+\chapter{Testing terminology}
+
+\section*{What is testing?}
+Put simply, testing is a rigorous \textbf{technical investigation} done to expose \textbf{quality related information} about the \textbf{product} under test. It is not done randomly or in an ad-hoc manner.
+
+\begin{quote}
+  \textit{"Cyberpunk was terrible when it released because it wasn't tested" - H.V. Pham 2024}
+\end{quote}
+
+\subsection*{Quality related problems}
+\begin{itemize}
+  \item Find important bugs - like with anything, different objectives require different testing strategies and will yield different results each time
+  \item QOL issues
+  \item Usability
+  \item Interoperability with other products
+  \item Help managers make ship/no ship decisions
+  \item BLock premature product releases
+  \item Minimize technical support costs
+  \item Make sure technical specifications are followed and conforms to regulations
+  \item Minimize safety related lawsuit risk, find safe scenarios for use of product
+\end{itemize}
+
+We don't need to pass all test cases, although we want to pass as many as possible before releasing. It's better to create something with less features and runs better than to create something with a robust library of features that is full of bugs.
+
+\subsection*{Test case}
+\begin{itemize}
+  \item \textbf{Test case values/Input/Data}: The values that directly satisfy one test requirement
+  \item \textbf{Expected output/results}: The result that is produced when executing the test if the program satisfies it's intended behavior
+\end{itemize}
+
+Combining both of these gives us a \textbf{test oracle}
+
+\subsection*{Testing steps and activities}
+\begin{itemize}
+  \item \textbf{Test design}
+  \begin{itemize}
+    \item Design test values to satisfy specific criteria or other engineering goal
+    \item Requires knowledge of discrete math, programming, and testing
+  \end{itemize}
+
+  \item \textbf{Test automation}
+  \begin{itemize}
+    \item Embed test values into executable scripts
+    \item Requires knowledge of scripting
+  \end{itemize}
+
+  \item \textbf{Test execution}
+  \begin{itemize}
+    \item Run tests on the software, record the results of said test
+    \item Requires electron brain
+  \end{itemize}
+  
+  \item \textbf{Test evaluation}
+  \begin{itemize}
+    \item Evaluate results of testing, report to devs
+    \item Requires domain knowledge
+  \end{itemize} 
+\end{itemize}
+
+\section*{Types of testing}
+\begin{itemize}
+  \item \textbf{Static testing}
+  \begin{itemize}
+    \item Testing without executing the program
+    \item This method is very effective at finding \textbf{potential} faults, which are problems that could potentially cause other problems when new code is introduced
+  \end{itemize} 
+
+  \item \textbf{Dynamic testing}: Testing by executing the program with real inputs. Shows concrete issues with the program, but aren't necessarily a bug.
+\end{itemize}
+
+\subsection*{Black box testing}
+Deriving tests from external descriptions of software including specifications, requirements, and design.
+\begin{itemize}
+  \item Testing as \textbf{attacker/hacker}
+  \item We don't know the source code itself, but we have a set of inputs with a set of expected outputs.
+  \item This is effective when we write the test cases first based on the design of our software model before we write any of the executable code itself.
+  \item Works better for general implementations
+\end{itemize}
+
+\subsection*{White box testing}
+Opoosite of black box testing. Test cases are derived directly from the functions in our source code. This allows us to minimize the number of test cases we need to write to cover the entire scope of the code/code snippet.
+\begin{itemize}
+  \item Testing as \textbf{developer}
+  \item This includes branches, individual conditions, and statements.
+  \item Works better for specific implementations of requirements.
+\end{itemize}
+
+\textbf{Moral of the story, just use both in your test suite!}
+
+\subsection*{Top down vs bottom up testing}
+\begin{itemize}
+  \item \textbf{Top down}: Test the whole system together first, and go down through specific functions in depth first or breadth first manner. Similar to black box testing.
+  \item \textbf{Bottom up} is the exact opposite, where the details are tested first until we arrive at the whole system at the last step. Similar to white box testing.
+\end{itemize}
+
+\subsection*{Testing at different levels}
+\begin{itemize}
+  \item \textbf{Level 1}: Unit testing - Test each individual method
+  \item \textbf{Level 2}: Module testing - Test each class, file, module, or component individually
+  \item \textbf{Level 3}: Integration testing - Test how modules interact with each other
+  \item \textbf{Level 4}: System testing - Test the overall functionality of the system
+  \item \textbf{Level 5}: Acceptance testing - Is the software acceptable to be shipped to end users?
+\end{itemize}
+
+\section*{Fault, error, and failure}
+\begin{itemize}
+  \item Fault - essentially a bug, which is a static defect in software caused by incorrect lines of code. No code execution necessary.
+  \item Error - An incorrect and \textbf{unobserved internal state}. Only occurs when code is executed
+  \item Failure - An \textbf{observed external incorrect behavior} with respect to the expected behavior. Only occurs when program is executed.
+  \item Faults can lead to error, or both error and failure.
+\end{itemize}
+
+Each of these are considered as a type of fault, which is undesirable behavior that occurs within the code. External issues always occur due to internal error, but internal errors don't necessarily have external consequences.
 
 \end{document}
