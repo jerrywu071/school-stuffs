@@ -148,16 +148,17 @@ Maintenance is the most costly and takes the longest, since it is an ongoing pro
     
   \end{itemize} 
 
-
-  %%finish later
   \item To repair an error, costs are incurred in:
   \begin{itemize}
-    \item Rework
-    \item Change orders
-    \item Corrective action
-    \item Scrap
-    \item Recall
-    \item %%not done yet
+    \item \textbf{Rework} - respecification, redesign, recoding, retesting
+    \item \textbf{Change orders} - replacing defected systems by corrected one
+    \item \textbf{Corrective action} - undoing whatever damage may have been done and refund.
+    \item \textbf{Scrap} - useless code, design and test cases
+    \item \textbf{Recall} - of defective software (could be embedded)
+    \item \textbf{Warranty costs}
+    \item \textbf{Product liability} - customer can sue
+    \item \textbf{Service costs} - for reinstallation
+    \item \textbf{Documentation}
   \end{itemize} 
 \end{itemize}
 
@@ -255,15 +256,15 @@ Requirements for software can come from one of the following places:
 \begin{itemize}
   \item Environment: Determines the setting and circumstances of developmenta, operational, political, and other influences upon that system
   \item Mission: a use or operation for which a system is intended by one or more stakeholders to meet some set of objectives
-  \item Stakeholders %%finish
+  \item Stakeholders: an individual, team, or organization (or classes thereof) with interests in, or concerns relative to, a system.
 \end{itemize}
 
 \subsection*{Kruchten's definition}
 An architecture is the set of \textbf{significant decisions} about the organization of a software system.
 
 \begin{itemize}
-  \item structural elements of which the system is composed of together with their behavior
-  %%finish
+  \item the \textbf{selection} of structural elements and their interfaces by which the system is composed, together with their behavior as specified in the collaborations among those elements
+  \item the \textbf{composition} of these elements into progressively larger subsystems, and the architectural style that guides this organization. These elements and their interfaces, their collaborations, and their composition
 \end{itemize}
 
 \section*{Architectural styles}
@@ -287,7 +288,36 @@ An architecture is the set of \textbf{significant decisions} about the organizat
   \end{itemize} 
 \end{itemize}
 
+
+\subsection*{More terminology}
+\begin{itemize}
+  \item \textbf{Reference architecture}
+  \begin{itemize}
+    \item The general architecture for an application domain
+    \item For example, the common structure for compilers or operating systems
+  \end{itemize} 
+
+  \item \textbf{Product line architecture}
+  \begin{itemize}
+    \item Architecture for a line of similar software products
+    \item For example, the software structure for a family of computer games
+  \end{itemize} 
+\end{itemize}
 %some stuff to finish here
 \subsection*{Determining style}
+To determine the style of architecture to use for our application, we must consider the following questions:
+
+\begin{itemize}
+  \item What is the \textbf{structural pattern}? (i.e. components, connectors, constraints, etc.)
+  \item What are some of the \textbf{essential invariants} of the style? 
+  \item What are some \textbf{common examples} of its use?
+  \item What are the \textbf{advantages and disadvantages} of using that style?
+  \item What are some of the \textbf{common specializations} of that style?
+\end{itemize}
+
+\section*{Architecture recovery}
+
+
+
 
 \end{document}

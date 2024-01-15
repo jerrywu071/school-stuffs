@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1705081939 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4314/notes/Week 1.tex" "Week 1.pdf" "Week 1" 1705081939
+["pdflatex"] 1705361354 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4314/notes/Week 1.tex" "Week 1.pdf" "Week 1" 1705361354
   "/etc/texmf/web2c/texmf.cnf" 1675046609 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4314/notes/Week 1.tex" 1705081938 9930 eb05bfcbd834e93b1c74c4c7ccec78d1 ""
+  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4314/notes/Week 1.tex" 1705361354 11826 2c0f1256ae69c5ca00ab62c7a7b74a67 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -72,9 +72,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1675046631 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1685476551 2799767 f3a98faf324e8a30dddc07cf76604a22 ""
-  "Week 1.aux" 1705081939 222 21d77a092fb5052f87c670a130b5050c "pdflatex"
-  "Week 1.tex" 1705081938 9930 eb05bfcbd834e93b1c74c4c7ccec78d1 ""
-  "Week 1.toc" 1705081939 73 8cc0b9df7a96ec599724cb65ab61b49a "pdflatex"
+  "Week 1.aux" 1705361354 223 8db5a590b899bc2c55e985c5d49c2053 "pdflatex"
+  "Week 1.tex" 1705361354 11826 2c0f1256ae69c5ca00ab62c7a7b74a67 ""
+  "Week 1.toc" 1705361354 73 8cc0b9df7a96ec599724cb65ab61b49a "pdflatex"
   (generated)
   "Week 1.aux"
   "Week 1.log"
