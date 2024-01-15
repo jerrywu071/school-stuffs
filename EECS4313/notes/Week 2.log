@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  15 JAN 2024 15:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  15 JAN 2024 15:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/notes/Week 1.tex"
-(/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/notes/Week 1.tex
+**"/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/notes/Week 2.tex"
+(/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/notes/Week 2.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
@@ -200,8 +200,8 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box56
-) (./Week 1.aux)
-\openout1 = `"Week 1.aux"'.
+) (./Week 2.aux)
+\openout1 = `"Week 2.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
@@ -282,39 +282,35 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Week 1.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Week 2.toc)
 \tf@toc=\write3
-\openout3 = `"Week 1.toc"'.
+\openout3 = `"Week 2.toc"'.
 
  [2
 
 ]
 Lecture 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-
+Overfull \hbox (14.11563pt too wide) in paragraph at lines 70--71
+\OT1/cmr/m/n/12 re-port/github is-sues) and to the writer (via memo or a com-ment on the manuscript) 
  []
 
 [3
 
-] [4] [5]
-Lecture 2.
-[6
-
-] [7] [8] [9] [10] [11] (./Week 1.aux) ) 
+] (./Week 2.aux) ) 
 Here is how much of TeX's memory you used:
- 5236 strings out of 478287
- 75817 string characters out of 5849289
- 560966 words of memory out of 5000000
- 23383 multiletter control sequences out of 15000+600000
- 480132 words of font info for 69 fonts, out of 8000000 for 9000
+ 4885 strings out of 478287
+ 72916 string characters out of 5849289
+ 552966 words of memory out of 5000000
+ 23041 multiletter control sequences out of 15000+600000
+ 474965 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,62p,442b,1243s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Week 1.pdf" (11 pages, 133836 bytes).
+ 55i,6n,62p,284b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "Week 2.pdf" (3 pages, 61013 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 40 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

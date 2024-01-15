@@ -220,12 +220,85 @@ Opoosite of black box testing. Test cases are derived directly from the function
 
 \section*{Fault, error, and failure}
 \begin{itemize}
-  \item Fault - essentially a bug, which is a static defect in software caused by incorrect lines of code. No code execution necessary.
-  \item Error - An incorrect and \textbf{unobserved internal state}. Only occurs when code is executed
-  \item Failure - An \textbf{observed external incorrect behavior} with respect to the expected behavior. Only occurs when program is executed.
-  \item Faults can lead to error, or both error and failure.
+  \item \textbf{Fault} - essentially a bug, which is a static defect in software caused by incorrect lines of code. No code execution necessary. (example: mutation in DNA)
+  
+  \item \textbf{Error} - An incorrect and \textbf{unobserved internal state}. Only occurs when code is executed, an internal issue. (example: having 2 hearts instead of 1)
+  
+  \item \textbf{Failure} - An \textbf{observed external incorrect behavior} with respect to the expected behavior. Only occurs when program is executed. (example: getting a disease like cancer)
+  
+  \item Faults can lead to error, or both error and failure, or none at all.
 \end{itemize}
 
 Each of these are considered as a type of fault, which is undesirable behavior that occurs within the code. External issues always occur due to internal error, but internal errors don't necessarily have external consequences.
+
+\subsection*{States}
+A state contains:
+\begin{itemize}
+  \item Values of parameters and variables
+  \item Program counter (PC), which is also a variable signifying which line of code is being executed
+  \item If there is something wrong with the program counter, it is considered as an \textbf{error}. $\exists$ a set of states which is considered "correct", and everything outside of that set is either a fault, error, or failure.
+  \item It is important to observe as many failures as possible in order to expose faults in the code as possible.
+\end{itemize}
+
+\subsection*{To construct state diagram}
+
+\begin{itemize}
+  \item[1.] Identify the fault, fix the fault
+  \item[2.] Identify a test case that does not \textbf{execute} the fault
+  \item[3.] Identify a test case that \textbf{does} execute the fault, but doesn't result in an error
+  \item[4.] Identify a test case that does result in an error, but not failure (do not forget about the program counter)
+  \item[5.] For the given test case, determine the first error state. Be sure to describe the complete state.
+\end{itemize}
+
+\subsection*{RIP model}
+These are conditions that must be present for a failure to be observed
+\begin{itemize}
+  \item \textbf{Reachability} - the location(s) in the program that contain the fault must be reached
+  \item \textbf{Infection} - After executing the locaiton, the state of the program must be incorrect
+  \item \textbf{Propagation} - The infected state must propagate to cause some output of the program to be incorrect
+\end{itemize}
+
+\section*{How do we avoid bugs?}
+
+\subsection*{Ways to deal with faults}
+
+\begin{quote}
+  \textit{"Let's just make the bug a feature" - H.V. Pham 2024}
+\end{quote}
+
+It's impossible to avoid bugs, but we can mitigate them as well as possible by creating better design and architecture for our software models. More solutions include:
+
+\begin{itemize}
+  \item \textbf{Fault avoidance}
+  \begin{itemize}
+    \item Better design
+    \item Better PL
+  \end{itemize} 
+
+  \item \textbf{Fault detection}
+    \begin{itemize}
+      \item Testing
+    \item Debugging
+  \end{itemize}
+  
+  \item \textbf{Fault tolerance}
+    \begin{itemize}
+      \item Avoid redundancy
+      \item Isolation of faults (so as to avoid it from propagating)
+    \end{itemize}
+
+    \item \textbf{Patching} (fixing the fault)
+\end{itemize}
+
+\subsection*{Testing vs debugging}
+
+\begin{itemize}
+  \item \textbf{Testing} - evaluating software by observing its execution. Often, only specific inputs will trigger the fault into creating a failure
+  \item \textbf{Debugging} - The process of finding a fault given a failure. It is difficult to know what the fault is
+\end{itemize}
+
+\begin{quote}
+  \textit{"Debugging is an art"-H.V. Pham 2024}
+\end{quote}
 
 \end{document}

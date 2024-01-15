@@ -1,0 +1,73 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{array}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\pagenumbering{arabic}
+\renewcommand{\chaptername}{Lecture}
+\let\cleardoublepage\clearpage
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS4313 week 2}
+\author{Jerry Wu}
+\date{2024-01-15}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Reporting and analyzing bugs}
+
+\section*{Bug reporting}
+\subsection*{Writing an effective bug report}
+\begin{itemize}
+    \item Explain the problem and how to reproduce the problem
+    \item Analyze the problem so that it can be described with a \textbf{minimum} number of steps
+    \item Write a report that is complete, easy to understand, and non-antagonistic
+\end{itemize}
+
+\begin{quote}
+    \textit{"Be nice" - H.V. Pham 2024}
+\end{quote}
+
+\subsection*{What kind of errors to report?}
+
+\begin{itemize}
+    \item \textbf{Coding error} - The program does not do what the programmer would expect it to do; general bugs (pull request)
+    
+    \item \textbf{Design issue} - The program does what the programmer intended, but a reasonable customer would be confused or unhappy with it
+    
+    \item \textbf{Requirements issue} - The program is well designed and well implemented, but it won't meet one of the customer's requirements
+    
+    \item \textbf{Documentation/code mismatch} - Report this to the programmer (via bug report/github issues) and to the writer (via memo or a comment on the manuscript)
+\end{itemize}
+
+\end{document}
