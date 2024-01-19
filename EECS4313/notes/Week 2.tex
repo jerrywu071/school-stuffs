@@ -72,4 +72,108 @@
     \item \textbf{Specification/code mismatch} - Sometimes, the specs are right, sometimes the code is right and the specs should be changed
 \end{itemize}
 
+\section*{Making effective bug reports}
+
+\begin{quote}
+    \textit{"you are not the enemy of the programmer" - H.V. Pham 2024}
+\end{quote}
+
+\begin{itemize}
+    \item Bug reports store all information needed to document, report and fix problems occuring in a software system
+    \item Bug reports are like a pitch to the devs. Good bug reports will "sell" the developer the idea of spending their time and energy to fix said bug (incentive)
+    \item Bug reports are the \textbf{primary work product} of a tester. This is what people outside of the testing group will notice and remember most about your work. In other words, include as much detail as possible
+    \item The best tester is not the one who finds the most bugs or who embarrasses the most programmers, but the one who \textbf{gets the most bugs fixed}
+    \item The primary goal at the end of the day is to work together with the developer to get the system running properly
+\end{itemize}
+
+\subsection*{Selling a bug in a bug report}
+
+\begin{itemize}
+    \item Time is in short supply, so if you want to convince the dev to spend their time fixing your bug, you have to sell it to them
+    \item Selling revolves around two fundamental objectives:
+    \begin{itemize}
+        \item Motivate the buyer (make them \textbf{want} to fix the bug)
+        \item Overcome objections (get past their \textbf{excuses} and reasons for not fixing the bug)
+    \end{itemize} 
+\end{itemize}
+
+\subsection*{Motivating the bug fix}
+
+\begin{itemize}
+    \item When you run a test and find a failure, you are looking at a sympton and not the underlying fault. You may or may not have foun the best example of a failure that can be caused by the underlying fault.
+    
+    \item $\therefore$ you should do some follow up work to try to prove that a fault:
+    \begin{itemize}
+        \item is more serious than it first appears
+        \item is more general than it first appears
+        \item affects more versions of the software
+    \end{itemize} 
+
+    \item These things will often motivate a developer to fix a bug:
+    \begin{itemize}
+        \item The bug looks really bad
+        \item It looks like an interesting puzzle and piques the programmer's curiosity
+        \item It will affect lots of people
+        \item The problem is trivial
+        \item It has embarrassed the company, or a bug like it embarrassed a competitor
+        \item Management (that is, someone with influence) has said that they really want it fixed
+    \end{itemize} 
+
+    \item As soon as you run into a problem in the software, fill out a \textbf{problem report form}. In a well written report, you:
+    \begin{itemize}
+        \item \textbf{Explain the problem} and how to reproduce the problem
+        \item \textbf{Analyze the error} so you can describe it in a minimum number of steps
+        \item Include all the steps
+        \item Make the report easy to understand
+        \item Keep your tone neutral and non antagonistic
+        \item \textbf{Keep it simple}, report one bug per report
+        \item If a sample test file is essential to reproducing a problem, reference it and attach the test file.
+    \end{itemize} 
+\end{itemize}
+
+\subsection*{Problem report form outline}
+
+A typical report form includes some of the following fields
+
+\begin{itemize}
+    \item \textbf{Problem report number} - unique number assigned to the report
+    \item \textbf{Reported by} - author of the report
+    \item \textbf{Date reported} - self explanatory
+    \item \textbf{Program/component name} - the visible item/class under test
+    \item \textbf{Release number} - self explanatory
+    \item \textbf{Version/build identifier} - like version C or 20000802a
+    \item \textbf{Configuration(s)} - h/w and s/w configurations under which the bug was found and replicated
+    \item \textbf{Report type} - coding error, design issue, documentation mismatch, etc.
+    \item \textbf{Can reproduce} - yes/no
+    \item \textbf{Severity} - assigned by the tester. Some variation of small/medium/large
+    \item \textbf{Priority} - assigned by the programmer/project manager
+    \item \textbf{Problem summary} - self explanatory
+    \item \textbf{Keywords} - used for searching for open reports in the project, anyone can add keywords at any time
+    \item \textbf{Problem desc and reproduction steps}
+    \item \textbf{Suggested fix} - don't do this unless you know for sure
+    \item \textbf{Status} - Tester fills this in (open/closed/resolved/re-opened)
+    \item \textbf{Resolution} - The project manager owns this field, common resolutions include:
+    \begin{itemize}
+        \item \textbf{Pending} - the bug is currently being worked on
+        \item \textbf{Fixed} - the dev says it is fixed, so the tester should check it again
+        \item \textbf{Cannot reproduce} - the dev was unable to reproduce the issue. Add more details and notify the dev
+        \item \textbf{Deferred} - we'll fix this later (not)
+        \item \textbf{As designed} - the program works as intended
+        \item \textbf{Need info} - not enough information provided
+        \item \textbf{Duplicate} - the same issue has been brought up already
+        \item \textbf{Withdrawn} - tester has withdrew the report
+    \end{itemize}
+
+    \item \textbf{Resolution version} - build identifier
+    \item \textbf{Resolved by} - name of programmer, project manager, tester, etc
+    \item \textbf{Resolution tested by} - original tester, or a tester if the originator was not a tester
+    \item \textbf{Change history} - date stamped list of all changes to the record including name and fields changed
+    %%finish this later
+
+\end{itemize}
+
+\chapter{Open research questions on bug management}
+
+
+
 \end{document}

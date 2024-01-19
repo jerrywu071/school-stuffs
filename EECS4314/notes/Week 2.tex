@@ -60,4 +60,77 @@
     \textit{"How many graphics cards do you want? Yes." - H.V. Pham 2024}
 \end{quote}
 
+
+
+
+\section*{Class diagrams review}
+A class is a description of a set of objects that share the same attributes, operations, relationships, and semantics. Graphically, a class is drawn as a rectangle including its name, attributes, and operations in their own separate (3) compartments:
+
+\begin{itemize}
+    \item Class name (eg. Person, Car, etc.)
+    
+    \item Attributes (instance variables with their respective types)
+    \begin{itemize}
+        \item[] $+\equiv$ public
+        \item[] $\#\equiv$ protected
+        \item[] $-\equiv$ private
+        \item[] $/\equiv$ derived
+    \end{itemize} 
+
+    \item Operations (getters, setters, misc. methods) and their respective signatures
+    \begin{itemize}
+        \item eg. \texttt{newEntry(n:Name, a:Address, p:PhoneNumber, d:Description)}
+    \end{itemize}
+
+\end{itemize}
+
+\subsection*{Class relationships}
+
+In UML, pbject interconnections (logical or physical), are modelled as relationships
+
+\begin{itemize}
+    \item Dependencies - a semantic relationship between two or more elements
+    
+    \item Generalization - connection from subclass to superclass. Denotes inheritance of attributes and behaviors from the superclass to the subclass and indicates a specialization in the subclass of the more general superclass
+    
+    \item Association - if two classes in a model need to commmunicate with each other, but are not dependent on each other, then there will be a link denoted between the two classes. Dual associations are possible
+    \begin{itemize}
+        \item Aggregation - specifies a whole part relationship between an aggregate (whole) and a constituent part where the part can exist independently from the aggregate. Denoted by a hollow diamond. For example (car has an owner and a manufacturer, but owner and manufacturer and owner can exist without car)
+        \item Composition - Same as aggregation, but is a strong ownership relationship, so the constituent parts have to exist for the composite to exist. Denoted by a filled diamond.
+    \end{itemize} 
+
+    \item Interfaces - a named set of operations (no instance variables) that speifies the behavior of objects without showing their inner structure. It can be rendered in the model by a one or two compartment rectangle with the \textbf{stereotype} \texttt{<<interface>>} above the interface name
+    \begin{itemize}
+        \item Interface relationships are called \textbf{realization}, which means a concrete class \texttt{implements} an interface
+    \end{itemize} 
+
+    \item Enumeration - a user defined data type that consists of a name and ordered list of enumeration literals. Denoted using \texttt{<<enumeration>>}
+    
+    \item Exceptions - can be customized like any other class, denoted using \texttt{<<exception>>}
+\end{itemize}
+
+\subsection*{Package}
+A package is a container like element for organizing other elements into groups. Packages can contain classes, other packages, and diagrams. They can provide controlled access between classes in different packages. Denoted using a folder like shape.
+
+\begin{itemize}
+    \item Packages can depend/relate on/to other packages just like classes
+\end{itemize}
+
+\subsection*{Component diagrams}
+
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\section*{Dynamic modelling using UML}
+
+\subsection*{Use cases}
+\begin{itemize}
+    \item A use case specifies the behavior of a system or part of a system
+    \item A description of a set of sequences of actions, including its variants. Always  produces an observable result of the actor(user)
+    \item An \textbf{actor} is either a user of the system, or another system, subclass, or class
+\end{itemize}
+
+
+
 \end{document}

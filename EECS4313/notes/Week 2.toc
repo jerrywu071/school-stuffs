@@ -1,1 +1,2 @@
 \contentsline {chapter}{\numberline {1}Reporting and analyzing bugs}{3}{}%
+\contentsline {chapter}{\numberline {2}Open research questions on bug management}{7}{}%
