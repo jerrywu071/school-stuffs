@@ -1,0 +1,182 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{array}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\pagenumbering{arabic}
+\renewcommand{\chaptername}{Lecture}
+\let\cleardoublepage\clearpage
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS4313 week 2}
+\author{Jerry Wu}
+\date{2024-01-22}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Test automation}
+
+\section*{Why automated testing?}
+
+\begin{itemize}
+    \item Manual testing is time consuming and not economical
+    \item Automation is \textbf{unattended} and \textbf{can happen overnight}; thus not requiring human intervention
+    \item Automation increases the speed of test execution
+    \item Manual testing is error prone due to its recurring nature
+\end{itemize}
+
+\subsection*{Executing automated tests}
+
+\begin{itemize}
+    \item Test automation is the use of software separate from the software being tested to control the execution of tests
+    \begin{itemize}
+        \item Generating test inputs and expected results
+        \item Running test suites without manual intervention
+        \item Evaluating pass/no pass
+    \end{itemize}
+
+    \item Testing must be automated to be \textbf{effective and repeatable}
+\end{itemize}
+
+
+\subsection*{What can be automated?}
+
+Each one of these steps in software development can be automated, and each step down is easier to automate than the last. Of course, there has to be some human intervention to formulate the requirements for automation at the start.
+
+\begin{itemize}
+    \item \textbf{Analyze} - intellectual (performed once)
+    \item \textbf{Design} - mostly intellectual
+    \item \textbf{Construct} - clerical and intellectual
+    \item \textbf{Testing} - mostly clerical
+    \item \textbf{Deploy} - clerical (repeated many times)
+\end{itemize}
+
+The more clerical something is, the more worth automating it is.
+
+\section*{Record \& playback}
+
+\begin{itemize}
+    \item Usually for websites, mobile, UIs, etc.
+    \item Test scripts are recorded on the initial version of the application
+    \item The same scripts are executed on the next version
+    \item The scripts need \textbf{some modification} (quite costly at high number of modification) for the changes happening on the application during every version of the application
+    \item The test scripts repository keeps growing as the application goes through changes. This makes this kind of test suite very hard to maintain
+\end{itemize}
+
+\subsection*{Procedure}
+\begin{itemize}
+    \item Automation tool generates scripts by recording user actions
+    \item The generated scripts can be played back to reproduce the exact user actions
+\end{itemize}
+
+\subsection*{Advantages}
+\begin{itemize}
+    \item Less effort for automation
+    \item Quick returns
+    \item Does not require expertise on tools
+\end{itemize}
+
+\subsection*{Limitations}
+\begin{itemize}
+    \item High dependency on the GUI of AUT (application under test)
+    \item Difficult to maintain the scripts
+\end{itemize}
+
+\subsection*{Problems}
+
+\begin{itemize}
+    \item Very fragile
+    \begin{itemize}
+        \item A single change in UI can cause the whole system to break
+    \end{itemize} 
+    \item Hard to maintain
+    \begin{itemize}
+        \item An abundance of test scripts causes the test suite to be hard to maintain
+    \end{itemize} 
+    \item No modularity or reuse
+    \begin{itemize}
+        \item System must be ready before automation can start
+    \end{itemize} 
+\end{itemize}
+
+\section*{Testing terminology contd'}
+
+\begin{quote}
+    \textit{"You don't want to make assumptions. That is not unit testing" - H.V. Pham 2024}
+\end{quote}
+
+\begin{itemize}
+    \item A \textbf{unit test} is a test of a single class/method
+    \item A \textbf{test case} tests the respose of a single method to a particular set of inputs
+    \item A \textbf{test suite} is a collection of test cases
+    \item A \textbf{test runner} is software that runs tests and reports results
+    \item A \textbf{flaky test} is a test case where it is sometimes triggered and sometimes not depending on specific conditions, seemingly randomly.
+\end{itemize}
+
+\newpage
+\subsection*{Std. structure of a JUnit test class}
+
+\begin{itemize}
+    \item Test a class called \texttt{Fraction}
+    \item Create a test class called \texttt{FractionTest}
+\end{itemize}
+
+\begin{lstlisting}
+import org.junit.*;
+import static org.junit.Assert.*;
+
+public class FractionTest{
+    @Test
+    public void addTest(){...}
+
+    @Test
+    public void testToString(){...}
+
+    //useful if we have a counter during the tests to set in SetUp() and reset in TearDown()
+    @Before
+    public void SetUp(){...}
+
+    @After
+    public void TearDown(){...}
+}
+\end{lstlisting}
+
+
+\subsection*{More fixtures for test classes}
+\begin{itemize}
+    \item There is also a \texttt{@BeforeClass} annotation that will execute once before \textbf{all} test cases
+    \item Similarly, there is also an \texttt{@AfterClass} annotation that executes a method after every test case
+    \item Usually done for expensive allocations for resources like connecting/disconnecting a database.
+\end{itemize}
+
+\end{document}
