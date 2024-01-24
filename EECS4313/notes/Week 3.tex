@@ -179,4 +179,199 @@ public class FractionTest{
     \item Usually done for expensive allocations for resources like connecting/disconnecting a database.
 \end{itemize}
 
+\subsection*{Assert method: Equal, Null and fail}
+
+\begin{itemize}
+    \item \texttt{assertEquals(Object expected, Object actual)} - Compare two objects to see if they're identical. Use \texttt{.equals(Object other)} for compare
+    \item \texttt{assertArrayEquals(int[] expecteds, int[] actuals)} or \texttt{assertArrayEquals(long[] expecteds, long[] actuals)} - Compares two arrays
+    \item \texttt{assertSame(Object expected, Object actual)} - asserts that two rerferences are the same object (using \texttt{==}). Useful for testing a find method for data structures
+    \item \texttt{assertNull(Object object)} - asserts that a reference is not null
+    \item \texttt{fail()} - causes the test to fail and throw an exception (\texttt{AssertionError}). Useful as a result of a complex test, or when testing for exceptions.
+\end{itemize}
+
+\subsection*{Exception testing}
+
+\begin{itemize}
+    \item If a test case is expected to raise an exception, it can be written as follows:
+\begin{lstlisting}
+@Test(expected = Exception.class)
+public void testException(){
+    //some code that should raise an exception
+
+    fail("Should raise an exception");
+}
+\end{lstlisting}
+
+    \item if code doesn't throw an exception in this case, test fails. Else test passes.
+\end{itemize}
+
+\subsection*{Assert statement}
+
+\begin{itemize}
+    \item \texttt{assert boolean\_condition;} - throws an \texttt{AssertionError} if \texttt{boolean\_condition == false}. Can be used in place of \texttt{assertTrue()} in JUnit.
+\end{itemize}
+
+\subsection*{Ignoring test cases}
+\begin{itemize}
+    \item Test cases that are not finished being written yet can be ignored using the \texttt{@Ignore} annotation.
+    \item JUnit will not execute the test cases marked with this annotation, and will report the number of test cases that were ignored
+\end{itemize}
+
+\section*{Types of test generation}
+
+\begin{itemize}
+    \item \textbf{Random testing}
+    \begin{itemize}
+        \item Pure random
+        \begin{itemize}
+            \item Easiest way to do automatic test case generation
+            \item Doesn't require any preparation and is easy to implement
+            \item However, there may be semantically redundant inputs. E.g., for a program that computes $\displaystyle\frac{10}{x}$, providing any onput except 0 means the same thing.
+            \item For example:
+            
+            \begin{lstlisting}
+//Simple useful test
+Set s = new HashSet();
+s.add("hi");
+assertTrue(s.equals(s));
+            
+            
+            
+            \end{lstlisting}
+
+            \item Redundant test:
+            \begin{lstlisting}
+//Redundant test
+Set s = new HashSet();
+s.add("hi");
+s.add("hi");
+assertTrue(s.equals(s));        
+            \end{lstlisting}
+
+            \item Another example
+            \begin{lstlisting}
+//Simple useful test
+Date d = new Date(2006,2,14);
+assertTrue(d.equals(d));
+            \end{lstlisting}
+
+            \item Illegal test:
+            \begin{lstlisting}
+//Simple useful test
+Date d = new Date(2006,2,14);
+d.setMonth(-1); // not allowed!
+assertTrue(d.equals(d));
+            \end{lstlisting}
+                
+            \item Illegal test:
+            \begin{lstlisting}
+//Simple useful test
+Date d = new Date(2006,2,14);
+d.setMonth(-5); // ILLEGAL!
+assertTrue(d.equals(d));
+            \end{lstlisting}
+
+        \end{itemize}
+        \item Rule-based - uses information like past crashes, constraints, etc. to make test cases
+        \begin{itemize}
+            \item Use rules like boundary cases: $x\in [-2^{32}, 2^{32}]$
+            \item Use distributions like normal, bimodal, $\chi^2$, etc. Ask Jason.
+        \end{itemize} 
+        \item Feedback guided (Radoop)
+        \begin{itemize}
+            \item Question: It is easy to generate random values for primitive types like \texttt{int}. How do we generate random objects like linked lists, trees, etc.?
+            
+            \item Use \texttt{id = -1, content = "", child = null}
+            
+            \begin{lstlisting}
+class TreeNode{
+    int id; String content; Child child;
+    public TreeNode(String str, Child child){
+    this.id = Global.id ++;
+    this.content = "node:" + str;
+    this.child = child;
+    }
+    public do(){
+    String content = this.content.substring(4); // NullPointerException! (at random)
+    this.child.do();
+    ...
+    }
+}
+            \end{lstlisting}
+        \end{itemize} 
+
+        \item Build test inputs incrementally
+        \begin{itemize}
+            \item New test inputs extend previous ones
+            \item In this context, a test input would be a method sequence
+        \end{itemize}
+
+        \item As soon as new test input is created, execute it
+        \item Use execution result to guide future test case generations
+        \begin{itemize}
+            \item away from redundant or illegal method sequences
+            \item towards sequences that create new object states
+            \item do not use duplicate and null objects
+            \item do not use objects generated from exceptions
+        \end{itemize}
+
+        %%finish taking some notes for slides 42 and 43
+    \end{itemize}
+
+    \item \textbf{Search based testing}
+    \begin{itemize}
+        \item EvoSuite
+        \item Deem test case generation as an optimization problem
+        \item Based on random testing, and focuses on the input domains
+        \item Uses code coverage as guidance
+        \item Find input values that can achieve best coverage such as statement coverage, logic coverage, input, etc.
+        \item Try to find maximum or minimum value of a certain function
+        \item Numerous practical problems can be viewed as optimization problems
+        \begin{itemize}
+            \item Least cost to travel to a number of cities
+            \item Least camera to cover an area
+            \item Distribution of stores to attract most customers
+            \item Design pipe of systems with least material
+            \item Put items into a backpack (with limited volume) of the highest value
+        \end{itemize}
+    \end{itemize}
+
+    \subsection*{Solutions of optimization}
+    \begin{itemize}
+        \item Hill climbing
+        \begin{itemize}
+            \item Start from random point
+            \item Try all neighbouring points and choose neighbour with highest value until all neighboring points have a lower value than the current point
+            \item Easy to find \textbf{local} maxima
+        \end{itemize} 
+
+        \item Random restart hill climbing
+        \begin{itemize}
+            \item Restart hill climbing multiple times to avoid local maxima and get to global maxima
+        \end{itemize}
+
+        \item Annealing simulation
+        \begin{itemize}
+            \item Improved hill climbing
+            \item Has probability to move (i.e. restart) after reaching local peak
+            \item The probability drops as time goes by
+        \end{itemize} 
+
+        \item Genetic algorithm (search based SE)
+        \begin{itemize}
+            \item Simulate the process of evolution
+            \item Start with random points
+            \item Select a number of best points
+            \item Combine and mutate these points until no more improvements can be made
+        \end{itemize}
+    \end{itemize}
+
+    \item \textbf{Systemic testing}
+    \begin{itemize}
+        \item Symbolic execution - only for mission critical systems. This method is usually paywalled.
+    \end{itemize}
+\end{itemize}
+
+
+
 \end{document}
