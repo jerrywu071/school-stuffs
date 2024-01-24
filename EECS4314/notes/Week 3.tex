@@ -44,6 +44,70 @@
 \maketitle
 \tableofcontents
 
+\chapter{Software Architecture}
 
+\section*{Evolution of programming abstractions}
+
+\begin{itemize}
+    \item First computers used punchcards and were hardwired
+    \item First software was written in assembly
+    \item In the 1960s, high level programming languages like Fortran, Cobol, Pascal, C, etc. were introduced to make code more readable and easier to use/understand
+    \item ADTs and OOP in the mid 1970s
+    \item Design patterns first introduced in 1990s, allows object reuse
+\end{itemize}
+
+\subsection*{Why software architecture?}
+\begin{itemize}
+    \item As software size and complexity increases, the design problem goes beyond data structures and algorithms
+    \item Designing and specifying the overall system structure emerges as a new kind of problem
+    \item Recall reference architecture and product line architecture
+\end{itemize}
+
+\subsection*{Software architecture issues}
+\begin{itemize}
+    \item Organization and global control structure
+    \item Protocols of communication, synchronization, and data access
+    \item Assignment of functionality to design elements
+    \item Physical distribution of product
+    \item Selection among design alternatives
+\end{itemize}
+
+\subsection*{State of practice}
+
+\begin{itemize}
+    \item Currently, there is no well defined terminology or notation to characterize architectural structures and systems
+    \item Good software engineers will make common use of architectural principles when designing complex software systems
+    \item These are simply principles or idiomatic patterns that have emerged over time
+\end{itemize}
+
+\subsection*{Descriptions of software architectures}
+
+\begin{itemize}
+    \item \textbf{Example 1}
+    \begin{itemize}
+        \item Camelot is based on the \textbf{client server model} and uses remote procedure calls both locally and remotely to provide communication among appplications and servers
+        \item We have chosen a distributed \textbf{object oriented} approach to managing information
+    \end{itemize} 
+
+    \item \textbf{Example 2}
+    \begin{itemize}
+        \item \textbf{Abstraction layering} (layered architecture) and system decomposition provide the appearance of system uniformity to clients, yet allow HeliX to accomidate a diversity of autonomous devices (self managing systems like server management, not self driving cars)
+        \item The architecture encourages a \textbf{client server model} for structuring of applications
+    \end{itemize} 
+
+    \item \textbf{Example 3}
+    \begin{itemize}
+        \item The easiest way to make a canonical \textbf{sequential} compiler into a \textbf{concurrent} compiler is to \textbf{pipeline} the execution of the compilar phases over a number of processors
+        \item A more effective way is to \textbf{split the source code into many segments which are concurrently processed through the various phases of compilation} (by multiple compiler processes) before a final \textbf{merging} pass recombines the object code into a single program
+    \end{itemize} 
+\end{itemize}
+
+\subsection*{Some standard software architectures}
+
+\begin{itemize}
+    \item \textbf{ISO/OSI reference model} is a layered network architecture
+    \item \textbf{X Window System} is a distributed windowed user interface architecture based on event triggering and callbacks. Linux can run without a GUI, but it can have a windowed GUI thanks to this.
+    \item \textbf{NIST/ECMA reference model} is a generic software engineering environment architecture based on layered communication substrates
+\end{itemize}
 
 \end{document}
