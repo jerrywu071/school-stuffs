@@ -1,1 +1,19 @@
 \contentsline {chapter}{\numberline {1}Software Architecture}{3}{}%
+\contentsline {section}{\numberline {1.1}Evolution of programming abstractions}{3}{}%
+\contentsline {subsection}{\numberline {1.1.1}Why software architecture?}{3}{}%
+\contentsline {subsection}{\numberline {1.1.2}Software architecture issues}{3}{}%
+\contentsline {subsection}{\numberline {1.1.3}State of practice}{4}{}%
+\contentsline {subsection}{\numberline {1.1.4}Descriptions of software architectures}{4}{}%
+\contentsline {subsection}{\numberline {1.1.5}Some standard software architectures}{5}{}%
+\contentsline {section}{\numberline {1.2}Intuition about architecture}{5}{}%
+\contentsline {subsection}{\numberline {1.2.1}Hardware architecture}{5}{}%
+\contentsline {subsection}{\numberline {1.2.2}Differences between hardware and software architecture}{5}{}%
+\contentsline {subsection}{\numberline {1.2.3}Software vs network architecture}{6}{}%
+\contentsline {subsection}{\numberline {1.2.4}Software vs building architeture}{6}{}%
+\contentsline {subsection}{\numberline {1.2.5}What are architectural styles}{6}{}%
+\contentsline {subsection}{\numberline {1.2.6}Why bother with architectural styles?}{7}{}%
+\contentsline {section}{\numberline {1.3}Types of architectural styles}{7}{}%
+\contentsline {subsection}{\numberline {1.3.1}Disclaimer}{7}{}%
+\contentsline {subsection}{\numberline {1.3.2}Pipe and filter}{7}{}%
+\contentsline {subsection}{\numberline {1.3.3}Examples of pipe and filter}{8}{}%
+\contentsline {subsection}{\numberline {1.3.4}Advantages and disadvantages of P\&F}{8}{}%

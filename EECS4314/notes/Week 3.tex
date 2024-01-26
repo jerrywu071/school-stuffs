@@ -46,7 +46,7 @@
 
 \chapter{Software Architecture}
 
-\section*{Evolution of programming abstractions}
+\section{Evolution of programming abstractions}
 
 \begin{itemize}
     \item First computers used punchcards and were hardwired
@@ -56,14 +56,14 @@
     \item Design patterns first introduced in 1990s, allows object reuse
 \end{itemize}
 
-\subsection*{Why software architecture?}
+\subsection{Why software architecture?}
 \begin{itemize}
     \item As software size and complexity increases, the design problem goes beyond data structures and algorithms
     \item Designing and specifying the overall system structure emerges as a new kind of problem
     \item Recall reference architecture and product line architecture
 \end{itemize}
 
-\subsection*{Software architecture issues}
+\subsection{Software architecture issues}
 \begin{itemize}
     \item Organization and global control structure
     \item Protocols of communication, synchronization, and data access
@@ -72,7 +72,7 @@
     \item Selection among design alternatives
 \end{itemize}
 
-\subsection*{State of practice}
+\subsection{State of practice}
 
 \begin{itemize}
     \item Currently, there is no well defined terminology or notation to characterize architectural structures and systems
@@ -80,7 +80,7 @@
     \item These are simply principles or idiomatic patterns that have emerged over time
 \end{itemize}
 
-\subsection*{Descriptions of software architectures}
+\subsection{Descriptions of software architectures}
 
 \begin{itemize}
     \item \textbf{Example 1}
@@ -102,12 +102,185 @@
     \end{itemize} 
 \end{itemize}
 
-\subsection*{Some standard software architectures}
+\subsection{Some standard software architectures}
 
 \begin{itemize}
     \item \textbf{ISO/OSI reference model} is a layered network architecture
     \item \textbf{X Window System} is a distributed windowed user interface architecture based on event triggering and callbacks. Linux can run without a GUI, but it can have a windowed GUI thanks to this.
     \item \textbf{NIST/ECMA reference model} is a generic software engineering environment architecture based on layered communication substrates
 \end{itemize}
+
+\section{Intuition about architecture}
+
+We need to look at several architectural disciplines to develop an intuition about software architecture. Specifically:
+
+\begin{itemize}
+    \item Hardware architecture
+    \item Network architecture
+    \item Building architecture
+\end{itemize}
+
+\subsection{Hardware architecture}
+
+\begin{itemize}
+    \item RISC machines emphasize the instruction set as an important feature
+    \item Pipelined and multiprocessor machines emphasize the configuration of architectural pieces of the hardware
+\end{itemize}
+
+\subsection{Differences between hardware and software architecture}
+
+\begin{itemize}
+    \item \textbf{Differences}
+    \begin{itemize}
+        \item Relatively small (compared to software) number of design elements
+        \item Scale is achieved by replication of design elements
+    \end{itemize} 
+
+    \item \textbf{Similarities}
+    \begin{itemize}
+        \item We often configure software architectures in an analogous way to hardware. E.g. we create multi process software by using pipelining and multithreading
+    \end{itemize}
+\end{itemize}
+
+\subsection{Software vs network architecture}
+
+\begin{itemize}
+    \item Networked architectures are achieved by abstracting the design elements of a network into nodes and connections
+    \item Topology is the most emphasized aspect
+    \begin{itemize}
+        \item Star topology
+        \item Ring Topology
+        \item Manhattan street networks
+    \end{itemize}
+
+    \item Unlike software architectures, network architectures only have a few topologies of interest
+\end{itemize}
+
+\subsection{Software vs building architeture}
+
+\begin{itemize}
+    \item \textbf{Multiple views}
+    \begin{itemize}
+        \item Skeleton frames, detailed views of electric wiring, etc.
+        \item SW: class UML, use cases, etc
+    \end{itemize} 
+
+    \item \textbf{Architectural styles}
+    \begin{itemize}
+        \item Classical, roman, etc.
+        \item SW: pipelines, layers, etc.
+    \end{itemize} 
+
+    \item \textbf{Materials}
+    \begin{itemize}
+        \item Do not build a skyscraper using wooden posts and beams
+        \item SW: algorithms (e.g. which sorting algorithm to use)
+    \end{itemize} 
+\end{itemize}
+
+\subsection{What are architectural styles}
+
+\begin{itemize}
+    \item An architectural style defines a family of systems in terms of a pattern of structural organization. It determines:
+    \begin{itemize}
+        \item The vocabulary of components and connectors that can beused in instances of that style
+        \item A set of constraints on how said components can be combined together into a system
+    \end{itemize}
+\end{itemize}
+
+\subsection{Why bother with architectural styles?}
+\begin{itemize}
+    \item Makes for an easy way to \textbf{communicate} among stakeholders
+    \item \textbf{Documentation} of early design decisions
+    \item Allow for the \textbf{reuse and transfer} of qualities to similar systems
+\end{itemize}
+
+\section{Types of architectural styles}
+\subsection{Disclaimer}
+There is no architectural style that is a silver bullet. Every style has their advantages and disadvantages.
+\subsection{Pipe and filter}
+
+\begin{itemize}
+    \item Suitable for applications that require a defined \textbf{series of independent computations} to be performed on \textbf{ordered data}. 
+    \item A component reads streams of data on its inputs and produces streams of data on its outputs
+    \item \textbf{VERY COMMON FOR COMPILERS}
+    \item \textbf{Components}: called \textbf{filters}
+    \begin{itemize}
+        \item apply local transformations to their input streams
+        \item they often do their computing incrementally so that output begins before all input is consumed
+    \end{itemize} 
+
+    \item \textbf{Connectors}: called pipes
+    \begin{itemize}
+        \item serve as conduits for the streams
+        \item transmitting outputs of one filter to the inputs of another
+    \end{itemize} 
+
+    \item \textbf{Invariants of pipes and filters}
+    \begin{itemize}
+        \item Filters do not share states with other filters
+        \item Filters do not know the identity of their upstream or downstream filters
+        \item The correctness of output of a pipe and filter network should not depend on the order in which their filters perform their incremental processing
+    \end{itemize} 
+
+    \item \textbf{Specializations}
+    \begin{itemize}
+        \item Pipelines: Restricts topologies to \textbf{linear sequences} of filters
+        \item Batch sequential: A degenerate case of pipeline architecture where \textbf{each filter processes all of its input data before producing any output}
+    \end{itemize} 
+\end{itemize}
+
+\subsection{Examples of pipe and filter}
+
+\begin{itemize}
+    \item UNIX shell scripts: Provides a notation for connecting UNIX processes via pipes. E.g. \texttt{cat file | grep Eroll | wc -l}
+    \item Traditional compilers: Compilation phases are pipelined though the phases are not always incremental. The phases in the pipeline inclide:
+    \begin{itemize}
+        \item lexical analysis
+        \item parsing
+        \item semantic analysis
+        \item code generation
+    \end{itemize} 
+\end{itemize}
+
+\subsection{Advantages and disadvantages of P\&F}
+
+\begin{itemize}
+    
+    \item \textbf{Advantages}
+    \begin{itemize}
+        \item \textbf{Easy to understand} the overall input/output behavior of a system; composition of the behaviors of the individual filters
+        \item They \textbf{support reuse} since any two filters can be hooked together; common data formats between them
+        \item Systems can be \textbf{easily maintained and enhanced}; new filters can be added and old filters can be replaced
+        \item They permit certain kinds of \textbf{specialized analysis} like throughput and deadlock analysis
+        \item They naturally support \textbf{concurrent execution}
+    \end{itemize} 
+
+    \item \textbf{Disadvantages}
+    \begin{itemize}
+        \item Not good for handling \textbf{interactive systems} due to their transformational character
+        \item Excessive parsing and unparsing leads to \textbf{loss of performance} and \textbf{increased complexity}
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Repository style}
+\begin{itemize}
+    \item Suitable for applications in which the central issue is \textbf{establishing, augmenting, and maintaining} a complex central body of information
+    \item Typically the information must be manipulated in a variety of ways. \textbf{Persistent data/storage is required}
+    \item In a nutshell, pretty much anything which has a \textbf{database, or is a management system}
+    
+    \item \textbf{Components}
+    \begin{itemize}
+        \item A central data structure representing the current state of the system
+        \item A collection of independent components that operate on the central data structure
+    \end{itemize} 
+
+    \item \textbf{Connectors}
+    \begin{itemize}
+        \item Typically procedure calls or direct memory accesses
+    \end{itemize} 
+\end{itemize}
+
+
 
 \end{document}

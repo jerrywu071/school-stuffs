@@ -46,7 +46,7 @@
 
 \chapter{Test automation}
 
-\section*{Why automated testing?}
+\section{Why automated testing?}
 
 \begin{itemize}
     \item Manual testing is time consuming and not economical
@@ -55,7 +55,7 @@
     \item Manual testing is error prone due to its recurring nature
 \end{itemize}
 
-\subsection*{Executing automated tests}
+\subsection{Executing automated tests}
 
 \begin{itemize}
     \item Test automation is the use of software separate from the software being tested to control the execution of tests
@@ -69,7 +69,7 @@
 \end{itemize}
 
 
-\subsection*{What can be automated?}
+\subsection{What can be automated?}
 
 Each one of these steps in software development can be automated, and each step down is easier to automate than the last. Of course, there has to be some human intervention to formulate the requirements for automation at the start.
 
@@ -83,7 +83,7 @@ Each one of these steps in software development can be automated, and each step 
 
 The more clerical something is, the more worth automating it is.
 
-\section*{Record \& playback}
+\section{Record \& playback}
 
 \begin{itemize}
     \item Usually for websites, mobile, UIs, etc.
@@ -93,26 +93,26 @@ The more clerical something is, the more worth automating it is.
     \item The test scripts repository keeps growing as the application goes through changes. This makes this kind of test suite very hard to maintain
 \end{itemize}
 
-\subsection*{Procedure}
+\subsection{Procedure}
 \begin{itemize}
     \item Automation tool generates scripts by recording user actions
     \item The generated scripts can be played back to reproduce the exact user actions
 \end{itemize}
 
-\subsection*{Advantages}
+\subsection{Advantages}
 \begin{itemize}
     \item Less effort for automation
     \item Quick returns
     \item Does not require expertise on tools
 \end{itemize}
 
-\subsection*{Limitations}
+\subsection{Limitations}
 \begin{itemize}
     \item High dependency on the GUI of AUT (application under test)
     \item Difficult to maintain the scripts
 \end{itemize}
 
-\subsection*{Problems}
+\subsection{Problems}
 
 \begin{itemize}
     \item Very fragile
@@ -129,7 +129,7 @@ The more clerical something is, the more worth automating it is.
     \end{itemize} 
 \end{itemize}
 
-\section*{Testing terminology contd'}
+\section{Testing terminology contd'}
 
 \begin{quote}
     \textit{"You don't want to make assumptions. That is not unit testing" - H.V. Pham 2024}
@@ -144,7 +144,7 @@ The more clerical something is, the more worth automating it is.
 \end{itemize}
 
 \newpage
-\subsection*{Std. structure of a JUnit test class}
+\subsection{Std. structure of a JUnit test class}
 
 \begin{itemize}
     \item Test a class called \texttt{Fraction}
@@ -152,8 +152,8 @@ The more clerical something is, the more worth automating it is.
 \end{itemize}
 
 \begin{lstlisting}
-import org.junit.*;
-import static org.junit.Assert.*;
+import org.junit.;
+import static org.junit.Assert.;
 
 public class FractionTest{
     @Test
@@ -172,14 +172,14 @@ public class FractionTest{
 \end{lstlisting}
 
 
-\subsection*{More fixtures for test classes}
+\subsection{More fixtures for test classes}
 \begin{itemize}
     \item There is also a \texttt{@BeforeClass} annotation that will execute once before \textbf{all} test cases
     \item Similarly, there is also an \texttt{@AfterClass} annotation that executes a method after every test case
     \item Usually done for expensive allocations for resources like connecting/disconnecting a database.
 \end{itemize}
 
-\subsection*{Assert method: Equal, Null and fail}
+\subsection{Assert method: Equal, Null and fail}
 
 \begin{itemize}
     \item \texttt{assertEquals(Object expected, Object actual)} - Compare two objects to see if they're identical. Use \texttt{.equals(Object other)} for compare
@@ -189,7 +189,7 @@ public class FractionTest{
     \item \texttt{fail()} - causes the test to fail and throw an exception (\texttt{AssertionError}). Useful as a result of a complex test, or when testing for exceptions.
 \end{itemize}
 
-\subsection*{Exception testing}
+\subsection{Exception testing}
 
 \begin{itemize}
     \item If a test case is expected to raise an exception, it can be written as follows:
@@ -205,19 +205,19 @@ public void testException(){
     \item if code doesn't throw an exception in this case, test fails. Else test passes.
 \end{itemize}
 
-\subsection*{Assert statement}
+\subsection{Assert statement}
 
 \begin{itemize}
     \item \texttt{assert boolean\_condition;} - throws an \texttt{AssertionError} if \texttt{boolean\_condition == false}. Can be used in place of \texttt{assertTrue()} in JUnit.
 \end{itemize}
 
-\subsection*{Ignoring test cases}
+\subsection{Ignoring test cases}
 \begin{itemize}
     \item Test cases that are not finished being written yet can be ignored using the \texttt{@Ignore} annotation.
     \item JUnit will not execute the test cases marked with this annotation, and will report the number of test cases that were ignored
 \end{itemize}
 
-\section*{Types of test generation}
+\section{Types of test generation}
 
 \begin{itemize}
     \item \textbf{Random testing}
@@ -336,7 +336,7 @@ class TreeNode{
         \end{itemize}
     \end{itemize}
 
-    \subsection*{Solutions of optimization}
+    \subsection{Solutions of optimization}
     \begin{itemize}
         \item Hill climbing
         \begin{itemize}
