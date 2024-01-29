@@ -16,3 +16,10 @@
 \contentsline {subsection}{\numberline {1.3.6}Ignoring test cases}{7}{}%
 \contentsline {section}{\numberline {1.4}Types of test generation}{7}{}%
 \contentsline {subsection}{\numberline {1.4.1}Solutions of optimization}{10}{}%
+\contentsline {subsection}{\numberline {1.4.2}Symbolic execution based test generation use cases}{11}{}%
+\contentsline {subsection}{\numberline {1.4.3}The main idea}{11}{}%
+\contentsline {subsection}{\numberline {1.4.4}Static symbolic execution}{11}{}%
+\contentsline {subsection}{\numberline {1.4.5}Problems in static symbolic execution}{12}{}%
+\contentsline {subsection}{\numberline {1.4.6}Dynamic symbolic execution}{12}{}%
+\contentsline {subsection}{\numberline {1.4.7}Main idea}{12}{}%
+\contentsline {subsection}{\numberline {1.4.8}Symbolic execution challenges}{13}{}%

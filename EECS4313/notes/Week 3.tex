@@ -365,13 +365,101 @@ class TreeNode{
             \item Combine and mutate these points until no more improvements can be made
         \end{itemize}
     \end{itemize}
-
-    \item \textbf{Systemic testing}
-    \begin{itemize}
-        \item Symbolic execution - only for mission critical systems. This method is usually paywalled.
-    \end{itemize}
 \end{itemize}
 
+\subsection{Symbolic execution based test generation use cases}
+\begin{itemize}
+    \item Making a target at a certain code coverage
+    \item Understanding how the code works to use this method
+    \item Analyze the code structure to find out a path to go to a certain statement \& the constraints of certain inputs to let the program follow the path
+    \item Analyzing a program to determine what inputs cause a part of a program to execute
+\end{itemize} 
 
+\subsection{The main idea}
+\begin{itemize}
+    \item If a statement hasn't been covered yet, try and provide an input to go over that statement
+    \item A statement is only covered once a path that goes to said statement is covered
+    \item So what input will cause the program to go through certain paths? Only if the input satisfies all if conditions along the path!
+\end{itemize}
+
+\subsection{Static symbolic execution}
+
+\begin{itemize}
+    \item Do not execute the software at all
+    \item Construct a constraint for each statement, the statement will be executed when the constraint is satisfied
+    \item Solve the constraints
+    \item The parameters (variables) in te constraint are inputs of the software to cover a specific statement
+    \newpage
+    \item \textbf{Basic example}:\\
+    Here, \texttt{T} is the condition for the statement to reach this block. \texttt{y=s} is the relationship of all variables to the inputs after the statement is executed. \texttt{s} is a symbolic variable for input
+    \begin{lstlisting}
+y=read();              //T                                          (y=s)
+y=2*y;                 //T                                          (y=2*s)
+if(y <= 12)            //T                                          (y=2*s)
+    fails();           //T && y <= 12                               (y=2*s)
+else
+    success();         //T && !(y <= 12)                            (y=2*s)
+print("OK");           //T && y <= 12 (y=2*s) || T && !(y<=12)      (y=2*s)
+    \end{lstlisting}
+\end{itemize}
+
+\subsection{Problems in static symbolic execution}
+
+\begin{itemize}
+    \item Path explosion
+    \begin{itemize}
+        \item Remember $n$ branches will cause $2n$ paths
+        \item Infinite paths for unbounded (infinite) loops
+        \item Calculating constraints on all paths is infeasible for real software
+    \end{itemize} 
+
+    \item Overcomplicated constraints
+    \begin{itemize}
+        \item Constraints get very complex for large programs (ESPECIALLY when loops are involved)
+        \item Not to mention resolving the constraint is an NPC (nondeterministic polynomial complete, or NP complete) problem.
+    \end{itemize}
+
+    \item \textbf{Moral of the story}: we only want to usse SSE for functional/method level testing. Anything beyond that will be impractical.
+\end{itemize}
+
+\subsection{Dynamic symbolic execution}
+\begin{itemize}
+    \item One of the revolutionary progress milestones of SWE in the 21st century
+\end{itemize}
+
+\subsection{Main idea}
+\begin{itemize}
+    \item Actually run the program
+    \item Generate the constraints as the program runs.
+    \item \textbf{Flip the constraints to reach other statements}
+\end{itemize} 
+
+\subsection{Symbolic execution challenges}
+
+\begin{itemize}
+    \item Scalability
+    \begin{itemize}
+        \item Key challenge!
+        \item Path space of a large program is massive
+    \end{itemize} 
+
+    \item Complex non linear constraints
+    \item Testing web apps and security problems
+    \begin{itemize}
+        \item String constraints
+        \item Mixed numeric and string constraints
+    \end{itemize}
+
+    \item Java Pathfinder for java
+    \item PEX
+    \begin{itemize}
+        \item Visual studio 2010 power tool
+    \end{itemize} 
+
+    \item KLEE
+    \begin{itemize}
+        \item Most popular symbolic execution tool for test generation in C/C++
+    \end{itemize} 
+\end{itemize}
 
 \end{document}

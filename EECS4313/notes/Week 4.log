@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  29 JAN 2024 15:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.5.30)  29 JAN 2024 15:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/notes/Week 3.tex"
-(/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/notes/Week 3.tex
+**"/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/notes/Week 4.tex"
+(/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/notes/Week 4.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
@@ -200,8 +200,8 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count301
 \l__pdf_internal_box=\box56
-) (./Week 3.aux)
-\openout1 = `"Week 3.aux"'.
+) (./Week 4.aux)
+\openout1 = `"Week 4.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
 LaTeX Font Info:    ... okay on input line 43.
@@ -282,9 +282,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Week 3.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./Week 4.toc)
 \tf@toc=\write3
-\openout3 = `"Week 3.toc"'.
+\openout3 = `"Week 4.toc"'.
 
  [2
 
@@ -292,40 +292,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Lecture 1.
 [3
 
-]
-Overfull \hbox (5.23795pt too wide) in paragraph at lines 93--94
-[]\OT1/cmr/m/n/12 The test scripts repos-i-tory keeps grow-ing as the ap-pli-ca-tion goes through changes.
- []
-
-[4] [5]
-Overfull \hbox (62.19643pt too wide) in paragraph at lines 186--187
-[]\OT1/cmtt/m/n/12 assertArrayEquals(int[] expecteds, int[] actuals) \OT1/cmr/m/n/12 or \OT1/cmtt/m/n/12 assertArrayEquals(long[]
- []
-
-[6]
-Overfull \hbox (0.60748pt too wide) in paragraph at lines 187--188
-[]\OT1/cmtt/m/n/12 assertSame(Object expected, Object actual) \OT1/cmr/m/n/12 - as-serts that two rerfer-ences
- []
-
-
-Overfull \hbox (12.54446pt too wide) in paragraph at lines 211--212
-[]\OT1/cmtt/m/n/12 assert boolean[]condition; \OT1/cmr/m/n/12 - throws an \OT1/cmtt/m/n/12 AssertionError \OT1/cmr/m/n/12 if \OT1/cmtt/m/n/12 boolean[]condition
- []
-
-[7] [8] [9] [10] [11] [12] [13] (./Week 3.aux) ) 
+] (./Week 4.aux) ) 
 Here is how much of TeX's memory you used:
- 5275 strings out of 478287
- 76276 string characters out of 5849289
- 587966 words of memory out of 5000000
- 23421 multiletter control sequences out of 15000+600000
- 480301 words of font info for 70 fonts, out of 8000000 for 9000
+ 4903 strings out of 478287
+ 73098 string characters out of 5849289
+ 548966 words of memory out of 5000000
+ 23054 multiletter control sequences out of 15000+600000
+ 478321 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,62p,324b,1330s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "Week 3.pdf" (13 pages, 167844 bytes).
+ 55i,6n,62p,284b,261s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on "Week 4.pdf" (3 pages, 33032 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 29 PDF objects out of 1000 (max. 8388607)
+ 17 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
