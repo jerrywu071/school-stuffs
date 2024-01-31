@@ -16,7 +16,7 @@
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
 \pagenumbering{arabic}
-\renewcommand{\chaptername}{Lecture}
+\renewcommand{\chaptername}{Section}
 \let\cleardoublepage\clearpage
 
 \lstset{frame=tb,
@@ -44,8 +44,167 @@
 \maketitle
 \tableofcontents
 
-\chapter{Test automation contd'}
+\chapter{Structural coverage}
 
-\section{}
+\begin{quote}
+  \textit{One of the biggest testing goals is maximum code coverage, and is still worked towards to this day.}
+\end{quote}
+\section{Abstract}
+If we can have a test suite where every test case covers every statement, then we have 100\% coverage, however this does not mean we have the best test suite, but the likelihood of finding bugs increases as we cover more lines of code.
+
+\begin{quote}
+    \textit{"If you don't try, how can you win?" - H.V. Pham 2024}
+\end{quote}
+
+\section{Basic example}
+
+\begin{itemize}
+  \item $floor(x)$ is some $max(n\in \mathbb{Z}\implies n\leq x)$, i.e. $floor(2.3)=2$
+  \begin{lstlisting}
+public class Floor{
+    public static int floor(int x, int y){
+        if(x > y)
+            return x/y;
+        else
+          return y/x;
+    }
+}
+  \end{lstlisting}
+
+  \item What would we test here?
+\end{itemize}
+
+\subsection{Test requirement \& test criterion}
+
+\begin{quote}
+  \textit{"We need to try all the flavours" - H.V. Pham 2024}
+\end{quote}
+
+\begin{itemize}
+  \item \textbf{Test requirement}: A specific element of a software artifact that a test must satisfy or cover
+  \begin{itemize}
+    \item Ice cream cone flavours: vanilla, chocolate, mint
+    \item Example: Test one chocolate cone
+    \item TR denotes a set of test requirements
+  \end{itemize} 
+
+  \item A test criterion is a rule or collection of rules that define the test requirements
+  \begin{itemize}
+    \item Coverae is one recipe for generating TR in a systematic way
+    \item Flavour criterion [cover all flavours] (MORE GENERAL)
+    \item So, \texttt{TR=\{f=chocolate, f=vanilla, f=mint\}}
+  \end{itemize} 
+\end{itemize}
+
+\subsection{Criteria based on structures}
+We have four ways to model software in testing:
+\begin{itemize}
+  \item Graph (control flow graph)
+  \item Logical expression (or, and, not, etc.)
+  \item Input domain characterization:
+  \begin{itemize}
+    \item $A:\{0,1,n>1\}$
+    \item $B:\{600,700,800\}$
+    \item $C:\{swe, cs, isa, infs\}$
+  \end{itemize}
+  \item Syntactic structure
+  \begin{lstlisting}
+if x > y z = x - y
+else z = 2 * x
+  \end{lstlisting} 
+\end{itemize}
+
+\section{Measuring test sets}
+
+\begin{itemize}
+  \item To test an ice cream shop, how do we know how good a test set is? We can choose the best test set based on widest coverage.
+  \begin{itemize}
+    \item Test set 1: 1 chocolate cone
+    \item Test set 2: 2 chocolate, 1 vanilla
+    \item \textbf{Test set 3: 1 chocolate, 1 vanilla, 1 mint} - still not the best one even if we try one of each. We can still try more of each one, just don't get diabetes.
+  \end{itemize}
+\end{itemize}
+
+\section{Coverage}
+
+Given a set of test requirements $TR$ for a coverage criterion $C$, $T$ satisfies $C$ iff $\forall tr\in TR, \exists t\in T$ that satisfies $tr$ 
+
+\subsection{Coverage level}
+\begin{itemize}
+  \item Given TR and a test set T, the coverage level is the \textbf{ratio of number of test requirements satisfied by T to the size of TR}
+  \begin{itemize}
+    \item $TR={f=chocolate, f=vanilla, f=mint}$
+    \item $T_1={chocolate(3), vanilla(1)}$
+    \item Coverage level = $\frac{2}{3}\approx 66.7\%$
+  \end{itemize} 
+
+  \item Coverage levels help us evaluate the goodness of a test set, especially in the presence of infeasible test requirements
+\end{itemize}
+
+\subsection{Subsumption}
+\begin{itemize}
+  \item Criteria subsumption: A test criterion $C_1$ subsumes $C_2$ iff \textbf{every} set of test cases that satisfies criterion $C_1$ also satisfies $C_2$
+  \item Must be true $\forall T$, i.e. $\forall t\in C_1$, $t$ satisfies $C_2$.
+  \item A common example is that edge coverage subsumes node coverage, since if we visit every edge between two nodes, we also visit every node.
+  \item Subsumption is a rough guide for comparing criteria, although it is hard to use in practice
+\end{itemize}
+
+\subsection{Moral of the story}
+Maximum coverage can only go so far for detecting bugs. But just because we have high code coverage doesn't mean we can find every bug. At the end of the day, finding as many bugs as possible is the true goal.
+
+\section{Control flow graph definitions and terminology}
+
+\begin{itemize}
+  \item $N$: \textbf{Set of all nodes} $\{A,B,C,D,E\}$
+  \item $N_0$: \textbf{Set of initial nodes} $\{A\}$ - doesn't usually happen in code
+  \item $N_f$: \textbf{Set of final nodes} $\{E\}$ - possible in code since there can be multiple terminating conditions, return statements, etc.
+  \item $E\subseteq N\times N$: \textbf{Edges}, e.g. $(A,B)$ and $(C,E)$, etc. $C$ is the predecessor and $E$ is the successor in $(C,E)$.
+\end{itemize}
+
+\subsection{Subgraphs}
+
+Leg $G'$ be a subgraph if $G$; then
+\begin{itemize}
+  \item $\forall v\in G'$, $v$ must be a subset $N_{\subseteq}$ of $N$
+  \item $\forall v_0\in G'$ are $N_0 \cap N$
+  \item The edges of $G'$ are $E\cap (N_{\subseteq}\times N_{\subseteq})$
+\end{itemize}
+
+\subsection{Path}
+
+Recall that a path in a graph is a sequence of nodes from a graph $G$ whose adjacent pairs all belong to the set of edges $E$ of $G$.
+
+\begin{itemize}
+  \item Path A: $\{2,3,5\}$, length is 2
+  \item Path B: $\{1,2,3,4,5,6\}$ length is 4
+\end{itemize}
+
+Paths have to be connected, and if the graph is directed, needs to go in the correct direction.
+
+\subsection{Subpath}
+It's just a smaller path within a bigger path. Self explanatory.
+
+\subsection{Test path}
+
+A test path is a path $p$ (possibly of length 0) that starts at some $v_0\in N_0$ and ends at some $v_f \in N_f$. In other words, it's just a simulation of how the program runs.
+
+\subsection{Paths \& semantics}
+\begin{itemize}
+  \item Some paths in a control flow graph might not correspond to a program's semantics. For example:
+
+  \begin{lstlisting}
+if(false)
+    gamma();
+    return;
+beta();
+  \end{lstlisting}
+  In this case, $\beta$ is never executed since it is a concrete false statement.
+
+  \item In this course, we generally only talk about the syntax of the graph and not the semantics
+
+\end{itemize}
+
+\section{Reachability}
+define $reach_G(x)$ as the subgraph that is syntactically reachable from $x$, where $x$ is a single node, an edge, or a set of nodes and edges.
 
 \end{document}

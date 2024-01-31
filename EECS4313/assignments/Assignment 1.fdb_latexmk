@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1706561037 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/assignments/Assignment 1.tex" "Assignment 1.pdf" "Assignment 1" 1706561037
+["pdflatex"] 1706726733 "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/assignments/Assignment 1.tex" "Assignment 1.pdf" "Assignment 1" 1706726734
   "/etc/texmf/web2c/texmf.cnf" 1675046609 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/assignments/Assignment 1.tex" 1706561037 920 a9f88328c8ba6755080ad0f7f650031c ""
+  "/home/dimitri/Documents/GitHub/latex-stuffs/EECS4313/assignments/Assignment 1.tex" 1706726733 922 9165e975871ad27d28a4d06b2cfc98ab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -53,8 +53,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1675046631 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1685476551 2799767 f3a98faf324e8a30dddc07cf76604a22 ""
-  "Assignment 1.aux" 1706561037 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "Assignment 1.tex" 1706561037 920 a9f88328c8ba6755080ad0f7f650031c ""
+  "Assignment 1.aux" 1706726733 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "Assignment 1.tex" 1706726733 922 9165e975871ad27d28a4d06b2cfc98ab ""
   (generated)
   "Assignment 1.aux"
   "Assignment 1.log"
