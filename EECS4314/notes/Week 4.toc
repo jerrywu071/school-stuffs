@@ -1,0 +1,15 @@
+\contentsline {chapter}{\numberline {1}Architecture of a compiler}{3}{}%
+\contentsline {section}{\numberline {1.1}Abstract}{3}{}%
+\contentsline {section}{\numberline {1.2}Early compiler architectures (review)}{3}{}%
+\contentsline {subsection}{\numberline {1.2.1}The overall design}{3}{}%
+\contentsline {subsection}{\numberline {1.2.2}Problems with this design, and subsequent solition}{4}{}%
+\contentsline {section}{\numberline {1.3}Hybrid compiler architetures}{4}{}%
+\contentsline {chapter}{\numberline {2}Implicit invocation style}{5}{}%
+\contentsline {section}{\numberline {2.1}The main idea}{5}{}%
+\contentsline {subsection}{\numberline {2.1.1}Publish-subscribe}{5}{}%
+\contentsline {subsection}{\numberline {2.1.2}Event based}{5}{}%
+\contentsline {subsection}{\numberline {2.1.3}Components and connectors}{6}{}%
+\contentsline {subsection}{\numberline {2.1.4}Advantages of implicit invocation}{6}{}%
+\contentsline {subsection}{\numberline {2.1.5}Disadvantages of implicit invocation}{6}{}%
+\contentsline {subsection}{\numberline {2.1.6}Examples of implicit invocation}{6}{}%
+\contentsline {subsection}{\numberline {2.1.7}QA evaluation of implicit invocation}{7}{}%

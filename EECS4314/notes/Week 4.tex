@@ -1,0 +1,177 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{array}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\pagenumbering{arabic}
+\renewcommand{\chaptername}{Section}
+\let\cleardoublepage\clearpage
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS4314 week 4}
+\author{Jerry Wu}
+\date{2024-01-31}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Architecture of a compiler}
+
+\section{Abstract}
+\begin{itemize}
+    \item The architecture of a system can change in response to improvements in technology
+    \item This can be seen in the way we think about compilers
+\end{itemize}
+
+\section{Early compiler architectures (review)}
+
+\subsection{The overall design}
+
+\begin{itemize}
+    \item In the 1970s, compilation of code was regarded as a purely sequential (batch sequential or pipeline) process.
+    \item Text (high level programming language) gets fed into a machine that performs some operations and converts it to machine code in the following order of operations:
+    \begin{itemize}
+        \item Lexical (keywords, names, etc.)
+        \item Syntax (brackets, parentheses, etc)
+        \item Semantics (variable initializations, function definitions, etc.)
+        \item Optimizations (improve speed, efficiency, detection of dead code, etc.)
+        \item Code generation (generate the assembly, bytecode, etc)
+    \end{itemize}
+\end{itemize}
+
+\subsection{Problems with this design, and subsequent solition}
+
+\begin{itemize}
+    \item If one of the later steps (like optimization) wants lexical data of the compilation, it would have to go through all previous pipes in order to access it
+    \item If we want to solve this, we can \textbf{link each filter to a separate symbol table} during lexical analysis so that any filter in the sequence can access it, i.e. optimizations wants to access data from the syntactical analysis filter step.
+    \item In the mid 1980s, increasing attention turned to the intermediate representation of the program during compilation. This was when each filter step in the compiler was also linked to an \textbf{attributed parse tree} along with a symbol table.
+\end{itemize}
+
+\section{Hybrid compiler architetures}
+
+\begin{itemize}
+    \item The new view accomodates various tools (e.g. syntax directed editors like vscode) that operate on an internal representation rather than the textual form of a program
+    \item Architectural shift to a repository style with elements of a pipeline style since the order of the execution of the process is still predetermined.
+    \item This allows for the compiler to continuously run while code is being edited for live updates, since the parse tree and symbol table are both centralized along with edit and flow.
+\end{itemize}
+
+\chapter{Implicit invocation style}
+
+\section{The main idea}
+
+\begin{itemize}
+    \item This style is suitable for applications that involve \textbf{loosely coupled collections of components}, each of which carries out some operation and may in the process enable other operations
+    \item It's particularly useful for applications that must be reconfigured on the fly:
+    \begin{itemize}
+        \item Changing service provider
+        \item Enabling or disabling features/capabilities
+    \end{itemize} 
+
+    \item Subscribers connect to publishers directly (or through a network)
+    \item Components communicate using the event bus, not directly to each other.
+\end{itemize}
+
+\subsection{Publish-subscribe}
+\begin{itemize}
+    \item Subscribers register to receive specific messages
+    \item Publishers manage a subscription list and broadcast messages to subscribers
+\end{itemize}
+
+\subsection{Event based}
+
+\begin{itemize}
+    \item Independent components asynchronously emit "events" communicated over an event bus/medium.
+\end{itemize}
+
+\subsection{Components and connectors}
+
+\begin{itemize}
+    \item \textbf{Components}
+    \begin{itemize}
+        \item Publishers, subscribers
+        \item Event generators and consumers
+    \end{itemize}
+
+    \item \textbf{Connectors}
+    \begin{itemize}
+        \item Procedure calls
+        \item Event bus
+    \end{itemize}
+\end{itemize}
+
+\subsection{Advantages of implicit invocation}
+
+\begin{itemize}
+    \item For piublish and subscribe: efficient dissemination of one way information
+    \item Provides strong support for reuse: any component can be added by registering/subscribing for events
+    \item Eases system evolution: components may be replaced without affecting other components in the system
+\end{itemize}
+
+\subsection{Disadvantages of implicit invocation}
+
+\begin{itemize}
+    \item For publish and subscribe: needs special protocols when the number of subscribers becomes very large
+    \item When a component announces an event:
+    \begin{itemize}
+        \item It has no idea how other components will respond to the event
+        \item It cannot rely on the order in which the responses are invoked
+        \item It cannot know when responses are finished
+    \end{itemize}
+\end{itemize}
+
+\subsection{Examples of implicit invocation}
+
+\begin{itemize}
+    \item Used in \textbf{programming environments} to integrate tools
+    \begin{itemize}
+        \item Debugger stops at a breakpoint and makes an announcement
+        \item Editors scroll to the appropriate source line and highlights it
+    \end{itemize} 
+
+    \item X, youtube, etc.
+\end{itemize}
+
+\subsection{QA evaluation of implicit invocation}
+
+\begin{itemize}
+    \item \textbf{Performance}
+    \begin{itemize}
+        \item Publish and subscribe: can it deliver thousands of messages?
+        \item Event based: how does it compare to repository style?
+    \end{itemize} 
+    
+    \item \textbf{Availability} - Publisher needs to be replicated
+    \item \textbf{Scalability} - Can it support thousands of users, growth in data size?
+    \item \textbf{Modifiability} - Easily add more subscribers, chanhges in message formats affects many subscribers
+\end{itemize}
+
+\end{document}

@@ -17,3 +17,4 @@
 \contentsline {subsection}{\numberline {1.3.2}Pipe and filter}{7}{}%
 \contentsline {subsection}{\numberline {1.3.3}Examples of pipe and filter}{8}{}%
 \contentsline {subsection}{\numberline {1.3.4}Advantages and disadvantages of P\&F}{8}{}%
+\contentsline {subsection}{\numberline {1.3.5}Repository style}{9}{}%

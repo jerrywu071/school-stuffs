@@ -16,7 +16,7 @@
 \definecolor{mauve}{rgb}{0.58,0,0.82}
 
 \pagenumbering{arabic}
-\renewcommand{\chaptername}{Lecture}
+\renewcommand{\chaptername}{Section}
 \let\cleardoublepage\clearpage
 
 \lstset{frame=tb,
@@ -263,7 +263,7 @@ There is no architectural style that is a silver bullet. Every style has their a
     \end{itemize}
 \end{itemize}
 
-\subsection*{Repository style}
+\subsection{Repository style}
 \begin{itemize}
     \item Suitable for applications in which the central issue is \textbf{establishing, augmenting, and maintaining} a complex central body of information
     \item Typically the information must be manipulated in a variety of ways. \textbf{Persistent data/storage is required}
@@ -279,8 +279,38 @@ There is no architectural style that is a silver bullet. Every style has their a
     \begin{itemize}
         \item Typically procedure calls or direct memory accesses
     \end{itemize} 
+
+    \item \textbf{Specializatios}
+    \begin{itemize}
+        \item Changes to the data structure triggers computations
+        \item Data structure in memory (RAM)
+        \item Data structure on disk (HDD,SSD, etc)
+        \item Concurrent computations and data accesses
+    \end{itemize}
+
+    \item \textbf{Examples of repository style}
+    \begin{itemize}
+        \item Information systems
+        \item Central code repository systems (github)
+        \item Programming environments (repl.it)
+        \item Graphical editors
+        \item Database management systems
+        \item Games (world of warcraft)
+    \end{itemize} 
+
+    \item \textbf{Advantages of repository style architecture}
+    \begin{itemize}
+        \item Efficient way to store large amounts of data (centralized)
+        \item Sharing model (what the data looks like) is published as the repository schema
+        \item Centralized management (backup, security, concurrency control, etc.)
+    \end{itemize} 
+    
+    \item \textbf{Disadvantages}
+    \begin{itemize}
+        \item Must agree on data model a priori
+        \item Difficult to distribute the data (since its centralized)
+        \item Data evolution is expensive
+    \end{itemize} 
 \end{itemize}
-
-
 
 \end{document}
