@@ -128,26 +128,6 @@
     \end{itemize}
 \end{itemize}
 
-\subsection{Advantages of implicit invocation}
-
-\begin{itemize}
-    \item For piublish and subscribe: efficient dissemination of one way information
-    \item Provides strong support for reuse: any component can be added by registering/subscribing for events
-    \item Eases system evolution: components may be replaced without affecting other components in the system
-\end{itemize}
-
-\subsection{Disadvantages of implicit invocation}
-
-\begin{itemize}
-    \item For publish and subscribe: needs special protocols when the number of subscribers becomes very large
-    \item When a component announces an event:
-    \begin{itemize}
-        \item It has no idea how other components will respond to the event
-        \item It cannot rely on the order in which the responses are invoked
-        \item It cannot know when responses are finished
-    \end{itemize}
-\end{itemize}
-
 \subsection{Examples of implicit invocation}
 
 \begin{itemize}
@@ -173,5 +153,169 @@
     \item \textbf{Scalability} - Can it support thousands of users, growth in data size?
     \item \textbf{Modifiability} - Easily add more subscribers, chanhges in message formats affects many subscribers
 \end{itemize}
+
+\section{Advantages of implicit invocation}
+
+\begin{itemize}
+    \item For piublish and subscribe: efficient dissemination of one way information
+    \item Provides strong support for reuse: any component can be added by registering/subscribing for events
+    \item Eases system evolution: components may be replaced without affecting other components in the system
+\end{itemize}
+
+\section{Disadvantages of implicit invocation}
+
+\begin{itemize}
+    \item For publish and subscribe: needs special protocols when the number of subscribers becomes very large
+    \item When a component announces an event:
+    \begin{itemize}
+        \item It has no idea how other components will respond to the event
+        \item It cannot rely on the order in which the responses are invoked
+        \item It cannot know when responses are finished
+    \end{itemize}
+\end{itemize}
+
+\chapter{Layered style architecture}
+
+\section{Overview}
+We can think of it like a cake with different layers as the name suggests. It is designed so that programs/functions in one layer can obtain services from a layer below it. We can break down the layers into 3 fundamental layers, but there can be more if necessary:
+
+\begin{itemize}
+    \item High level layer (apps)
+    \item Middle layer (drivers)
+    \item Low level layer (hardware)
+\end{itemize} 
+
+\subsection{Specializations of layered style}
+
+\begin{itemize}
+    \item Often exceptions are made to permit non adjacent layers to communicate directly (usually done for efficiency so we can rely on abstraction)
+\end{itemize}
+
+\subsection{Examples of layered style}
+\begin{itemize}
+    \item Layered communication protocols
+    \begin{itemize}
+        \item Each layer provides a substrate for communication at some level of abstraction
+        \item Lower levels define lower levels of interactions, with the lowest level being the hardware (physical layer)
+    \end{itemize} 
+    
+    \item Unix layered architecture (one layer can contain multiple adjacent blocks, i.e. files, sockets, cooked block, raw block, etc.)
+\end{itemize}
+
+\section{Advantages of layered style}
+\begin{itemize}
+    \item \textbf{Design}: based on increasing levels of abstraction
+    \item \textbf{Enhancement}: since changes to the function of one layer affects at most two other layers
+    \item \textbf{Reuse}: since different implementations (with identical interfaces) of the same layer can be used interchangably
+\end{itemize}
+
+\section{Disadvantages}
+\begin{itemize}
+    \item Not all systems are easily structures in a layered fashion
+    \item Performance requirements may force the \textbf{coupling of high level functions to their lower level implementations}
+\end{itemize}
+
+\chapter{Client-server style}
+
+\section{Overview}
+This style is suitable for applications that involve distributed data and processing across a range of components
+\begin{itemize}
+    \item \textbf{Components}:
+    \begin{itemize}
+        \item \textbf{Servers}: Standalone components that provide specific services such as printing, data management, etc.
+    \end{itemize}
+
+    \item \textbf{Connector}: The network which allows clients to access remote servers
+\end{itemize}
+
+\subsection{Examples of client server style}
+
+\begin{itemize}
+    \item File servers
+    \begin{itemize}
+        \item Primitive form of data service (not a database)
+        \item Useful for sharing files across a network
+        \item Client passes request for files over the network to the file server
+    \end{itemize} 
+
+    \item Databases
+    \begin{itemize}
+        \item More efficient in distributing data and is more powerful than file servers
+        \item Client passes SQL requests as messages to the DB server, to which results are returned
+        \item Query processing is done by the server
+        \item No need for large data transfers
+        \item Transaction DB servers are also available
+    \end{itemize} 
+\end{itemize}
+
+\section{Advantages of client server style}
+
+\begin{itemize}
+    \item \textbf{Distribution} of data is straightforward
+    \item \textbf{Transparency} of location
+    \item \textbf{Mix and match} heterogeneous platforms
+    \item \textbf{Easy to add} new servers or upgrade existing servers
+\end{itemize}
+
+\section{Disadvantages of client server style}
+
+\begin{itemize}
+    \item \textbf{No central register of names and services} - it might be hard to find out what services are available
+\end{itemize}
+
+\chapter{Process-control style}
+
+\section{Overview}
+
+This style is suitable for applications whose purpose is to maintain specified properties of the outputs of the process at (sufficiently near) given reference values.
+
+\begin{itemize}
+    \item \textbf{Components}
+    \begin{itemize}
+        \item Process definition includes mechanisms for manipulating some process variables
+        \item Control algorithm for deciding how to manipulate and process variables
+    \end{itemize} 
+
+    \item \textbf{Connectors}: are the data flow relations for:
+    \begin{itemize}
+        \item \textbf{Process variables}:
+        \begin{itemize}
+            \item \textit{Controlled variable} whose value the system is intended to control
+            \item \textit{Input variable} that measures an input in the process 
+            \item \textit{Manipulated variable} whose value can be changed by the controller
+        \end{itemize} 
+
+        \item \textbf{Set point} is the desired value for a controlled variable
+        \item \textbf{Sensors} to obtain the values of process variables pertinent to control
+    \end{itemize} 
+\end{itemize}
+
+\subsection{Examples of process control style}
+
+\begin{itemize}
+    \item Automobile anti lock brakes
+    \item Nuclear power plants
+    \item Automobile cruise control
+\end{itemize}
+
+\chapter{Exercise}
+
+\section{Automated stock trading system}
+A customer approaches ABC Trading Solutions with the need for an architecture design for an automated stock trading system
+
+\begin{itemize}
+    \item The system needs to take in a list of stocks related to specific sectors and buy/sell these stocks based on some predefined algorithms
+    \item The system needs to perform well (place many orders) and scale to support many investors
+\end{itemize}
+
+Propose an architecture for the system accompanied by an informal evaluation of the advantages and disadvantages of the proposed architecture.
+
+\subsection{Some notes}
+\begin{itemize}
+    \item We will need \textbf{client server} for sure since we need to communicate with the market in order to buy and sell stocks in the first place
+    \item \textbf{Implicit invocation} can be used for a feed subscription service to notify end users about when a stock changes price or reaches a certain threshold or when profits are optimal, etc.
+\end{itemize}
+
+
 
 \end{document}

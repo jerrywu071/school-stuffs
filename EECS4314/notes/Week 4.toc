@@ -1,15 +1,32 @@
-\contentsline {chapter}{\numberline {1}Architecture of a compiler}{3}{}%
-\contentsline {section}{\numberline {1.1}Abstract}{3}{}%
-\contentsline {section}{\numberline {1.2}Early compiler architectures (review)}{3}{}%
-\contentsline {subsection}{\numberline {1.2.1}The overall design}{3}{}%
-\contentsline {subsection}{\numberline {1.2.2}Problems with this design, and subsequent solition}{4}{}%
-\contentsline {section}{\numberline {1.3}Hybrid compiler architetures}{4}{}%
-\contentsline {chapter}{\numberline {2}Implicit invocation style}{5}{}%
-\contentsline {section}{\numberline {2.1}The main idea}{5}{}%
-\contentsline {subsection}{\numberline {2.1.1}Publish-subscribe}{5}{}%
-\contentsline {subsection}{\numberline {2.1.2}Event based}{5}{}%
-\contentsline {subsection}{\numberline {2.1.3}Components and connectors}{6}{}%
-\contentsline {subsection}{\numberline {2.1.4}Advantages of implicit invocation}{6}{}%
-\contentsline {subsection}{\numberline {2.1.5}Disadvantages of implicit invocation}{6}{}%
-\contentsline {subsection}{\numberline {2.1.6}Examples of implicit invocation}{6}{}%
-\contentsline {subsection}{\numberline {2.1.7}QA evaluation of implicit invocation}{7}{}%
+\contentsline {chapter}{\numberline {1}Architecture of a compiler}{4}{}%
+\contentsline {section}{\numberline {1.1}Abstract}{4}{}%
+\contentsline {section}{\numberline {1.2}Early compiler architectures (review)}{4}{}%
+\contentsline {subsection}{\numberline {1.2.1}The overall design}{4}{}%
+\contentsline {subsection}{\numberline {1.2.2}Problems with this design, and subsequent solition}{5}{}%
+\contentsline {section}{\numberline {1.3}Hybrid compiler architetures}{5}{}%
+\contentsline {chapter}{\numberline {2}Implicit invocation style}{6}{}%
+\contentsline {section}{\numberline {2.1}The main idea}{6}{}%
+\contentsline {subsection}{\numberline {2.1.1}Publish-subscribe}{6}{}%
+\contentsline {subsection}{\numberline {2.1.2}Event based}{6}{}%
+\contentsline {subsection}{\numberline {2.1.3}Components and connectors}{7}{}%
+\contentsline {subsection}{\numberline {2.1.4}Examples of implicit invocation}{7}{}%
+\contentsline {subsection}{\numberline {2.1.5}QA evaluation of implicit invocation}{7}{}%
+\contentsline {section}{\numberline {2.2}Advantages of implicit invocation}{7}{}%
+\contentsline {section}{\numberline {2.3}Disadvantages of implicit invocation}{8}{}%
+\contentsline {chapter}{\numberline {3}Layered style architecture}{9}{}%
+\contentsline {section}{\numberline {3.1}Overview}{9}{}%
+\contentsline {subsection}{\numberline {3.1.1}Specializations of layered style}{9}{}%
+\contentsline {subsection}{\numberline {3.1.2}Examples of layered style}{9}{}%
+\contentsline {section}{\numberline {3.2}Advantages of layered style}{10}{}%
+\contentsline {section}{\numberline {3.3}Disadvantages}{10}{}%
+\contentsline {chapter}{\numberline {4}Client-server style}{11}{}%
+\contentsline {section}{\numberline {4.1}Overview}{11}{}%
+\contentsline {subsection}{\numberline {4.1.1}Examples of client server style}{11}{}%
+\contentsline {section}{\numberline {4.2}Advantages of client server style}{12}{}%
+\contentsline {section}{\numberline {4.3}Disadvantages of client server style}{12}{}%
+\contentsline {chapter}{\numberline {5}Process-control style}{13}{}%
+\contentsline {section}{\numberline {5.1}Overview}{13}{}%
+\contentsline {subsection}{\numberline {5.1.1}Examples of process control style}{13}{}%
+\contentsline {chapter}{\numberline {6}Exercise}{14}{}%
+\contentsline {section}{\numberline {6.1}Automated stock trading system}{14}{}%
+\contentsline {subsection}{\numberline {6.1.1}Some notes}{14}{}%
