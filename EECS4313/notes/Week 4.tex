@@ -207,4 +207,111 @@ beta();
 \section{Reachability}
 define $reach_G(x)$ as the subgraph that is syntactically reachable from $x$, where $x$ is a single node, an edge, or a set of nodes and edges.
 
+\subsection{Syntactical and semantic reachability}
+
+\begin{itemize}
+  \item A node $n$ is \textbf{syntactically} reachable from $n_i$ if $\exists$ path $(n_i,n)$, e.g. $\gamma$ from $\alpha$ or $\beta$ from $\alpha$
+  \item A node is \textbf{semantically} reachable if one of the paths from $n_i$ to $n$ can be reached on the same input, e.g. $\gamma$ from $\alpha$ but \textbf{not} $\beta$ from $\alpha$
+\end{itemize}
+
+\subsection{SESEs (single entry, single exit graphs)}
+SESE graphs definition: All test paths start at a single node and end at some other node.
+\begin{itemize}
+  \item $N_0$ and $N_f$ have exactly one node
+  \item A path is said to \textbf{tour} all of its subpaths
+  \item Any path \textbf{tours} itself
+\end{itemize}
+
+Take the following set of paths:
+
+\begin{align*}
+  p_A=\left[0,1,3,4,6\right]\\
+  p_B=\left[0,1,3,5,6\right]\\
+  p_C=\left[0,2,3,4,6\right]\\
+  p_D=\left[0,2,3,5,6\right]
+\end{align*}
+
+\begin{itemize}
+  \item $p_0=\left[1,3,4\right]$ is a subpath of $p_A\therefore p_A$ tours $p_0$ 
+\end{itemize}
+
+\section{Connect test cases and test paths}
+
+\begin{itemize}
+  \item Connect test cases and test paths with a mapping \texttt{path()} from test cases to test paths
+  \begin{itemize}
+    \item E.g. $path(t)$ is the set of test paths corresponding to test case $t$
+    \item Given a test suite $T$, $path(T)=\{path(t)|t\in T\}$
+  \end{itemize}
+
+  \item Each test case gives at least one test path
+  \begin{itemize}
+    \item If the software is \textbf{deterministic}, then each test case gives exactly one test path
+    \item Otherwise, a test case is connected to multiple test paths and vice versa.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Deterministic vs non deterministic CFGs}
+
+\begin{itemize}
+  \item Generally, we want to avoid NFA control flow graphs at all costs, but things like java \texttt{hashCode()} implementations can cause nondeterminism
+  \item We want to avoid it because it makes it hard to check test case outputs since more than one output can be a valid result of the test case
+  \item Other causes can stem from thread scheduler ad memory address
+\end{itemize}
+
+\subsection{Node coverage}
+
+\begin{quote}
+  \textit{"You need to choose wisely" - H.V. Pham 2024}
+\end{quote}
+\begin{itemize}
+  \item \textbf{Node coverage is the same as statement coverage}. For each node $n\in reach_G\left[N_0\right]$, $TR$ contains a requirement to visit ndoe $n$
+  \begin{itemize}
+    \item $TR$ visits each reachable $n\in G$
+    \item $TR=\{0,1,2,3,4,5,6\}$
+  \end{itemize} 
+\end{itemize}
+
+\subsection{Edge \& edge pair coverage}
+
+\begin{itemize}
+  \item Edge coverage: $TR$ contains each reachable path of length up to 1, inclusive in $G$
+  \item $TR=\{[1,2],[2,4],\ldots\}$
+  \item Edge pair coverage: $TR$ contains each reachable path of up to length 2 inclusive in $G$
+  \item $TR=\{[1,2,3],[1,2,4],\ldots\}$
+  \item Edge coverage \textbf{subsumes} node coverage, so it is a stronger form of coverage than node coverage
+  \item However, if the CFG is a diamond, then both are equally good
+\end{itemize}
+
+\subsection{Simple path}
+
+\begin{itemize}
+  \item A path is \textbf{simple} if no node appears more than once in a path, except that the first and last nodes may be the same
+  \item Some properties of simple paths:
+  \begin{itemize}
+    \item No internal loops
+    \item Can bound their length
+    \item Can create any path by composing simple paths
+    \item Many simple paths exist (too many!)
+  \end{itemize} 
+
+  \item Examples
+  \begin{itemize}
+    \item $p=[1,2,3,5,6,7]$
+    \item $p=[1,2,4]$
+    \item $p=[2,3,4,5,2]$
+  \end{itemize} 
+\end{itemize}
+
+\subsection{Prime path}
+
+\begin{itemize}
+  \item Because there are too many simple paths, let's consider prime paths, which are \textbf{simple paths of maximum length}
+  \item A path is \textbf{prime} if it is \textbf{simple} and \textbf{does not appear as a proper subpath} of any other simple path
+\end{itemize}
+
+\subsection{Prime path examples}
+
+
+
 \end{document}
