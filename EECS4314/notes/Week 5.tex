@@ -1,0 +1,101 @@
+\documentclass[12pt]{book}
+
+\usepackage[]{amsmath}
+\usepackage[]{amsthm}
+\usepackage[]{amsfonts}
+\usepackage[]{amssymb}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{array}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\pagenumbering{arabic}
+\renewcommand{\chaptername}{Section}
+\let\cleardoublepage\clearpage
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\small\color{black},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=4
+}
+
+\title{EECS4314 week 5}
+\author{Jerry Wu}
+\date{2024-02-07}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter{Design patterns review}
+
+\section{Evolution of programming abstractions}
+
+\begin{itemize}
+  \item First modern programmable computers in the 1950s were largely hardwired (first software was written in machine code)
+  \item Assembly introduced through symbolic assemblers, macro processors, etc
+  \item In the 1960s high level languages were created (FORTRAN, COBOL, C, etc.)
+  \item HL languages were independent of machine and problem domain
+\end{itemize}
+
+\subsection{Abstractions from developers perspective}
+
+\begin{itemize}
+  \item Typed variables and user defined types created in late 1960s
+  \item Modules created in early 1970s
+  \item ADTs and OOP created in mid 1970s
+  \item OOP design patterns, refactoring in 1990s
+\end{itemize}
+
+\section{What are design patterns? (OODP)}
+
+\begin{itemize}
+  \item Design patterns are reusable solutions to common problems
+  \begin{itemize}
+    \item An OODP involves a small set of classes cooperating to achieve a desired end
+    \item Done via adding a level of indirection in some clever way
+    \item New solutions provide the small functionality as an existing approach but in some more desirable way in terms of elegance, efficiency, and adaptability
+  \end{itemize} 
+
+  \item OODPs make heavy use of interfaces, information hiding, polymorphism, and intermediary objects
+  \item Typical presentation of an OODP
+  \begin{itemize}
+    \item A motivating problem and its context
+    \item Discussion of the possible solutions 
+    \item Common variations and tradeoffs
+  \end{itemize} 
+\end{itemize}
+
+\subsection{Learning design patterns}
+
+\begin{itemize}
+  \item Think of OODP as high level programming abstractions
+  \begin{itemize}
+    \item First, learn the basics (data structures, algorithms, tools and language details)
+    \item Then learn modules, interfaces, information hiding, classes/OOP
+    \item Design patterns are the next level of abstractions
+    \item Architecture
+  \end{itemize} 
+\end{itemize}
+
+\section{Why design patterns?}
+
+
+\end{document}
