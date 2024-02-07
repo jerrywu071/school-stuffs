@@ -23,4 +23,4 @@
 \contentsline {subsection}{\numberline {1.7.3}Edge \& edge pair coverage}{9}{}%
 \contentsline {subsection}{\numberline {1.7.4}Simple path}{9}{}%
 \contentsline {subsection}{\numberline {1.7.5}Prime path}{10}{}%
-\contentsline {subsection}{\numberline {1.7.6}Prime path examples}{10}{}%
+\contentsline {subsection}{\numberline {1.7.6}More path coverage criteria}{10}{}%

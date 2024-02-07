@@ -308,10 +308,18 @@ Take the following set of paths:
 \begin{itemize}
   \item Because there are too many simple paths, let's consider prime paths, which are \textbf{simple paths of maximum length}
   \item A path is \textbf{prime} if it is \textbf{simple} and \textbf{does not appear as a proper subpath} of any other simple path
+  \item Covering every prime path automatically subsumes covering \textbf{all simple paths}, leading to maximum coverage
+  \item A prime path which starts and ends with the same node is a \textbf{round trip path}
 \end{itemize}
 
-\subsection{Prime path examples}
+\subsection{More path coverage criteria}
 
+\begin{itemize}
+  \item \textbf{Complete path coverage (CPC)}: $TR$ contains ALL paths in $G$
+  \item \textbf{Specified path coverage (SPC)}: $TR$ contains a specific set $S$ of paths
+  \item To show that \textbf{CPC} subsumes \textbf{PPC} (prime path coverage), show that \textbf{PPC} $\subseteq$ \textbf{CPC}
+\end{itemize}
 
+%%finish taking notes on definitions
 
 \end{document}
