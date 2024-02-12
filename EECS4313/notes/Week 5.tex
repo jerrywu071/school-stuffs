@@ -36,15 +36,57 @@
   tabsize=4
 }
 
-\title{EECS4314 week 5}
+\title{EECS4313 week 5}
 \author{Jerry Wu}
-\date{2024-02-05}
+\date{2024-02-12}
 
 \begin{document}
 \maketitle
 \tableofcontents
 
-\chapter*{Syntactical and semantic reachability}
+\chapter{Control flow \& data flow in practice}
+
+\section{Structural coverage in practice}
+
+\begin{itemize}
+  \item The most common application of graph criteria is to the \textbf{program source}
+  \item \textbf{Graph}: Usually the CFG
+  \begin{itemize}
+    \item Node coverage: Execute each statement
+    \item Edge coverage: Cover every branch (if else cases)
+    \item Basic block: A sequence of statements such that if the first statement is executed, all statements will be executed (i.e. no branches)
+  \end{itemize} 
+
+  \item \textbf{Loops}: Looping structures such as for, while, etc.
+  \item \textbf{Data flow coverage}: Augment the CFG
+  \begin{itemize}
+    \item Defs are statements that \textbf{assign} values to variables
+    \item Uses are statements that \textbf{use} variables
+    \item Branch predicates are the conditionals inside of loop and if/else if clauses
+  \end{itemize} 
+\end{itemize}
+
+\begin{quote}
+  \textit{"What else?" - H.V. Pham 2024}
+\end{quote}
+
+\subsection{If statement and loop representation}
+\begin{itemize}
+  \item Basic if/else structures are represented by a diamond shaped graph in CFGs
+  \begin{quote}
+    \textit{"Real diamond is good, this one is not" - H.V. Pham 2024}
+  \end{quote}
+
+  \item In loops, cannot combine non branching statements prior to loop clauses with the loop clause into one node because the loop will re initialize the value every time it loops
+  \begin{lstlisting}
+x=0;        //CANNOT COMBINE
+while(x<y)  //THESE LINES INTO ONE NODE
+{
+  y=f(x,y);
+  x++;
+}
+  \end{lstlisting}
+\end{itemize}
 
 
 
