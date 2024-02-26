@@ -1,4 +1,6 @@
 \contentsline {section}{\numberline {1}Individual Sovereignty}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Attention sovereignty}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Right to reward}{2}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Harmlessness}{2}{section.2}%
 \contentsline {section}{\numberline {3}Privacy and Data Protection}{2}{section.3}%
 \contentsline {section}{\numberline {4}Transparency}{2}{section.4}%
