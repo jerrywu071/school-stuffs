@@ -1,0 +1,7 @@
+\contentsline {chapter}{\numberline {1}Violence in video games}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Moral panic}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}What is moral panic?}{3}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Mods and rockers}{3}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Deviancy amplification}{3}{subsection.1.2.1}%
+\contentsline {section}{\numberline {1.3}Revisiting arcades}{3}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Death race}{4}{subsection.1.3.1}%
